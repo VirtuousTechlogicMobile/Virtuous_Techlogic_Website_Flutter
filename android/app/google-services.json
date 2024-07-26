@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "56398585863",
+    "firebase_url": "https://virtuous-techlogic-webs-bbr64z-default-rtdb.firebaseio.com",
+    "project_id": "virtuous-techlogic-webs-bbr64z",
+    "storage_bucket": "virtuous-techlogic-webs-bbr64z.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56398585863:android:59b8972159b47fa4394aa2",
+        "android_client_info": {
+          "package_name": "com.mycompany.virtuoustechlogicwebsite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFShD5_EjqZoDO0E360dT9EGGiYRZJ-Go"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56398585863:android:a4b682d9f743b4f8394aa2",
+        "android_client_info": {
+          "package_name": "com.mycompany.virtuoustechlogicwebsiteadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFShD5_EjqZoDO0E360dT9EGGiYRZJ-Go"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
