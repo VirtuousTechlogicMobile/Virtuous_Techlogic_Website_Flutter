@@ -1,25 +1,23 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/actions/index.dart' as actions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/custom_code/actions/index.dart' as actions;
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'share_blog_model.dart';
+
 export 'share_blog_model.dart';
 
 class ShareBlogWidget extends StatefulWidget {
   const ShareBlogWidget({
     super.key,
     required this.blogTitle,
-    required this.blogReference,
   });
 
   final String? blogTitle;
-  final DocumentReference? blogReference;
 
   @override
   State<ShareBlogWidget> createState() => _ShareBlogWidgetState();
@@ -69,7 +67,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
             logFirebaseEvent('SHARE_BLOG_COMP_Column_hlbm48wn_ON_TAP');
             await Clipboard.setData(ClipboardData(
                 text:
-                    'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget!.blogReference?.id}&blogTitle=${widget!.blogTitle}'));
+                    'https://virtuoustechlogic.com/individualBlogPage/${widget!.blogTitle}'));
           },
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -125,7 +123,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                           logFirebaseEvent(
                               'SHARE_BLOG_COMP_facebookF_ICN_ON_TAP');
                           await launchURL(
-                              'https://www.facebook.com/sharer/sharer.php?u=https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget!.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget!.blogTitle!))}');
+                              'https://www.facebook.com/sharer/sharer.php?u=https://virtuoustechlogic.com/individualBlogPage/${Uri.encodeComponent((widget!.blogTitle!))}');
                         },
                       ),
                       Text(
@@ -164,10 +162,8 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                           logFirebaseEvent(
                               'SHARE_BLOG_COMP_instagram_ICN_ON_TAP');
                           await actions.socialMediablogShare(
-                            widget!.blogReference!,
-                            widget!.blogTitle!,
-                            'https://api.whatsapp.com/send?text=',
-                          );
+                              widget.blogTitle ?? '',
+                              'https://api.whatsapp.com/send?text= ');
                         },
                       ),
                       Text(
@@ -199,7 +195,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                         Flexible(
                           child: SelectionArea(
                               child: Text(
-                            'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget!.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget!.blogTitle!))}',
+                            'https://virtuoustechlogic.com/individualBlogPage/${Uri.encodeComponent((widget!.blogTitle!))}',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -226,7 +222,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                                     'SHARE_BLOG_COMP_Icon_h3y7faep_ON_TAP');
                                 await Clipboard.setData(ClipboardData(
                                     text:
-                                        'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget!.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget!.blogTitle!))}'));
+                                        'https://virtuoustechlogic.com/individualBlogPage/${Uri.encodeComponent((widget!.blogTitle!))}'));
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(

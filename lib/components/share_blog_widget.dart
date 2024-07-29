@@ -1,14 +1,14 @@
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/actions/index.dart' as actions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/custom_code/actions/index.dart' as actions;
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'share_blog_model.dart';
+
 export 'share_blog_model.dart';
 
 class ShareBlogWidget extends StatefulWidget {
@@ -164,7 +164,6 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                           logFirebaseEvent(
                               'SHARE_BLOG_COMP_instagram_ICN_ON_TAP');
                           await actions.socialMediablogShare(
-                            widget!.blogReference!,
                             widget!.blogTitle!,
                             'https://api.whatsapp.com/send?text=',
                           );

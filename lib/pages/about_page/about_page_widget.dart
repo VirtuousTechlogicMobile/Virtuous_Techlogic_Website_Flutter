@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
 import '/components/about_us_comp/about_us_comp_widget.dart';
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
@@ -11,11 +14,8 @@ import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/components/why_choose_us_about_us_comp/why_choose_us_about_us_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'about_page_model.dart';
+
 export 'about_page_model.dart';
 
 class AboutPageWidget extends StatefulWidget {
@@ -39,7 +39,11 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AboutPageModel());
-
+    SystemChrome.setApplicationSwitcherDescription(
+      ApplicationSwitcherDescription(
+        label: "About page",
+      ),
+    );
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'aboutPage'});
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }

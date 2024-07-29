@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/virtuous_techlogic_website.iml" filepath="$PROJECT_DIR$/.idea/virtuous_techlogic_website.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/virtuous_techlogic_website_android.iml" filepath="$PROJECT_DIR$/android/virtuous_techlogic_website_android.iml" />
     </modules>
   </component>
 </project>

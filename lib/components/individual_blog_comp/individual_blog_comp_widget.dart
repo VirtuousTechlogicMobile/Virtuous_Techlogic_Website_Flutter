@@ -1,12 +1,12 @@
-import '/components/share_blog/share_blog_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/components/share_blog/share_blog_widget.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'individual_blog_comp_model.dart';
+
 export 'individual_blog_comp_model.dart';
 
 class IndividualBlogCompWidget extends StatefulWidget {
@@ -17,7 +17,6 @@ class IndividualBlogCompWidget extends StatefulWidget {
     required this.individualBlogDate,
     required this.individualBlogDescription,
     this.individualeditdescription,
-    required this.blogrefcomp,
   });
 
   final String? individualBlogImage;
@@ -25,7 +24,6 @@ class IndividualBlogCompWidget extends StatefulWidget {
   final String? individualBlogDate;
   final String? individualBlogDescription;
   final String? individualeditdescription;
-  final DocumentReference? blogrefcomp;
 
   @override
   State<IndividualBlogCompWidget> createState() =>
@@ -45,7 +43,6 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => IndividualBlogCompModel());
-
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -318,7 +315,6 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                                         child: ShareBlogWidget(
                                           blogTitle:
                                               widget!.individualBlogTitle!,
-                                          blogReference: widget!.blogrefcomp!,
                                         ),
                                       );
                                     },

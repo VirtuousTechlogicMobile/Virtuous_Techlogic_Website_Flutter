@@ -2,23 +2,18 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
 
-import '/index.dart';
-import '/main.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
+import '/index.dart';
 
 export 'package:go_router/go_router.dart';
-export 'serialization_util.dart';
+
 export '/backend/firebase_dynamic_links/firebase_dynamic_links.dart'
     show generateCurrentPageLink;
+export 'serialization_util.dart';
 
 const kTransitionInfoKey = '__transition_info__';
 
@@ -168,19 +163,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
             FFRoute(
               name: 'individualBlogPage',
-              path: 'individualBlogPage',
-              builder: (context, params) => IndividualBlogPageWidget(
-                individualBlogRefpage: params.getParam(
-                  'individualBlogRefpage',
-                  ParamType.DocumentReference,
-                  isList: false,
-                  collectionNamePath: ['blogDetails'],
-                ),
-                blogTitle: params.getParam(
+              path: 'individualBlogPage/:blogTitle',
+              builder: (context, params) {
+                final String title = params.getParam(
                   'blogTitle',
                   ParamType.String,
-                ),
-              ),
+                );
+
+                return IndividualBlogPageWidget(
+                  blogTitle: title,
+                );
+              },
             ),
             FFRoute(
               name: 'individualCaseStudy',

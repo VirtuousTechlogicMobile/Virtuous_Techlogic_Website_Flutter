@@ -1,13 +1,13 @@
+import 'package:flutter/material.dart';
+
 import '/backend/backend.dart';
 import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 import '/components/blog_comp/blog_comp_widget.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'explore_our_blogs_comp_model.dart';
+
 export 'explore_our_blogs_comp_model.dart';
 
 class ExploreOurBlogsCompWidget extends StatefulWidget {
@@ -121,28 +121,18 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                         ),
                         blogTag: columnBlogDetailsRecord.blogTags,
                         readmore: () async {
-                          logFirebaseEvent(
-                              'EXPLORE_OUR_BLOGS_Container_m5k9xx4f_CAL');
+                          /* final String ref =
+                              "${Uri.encodeComponent(columnBlogDetailsRecord.reference.id)}";*/
+                          final String blotitle =
+                              "${Uri.encodeComponent(columnBlogDetailsRecord.title)}";
 
-                          context.pushNamed(
-                            'individualBlogPage',
-                            queryParameters: {
-                              'individualBlogRefpage': serializeParam(
-                                columnBlogDetailsRecord.reference,
-                                ParamType.DocumentReference,
-                              ),
-                              'blogTitle': serializeParam(
-                                columnBlogDetailsRecord.title,
-                                ParamType.String,
-                              ),
-                            }.withoutNulls,
-                          );
+                          // print("reference : ${ref}");
 
-                          FFAppState().selectedTitle = valueOrDefault<String>(
-                            columnBlogDetailsRecord.title,
-                            'Title',
+                          print(("Blog Title : ${blotitle}"));
+
+                          GoRouter.of(context).go(
+                            '/individualBlogPage/${blotitle}',
                           );
-                          setState(() {});
                         },
                       );
                     }).divide(SizedBox(height: 20.0)),
