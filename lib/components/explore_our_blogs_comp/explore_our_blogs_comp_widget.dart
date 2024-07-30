@@ -52,14 +52,14 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
           wrapWithModel(
             model: _model.commonRichTextCompModel,
             updateCallback: () => setState(() {}),
-            child: CommonRichTextCompWidget(
+            child: const CommonRichTextCompWidget(
               richTextOne: 'Explore ',
               richTextTwo: 'Our Blogs',
               texts: 'Blogs & posts by our Team',
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: StreamBuilder<List<BlogDetailsRecord>>(
               stream: queryBlogDetailsRecord(
                 queryBuilder: (blogDetailsRecord) => blogDetailsRecord.where(
@@ -121,28 +121,23 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                         ),
                         blogTag: columnBlogDetailsRecord.blogTags,
                         readmore: () async {
-                          /* final String ref =
-                              "${Uri.encodeComponent(columnBlogDetailsRecord.reference.id)}";*/
-                          final String blotitle =
-                              "${Uri.encodeComponent(columnBlogDetailsRecord.title)}";
-
-                          // print("reference : ${ref}");
-
-                          print(("Blog Title : ${blotitle}"));
-
-                          GoRouter.of(context).go(
-                            '/individualBlogPage/${blotitle}',
+                          final String blotitle = Uri.encodeComponent(
+                              columnBlogDetailsRecord.title);
+                          await launchURL('individualBlogPage/${blotitle}');
+                          FFAppState().selectedTitle = valueOrDefault<String>(
+                            columnBlogDetailsRecord.title,
+                            'Title',
                           );
                         },
                       );
-                    }).divide(SizedBox(height: 20.0)),
+                    }).divide(const SizedBox(height: 20.0)),
                   ),
                 );
               },
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
             child: wrapWithModel(
               model: _model.getInTouchButtonCompModel,
               updateCallback: () => setState(() {}),
@@ -155,7 +150,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                   context.pushNamed(
                     'moreBlog',
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: TransitionInfo(
+                      kTransitionInfoKey: const TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.fade,
                       ),
@@ -165,7 +160,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
               ),
             ),
           ),
-        ].divide(SizedBox(height: 30.0)),
+        ].divide(const SizedBox(height: 30.0)),
       ),
     );
   }

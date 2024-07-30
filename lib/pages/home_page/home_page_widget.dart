@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
@@ -44,12 +43,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => HomePageModel());
-    SystemChrome.setApplicationSwitcherDescription(
-      ApplicationSwitcherDescription(
-        label: "HomePageNew",
-        primaryColor: 0xffaaaaaa, // This line is required
-      ),
-    );
+
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'homePage'});
     animationsMap.addAll({
       'endDrawerOnActionTriggerAnimation': AnimationInfo(

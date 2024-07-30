@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '/components/about_us_comp/about_us_comp_widget.dart';
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
@@ -39,11 +38,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AboutPageModel());
-    SystemChrome.setApplicationSwitcherDescription(
-      ApplicationSwitcherDescription(
-        label: "About page",
-      ),
-    );
+
     logFirebaseEvent('screen_view', parameters: {'screen_name': 'aboutPage'});
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -69,13 +64,13 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
           child: wrapWithModel(
             model: _model.sidebarCompModel,
             updateCallback: () => setState(() {}),
-            child: SidebarCompWidget(),
+            child: const SidebarCompWidget(),
           ),
         ),
         body: SafeArea(
           top: true,
           child: Stack(
-            alignment: AlignmentDirectional(1.0, 1.0),
+            alignment: const AlignmentDirectional(1.0, 1.0),
             children: [
               Builder(
                 builder: (context) {
@@ -122,12 +117,13 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        30.0, 0.0, 30.0, 20.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            30.0, 0.0, 30.0, 20.0),
                                     child: wrapWithModel(
                                       model: _model.aboutUsCompModel1,
                                       updateCallback: () => setState(() {}),
-                                      child: AboutUsCompWidget(
+                                      child: const AboutUsCompWidget(
                                         text:
                                             'We are Top Rated App Development company who create ',
                                         richText1: 'We are ',
@@ -142,24 +138,24 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                                 wrapWithModel(
                                   model: _model.languageCompModel1,
                                   updateCallback: () => setState(() {}),
-                                  child: LanguageCompWidget(),
+                                  child: const LanguageCompWidget(),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       16.0, 30.0, 16.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.ourCultureCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: OurCultureCompWidget(),
+                                    child: const OurCultureCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 40.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -201,12 +197,12 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       50.0, 40.0, 50.0, 40.0),
                                   child: wrapWithModel(
                                     model: _model.aboutUsCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: AboutUsCompWidget(
+                                    child: const AboutUsCompWidget(
                                       text:
                                           'We are Top Rated App Development company who create',
                                       richText1: 'We are  ',
@@ -220,33 +216,33 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                                 wrapWithModel(
                                   model: _model.languageCompModel2,
                                   updateCallback: () => setState(() {}),
-                                  child: LanguageCompWidget(),
+                                  child: const LanguageCompWidget(),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 40.0, 30.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.whyChooseUsAboutUsCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: WhyChooseUsAboutUsCompWidget(),
+                                    child: const WhyChooseUsAboutUsCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 40.0, 30.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.ourCultureCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: OurCultureCompWidget(),
+                                    child: const OurCultureCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 40.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -262,7 +258,7 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                         wrapWithModel(
                           model: _model.desktopHeaderCompModel,
                           updateCallback: () => setState(() {}),
-                          child: DesktopHeaderCompWidget(
+                          child: const DesktopHeaderCompWidget(
                             indexParameter: 1,
                           ),
                         ),
@@ -281,12 +277,13 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        48.0, 40.0, 48.0, 30.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            48.0, 40.0, 48.0, 30.0),
                                     child: wrapWithModel(
                                       model: _model.aboutUsCompModel3,
                                       updateCallback: () => setState(() {}),
-                                      child: AboutUsCompWidget(
+                                      child: const AboutUsCompWidget(
                                         text:
                                             'We are Top Rated App Development company who create',
                                         richText1: 'We are  ',
@@ -301,33 +298,33 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                                 wrapWithModel(
                                   model: _model.languageCompDesktopModel,
                                   updateCallback: () => setState(() {}),
-                                  child: LanguageCompDesktopWidget(),
+                                  child: const LanguageCompDesktopWidget(),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       48.0, 40.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.whyChooseUsAboutUsCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: WhyChooseUsAboutUsCompWidget(),
+                                    child: const WhyChooseUsAboutUsCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       48.0, 50.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.ourCultureCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: OurCultureCompWidget(),
+                                    child: const OurCultureCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 60.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -340,11 +337,12 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                 },
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
                 child: wrapWithModel(
                   model: _model.whatsapStickyCompModel,
                   updateCallback: () => setState(() {}),
-                  child: WhatsapStickyCompWidget(),
+                  child: const WhatsapStickyCompWidget(),
                 ),
               ),
             ],

@@ -1,23 +1,19 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/explore_our_offering_comp/explore_our_offering_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
 import '/components/process_step_comp/process_step_comp_widget.dart';
-import '/components/request_quote_comp/request_quote_comp_widget.dart';
 import '/components/sidebar_comp/sidebar_comp_widget.dart';
 import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'services_page_model.dart';
+
 export 'services_page_model.dart';
 
 class ServicesPageWidget extends StatefulWidget {
@@ -56,8 +52,8 @@ class _ServicesPageWidgetState extends State<ServicesPageWidget>
             curve: Curves.easeOut,
             delay: 0.0.ms,
             duration: 1000.0.ms,
-            begin: Offset(100.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(100.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -93,7 +89,7 @@ class _ServicesPageWidgetState extends State<ServicesPageWidget>
           child: wrapWithModel(
             model: _model.sidebarCompModel,
             updateCallback: () => setState(() {}),
-            child: SidebarCompWidget(),
+            child: const SidebarCompWidget(),
           ),
         ).animateOnActionTrigger(
             animationsMap['endDrawerOnActionTriggerAnimation']!,
@@ -101,7 +97,7 @@ class _ServicesPageWidgetState extends State<ServicesPageWidget>
         body: SafeArea(
           top: true,
           child: Stack(
-            alignment: AlignmentDirectional(1.0, 1.0),
+            alignment: const AlignmentDirectional(1.0, 1.0),
             children: [
               Builder(
                 builder: (context) {
@@ -142,52 +138,36 @@ class _ServicesPageWidgetState extends State<ServicesPageWidget>
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Container(
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 20.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 20.0, 0.0, 0.0),
                                     child: wrapWithModel(
                                       model:
                                           _model.exploreOurOfferingCompModel1,
                                       updateCallback: () => setState(() {}),
-                                      child: ExploreOurOfferingCompWidget(),
+                                      child:
+                                          const ExploreOurOfferingCompWidget(),
                                     ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 40.0, 10.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.processStepCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: ProcessStepCompWidget(),
+                                    child: const ProcessStepCompWidget(),
                                   ),
                                 ),
-                                if (false)
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 30.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.requestQuoteCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child: RequestQuoteCompWidget(
-                                        formImage:
-                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/sqeka8titoar/Rectangle_24.png',
-                                        email: 'info@virtuoustechlogic.com',
-                                        callNumber: '6377231496',
-                                        whatsappNumber: '6377231496',
-                                        descriptionText:
-                                            'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
-                                      ),
-                                    ),
-                                  ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 40.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -232,40 +212,30 @@ class _ServicesPageWidgetState extends State<ServicesPageWidget>
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       48.0, 40.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.exploreOurOfferingCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: ExploreOurOfferingCompWidget(),
+                                    child: const ExploreOurOfferingCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       48.0, 40.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.processStepCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: ProcessStepCompWidget(),
+                                    child: const ProcessStepCompWidget(),
                                   ),
                                 ),
-                                if (false)
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 40.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.requestQuoteCompModel2,
-                                      updateCallback: () => setState(() {}),
-                                      child: RequestQuoteCompWidget(),
-                                    ),
-                                  ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 50.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -281,7 +251,7 @@ class _ServicesPageWidgetState extends State<ServicesPageWidget>
                         wrapWithModel(
                           model: _model.desktopHeaderCompModel,
                           updateCallback: () => setState(() {}),
-                          child: DesktopHeaderCompWidget(
+                          child: const DesktopHeaderCompWidget(
                             indexParameter: 2,
                           ),
                         ),
@@ -291,40 +261,30 @@ class _ServicesPageWidgetState extends State<ServicesPageWidget>
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       48.0, 40.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.exploreOurOfferingCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: ExploreOurOfferingCompWidget(),
+                                    child: const ExploreOurOfferingCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       48.0, 40.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.processStepCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: ProcessStepCompWidget(),
+                                    child: const ProcessStepCompWidget(),
                                   ),
                                 ),
-                                if (false)
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 40.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.requestQuoteCompModel3,
-                                      updateCallback: () => setState(() {}),
-                                      child: RequestQuoteCompWidget(),
-                                    ),
-                                  ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 50.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -337,11 +297,12 @@ class _ServicesPageWidgetState extends State<ServicesPageWidget>
                 },
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 25.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 25.0),
                 child: wrapWithModel(
                   model: _model.whatsapStickyCompModel,
                   updateCallback: () => setState(() {}),
-                  child: WhatsapStickyCompWidget(),
+                  child: const WhatsapStickyCompWidget(),
                 ),
               ),
             ],

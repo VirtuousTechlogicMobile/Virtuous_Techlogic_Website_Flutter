@@ -1,12 +1,13 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'blog_comp_model.dart';
+
 export 'blog_comp_model.dart';
 
 class BlogCompWidget extends StatefulWidget {
@@ -82,7 +83,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                       ),
                       width: MediaQuery.sizeOf(context).width * 0.35,
                       height: MediaQuery.sizeOf(context).height * 0.3,
-                      fit: BoxFit.contain,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
