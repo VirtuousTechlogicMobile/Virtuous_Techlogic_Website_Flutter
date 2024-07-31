@@ -60,7 +60,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.sizeOf(context).width * 0.82,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -77,6 +77,13 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
                     child: Image.network(
+                      loadingBuilder: (context, child, loadingProgress) {
+                        if (loadingProgress == null) {
+                          return child;
+                        } else {
+                          return const CircularProgressIndicator();
+                        }
+                      },
                       valueOrDefault<String>(
                         widget!.blogimage,
                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
@@ -90,14 +97,14 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                 Expanded(
                   flex: 6,
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        40.0, 0.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: SelectionArea(
                               child: Text(
@@ -135,9 +142,9 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                               ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(-1.0, 1.0),
+                          alignment: const AlignmentDirectional(-1.0, 1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: SelectionArea(
                                 child: Text(
@@ -181,7 +188,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                               children: List.generate(tags.length, (tagsIndex) {
                                 final tagsItem = tags[tagsIndex];
                                 return Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: FFButtonWidget(
                                     onPressed: () {
@@ -193,10 +200,11 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                                     ),
                                     options: FFButtonOptions(
                                       height: 30.0,
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          24.0, 0.0, 24.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -230,7 +238,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                           },
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: wrapWithModel(
                             model: _model.getInTouchButtonCompModel1,
@@ -265,20 +273,20 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(24.0),
                     child: CachedNetworkImage(
-                      fadeInDuration: Duration(milliseconds: 200),
-                      fadeOutDuration: Duration(milliseconds: 200),
+                      fadeInDuration: const Duration(milliseconds: 200),
+                      fadeOutDuration: const Duration(milliseconds: 200),
                       imageUrl: valueOrDefault<String>(
                         widget!.blogimage,
                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
                       ),
                       width: 328.0,
                       height: 280.0,
-                      fit: BoxFit.fill,
+                      fit: BoxFit.cover,
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 7.0, 10.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        10.0, 7.0, 10.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
                         widget!.blogTitleText,
@@ -294,8 +302,8 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 10.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 10.0, 10.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
                         widget!.blogDate,
@@ -311,8 +319,8 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        10.0, 10.0, 10.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
                         widget!.blogDescription,
@@ -333,8 +341,73 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 0.0),
+                    padding: const EdgeInsets.only(top: 10.0),
+                    child: Builder(
+                      builder: (context) {
+                        final tags = widget!.blogTag?.toList() ?? [];
+
+                        return Wrap(
+                          spacing: 10.0,
+                          runSpacing: 0.0,
+                          alignment: WrapAlignment.start,
+                          crossAxisAlignment: WrapCrossAlignment.start,
+                          direction: Axis.horizontal,
+                          runAlignment: WrapAlignment.start,
+                          verticalDirection: VerticalDirection.down,
+                          clipBehavior: Clip.none,
+                          children: List.generate(tags.length, (tagsIndex) {
+                            final tagsItem = tags[tagsIndex];
+                            return Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 10.0, 0.0, 0.0),
+                              child: FFButtonWidget(
+                                onPressed: () {
+                                  print('Button pressed ...');
+                                },
+                                text: valueOrDefault<String>(
+                                  tagsItem,
+                                  'Flutter',
+                                ),
+                                options: FFButtonOptions(
+                                  height: 30.0,
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      24.0, 0.0, 24.0, 0.0),
+                                  iconPadding:
+                                      const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 0.0),
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryBackground,
+                                  textStyle: FlutterFlowTheme.of(context)
+                                      .titleSmall
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .titleSmallFamily,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        fontSize: 14.0,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmallFamily),
+                                      ),
+                                  elevation: 1.0,
+                                  borderSide: BorderSide(
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    width: 1.0,
+                                  ),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                ),
+                              ),
+                            );
+                          }),
+                        );
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        10.0, 30.0, 10.0, 0.0),
                     child: wrapWithModel(
                       model: _model.getInTouchButtonCompModel2,
                       updateCallback: () => setState(() {}),

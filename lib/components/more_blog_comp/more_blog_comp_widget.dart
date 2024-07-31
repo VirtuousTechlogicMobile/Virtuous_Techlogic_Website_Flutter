@@ -161,230 +161,247 @@ class _MoreBlogCompWidgetState extends State<MoreBlogCompWidget> {
                           return Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0, 0, 100, 0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0, 30, 0, 0),
-                                  child: FlutterFlowChoiceChips(
-                                    options: _model.blogtagsResult!
-                                        .sortedList(
-                                            keyOf: (e) => e.index, desc: false)
-                                        .map((e) => valueOrDefault<String>(
-                                              e.tag,
-                                              'N/A',
-                                            ))
-                                        .toList()
-                                        .map((label) => ChipData(label))
-                                        .toList(),
-                                    onChanged: (val) async {
-                                      setState(() =>
-                                          _model.choiceChipsValues1 = val);
-                                      logFirebaseEvent(
-                                          'MORE_BLOG_ChoiceChips_grt9g9nv_ON_FORM_W');
-                                      _model.listOfBlogTag = _model
-                                          .choiceChipsValues1!
+                            child: SingleChildScrollView(
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Padding(
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 30, 0, 0),
+                                    child: FlutterFlowChoiceChips(
+                                      options: _model.blogtagsResult!
+                                          .sortedList(
+                                              keyOf: (e) => e.index,
+                                              desc: false)
+                                          .map((e) => valueOrDefault<String>(
+                                                e.tag,
+                                                'N/A',
+                                              ))
                                           .toList()
-                                          .cast<String>();
-                                      _model.updatePage(() {});
-                                      _model.selectedblogtagCopy =
-                                          await queryBlogDetailsRecordOnce(
-                                        queryBuilder: (blogDetailsRecord) =>
-                                            blogDetailsRecord
-                                                .whereArrayContainsAny(
-                                                    'blog_tags',
-                                                    _model.choiceChipsValues1),
-                                      );
-                                      _model.blogDetails = _model
-                                          .selectedblogtagCopy!
-                                          .toList()
-                                          .cast<BlogDetailsRecord>();
-                                      _model.updatePage(() {});
+                                          .map((label) => ChipData(label))
+                                          .toList(),
+                                      onChanged: (val) async {
+                                        setState(() =>
+                                            _model.choiceChipsValues1 = val);
+                                        logFirebaseEvent(
+                                            'MORE_BLOG_ChoiceChips_grt9g9nv_ON_FORM_W');
+                                        _model.listOfBlogTag = _model
+                                            .choiceChipsValues1!
+                                            .toList()
+                                            .cast<String>();
+                                        _model.updatePage(() {});
+                                        _model.selectedblogtagCopy =
+                                            await queryBlogDetailsRecordOnce(
+                                          queryBuilder: (blogDetailsRecord) =>
+                                              blogDetailsRecord
+                                                  .whereArrayContainsAny(
+                                                      'blog_tags',
+                                                      _model
+                                                          .choiceChipsValues1),
+                                        );
+                                        _model.blogDetails = _model
+                                            .selectedblogtagCopy!
+                                            .toList()
+                                            .cast<BlogDetailsRecord>();
+                                        _model.updatePage(() {});
 
-                                      setState(() {});
-                                    },
-                                    selectedChipStyle: ChipStyle(
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context).primary,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryBackground,
-                                            letterSpacing: 0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily),
-                                          ),
-                                      iconColor: FlutterFlowTheme.of(context)
-                                          .primaryBackground,
-                                      iconSize: 14,
-                                      elevation: 0,
-                                      borderRadius: BorderRadius.circular(12),
-                                    ),
-                                    unselectedChipStyle: ChipStyle(
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .secondaryBackground,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMediumFamily,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
-                                            letterSpacing: 0,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily),
-                                          ),
-                                      iconColor: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      iconSize: 18,
-                                      elevation: 1,
-                                      borderColor:
-                                          FlutterFlowTheme.of(context).primary,
-                                      borderWidth: 1.2,
-                                      borderRadius: BorderRadius.circular(16),
-                                    ),
-                                    chipSpacing: 12,
-                                    rowSpacing: 12,
-                                    multiselect: true,
-                                    initialized:
-                                        _model.choiceChipsValues1 != null,
-                                    alignment: WrapAlignment.spaceBetween,
-                                    controller:
-                                        _model.choiceChipsValueController1 ??=
-                                            FormFieldController<List<String>>(
-                                      _model.listOfBlogTag,
-                                    ),
-                                    wrapped: true,
-                                  ),
-                                ),
-                                if (_model.choiceChipsValues1 != null &&
-                                    (_model.choiceChipsValues1)!.isNotEmpty)
-                                  Flexible(
-                                    child: Padding(
-                                      padding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              12, 0, 0, 0),
-                                      child: FlutterFlowChoiceChips(
-                                        options: const [
-                                          ChipData('Clear Filters', Icons.close)
-                                        ],
-                                        onChanged: (val) async {
-                                          setState(() =>
-                                              _model.choiceChipsValue2 =
-                                                  val?.firstOrNull);
-                                          logFirebaseEvent(
-                                              'MORE_BLOG_ChoiceChips_euerd83f_ON_FORM_W');
-                                          setState(() {
-                                            _model.choiceChipsValueController1
-                                                ?.reset();
-                                          });
-                                          _model.blogDetailsTresetValueCopy =
-                                              await queryBlogDetailsRecordOnce(
-                                            queryBuilder: (blogDetailsRecord) =>
-                                                blogDetailsRecord.where(
-                                              'status',
-                                              isEqualTo: true,
+                                        setState(() {});
+                                      },
+                                      selectedChipStyle: ChipStyle(
+                                        backgroundColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBackground,
+                                              letterSpacing: 0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMediumFamily),
                                             ),
-                                          );
-                                          _model.blogDetails = _model
-                                              .blogDetailsTresetValueCopy!
-                                              .toList()
-                                              .cast<BlogDetailsRecord>();
-                                          setState(() {});
+                                        iconColor: FlutterFlowTheme.of(context)
+                                            .primaryBackground,
+                                        iconSize: 14,
+                                        elevation: 0,
+                                        borderRadius: BorderRadius.circular(12),
+                                      ),
+                                      unselectedChipStyle: ChipStyle(
+                                        backgroundColor:
+                                            FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                        textStyle: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMediumFamily,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              letterSpacing: 0,
+                                              useGoogleFonts: GoogleFonts
+                                                      .asMap()
+                                                  .containsKey(
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMediumFamily),
+                                            ),
+                                        iconColor: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        iconSize: 18,
+                                        elevation: 1,
+                                        borderColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                        borderWidth: 1.2,
+                                        borderRadius: BorderRadius.circular(16),
+                                      ),
+                                      chipSpacing: 12,
+                                      rowSpacing: 12,
+                                      multiselect: true,
+                                      initialized:
+                                          _model.choiceChipsValues1 != null,
+                                      alignment: WrapAlignment.spaceBetween,
+                                      controller:
+                                          _model.choiceChipsValueController1 ??=
+                                              FormFieldController<List<String>>(
+                                        _model.listOfBlogTag,
+                                      ),
+                                      wrapped: true,
+                                    ),
+                                  ),
+                                  if (_model.choiceChipsValues1 != null &&
+                                      (_model.choiceChipsValues1)!.isNotEmpty)
+                                    Flexible(
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(12, 0, 0, 0),
+                                        child: FlutterFlowChoiceChips(
+                                          options: const [
+                                            ChipData(
+                                                'Clear Filters', Icons.close)
+                                          ],
+                                          onChanged: (val) async {
+                                            setState(() =>
+                                                _model.choiceChipsValue2 =
+                                                    val?.firstOrNull);
+                                            logFirebaseEvent(
+                                                'MORE_BLOG_ChoiceChips_euerd83f_ON_FORM_W');
+                                            setState(() {
+                                              _model.choiceChipsValueController1
+                                                  ?.reset();
+                                            });
+                                            _model.blogDetailsTresetValueCopy =
+                                                await queryBlogDetailsRecordOnce(
+                                              queryBuilder:
+                                                  (blogDetailsRecord) =>
+                                                      blogDetailsRecord.where(
+                                                'status',
+                                                isEqualTo: true,
+                                              ),
+                                            );
+                                            _model.blogDetails = _model
+                                                .blogDetailsTresetValueCopy!
+                                                .toList()
+                                                .cast<BlogDetailsRecord>();
+                                            setState(() {});
 
-                                          setState(() {});
-                                        },
-                                        selectedChipStyle: ChipStyle(
-                                          backgroundColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primary,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
-                                                letterSpacing: 0,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily),
-                                              ),
-                                          iconColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryBackground,
-                                          iconSize: 14,
-                                          elevation: 0,
-                                          borderRadius:
-                                              BorderRadius.circular(16),
+                                            setState(() {});
+                                          },
+                                          selectedChipStyle: ChipStyle(
+                                            backgroundColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primary,
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMediumFamily,
+                                                      color: FlutterFlowTheme
+                                                              .of(context)
+                                                          .primaryBackground,
+                                                      letterSpacing: 0,
+                                                      useGoogleFonts: GoogleFonts
+                                                              .asMap()
+                                                          .containsKey(
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily),
+                                                    ),
+                                            iconColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryBackground,
+                                            iconSize: 14,
+                                            elevation: 0,
+                                            borderRadius:
+                                                BorderRadius.circular(16),
+                                          ),
+                                          unselectedChipStyle: ChipStyle(
+                                            backgroundColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .secondaryBackground,
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyMedium
+                                                    .override(
+                                                      fontFamily:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMediumFamily,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .secondaryText,
+                                                      letterSpacing: 0,
+                                                      useGoogleFonts: GoogleFonts
+                                                              .asMap()
+                                                          .containsKey(
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .bodyMediumFamily),
+                                                    ),
+                                            iconColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primaryText,
+                                            iconSize: 14,
+                                            elevation: 0,
+                                            borderColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .primary,
+                                            borderWidth: 1.2,
+                                            borderRadius:
+                                                BorderRadius.circular(16),
+                                          ),
+                                          chipSpacing: 12,
+                                          rowSpacing: 12,
+                                          multiselect: false,
+                                          alignment: WrapAlignment.start,
+                                          controller: _model
+                                                  .choiceChipsValueController2 ??=
+                                              FormFieldController<List<String>>(
+                                            [],
+                                          ),
+                                          wrapped: true,
                                         ),
-                                        unselectedChipStyle: ChipStyle(
-                                          backgroundColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryBackground,
-                                          textStyle: FlutterFlowTheme.of(
-                                                  context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMediumFamily,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                letterSpacing: 0,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyMediumFamily),
-                                              ),
-                                          iconColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryText,
-                                          iconSize: 14,
-                                          elevation: 0,
-                                          borderColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primary,
-                                          borderWidth: 1.2,
-                                          borderRadius:
-                                              BorderRadius.circular(16),
-                                        ),
-                                        chipSpacing: 12,
-                                        rowSpacing: 12,
-                                        multiselect: false,
-                                        alignment: WrapAlignment.start,
-                                        controller: _model
-                                                .choiceChipsValueController2 ??=
-                                            FormFieldController<List<String>>(
-                                          [],
-                                        ),
-                                        wrapped: true,
                                       ),
                                     ),
-                                  ),
-                              ],
+                                ],
+                              ),
                             ),
                           );
                         } else {
