@@ -1,12 +1,14 @@
-import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '/backend/backend.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'about_us_comp_model.dart';
+
 export 'about_us_comp_model.dart';
 
 class AboutUsCompWidget extends StatefulWidget {
@@ -96,9 +98,9 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
                 child: custom_widgets.RichText(
                   width: double.infinity,
                   height: MediaQuery.sizeOf(context).height * 0.1,
-                  text1: widget!.richText1,
-                  text2: widget!.richText2,
-                  text3: widget!.richText3,
+                  text1: widget.richText1 ?? '',
+                  text2: widget.richText2 ?? '',
+                  text3: widget.richText3 ?? '',
                   color1: FlutterFlowTheme.of(context).primaryText,
                   color2: FlutterFlowTheme.of(context).primary,
                   color3: FlutterFlowTheme.of(context).primaryText,

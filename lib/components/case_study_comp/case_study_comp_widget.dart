@@ -18,11 +18,8 @@ class CaseStudyCompWidget extends StatefulWidget {
   State<CaseStudyCompWidget> createState() => _CaseStudyCompWidgetState();
 }
 
-class _CaseStudyCompWidgetState extends State<CaseStudyCompWidget>
-    with TickerProviderStateMixin {
+class _CaseStudyCompWidgetState extends State<CaseStudyCompWidget> {
   late CaseStudyCompModel _model;
-
-  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void setState(VoidCallback callback) {
@@ -34,21 +31,6 @@ class _CaseStudyCompWidgetState extends State<CaseStudyCompWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => CaseStudyCompModel());
-
-    animationsMap.addAll({
-      'commonRichTextCompOnPageLoadAnimation': AnimationInfo(
-        trigger: AnimationTrigger.onPageLoad,
-        effectsBuilder: () => [
-          FadeEffect(
-            curve: Curves.easeInOut,
-            delay: 200.0.ms,
-            duration: 800.0.ms,
-            begin: 0.0,
-            end: 1.0,
-          ),
-        ],
-      ),
-    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }

@@ -147,83 +147,16 @@ class _OurCustomerSaysCompWidgetState extends State<OurCustomerSaysCompWidget> {
           }(),
           false,
         )) {
-          return Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SelectionArea(
-                      child: Text(
-                    'Happy ',
-                    style: FlutterFlowTheme.of(context).displayMedium.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).displayMediumFamily,
-                          fontSize: () {
-                            if (MediaQuery.sizeOf(context).width <
-                                kBreakpointSmall) {
-                              return 30.0;
-                            } else if (MediaQuery.sizeOf(context).width <
-                                kBreakpointMedium) {
-                              return 48.0;
-                            } else if (MediaQuery.sizeOf(context).width <
-                                kBreakpointLarge) {
-                              return 48.0;
-                            } else {
-                              return 48.0;
-                            }
-                          }(),
-                          letterSpacing: 0.0,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).displayMediumFamily),
-                        ),
-                  )),
-                  SelectionArea(
-                      child: Text(
-                    'Clients',
-                    style: FlutterFlowTheme.of(context).displayMedium.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).displayMediumFamily,
-                          color: FlutterFlowTheme.of(context).primary,
-                          fontSize: () {
-                            if (MediaQuery.sizeOf(context).width <
-                                kBreakpointSmall) {
-                              return 30.0;
-                            } else if (MediaQuery.sizeOf(context).width <
-                                kBreakpointMedium) {
-                              return 48.0;
-                            } else if (MediaQuery.sizeOf(context).width <
-                                kBreakpointLarge) {
-                              return 48.0;
-                            } else {
-                              return 48.0;
-                            }
-                          }(),
-                          letterSpacing: 0.0,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).displayMediumFamily),
-                        ),
-                  )),
-                ],
-              ),
-              wrapWithModel(
-                model: _model.customerReviewCompMobileModel2,
-                updateCallback: () => setState(() {}),
-                child: const CustomerReviewCompMobileWidget(),
-              ),
-            ].divide(const SizedBox(height: 40.0)),
-          );
-        } else {
-          return Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              SelectionArea(
-                child: Row(
+          return SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    SelectionArea(
+                        child: Text(
                       'Happy ',
                       style:
                           FlutterFlowTheme.of(context).displayMedium.override(
@@ -248,8 +181,9 @@ class _OurCustomerSaysCompWidgetState extends State<OurCustomerSaysCompWidget> {
                                     FlutterFlowTheme.of(context)
                                         .displayMediumFamily),
                               ),
-                    ),
-                    Text(
+                    )),
+                    SelectionArea(
+                        child: Text(
                       'Clients',
                       style:
                           FlutterFlowTheme.of(context).displayMedium.override(
@@ -275,16 +209,92 @@ class _OurCustomerSaysCompWidgetState extends State<OurCustomerSaysCompWidget> {
                                     FlutterFlowTheme.of(context)
                                         .displayMediumFamily),
                               ),
-                    ),
+                    )),
                   ],
                 ),
-              ),
-              wrapWithModel(
-                model: _model.customerReviewCompModel,
-                updateCallback: () => setState(() {}),
-                child: const CustomerReviewCompWidget(),
-              ),
-            ].divide(const SizedBox(height: 40.0)),
+                wrapWithModel(
+                  model: _model.customerReviewCompMobileModel2,
+                  updateCallback: () => setState(() {}),
+                  child: const CustomerReviewCompMobileWidget(),
+                ),
+              ].divide(const SizedBox(height: 40.0)),
+            ),
+          );
+        } else {
+          return SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                SelectionArea(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Happy ',
+                        style: FlutterFlowTheme.of(context)
+                            .displayMedium
+                            .override(
+                              fontFamily: FlutterFlowTheme.of(context)
+                                  .displayMediumFamily,
+                              fontSize: () {
+                                if (MediaQuery.sizeOf(context).width <
+                                    kBreakpointSmall) {
+                                  return 30.0;
+                                } else if (MediaQuery.sizeOf(context).width <
+                                    kBreakpointMedium) {
+                                  return 48.0;
+                                } else if (MediaQuery.sizeOf(context).width <
+                                    kBreakpointLarge) {
+                                  return 48.0;
+                                } else {
+                                  return 48.0;
+                                }
+                              }(),
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .displayMediumFamily),
+                            ),
+                      ),
+                      Text(
+                        'Clients',
+                        style: FlutterFlowTheme.of(context)
+                            .displayMedium
+                            .override(
+                              fontFamily: FlutterFlowTheme.of(context)
+                                  .displayMediumFamily,
+                              color: FlutterFlowTheme.of(context).primary,
+                              fontSize: () {
+                                if (MediaQuery.sizeOf(context).width <
+                                    kBreakpointSmall) {
+                                  return 30.0;
+                                } else if (MediaQuery.sizeOf(context).width <
+                                    kBreakpointMedium) {
+                                  return 48.0;
+                                } else if (MediaQuery.sizeOf(context).width <
+                                    kBreakpointLarge) {
+                                  return 48.0;
+                                } else {
+                                  return 48.0;
+                                }
+                              }(),
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .displayMediumFamily),
+                            ),
+                      ),
+                    ],
+                  ),
+                ),
+                wrapWithModel(
+                  model: _model.customerReviewCompModel,
+                  updateCallback: () => setState(() {}),
+                  child: const CustomerReviewCompWidget(),
+                ),
+              ].divide(const SizedBox(height: 40.0)),
+            ),
           );
         }
       },

@@ -1,12 +1,13 @@
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
 import '/backend/backend.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/components/explore_our_product_comp/explore_our_product_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'explore_product_comp_model.dart';
+
 export 'explore_product_comp_model.dart';
 
 class ExploreProductCompWidget extends StatefulWidget {
@@ -46,7 +47,6 @@ class _ExploreProductCompWidgetState extends State<ExploreProductCompWidget> {
     context.watch<FFAppState>();
 
     return Container(
-      decoration: BoxDecoration(),
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -54,7 +54,7 @@ class _ExploreProductCompWidgetState extends State<ExploreProductCompWidget> {
             wrapWithModel(
               model: _model.commonRichTextCompModel,
               updateCallback: () => setState(() {}),
-              child: CommonRichTextCompWidget(
+              child: const CommonRichTextCompWidget(
                 richTextOne: 'Other ',
                 richTextTwo: ' Products',
                 texts:
@@ -74,7 +74,6 @@ class _ExploreProductCompWidgetState extends State<ExploreProductCompWidget> {
                     ),
               ),
               builder: (context, snapshot) {
-                // Customize what your widget looks like when it's loading.
                 if (!snapshot.hasData) {
                   return Center(
                     child: SizedBox(
@@ -99,8 +98,8 @@ class _ExploreProductCompWidgetState extends State<ExploreProductCompWidget> {
                       final columnBuildProductRecord =
                           columnBuildProductRecordList[columnIndex];
                       return Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 30.0, 0.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -124,7 +123,7 @@ class _ExploreProductCompWidgetState extends State<ExploreProductCompWidget> {
                               }.withoutNulls,
                               extra: <String, dynamic>{
                                 'productRef': columnBuildProductRecord,
-                                kTransitionInfoKey: TransitionInfo(
+                                kTransitionInfoKey: const TransitionInfo(
                                   hasTransition: true,
                                   transitionType: PageTransitionType.fade,
                                   duration: Duration(milliseconds: 0),
@@ -164,7 +163,7 @@ class _ExploreProductCompWidgetState extends State<ExploreProductCompWidget> {
                                 }.withoutNulls,
                                 extra: <String, dynamic>{
                                   'productRef': columnBuildProductRecord,
-                                  kTransitionInfoKey: TransitionInfo(
+                                  kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
                                     transitionType: PageTransitionType.fade,
                                     duration: Duration(milliseconds: 0),
@@ -179,7 +178,7 @@ class _ExploreProductCompWidgetState extends State<ExploreProductCompWidget> {
                           ),
                         ),
                       );
-                    }).divide(SizedBox(height: 10.0)),
+                    }).divide(const SizedBox(height: 10.0)),
                   ),
                 );
               },

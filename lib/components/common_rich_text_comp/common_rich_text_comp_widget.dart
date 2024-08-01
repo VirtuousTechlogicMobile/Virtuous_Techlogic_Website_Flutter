@@ -1,8 +1,10 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'common_rich_text_comp_model.dart';
+
 export 'common_rich_text_comp_model.dart';
 
 class CommonRichTextCompWidget extends StatefulWidget {
@@ -145,6 +147,59 @@ class _CommonRichTextCompWidgetState extends State<CommonRichTextCompWidget> {
               ],
             ),
           ),
+    Stack(
+    children: [
+    if (responsiveVisibility(
+    context: context,
+    tabletLandscape: false,
+    desktop: false,
+    ))
+    Row(
+    mainAxisSize: MainAxisSize.max,
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+    Padding(
+    padding: EdgeInsetsDirectional.fromSTEB(0, 70, 0, 0),
+    child: Container(
+    decoration: BoxDecoration(
+    color: Color(0xFFD2E8F6),
+    boxShadow: const [
+    BoxShadow(
+    blurRadius: 200,
+    color: Color(0xFFD2E5F2),
+    offset: Offset(
+    0.0,
+    0,
+    ),
+    spreadRadius: 150,
+    )
+    ],
+    borderRadius: BorderRadius.circular(500),
+    ),
+    ),
+    ),
+    Padding(
+    padding: EdgeInsetsDirectional.fromSTEB(0, 70, 0, 0),
+    child: Container(
+    decoration: BoxDecoration(
+    color: Color(0xFFF8E5CB),
+    boxShadow: const [
+    BoxShadow(
+    blurRadius: 200,
+    color: Color(0xFFF4E3C8),
+    offset: Offset(
+    15,
+    0,
+    ),
+    spreadRadius: 150,
+    )
+    ],
+    borderRadius: BorderRadius.circular(500),
+    ),
+    ),
+    ),
+    ],
+    ),
         if (responsiveVisibility(
           context: context,
           tabletLandscape: false,
@@ -251,8 +306,8 @@ class _CommonRichTextCompWidgetState extends State<CommonRichTextCompWidget> {
                   )),
                 ),
               ),
-            ],
-          ),
+          ],
+        ),
       ],
     );
   }
