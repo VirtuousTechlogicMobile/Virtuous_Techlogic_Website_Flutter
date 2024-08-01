@@ -236,6 +236,7 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget>
                             children: [
                               Row(
                                 mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
                                 children: [

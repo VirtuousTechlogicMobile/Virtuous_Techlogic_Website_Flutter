@@ -161,7 +161,7 @@ class _IndividualProductPageWidgetState
                                             _model.ourProductDetailCompModel1,
                                         updateCallback: () => setState(() {}),
                                         child: OurProductDetailCompWidget(
-                                          imagepath: widget.productRef?.image,
+                                          imagePath: widget.productRef?.image,
                                           title: widget.productRef?.title ?? '',
                                           description:
                                               widget.productRef?.description ??
@@ -246,7 +246,7 @@ class _IndividualProductPageWidgetState
                                               _model.ourProductDetailCompModel2,
                                           updateCallback: () => setState(() {}),
                                           child: OurProductDetailCompWidget(
-                                            imagepath: widget.productRef?.image,
+                                            imagePath: widget.productRef?.image,
                                             title:
                                                 widget.productRef?.title ?? '',
                                             description: widget
@@ -315,7 +315,7 @@ class _IndividualProductPageWidgetState
                                               _model.ourProductDetailCompModel3,
                                           updateCallback: () => setState(() {}),
                                           child: OurProductDetailCompWidget(
-                                            imagepath:
+                                            imagePath:
                                                 widget.productRef?.image ?? '',
                                             title: widget.productRef?.title ??
                                                 "title",
