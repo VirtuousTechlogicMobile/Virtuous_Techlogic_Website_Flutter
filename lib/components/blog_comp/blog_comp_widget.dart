@@ -361,9 +361,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
-                                },
+                                onPressed: () {},
                                 text: valueOrDefault<String>(
                                   tagsItem,
                                   'Flutter',

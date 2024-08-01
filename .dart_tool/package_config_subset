@@ -95,9 +95,9 @@ device_info_plus
 file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_plus-9.1.2/
 file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_plus-9.1.2/lib/
 device_info_plus_platform_interface
-2.12
-file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_plus_platform_interface-7.0.0/
-file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_plus_platform_interface-7.0.0/lib/
+2.18
+file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_plus_platform_interface-7.0.1/
+file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/device_info_plus_platform_interface-7.0.1/lib/
 diff_match_patch
 2.12
 file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/diff_match_patch-0.4.1/
@@ -583,9 +583,9 @@ win32
 file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.5.1/
 file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/win32-5.5.1/lib/
 win32_registry
-3.3
-file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/win32_registry-1.1.3/
-file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/win32_registry-1.1.3/lib/
+3.4
+file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/win32_registry-1.1.4/
+file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/win32_registry-1.1.4/lib/
 xdg_directories
 3.0
 file:///C:/Users/user/AppData/Local/Pub/Cache/hosted/pub.dev/xdg_directories-1.0.4/
@@ -620,6 +620,6 @@ file:///C:/Users/user/Documents/sdks/3.22.3/packages/flutter_web_plugins/
 file:///C:/Users/user/Documents/sdks/3.22.3/packages/flutter_web_plugins/lib/
 virtuous_techlogic_website
 3.0
-file:///D:/FlutterFlow/virtuous_techlogic_website/
-file:///D:/FlutterFlow/virtuous_techlogic_website/lib/
+file:///D:/virtuous_website/Virtuous_Techlogic_Website_Flutter/
+file:///D:/virtuous_website/Virtuous_Techlogic_Website_Flutter/lib/
 2

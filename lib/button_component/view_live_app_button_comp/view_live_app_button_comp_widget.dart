@@ -1,9 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'view_live_app_button_comp_model.dart';
+
 export 'view_live_app_button_comp_model.dart';
 
 class ViewLiveAppButtonCompWidget extends StatefulWidget {
@@ -50,7 +52,7 @@ class _ViewLiveAppButtonCompWidgetState
       onPressed: () {
         print('Button pressed ...');
       },
-      text: widget!.viewLiveApp!,
+      text: widget.viewLiveApp ?? '',
       icon: Icon(
         Icons.arrow_outward,
         size: 15.0,

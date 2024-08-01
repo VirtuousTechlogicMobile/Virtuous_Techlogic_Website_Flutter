@@ -231,30 +231,98 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget>
                           ),
                         ),
                         Expanded(
-                          child: SingleChildScrollView(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      30.0, 30.0, 30.0, 0.0),
-                                  child: wrapWithModel(
-                                    model: _model.caseStudyCompModel3,
-                                    updateCallback: () => setState(() {}),
-                                    child: const CaseStudyCompWidget(),
+                          child: Stack(
+                            alignment: Alignment.topCenter,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  Expanded(
+                                    child: Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              80, 400, 0, 0),
+                                      child: Container(
+                                        height: 200,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFFD2E8F6),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 100,
+                                              color: Color(0xFFD2E5F2),
+                                              offset: Offset(
+                                                0.0,
+                                                0,
+                                              ),
+                                              spreadRadius: 100,
+                                            )
+                                          ],
+                                          borderRadius:
+                                              BorderRadius.circular(500),
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 50.0, 0.0, 0.0),
-                                  child: wrapWithModel(
-                                    model: _model.footerCompModel3,
-                                    updateCallback: () => setState(() {}),
-                                    child: const FooterCompWidget(),
+                                  Expanded(
+                                    child: Container(
+                                      decoration: const BoxDecoration(),
+                                      child: Padding(
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(0, 50, 300, 0),
+                                        child: Container(
+                                          height: 350,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFF8E5CB),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 100,
+                                                color: Color(0xFFF4E3C8),
+                                                offset: Offset(
+                                                  15,
+                                                  0,
+                                                ),
+                                                spreadRadius: 80,
+                                              )
+                                            ],
+                                            borderRadius:
+                                                BorderRadius.circular(500),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                   ),
+                                ],
+                              ),
+                              SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              30.0, 30.0, 30.0, 0.0),
+                                      child: wrapWithModel(
+                                        model: _model.caseStudyCompModel3,
+                                        updateCallback: () => setState(() {}),
+                                        child: const CaseStudyCompWidget(),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 50.0, 0.0, 0.0),
+                                      child: wrapWithModel(
+                                        model: _model.footerCompModel3,
+                                        updateCallback: () => setState(() {}),
+                                        child: const FooterCompWidget(),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
