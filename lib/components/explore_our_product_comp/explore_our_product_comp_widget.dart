@@ -76,6 +76,7 @@ class _ExploreOurProductCompWidgetState
                 children: [
                   if (widget!.isLeftsideText)
                     Expanded(
+                      flex: 5,
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
@@ -162,22 +163,26 @@ class _ExploreOurProductCompWidgetState
                     context: context,
                     phone: false,
                   ))
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20.0),
-                      child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 0),
-                        fadeOutDuration: Duration(milliseconds: 0),
-                        imageUrl: widget!.imagePath!,
-                        width: 590.0,
-                        height: 280.0,
-                        fit: BoxFit.fill,
+                    Expanded(
+                      flex: 5,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: CachedNetworkImage(
+                          fadeInDuration: Duration(milliseconds: 0),
+                          fadeOutDuration: Duration(milliseconds: 0),
+                          imageUrl: widget!.imagePath!,
+                          // width: 590.0,
+                          // height: 280.0,
+                          fit: BoxFit.fill,
+                        ),
                       ),
                     ),
                   if (!widget!.isLeftsideText)
                     Expanded(
+                      flex: 5,
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,

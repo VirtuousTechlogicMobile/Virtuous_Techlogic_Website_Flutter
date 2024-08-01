@@ -14,7 +14,7 @@ class BredCrumbsUrl extends StatefulWidget {
     this.title,
     this.webOnPressEvent,
     this.bredcrumbsIcon,
-    this.pageOnPressevent,
+    this.pageOnPressEvent,
     this.webColor,
     this.pageColor,
     this.titleColor,
@@ -28,7 +28,7 @@ class BredCrumbsUrl extends StatefulWidget {
   final String? title;
   final Future Function()? webOnPressEvent;
   final String? bredcrumbsIcon;
-  final Future Function()? pageOnPressevent;
+  final Future Function()? pageOnPressEvent;
   final Color? webColor;
   final Color? pageColor;
   final Color? titleColor;
@@ -47,7 +47,7 @@ class _BredCrumbsUrlState extends State<BredCrumbsUrl> {
         children: [
           Flexible(
             flex: 1,
-            child: GestureDetector(
+            child: InkWell(
               onTap: widget.webOnPressEvent,
               child: AutoSizeText(
                 widget.webName ?? 'webname',
@@ -79,8 +79,8 @@ class _BredCrumbsUrlState extends State<BredCrumbsUrl> {
             ),
           ),
           Flexible(
-            child: GestureDetector(
-              onTap: widget.pageOnPressevent,
+            child: InkWell(
+              onTap: widget.pageOnPressEvent,
               child: AutoSizeText(
                 maxFontSize: 15,
                 minFontSize: 5,
@@ -120,7 +120,7 @@ class _BredCrumbsUrlState extends State<BredCrumbsUrl> {
                   ),
             ),
           ),
-        ].divide(SizedBox(width: 8)),
+        ].divide(const SizedBox(width: 8)),
       ),
     );
   }

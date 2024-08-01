@@ -5,7 +5,6 @@ import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'hiring_comp_model.dart';
 export 'hiring_comp_model.dart';
 
@@ -64,7 +63,7 @@ class _HiringCompWidgetState extends State<HiringCompWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         boxShadow: [
           BoxShadow(
             blurRadius: 50.0,
@@ -76,17 +75,18 @@ class _HiringCompWidgetState extends State<HiringCompWidget> {
           )
         ],
       ),
-      child: Container(
+      child: SizedBox(
         width: 387.0,
         height: 430.0,
         child: Stack(
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+              padding:
+                  const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
               child: Container(
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       blurRadius: 4.0,
                       color: Color(0x33000000),
@@ -103,11 +103,11 @@ class _HiringCompWidgetState extends State<HiringCompWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(5.0, 55.0, 5.0, 16.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          5.0, 55.0, 5.0, 16.0),
                       child: SelectionArea(
                           child: Text(
-                        widget!.jobTitle!,
+                        widget.jobTitle!,
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: FlutterFlowTheme.of(context)
@@ -122,107 +122,107 @@ class _HiringCompWidgetState extends State<HiringCompWidget> {
                     ),
                     Expanded(
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            10.0, 0.0, 0.0, 0.0),
                         child: wrapWithModel(
                           model: _model.expectationCompModel1,
                           updateCallback: () => setState(() {}),
                           child: ExpectationCompWidget(
-                            description: widget!.expectation!,
+                            description: widget.expectation!,
                           ),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            10.0, 0.0, 0.0, 0.0),
                         child: wrapWithModel(
                           model: _model.expectationCompModel2,
                           updateCallback: () => setState(() {}),
                           child: ExpectationCompWidget(
-                            description: widget!.expectation2!,
+                            description: widget.expectation2!,
                           ),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            10.0, 0.0, 0.0, 0.0),
                         child: wrapWithModel(
                           model: _model.expectationCompModel3,
                           updateCallback: () => setState(() {}),
                           child: ExpectationCompWidget(
-                            description: widget!.expectation3!,
+                            description: widget.expectation3!,
                           ),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            10.0, 0.0, 0.0, 0.0),
                         child: wrapWithModel(
                           model: _model.expectationCompModel4,
                           updateCallback: () => setState(() {}),
                           child: ExpectationCompWidget(
-                            description: widget!.expectation4!,
+                            description: widget.expectation4!,
                           ),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            10.0, 0.0, 0.0, 0.0),
                         child: wrapWithModel(
                           model: _model.expectationCompModel5,
                           updateCallback: () => setState(() {}),
                           child: ExpectationCompWidget(
-                            description: widget!.expectation5!,
+                            description: widget.expectation5!,
                           ),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            10.0, 0.0, 0.0, 0.0),
                         child: wrapWithModel(
                           model: _model.expectationCompModel6,
                           updateCallback: () => setState(() {}),
                           child: ExpectationCompWidget(
-                            description: widget!.expectation6!,
+                            description: widget.expectation6!,
                           ),
                         ),
                       ),
                     ),
                     Expanded(
                       child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            10.0, 0.0, 0.0, 0.0),
                         child: wrapWithModel(
                           model: _model.expectationCompModel7,
                           updateCallback: () => setState(() {}),
                           child: ExpectationCompWidget(
-                            description: widget!.expectation7!,
+                            description: widget.expectation7!,
                           ),
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 10.0, 0.0, 20.0),
-                        child: Container(
+                        child: SizedBox(
                           width: 150.0,
                           height: 42.0,
                           child: custom_widgets.ShareButton(
                             width: 150.0,
                             height: 42.0,
-                            title: widget!.jobTitle!,
+                            title: widget.jobTitle!,
                           ),
                         ),
                       ),
@@ -241,31 +241,31 @@ class _HiringCompWidgetState extends State<HiringCompWidget> {
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 500),
-                        fadeOutDuration: Duration(milliseconds: 500),
+                        fadeInDuration: const Duration(milliseconds: 500),
+                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: valueOrDefault<String>(
-                          widget!.imagePath,
+                          widget.imagePath,
                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/8w8x2gnlyyl6/customer-service.svg',
                         ),
                         width: 48.0,
                         height: 48.0,
                         fit: BoxFit.cover,
-                        alignment: Alignment(0.0, 0.0),
+                        alignment: const Alignment(0.0, 0.0),
                       ),
                     ),
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: 130.0,
                     height: 20.0,
                     decoration: BoxDecoration(
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         colors: [
                           Color(0x00FFFFFF),
                           Color(0x0A0586E2),
@@ -285,10 +285,10 @@ class _HiringCompWidgetState extends State<HiringCompWidget> {
                         color: Colors.transparent,
                       ),
                     ),
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                   ),
                 ),
-              ].divide(SizedBox(height: 5.0)),
+              ].divide(const SizedBox(height: 5.0)),
             ),
           ],
         ),

@@ -76,18 +76,9 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                   flex: 4,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
-                    child: Image.network(
-                      loadingBuilder: (context, child, loadingProgress) {
-                        if (loadingProgress == null) {
-                          return child;
-                        } else {
-                          return const CircularProgressIndicator();
-                        }
-                      },
-                      valueOrDefault<String>(
-                        widget!.blogimage,
-                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
-                      ),
+                    child: CachedNetworkImage(
+                      imageUrl: widget!.blogimage ??
+                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
                       width: MediaQuery.sizeOf(context).width * 0.35,
                       height: MediaQuery.sizeOf(context).height * 0.3,
                       fit: BoxFit.cover,

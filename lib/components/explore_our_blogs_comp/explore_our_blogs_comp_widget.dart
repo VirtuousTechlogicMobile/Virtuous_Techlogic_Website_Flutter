@@ -62,13 +62,16 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
             alignment: const AlignmentDirectional(0.0, 0.0),
             child: StreamBuilder<List<BlogDetailsRecord>>(
               stream: queryBlogDetailsRecord(
-                queryBuilder: (blogDetailsRecord) => blogDetailsRecord.where(
-                  'status',
-                  isEqualTo: true,
-                ),
+                queryBuilder: (blogDetailsRecord) {
+                  return blogDetailsRecord.where(
+                    'status',
+                    isEqualTo: true,
+                  );
+                },
                 limit: 2,
               ),
               builder: (context, snapshot) {
+                print("snapshot.data! = ${snapshot.data!.toString()}");
                 // Customize what your widget looks like when it's loading.
                 if (!snapshot.hasData) {
                   return Center(
@@ -76,6 +79,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                       width: 50.0,
                       height: 50.0,
                       child: CircularProgressIndicator(
+                        color: FlutterFlowTheme.of(context).primary,
                         valueColor: AlwaysStoppedAnimation<Color>(
                           FlutterFlowTheme.of(context).primary,
                         ),

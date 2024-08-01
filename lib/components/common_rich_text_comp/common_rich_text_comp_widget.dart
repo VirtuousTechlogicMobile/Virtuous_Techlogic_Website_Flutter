@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'common_rich_text_comp_model.dart';
 export 'common_rich_text_comp_model.dart';
 
@@ -69,7 +68,7 @@ class _CommonRichTextCompWidgetState extends State<CommonRichTextCompWidget> {
                     SelectionArea(
                         child: Text(
                       valueOrDefault<String>(
-                        widget!.richTextOne,
+                        widget.richTextOne,
                         'Virtuous',
                       ),
                       style:
@@ -90,7 +89,7 @@ class _CommonRichTextCompWidgetState extends State<CommonRichTextCompWidget> {
                       SelectionArea(
                           child: Text(
                         valueOrDefault<String>(
-                          widget!.richTextTwo,
+                          widget.richTextTwo,
                           'Techlogic',
                         ),
                         style:
@@ -104,25 +103,42 @@ class _CommonRichTextCompWidgetState extends State<CommonRichTextCompWidget> {
                                           .displayMediumFamily),
                                 ),
                       )),
-                  ].divide(SizedBox(width: 5.0)),
+                  ].divide(const SizedBox(width: 5.0)),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        20.0, 20.0, 20.0, 0.0),
                     child: SelectionArea(
-                        child: Text(
-                      widget!.texts!,
-                      textAlign: TextAlign.center,
-                      maxLines: 6,
-                      style: FlutterFlowTheme.of(context).labelLarge.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).labelLargeFamily,
-                            letterSpacing: 0.0,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).labelLargeFamily),
-                          ),
+                        child: SizedBox(
+                      width: () {
+                        if (MediaQuery.sizeOf(context).width <
+                            kBreakpointSmall) {
+                          return 328.0;
+                        } else if (MediaQuery.sizeOf(context).width <
+                            kBreakpointMedium) {
+                          return 590.0;
+                        } else if (MediaQuery.sizeOf(context).width <
+                            kBreakpointLarge) {
+                          return 590.0;
+                        } else {
+                          return 590.0;
+                        }
+                      }(),
+                      child: Text(
+                        widget.texts!,
+                        textAlign: TextAlign.center,
+                        maxLines: 6,
+                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).labelLargeFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .labelLargeFamily),
+                            ),
+                      ),
                     )),
                   ),
                 ),
@@ -142,7 +158,7 @@ class _CommonRichTextCompWidgetState extends State<CommonRichTextCompWidget> {
               SelectionArea(
                   child: Text(
                 valueOrDefault<String>(
-                  widget!.richTextOne,
+                  widget.richTextOne,
                   'Virtuous',
                 ),
                 style: FlutterFlowTheme.of(context).displayMedium.override(
@@ -168,11 +184,11 @@ class _CommonRichTextCompWidgetState extends State<CommonRichTextCompWidget> {
                     ),
               )),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: SelectionArea(
                     child: Text(
                   valueOrDefault<String>(
-                    widget!.richTextTwo,
+                    widget.richTextTwo,
                     'Techlogic',
                   ),
                   textAlign: TextAlign.center,
@@ -201,22 +217,37 @@ class _CommonRichTextCompWidgetState extends State<CommonRichTextCompWidget> {
                 )),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      20.0, 20.0, 20.0, 0.0),
                   child: SelectionArea(
-                      child: Text(
-                    widget!.texts!,
-                    textAlign: TextAlign.center,
-                    maxLines: 6,
-                    style: FlutterFlowTheme.of(context).labelLarge.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).labelLargeFamily,
-                          letterSpacing: 0.0,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).labelLargeFamily),
-                        ),
+                      child: SizedBox(
+                    width: () {
+                      if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                        return 328.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
+                        return 590.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
+                        return 590.0;
+                      } else {
+                        return 590.0;
+                      }
+                    }(),
+                    child: Text(
+                      widget.texts!,
+                      textAlign: TextAlign.center,
+                      maxLines: 6,
+                      style: FlutterFlowTheme.of(context).labelLarge.override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).labelLargeFamily,
+                            letterSpacing: 0.0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).labelLargeFamily),
+                          ),
+                    ),
                   )),
                 ),
               ),

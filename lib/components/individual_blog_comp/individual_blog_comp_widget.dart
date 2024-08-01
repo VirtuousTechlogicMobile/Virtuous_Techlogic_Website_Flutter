@@ -66,7 +66,7 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
           tablet: false,
         ))
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(60, 0, 60, 0),
+            padding: const EdgeInsetsDirectional.fromSTEB(60, 0, 60, 0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -79,14 +79,15 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                       Flexible(
                         flex: 2,
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 30),
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0, 20, 0, 30),
                           child: custom_widgets.BredCrumbsUrl(
                             width: MediaQuery.sizeOf(context).width * 0.8,
                             height: MediaQuery.sizeOf(context).height * 0.05,
                             webName: 'Virtuous Techlogic',
                             pageName: 'Blog',
                             title: valueOrDefault<String>(
-                              widget!.individualBlogTitle,
+                              widget.individualBlogTitle,
                               'blog Title',
                             ),
                             bredcrumbsIcon: '/',
@@ -101,7 +102,7 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
 
                               context.pushNamed('homePage');
                             },
-                            pageOnPressevent: () async {
+                            pageOnPressEvent: () async {
                               logFirebaseEvent(
                                   'INDIVIDUAL_BLOG_Container_jwp4degf_CALLB');
 
@@ -128,12 +129,12 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                                     elevation: 0,
                                     insetPadding: EdgeInsets.zero,
                                     backgroundColor: Colors.transparent,
-                                    alignment: AlignmentDirectional(0, 0)
+                                    alignment: const AlignmentDirectional(0, 0)
                                         .resolve(Directionality.of(context)),
                                     child: Padding(
                                       padding: const EdgeInsets.all(20.0),
                                       child: ShareBlogWidget(
-                                        blogTitle: widget!.individualBlogTitle!,
+                                        blogTitle: widget.individualBlogTitle!,
                                       ),
                                     ),
                                   );
@@ -141,32 +142,35 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                               ).then((value) => setState(() {}));
                             },
                             child: Container(
-                              width: MediaQuery.sizeOf(context).width * 0.02,
-                              height: MediaQuery.sizeOf(context).width * 0.02,
+                              width: 50.0,
+                              height: 50.0,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 border: Border.all(
                                   color: FlutterFlowTheme.of(context).primary,
                                 ),
                               ),
-                              alignment: AlignmentDirectional(0, 0),
-                              child: Icon(
-                                Icons.share,
-                                color: FlutterFlowTheme.of(context).primary,
-                                size: 24,
+                              alignment: const AlignmentDirectional(0, 0),
+                              child: Padding(
+                                padding: const EdgeInsets.all(5.0),
+                                child: Icon(
+                                  Icons.share,
+                                  color: FlutterFlowTheme.of(context).primary,
+                                  size: 24,
+                                ),
                               ),
                             ),
                           ),
                         ),
                       ),
-                    ].addToEnd(SizedBox(width: 15)),
+                    ].addToEnd(const SizedBox(width: 15)),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
                     child: SelectionArea(
                         child: Text(
                       valueOrDefault<String>(
-                        widget!.individualBlogTitle,
+                        widget.individualBlogTitle,
                         'BlogTitle',
                       ),
                       textAlign: TextAlign.start,
@@ -182,19 +186,19 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                     )),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0, 0),
+                    alignment: const AlignmentDirectional(0, 0),
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(20),
                         child: Image.network(
                           loadingBuilder: (context, child, loadingProgress) {
-                            if(loadingProgress ==  null){
+                            if (loadingProgress == null) {
                               return child;
                             } else {
-                              return CircularProgressIndicator();
+                              return const CircularProgressIndicator();
                             }
                           },
                           valueOrDefault<String>(
-                            widget!.individualBlogImage,
+                            widget.individualBlogImage,
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp',
                           ),
                           width: () {
@@ -230,7 +234,7 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                   ),
                   Text(
                     valueOrDefault<String>(
-                      widget!.individualBlogDate,
+                      widget.individualBlogDate,
                       'BlogDate',
                     ),
                     style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -243,12 +247,12 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                         ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: custom_widgets.DisplayQuillToHtml(
                       width: MediaQuery.sizeOf(context).width * 0.8,
                       height: MediaQuery.sizeOf(context).height * 0.1,
                       defaultJsonData: valueOrDefault<String>(
-                        widget!.individualeditdescription,
+                        widget.individualeditdescription,
                         'virtuous',
                       ),
                       isMaxCharacterAllowOrNot: false,
@@ -264,21 +268,21 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
           desktop: false,
         ))
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
+            padding: const EdgeInsetsDirectional.fromSTEB(16, 0, 16, 0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 30),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 20, 0, 30),
                     child: custom_widgets.BredCrumbsUrl(
                       width: MediaQuery.sizeOf(context).width * 0.5,
                       height: MediaQuery.sizeOf(context).height * 0.05,
                       webName: 'Virtuous Techlogic',
                       pageName: 'Blog',
                       title: valueOrDefault<String>(
-                        widget!.individualBlogTitle,
+                        widget.individualBlogTitle,
                         'blog Title',
                       ),
                       bredcrumbsIcon: '/',
@@ -292,7 +296,7 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
 
                         context.pushNamed('homePage');
                       },
-                      pageOnPressevent: () async {
+                      pageOnPressEvent: () async {
                         logFirebaseEvent(
                             'INDIVIDUAL_BLOG_Container_5bg3059l_CALLB');
 
@@ -301,11 +305,11 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 25),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 0, 25),
                     child: SelectionArea(
                         child: AutoSizeText(
                       valueOrDefault<String>(
-                        widget!.individualBlogTitle,
+                        widget.individualBlogTitle,
                         'BlogTitle',
                       ),
                       textAlign: TextAlign.start,
@@ -321,12 +325,12 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                     )),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0, 0),
+                    alignment: const AlignmentDirectional(0, 0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
                       child: Image.network(
                         valueOrDefault<String>(
-                          widget!.individualBlogImage,
+                          widget.individualBlogImage,
                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp',
                         ),
                         width: () {
@@ -367,7 +371,7 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.individualBlogDate,
+                          widget.individualBlogDate,
                           'BlogDate',
                         ),
                         style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -382,7 +386,8 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                       ),
                       Builder(
                         builder: (context) => Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                          padding:
+                              const EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -398,12 +403,12 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                                     elevation: 0,
                                     insetPadding: EdgeInsets.zero,
                                     backgroundColor: Colors.transparent,
-                                    alignment: AlignmentDirectional(0, 0)
+                                    alignment: const AlignmentDirectional(0, 0)
                                         .resolve(Directionality.of(context)),
                                     child: Padding(
                                       padding: const EdgeInsets.all(20.0),
                                       child: ShareBlogWidget(
-                                        blogTitle: widget!.individualBlogTitle!,
+                                        blogTitle: widget.individualBlogTitle!,
                                       ),
                                     ),
                                   );
@@ -411,15 +416,15 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                               ).then((value) => setState(() {}));
                             },
                             child: Container(
-                              width: MediaQuery.sizeOf(context).width * 0.05,
-                              height: MediaQuery.sizeOf(context).width * 0.05,
+                              width: 40,
+                              height: 40,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 border: Border.all(
                                   color: FlutterFlowTheme.of(context).primary,
                                 ),
                               ),
-                              alignment: AlignmentDirectional(0, 0),
+                              alignment: const AlignmentDirectional(0, 0),
                               child: Icon(
                                 Icons.share,
                                 color: FlutterFlowTheme.of(context).primary,
@@ -432,12 +437,12 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                     child: custom_widgets.DisplayQuillToHtml(
                       width: MediaQuery.sizeOf(context).width * 0.8,
                       height: MediaQuery.sizeOf(context).height * 0.1,
                       defaultJsonData: valueOrDefault<String>(
-                        widget!.individualeditdescription,
+                        widget.individualeditdescription,
                         'virtuous',
                       ),
                       isMaxCharacterAllowOrNot: false,

@@ -52,8 +52,8 @@ class _CaseStudyImageCompWidgetState extends State<CaseStudyImageCompWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 1000.0.ms,
-            begin: Offset(0.0, 0.0),
-            end: Offset(1.05, 1.05),
+            begin: const Offset(0.0, 0.0),
+            end: const Offset(1.05, 1.05),
           ),
         ],
       ),
@@ -73,101 +73,120 @@ class _CaseStudyImageCompWidgetState extends State<CaseStudyImageCompWidget>
   Widget build(BuildContext context) {
     return MouseRegion(
       opaque: false,
-      cursor: MouseCursor.defer ?? MouseCursor.defer,
-      child: Container(
-        width: 560.0,
-        decoration: BoxDecoration(),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(24.0),
-              child: CachedNetworkImage(
-                fadeInDuration: Duration(milliseconds: 100),
-                fadeOutDuration: Duration(milliseconds: 100),
-                imageUrl: widget.imagepath!,
-                width: () {
-                  if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
-                    return 328.0;
-                  } else if (MediaQuery.sizeOf(context).width <
-                      kBreakpointMedium) {
-                    return 520.0;
-                  } else if (MediaQuery.sizeOf(context).width <
-                      kBreakpointLarge) {
-                    return 520.0;
-                  } else {
-                    return 520.0;
-                  }
-                }(),
-                height: () {
-                  if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
-                    return 280.0;
-                  } else if (MediaQuery.sizeOf(context).width <
-                      kBreakpointMedium) {
-                    return 400.0;
-                  } else if (MediaQuery.sizeOf(context).width <
-                      kBreakpointLarge) {
-                    return 400.0;
-                  } else {
-                    return 400.0;
-                  }
-                }(),
-                fit: BoxFit.cover,
-              ),
-            ),
-            Flexible(
-              child: Text(
-                widget!.title!,
-                textAlign: TextAlign.start,
-                style: FlutterFlowTheme.of(context).headlineSmall.override(
-                      fontFamily:
-                          FlutterFlowTheme.of(context).headlineSmallFamily,
-                      letterSpacing: 0.0,
-                      useGoogleFonts: GoogleFonts.asMap().containsKey(
-                          FlutterFlowTheme.of(context).headlineSmallFamily),
-                    ),
-              ),
-            ),
-            Builder(
-              builder: (context) {
-                final technology = widget!.technology!.toList();
-
-                return Wrap(
-                  spacing: 8.0,
-                  runSpacing: 5.0,
-                  alignment: WrapAlignment.start,
-                  crossAxisAlignment: WrapCrossAlignment.start,
-                  direction: Axis.horizontal,
-                  runAlignment: WrapAlignment.start,
-                  verticalDirection: VerticalDirection.down,
-                  clipBehavior: Clip.none,
-                  children: List.generate(technology.length, (technologyIndex) {
-                    final technologyItem = technology[technologyIndex];
-                    return Text(
-                      technologyItem,
-                      textAlign: TextAlign.start,
-                      style: FlutterFlowTheme.of(context).labelLarge.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).labelLargeFamily,
-                            letterSpacing: 0.0,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).labelLargeFamily),
-                          ),
-                    );
-                  }),
-                );
-              },
-            ),
-          ].divide(SizedBox(height: 10.0)),
-        ),
-      ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation']!),
+      cursor: MouseCursor.defer,
       onEnter: ((event) async {
         setState(() => _model.mouseRegionHovered = true);
       }),
       onExit: ((event) async {
         setState(() => _model.mouseRegionHovered = false);
       }),
+      child: Container(
+        width: () {
+          if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+            return 328.0;
+          } else if (MediaQuery.sizeOf(context).width < kBreakpointMedium) {
+            return 520.0;
+          } else if (MediaQuery.sizeOf(context).width < kBreakpointLarge) {
+            return 520.0;
+          } else {
+            return 520.0;
+          }
+        }(),
+        decoration: const BoxDecoration(),
+        child: Padding(
+          padding: const EdgeInsets.only(
+            left: 20.0,
+            bottom: 48,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(24.0),
+                child: CachedNetworkImage(
+                  fadeInDuration: const Duration(milliseconds: 100),
+                  fadeOutDuration: const Duration(milliseconds: 100),
+                  imageUrl: widget.imagepath!,
+                  width: () {
+                    if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                      return 328.0;
+                    } else if (MediaQuery.sizeOf(context).width <
+                        kBreakpointMedium) {
+                      return 590.0;
+                    } else if (MediaQuery.sizeOf(context).width <
+                        kBreakpointLarge) {
+                      return 590.0;
+                    } else {
+                      return 590.0;
+                    }
+                  }(),
+                  height: () {
+                    if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                      return 280.0;
+                    } else if (MediaQuery.sizeOf(context).width <
+                        kBreakpointMedium) {
+                      return 480.0;
+                    } else if (MediaQuery.sizeOf(context).width <
+                        kBreakpointLarge) {
+                      return 480.0;
+                    } else {
+                      return 480.0;
+                    }
+                  }(),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              Flexible(
+                child: Text(
+                  widget.title!,
+                  textAlign: TextAlign.start,
+                  style: FlutterFlowTheme.of(context).headlineSmall.override(
+                        fontFamily:
+                            FlutterFlowTheme.of(context).headlineSmallFamily,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                          FlutterFlowTheme.of(context).headlineSmallFamily,
+                        ),
+                      ),
+                ),
+              ),
+              Builder(
+                builder: (context) {
+                  final technology = widget.technology!.toList();
+
+                  return Wrap(
+                    spacing: 8.0,
+                    runSpacing: 5.0,
+                    alignment: WrapAlignment.start,
+                    crossAxisAlignment: WrapCrossAlignment.start,
+                    direction: Axis.horizontal,
+                    runAlignment: WrapAlignment.start,
+                    verticalDirection: VerticalDirection.down,
+                    clipBehavior: Clip.none,
+                    children:
+                        List.generate(technology.length, (technologyIndex) {
+                      final technologyItem = technology[technologyIndex];
+                      return Text(
+                        technologyItem,
+                        textAlign: TextAlign.start,
+                        style: FlutterFlowTheme.of(context).labelLarge.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).labelLargeFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).labelLargeFamily,
+                              ),
+                            ),
+                      );
+                    }),
+                  );
+                },
+              ),
+            ].divide(const SizedBox(height: 10.0)),
+          ),
+        ),
+      ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation']!),
     );
   }
 }

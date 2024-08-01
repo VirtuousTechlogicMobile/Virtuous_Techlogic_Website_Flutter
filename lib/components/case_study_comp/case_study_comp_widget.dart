@@ -71,11 +71,11 @@ class _CaseStudyCompWidgetState extends State<CaseStudyCompWidget>
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
             child: wrapWithModel(
               model: _model.commonRichTextCompModel,
               updateCallback: () => setState(() {}),
-              child: CommonRichTextCompWidget(
+              child: const CommonRichTextCompWidget(
                 richTextOne: 'Explore our ',
                 richTextTwo: 'Case Studies',
                 texts:
@@ -84,76 +84,79 @@ class _CaseStudyCompWidgetState extends State<CaseStudyCompWidget>
             ).animateOnPageLoad(
                 animationsMap['commonRichTextCompOnPageLoadAnimation']!),
           ),
-          StreamBuilder<List<CaseStudiesRecord>>(
-            stream: queryCaseStudiesRecord(
-              queryBuilder: (caseStudiesRecord) => caseStudiesRecord.where(
-                'status',
-                isEqualTo: true,
+          Padding(
+            padding: const EdgeInsets.only(left: 30.0, right: 30.0, top: 45),
+            child: StreamBuilder<List<CaseStudiesRecord>>(
+              stream: queryCaseStudiesRecord(
+                queryBuilder: (caseStudiesRecord) => caseStudiesRecord.where(
+                  'status',
+                  isEqualTo: true,
+                ),
               ),
-            ),
-            builder: (context, snapshot) {
-              // Customize what your widget looks like when it's loading.
-              if (!snapshot.hasData) {
-                return Center(
-                  child: SizedBox(
-                    width: 50.0,
-                    height: 50.0,
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        FlutterFlowTheme.of(context).primary,
+              builder: (context, snapshot) {
+                // Customize what your widget looks like when it's loading.
+                if (!snapshot.hasData) {
+                  return Center(
+                    child: SizedBox(
+                      width: 50.0,
+                      height: 50.0,
+                      child: CircularProgressIndicator(
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                          FlutterFlowTheme.of(context).primary,
+                        ),
                       ),
                     ),
-                  ),
-                );
-              }
-              List<CaseStudiesRecord> wrapCaseStudiesRecordList =
-                  snapshot.data!;
-
-              return Wrap(
-                spacing: 20.0,
-                runSpacing: 30.0,
-                alignment: WrapAlignment.start,
-                crossAxisAlignment: WrapCrossAlignment.start,
-                direction: Axis.horizontal,
-                runAlignment: WrapAlignment.start,
-                verticalDirection: VerticalDirection.down,
-                clipBehavior: Clip.none,
-                children: List.generate(wrapCaseStudiesRecordList.length,
-                    (wrapIndex) {
-                  final wrapCaseStudiesRecord =
-                      wrapCaseStudiesRecordList[wrapIndex];
-                  return InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      logFirebaseEvent('CASE_STUDY_Container_5tjoamwo_ON_TAP');
-
-                      context.pushNamed(
-                        'individualCaseStudy',
-                        queryParameters: {
-                          'ref': serializeParam(
-                            wrapCaseStudiesRecord,
-                            ParamType.Document,
-                          ),
-                        }.withoutNulls,
-                        extra: <String, dynamic>{
-                          'ref': wrapCaseStudiesRecord,
-                        },
-                      );
-                    },
-                    child: CaseStudyImageCompWidget(
-                      key: Key(
-                          'Key5tj_${wrapIndex}_of_${wrapCaseStudiesRecordList.length}'),
-                      imagepath: wrapCaseStudiesRecord.image,
-                      title: wrapCaseStudiesRecord.title,
-                      technology: wrapCaseStudiesRecord.language,
-                    ),
                   );
-                }),
-              );
-            },
+                }
+                List<CaseStudiesRecord> wrapCaseStudiesRecordList =
+                    snapshot.data!;
+
+                return Wrap(
+                  spacing: 20.0,
+                  runSpacing: 30.0,
+                  alignment: WrapAlignment.start,
+                  crossAxisAlignment: WrapCrossAlignment.start,
+                  direction: Axis.horizontal,
+                  runAlignment: WrapAlignment.start,
+                  verticalDirection: VerticalDirection.down,
+                  clipBehavior: Clip.none,
+                  children: List.generate(wrapCaseStudiesRecordList.length,
+                      (wrapIndex) {
+                    final wrapCaseStudiesRecord =
+                        wrapCaseStudiesRecordList[wrapIndex];
+                    return InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        logFirebaseEvent('CASE_STUDY_Container_5_ON_TAP');
+
+                        context.pushNamed(
+                          'individualCaseStudy',
+                          queryParameters: {
+                            'ref': serializeParam(
+                              wrapCaseStudiesRecord,
+                              ParamType.Document,
+                            ),
+                          }.withoutNulls,
+                          extra: <String, dynamic>{
+                            'ref': wrapCaseStudiesRecord,
+                          },
+                        );
+                      },
+                      child: CaseStudyImageCompWidget(
+                        key: Key(
+                            'Key5tj_${wrapIndex}_of_${wrapCaseStudiesRecordList.length}'),
+                        imagepath: wrapCaseStudiesRecord.image,
+                        title: wrapCaseStudiesRecord.title,
+                        technology: wrapCaseStudiesRecord.language,
+                      ),
+                    );
+                  }),
+                );
+              },
+            ),
           ),
         ],
       ),

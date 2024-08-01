@@ -146,8 +146,23 @@ class _HtmlViewerState extends State<_HtmlViewer> {
             if (_previewMode) {
               if (_isPreviewable) {
                 viewer = Html(
-                  data:
-                      '<html lang="en"><body style="font-family:Poppins;font-style: normal;font-size:16px; font-weight: normal;letter-spacing: 2px;line-height: 1.2;color:#676767;">$_html</body></html>',
+                  data: '''
+            <html lang="en">
+              <body style="
+                font-family: Poppins;
+                font-style: normal;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 2px;
+                line-height: 1.2;
+                color: #676767;
+                margin: 0;  /* Remove margin */
+                padding: 0; /* Remove padding */
+              ">
+                $_html
+              </body>
+            </html>
+          ''',
                   onLinkTap: (url, _, ___) => launchURL(url!),
                 );
               } else {
