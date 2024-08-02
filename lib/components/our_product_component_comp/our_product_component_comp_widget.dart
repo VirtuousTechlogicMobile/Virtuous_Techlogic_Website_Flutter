@@ -1,6 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-
 import '/backend/backend.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/components/explore_our_product_comp/explore_our_product_comp_widget.dart';
@@ -70,50 +67,55 @@ class _OurProductComponentCompWidgetState
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            wrapWithModel(
-              model: _model.commonRichTextCompModel,
-              updateCallback: () => setState(() {}),
-              child: const CommonRichTextCompWidget(
-                richTextOne: 'Explore Our ',
-                richTextTwo: 'Own Area',
-                texts:
-                    'From retail to healthcare, our white-label solutions are tailored to fit your industry needs. Take your business to the next level with ease!',
-              ),
-            ).animateOnPageLoad(
-                animationsMap['commonRichTextCompOnPageLoadAnimation']!),
-            StreamBuilder<List<BuildProductRecord>>(
-              stream: queryBuildProductRecord(
-                queryBuilder: (buildProductRecord) => buildProductRecord
-                    .where(
-                      'status',
-                      isEqualTo: true,
-                    )
-                    .orderBy('created_at', descending: true),
-                limit: 4,
-              ),
-              builder: (context, snapshot) {
-                // Customize what your widget looks like when it's loading.
-                if (!snapshot.hasData) {
-                  return Center(
-                    child: SizedBox(
-                      width: 50.0,
-                      height: 50.0,
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          FlutterFlowTheme.of(context).primary,
+    return Container(
+      constraints: BoxConstraints(maxWidth: getMaxWidth(context)),
+      decoration: BoxDecoration(
+        color: FlutterFlowTheme.of(context).secondaryBackground,
+      ),
+      child: Padding(
+        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              wrapWithModel(
+                model: _model.commonRichTextCompModel,
+                updateCallback: () => setState(() {}),
+                child: const CommonRichTextCompWidget(
+                  richTextOne: 'Explore Our ',
+                  richTextTwo: 'Own Area',
+                  texts:
+                      'From retail to healthcare, our white-label solutions are tailored to fit your industry needs. Take your business to the next level with ease!',
+                ),
+              ).animateOnPageLoad(
+                  animationsMap['commonRichTextCompOnPageLoadAnimation']!),
+              StreamBuilder<List<BuildProductRecord>>(
+                stream: queryBuildProductRecord(
+                  queryBuilder: (buildProductRecord) => buildProductRecord
+                      .where(
+                        'status',
+                        isEqualTo: true,
+                      )
+                      .orderBy('created_at', descending: true),
+                  limit: 4,
+                ),
+                builder: (context, snapshot) {
+                  // Customize what your widget looks like when it's loading.
+                  if (!snapshot.hasData) {
+                    return Center(
+                      child: SizedBox(
+                        width: 50.0,
+                        height: 50.0,
+                        child: CircularProgressIndicator(
+                          valueColor: AlwaysStoppedAnimation<Color>(
+                            FlutterFlowTheme.of(context).primary,
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                }
-                List<BuildProductRecord> columnBuildProductRecordList =
-                    snapshot.data!;
+                    );
+                  }
+                  List<BuildProductRecord> columnBuildProductRecordList =
+                      snapshot.data!;
 
                 return Column(
                   mainAxisSize: MainAxisSize.max,

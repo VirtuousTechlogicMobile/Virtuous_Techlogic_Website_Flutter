@@ -6,6 +6,10 @@ import '/button_component/view_live_app_button_comp/view_live_app_button_comp_wi
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'our_product_detail_comp_model.dart';
 
 export 'our_product_detail_comp_model.dart';
@@ -60,280 +64,199 @@ class _OurProductDetailCompWidgetState
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsetsDirectional.fromSTEB(60.0, 5.0, 60.0, 5.0),
-      child: SizedBox(
-        width: () {
-          if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
-            return 328.0;
-          } else if (MediaQuery.sizeOf(context).width < kBreakpointMedium) {
-            return 714.0;
-          } else if (MediaQuery.sizeOf(context).width < kBreakpointLarge) {
-            return 1199.0;
-          } else {
-            return 1199.0;
-          }
-        }(),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Generated code for this Stack Widget...
-            Stack(
-              children: [
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
-                      child: Container(
-                        width: 300,
-                        height: 300,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFD2E8F6),
-                          boxShadow: const [
-                            BoxShadow(
-                              blurRadius: 100,
-                              color: Color(0xFFD2E5F2),
-                              offset: Offset(
-                                0.0,
-                                0,
-                              ),
-                              spreadRadius: 80,
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(500),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 50, 50, 0),
-                      child: Container(
-                        width: 300,
-                        height: 350,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFF8E5CB),
-                          boxShadow: const [
-                            BoxShadow(
-                              blurRadius: 100,
-                              color: Color(0xFFF4E3C8),
-                              offset: Offset(
-                                15,
-                                0,
-                              ),
-                              spreadRadius: 80,
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(500),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Align(
-                  alignment: AlignmentDirectional(0, 0),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(5, 20, 0, 0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(24),
-                      child: Image.network(
-                        loadingBuilder: (context, child, loadingProgress) {
-                          if (loadingProgress == null) {
-                            return child;
-                          } else {
-                            return const CircularProgressIndicator();
-                          }
-                        },
-                        widget.imagePath ??
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp',
-                        width: () {
-                          if (MediaQuery.sizeOf(context).width <
-                              kBreakpointSmall) {
-                            return 328.0;
-                          } else if (MediaQuery.sizeOf(context).width <
-                              kBreakpointMedium) {
-                            return 714.0;
-                          } else if (MediaQuery.sizeOf(context).width <
-                              kBreakpointLarge) {
-                            return 1199.0;
-                          } else {
-                            return 1199.0;
-                          }
-                        }(),
-                        height: () {
-                          if (MediaQuery.sizeOf(context).width <
-                              kBreakpointSmall) {
-                            return 200.0;
-                          } else if (MediaQuery.sizeOf(context).width <
-                              kBreakpointMedium) {
-                            return 200.0;
-                          } else if (MediaQuery.sizeOf(context).width <
-                              kBreakpointLarge) {
-                            return 472.0;
-                          } else {
-                            return 472.0;
-                          }
-                        }(),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Align(
+            alignment: const AlignmentDirectional(0.0, 0.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(24.0),
+              child: CachedNetworkImage(
+                fadeInDuration: const Duration(milliseconds: 5),
+                fadeOutDuration: const Duration(milliseconds: 5),
+                imageUrl: widget.imagePath!,
+                width: () {
+                  if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                    return 328.0;
+                  } else if (MediaQuery.sizeOf(context).width <
+                      kBreakpointMedium) {
+                    return 714.0;
+                  } else if (MediaQuery.sizeOf(context).width <
+                      kBreakpointLarge) {
+                    return 1199.0;
+                  } else {
+                    return 1199.0;
+                  }
+                }(),
+                height: () {
+                  if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                    return 200.0;
+                  } else if (MediaQuery.sizeOf(context).width <
+                      kBreakpointMedium) {
+                    return 200.0;
+                  } else if (MediaQuery.sizeOf(context).width <
+                      kBreakpointLarge) {
+                    return 472.0;
+                  } else {
+                    return 472.0;
+                  }
+                }(),
+                fit: BoxFit.fill,
+              ),
             ),
-            SelectionArea(
-                child: Text(
-              widget.title ?? 'Default Title',
-              style: FlutterFlowTheme.of(context).displaySmall.override(
-                    fontFamily: FlutterFlowTheme.of(context).displaySmallFamily,
-                    letterSpacing: 0.0,
-                    useGoogleFonts: GoogleFonts.asMap().containsKey(
-                        FlutterFlowTheme.of(context).displaySmallFamily),
+          ),
+          SelectionArea(
+              child: Text(
+            widget.title!,
+            style: FlutterFlowTheme.of(context).displaySmall.override(
+                  fontFamily: FlutterFlowTheme.of(context).displaySmallFamily,
+                  letterSpacing: 0.0,
+                  useGoogleFonts: GoogleFonts.asMap().containsKey(
+                      FlutterFlowTheme.of(context).displaySmallFamily),
+                ),
+          )),
+          if (responsiveVisibility(
+            context: context,
+            phone: false,
+            tablet: false,
+            tabletLandscape: false,
+            desktop: false,
+          ))
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                wrapWithModel(
+                  model: _model.viewLiveAppButtonCompModel1,
+                  updateCallback: () => setState(() {}),
+                  child: const ViewLiveAppButtonCompWidget(
+                    viewLiveApp: 'View Live App',
                   ),
-            )),
-            if (responsiveVisibility(
-              context: context,
-              phone: false,
-              tablet: false,
-              tabletLandscape: false,
-              desktop: false,
-            ))
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  wrapWithModel(
-                    model: _model.viewLiveAppButtonCompModel1,
-                    updateCallback: () => setState(() {}),
-                    child: const ViewLiveAppButtonCompWidget(
-                      viewLiveApp: 'View Live App',
-                    ),
+                ),
+                wrapWithModel(
+                  model: _model.getInTouchButtonCompModel1,
+                  updateCallback: () => setState(() {}),
+                  child: GetInTouchButtonCompWidget(
+                    buttonName: 'Contact for Pricing',
+                    buttonAction: () async {},
                   ),
-                  wrapWithModel(
-                    model: _model.getInTouchButtonCompModel1,
-                    updateCallback: () => setState(() {}),
-                    child: GetInTouchButtonCompWidget(
-                      buttonName: 'Contact for Pricing',
-                      buttonAction: () async {},
-                    ),
+                ),
+              ].divide(const SizedBox(width: 20.0)),
+            ),
+          if (responsiveVisibility(
+            context: context,
+            phone: false,
+            tablet: false,
+            tabletLandscape: false,
+            desktop: false,
+          ))
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                wrapWithModel(
+                  model: _model.viewLiveAppButtonCompModel2,
+                  updateCallback: () => setState(() {}),
+                  child: const ViewLiveAppButtonCompWidget(
+                    viewLiveApp: 'View Live App',
                   ),
-                ].divide(const SizedBox(width: 20.0)),
-              ),
-            if (responsiveVisibility(
-              context: context,
-              phone: false,
-              tablet: false,
-              tabletLandscape: false,
-              desktop: false,
-            ))
-              Column(
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  wrapWithModel(
-                    model: _model.viewLiveAppButtonCompModel2,
-                    updateCallback: () => setState(() {}),
-                    child: const ViewLiveAppButtonCompWidget(
-                      viewLiveApp: 'View Live App',
-                    ),
+                ),
+                wrapWithModel(
+                  model: _model.getInTouchButtonCompModel2,
+                  updateCallback: () => setState(() {}),
+                  child: GetInTouchButtonCompWidget(
+                    buttonName: 'Contact for Pricing',
+                    buttonAction: () async {},
                   ),
-                  wrapWithModel(
-                    model: _model.getInTouchButtonCompModel2,
-                    updateCallback: () => setState(() {}),
-                    child: GetInTouchButtonCompWidget(
-                      buttonName: 'Contact for Pricing',
-                      buttonAction: () async {},
-                    ),
-                  ),
-                ].divide(const SizedBox(height: 20.0)),
-              ),
-            Text(
-              'Description',
+                ),
+              ].divide(const SizedBox(height: 20.0)),
+            ),
+          Text(
+            'Description',
+            style: FlutterFlowTheme.of(context).headlineSmall.override(
+                  fontFamily: FlutterFlowTheme.of(context).headlineSmallFamily,
+                  color: FlutterFlowTheme.of(context).text16Colo2,
+                  letterSpacing: 0.0,
+                  useGoogleFonts: GoogleFonts.asMap().containsKey(
+                      FlutterFlowTheme.of(context).headlineSmallFamily),
+                ),
+          ),
+          custom_widgets.DisplayQuillToHtml(
+            width: MediaQuery.sizeOf(context).width * 1.0,
+            height: MediaQuery.sizeOf(context).height * 0.08,
+            defaultJsonData: widget.editDescription!,
+            isMaxCharacterAllowOrNot: false,
+          ),
+          Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+            child: Text(
+              'Features',
               style: FlutterFlowTheme.of(context).headlineSmall.override(
                     fontFamily:
                         FlutterFlowTheme.of(context).headlineSmallFamily,
-                    color: FlutterFlowTheme.of(context).text16Colo2,
+                    color: const Color(0xFF676767),
                     letterSpacing: 0.0,
+                    fontWeight: FontWeight.w600,
                     useGoogleFonts: GoogleFonts.asMap().containsKey(
                         FlutterFlowTheme.of(context).headlineSmallFamily),
                   ),
             ),
-            custom_widgets.DisplayQuillToHtml(
-              width: MediaQuery.sizeOf(context).width * 1.0,
-              height: MediaQuery.sizeOf(context).height * 0.08,
-              defaultJsonData: widget.editDescription ?? '',
-              isMaxCharacterAllowOrNot: false,
-            ),
-            Padding(
-              padding:
-                  const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-              child: Text(
-                'Features',
-                style: FlutterFlowTheme.of(context).headlineSmall.override(
-                      fontFamily:
-                          FlutterFlowTheme.of(context).headlineSmallFamily,
-                      color: const Color(0xFF676767),
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w600,
-                      useGoogleFonts: GoogleFonts.asMap().containsKey(
-                          FlutterFlowTheme.of(context).headlineSmallFamily),
-                    ),
-              ),
-            ),
-            Builder(
-              builder: (context) {
-                final featuresList = widget.features ?? [];
+          ),
+          Builder(
+            builder: (context) {
+              final featuresList = widget.features!.toList();
 
-                return Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children:
-                      List.generate(featuresList.length, (featuresListIndex) {
-                    final featuresListItem = featuresList[featuresListIndex];
-                    return Padding(
-                      padding: const EdgeInsets.only(top: 8.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Icon(
-                            Icons.done,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            size: 24.0,
-                          ),
-                          Expanded(
-                            child: Align(
-                              alignment: AlignmentDirectional.topStart,
-                              child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    5.0, 0.0, 0.0, 0.0),
-                                child: SelectionArea(
-                                    child: Text(
-                                  featuresListItem,
-                                  maxLines: 20,
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyLarge
-                                      .override(
-                                        fontFamily: FlutterFlowTheme.of(context)
-                                            .bodyLargeFamily,
-                                        letterSpacing: 0.0,
-                                        useGoogleFonts: GoogleFonts.asMap()
-                                            .containsKey(
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyLargeFamily),
-                                        lineHeight: 2.0,
-                                      ),
-                                )),
-                              ),
+              return Column(
+                mainAxisSize: MainAxisSize.max,
+                children:
+                    List.generate(featuresList.length, (featuresListIndex) {
+                  final featuresListItem = featuresList[featuresListIndex];
+                  return Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.done,
+                          color: FlutterFlowTheme.of(context).secondaryText,
+                          size: 24.0,
+                        ),
+                        Expanded(
+                          child: Align(
+                            alignment: AlignmentDirectional.topStart,
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  5.0, 0.0, 0.0, 0.0),
+                              child: SelectionArea(
+                                  child: Text(
+                                featuresListItem,
+                                maxLines: 20,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyLargeFamily,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyLargeFamily),
+                                      lineHeight: 2.0,
+                                    ),
+                              )),
                             ),
                           ),
-                        ],
-                      ),
-                    );
-                  }),
-                );
-              },
-            ),
-          ].divide(const SizedBox(height: 10.0)),
-        ),
+                        ),
+                      ],
+                    ),
+                  );
+                }),
+              );
+            },
+          ),
+        ].divide(const SizedBox(height: 10.0)),
       ),
     );
   }
