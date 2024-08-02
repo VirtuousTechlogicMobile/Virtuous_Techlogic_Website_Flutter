@@ -112,7 +112,7 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: SelectionArea(
                       child: Text(
-                    widget!.text!,
+                    widget.text ?? 'Text',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily:
@@ -130,7 +130,7 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: SelectionArea(
                       child: Text(
-                    widget!.text2!,
+                    widget.text2!,
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily:

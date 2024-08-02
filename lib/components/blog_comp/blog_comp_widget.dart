@@ -100,7 +100,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                           child: SelectionArea(
                               child: Text(
                             valueOrDefault<String>(
-                              widget!.blogTitleText,
+                              widget.blogTitleText,
                               'title',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -117,7 +117,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                         ),
                         Text(
                           valueOrDefault<String>(
-                            widget!.blogDate,
+                            widget.blogDate,
                             'name',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -140,7 +140,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                             child: SelectionArea(
                                 child: Text(
                               valueOrDefault<String>(
-                                widget!.blogDescription,
+                                widget.blogDescription,
                                 'description',
                               ).maybeHandleOverflow(
                                 maxChars: 280,
@@ -165,7 +165,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                         ),
                         Builder(
                           builder: (context) {
-                            final tags = widget!.blogTag?.toList() ?? [];
+                            final tags = widget.blogTag?.toList() ?? [];
 
                             return Wrap(
                               spacing: 10.0,
@@ -267,7 +267,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                       fadeInDuration: const Duration(milliseconds: 200),
                       fadeOutDuration: const Duration(milliseconds: 200),
                       imageUrl: valueOrDefault<String>(
-                        widget!.blogimage,
+                        widget.blogimage,
                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
                       ),
                       width: 328.0,
@@ -280,7 +280,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                         10.0, 7.0, 10.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
-                        widget!.blogTitleText,
+                        widget.blogTitleText,
                         'Blogtitle',
                       ),
                       style: FlutterFlowTheme.of(context).titleLarge.override(
@@ -297,7 +297,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                         0.0, 10.0, 10.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
-                        widget!.blogDate,
+                        widget.blogDate,
                         'blogDate',
                       ),
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
@@ -314,7 +314,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                         10.0, 10.0, 10.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
-                        widget!.blogDescription,
+                        widget.blogDescription,
                         'Blogdescription',
                       ).maybeHandleOverflow(
                         maxChars: 280,
@@ -335,7 +335,7 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                     padding: const EdgeInsets.only(top: 10.0),
                     child: Builder(
                       builder: (context) {
-                        final tags = widget!.blogTag?.toList() ?? [];
+                        final tags = widget.blogTag?.toList() ?? [];
 
                         return Wrap(
                           spacing: 10.0,

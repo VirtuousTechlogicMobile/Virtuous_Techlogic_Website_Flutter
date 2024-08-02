@@ -56,7 +56,7 @@ class _GetInTouchButtonCompWidgetState
         logFirebaseEvent('GET_IN_TOUCH_BUTTON_BUTTON_BTN_ON_TAP');
         await widget.buttonAction?.call();
       },
-      text: widget!.buttonName!,
+      text: widget.buttonName!,
       icon: const Icon(
         Icons.arrow_outward,
         size: 15.0,

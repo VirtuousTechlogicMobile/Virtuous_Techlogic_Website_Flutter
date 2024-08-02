@@ -6,10 +6,6 @@ import '/button_component/view_live_app_button_comp/view_live_app_button_comp_wi
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'our_product_detail_comp_model.dart';
 
 export 'our_product_detail_comp_model.dart';
@@ -80,47 +76,113 @@ class _OurProductDetailCompWidgetState
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(24.0),
-                child: CachedNetworkImage(
-                  fadeInDuration: const Duration(milliseconds: 5),
-                  fadeOutDuration: const Duration(milliseconds: 5),
-                  imageUrl: widget.imagePath!,
-                  width: () {
-                    if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
-                      return 328.0;
-                    } else if (MediaQuery.sizeOf(context).width <
-                        kBreakpointMedium) {
-                      return 714.0;
-                    } else if (MediaQuery.sizeOf(context).width <
-                        kBreakpointLarge) {
-                      return 1199.0;
-                    } else {
-                      return 1199.0;
-                    }
-                  }(),
-                  height: () {
-                    if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
-                      return 200.0;
-                    } else if (MediaQuery.sizeOf(context).width <
-                        kBreakpointMedium) {
-                      return 200.0;
-                    } else if (MediaQuery.sizeOf(context).width <
-                        kBreakpointLarge) {
-                      return 472.0;
-                    } else {
-                      return 472.0;
-                    }
-                  }(),
-                  fit: BoxFit.fill,
+            // Generated code for this Stack Widget...
+            Stack(
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 100, 0, 0),
+                      child: Container(
+                        width: 300,
+                        height: 300,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFD2E8F6),
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 100,
+                              color: Color(0xFFD2E5F2),
+                              offset: Offset(
+                                0.0,
+                                0,
+                              ),
+                              spreadRadius: 80,
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(500),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 50, 50, 0),
+                      child: Container(
+                        width: 300,
+                        height: 350,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFF8E5CB),
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 100,
+                              color: Color(0xFFF4E3C8),
+                              offset: Offset(
+                                15,
+                                0,
+                              ),
+                              spreadRadius: 80,
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(500),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-              ),
+                Align(
+                  alignment: AlignmentDirectional(0, 0),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(5, 20, 0, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(24),
+                      child: Image.network(
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          } else {
+                            return const CircularProgressIndicator();
+                          }
+                        },
+                        widget.imagePath ??
+                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp',
+                        width: () {
+                          if (MediaQuery.sizeOf(context).width <
+                              kBreakpointSmall) {
+                            return 328.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointMedium) {
+                            return 714.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointLarge) {
+                            return 1199.0;
+                          } else {
+                            return 1199.0;
+                          }
+                        }(),
+                        height: () {
+                          if (MediaQuery.sizeOf(context).width <
+                              kBreakpointSmall) {
+                            return 200.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointMedium) {
+                            return 200.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointLarge) {
+                            return 472.0;
+                          } else {
+                            return 472.0;
+                          }
+                        }(),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
             SelectionArea(
                 child: Text(
-              widget.title!,
+              widget.title ?? 'Default Title',
               style: FlutterFlowTheme.of(context).displaySmall.override(
                     fontFamily: FlutterFlowTheme.of(context).displaySmallFamily,
                     letterSpacing: 0.0,
@@ -197,7 +259,7 @@ class _OurProductDetailCompWidgetState
             custom_widgets.DisplayQuillToHtml(
               width: MediaQuery.sizeOf(context).width * 1.0,
               height: MediaQuery.sizeOf(context).height * 0.08,
-              defaultJsonData: widget.editDescription!,
+              defaultJsonData: widget.editDescription ?? '',
               isMaxCharacterAllowOrNot: false,
             ),
             Padding(
@@ -218,7 +280,7 @@ class _OurProductDetailCompWidgetState
             ),
             Builder(
               builder: (context) {
-                final featuresList = widget.features!.toList();
+                final featuresList = widget.features ?? [];
 
                 return Column(
                   mainAxisSize: MainAxisSize.max,
