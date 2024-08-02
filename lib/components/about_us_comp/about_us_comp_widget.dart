@@ -76,16 +76,12 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
             ),
           );
         }
-        List<AboutUsImagesRecord> columnAboutUsImagesRecordList =
-            snapshot.data!;
+        List<AboutUsImagesRecord> columnAboutUsImagesRecordList = snapshot.data!;
         // Return an empty Container when the item does not exist.
         if (snapshot.data!.isEmpty) {
           return Container();
         }
-        final columnAboutUsImagesRecord =
-            columnAboutUsImagesRecordList.isNotEmpty
-                ? columnAboutUsImagesRecordList.first
-                : null;
+        final columnAboutUsImagesRecord = columnAboutUsImagesRecordList.isNotEmpty ? columnAboutUsImagesRecordList.first : null;
 
         return SingleChildScrollView(
           child: Column(
@@ -115,11 +111,9 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
                     widget.text ?? 'Text',
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelLarge.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).labelLargeFamily,
+                          fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
                           letterSpacing: 0.0,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).labelLargeFamily),
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelLargeFamily),
                         ),
                   )),
                 ),
@@ -133,11 +127,9 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
                     widget.text2!,
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).labelLarge.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).labelLargeFamily,
+                          fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
                           letterSpacing: 0.0,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).labelLargeFamily),
+                          useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).labelLargeFamily),
                         ),
                   )),
                 ),
@@ -150,11 +142,9 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
                     crossAxisCount: () {
                       if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
                         return 1;
-                      } else if (MediaQuery.sizeOf(context).width <
-                          kBreakpointMedium) {
+                      } else if (MediaQuery.sizeOf(context).width < kBreakpointMedium) {
                         return 1;
-                      } else if (MediaQuery.sizeOf(context).width <
-                          kBreakpointLarge) {
+                      } else if (MediaQuery.sizeOf(context).width < kBreakpointLarge) {
                         return 2;
                       } else {
                         return 2;
@@ -168,7 +158,7 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
                   itemBuilder: (context, index) {
                     return [
                       () => ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
+                            borderRadius: BorderRadius.circular(30.0),
                             child: CachedNetworkImage(
                               fadeInDuration: Duration(milliseconds: 100),
                               fadeOutDuration: Duration(milliseconds: 100),
@@ -177,22 +167,20 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
                             ),
                           ),
                       () => ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
+                            borderRadius: BorderRadius.circular(30.0),
                             child: CachedNetworkImage(
                               fadeInDuration: Duration(milliseconds: 100),
                               fadeOutDuration: Duration(milliseconds: 100),
-                              imageUrl:
-                                  columnAboutUsImagesRecord!.ractangleImage1,
+                              imageUrl: columnAboutUsImagesRecord!.ractangleImage1,
                               fit: BoxFit.cover,
                             ),
                           ),
                       () => ClipRRect(
-                            borderRadius: BorderRadius.circular(8.0),
+                            borderRadius: BorderRadius.circular(30.0),
                             child: CachedNetworkImage(
                               fadeInDuration: Duration(milliseconds: 100),
                               fadeOutDuration: Duration(milliseconds: 100),
-                              imageUrl:
-                                  columnAboutUsImagesRecord!.ractangleImage2,
+                              imageUrl: columnAboutUsImagesRecord!.ractangleImage2,
                               fit: BoxFit.cover,
                             ),
                           ),
