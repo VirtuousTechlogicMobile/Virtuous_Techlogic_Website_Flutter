@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -6,10 +7,6 @@ import '/button_component/view_live_app_button_comp/view_live_app_button_comp_wi
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'our_product_detail_comp_model.dart';
 
 export 'our_product_detail_comp_model.dart';
@@ -40,7 +37,7 @@ class _OurProductDetailCompWidgetState
   late OurProductDetailCompModel _model;
 
   @override
-  void setState(VoidCallback callback) {
+  Future<void> setState(VoidCallback callback) async {
     super.setState(callback);
     _model.onUpdate();
   }
@@ -102,7 +99,7 @@ class _OurProductDetailCompWidgetState
                     return 472.0;
                   }
                 }(),
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
               ),
             ),
           ),

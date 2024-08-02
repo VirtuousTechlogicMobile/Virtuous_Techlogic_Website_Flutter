@@ -71,7 +71,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                 limit: 2,
               ),
               builder: (context, snapshot) {
-                print("snapshot.data! = ${snapshot.data!.toString()}");
+                print("snapshot.data! = ${snapshot.data?.toString()}");
                 // Customize what your widget looks like when it's loading.
                 if (!snapshot.hasData) {
                   return Center(

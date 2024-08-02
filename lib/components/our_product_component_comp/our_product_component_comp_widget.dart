@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+
 import '/backend/backend.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/components/explore_our_product_comp/explore_our_product_comp_widget.dart';
@@ -69,9 +72,6 @@ class _OurProductComponentCompWidgetState
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints(maxWidth: getMaxWidth(context)),
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).secondaryBackground,
-      ),
       child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
         child: SingleChildScrollView(
@@ -117,61 +117,21 @@ class _OurProductComponentCompWidgetState
                   List<BuildProductRecord> columnBuildProductRecordList =
                       snapshot.data!;
 
-                return Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: List.generate(columnBuildProductRecordList.length,
-                      (columnIndex) {
-                    final columnBuildProductRecord =
-                        columnBuildProductRecordList[columnIndex];
-                    return Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
-                          20.0, 20.0, 20.0, 0.0),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          logFirebaseEvent(
-                              'OUR_PRODUCT_COMPONENT_Container_u9ntarda');
-
-                          context.pushNamed(
-                            'IndividualProductPage',
-                            queryParameters: {
-                              'productRef': serializeParam(
-                                columnBuildProductRecord,
-                                ParamType.Document,
-                              ),
-                              'productTitle': serializeParam(
-                                columnBuildProductRecord.title,
-                                ParamType.String,
-                              ),
-                            }.withoutNulls,
-                            extra: <String, dynamic>{
-                              'productRef': columnBuildProductRecord,
-                              kTransitionInfoKey: const TransitionInfo(
-                                hasTransition: true,
-                                transitionType: PageTransitionType.fade,
-                                duration: Duration(milliseconds: 0),
-                              ),
-                            },
-                          );
-
-                          FFAppState().selectedTitle =
-                              columnBuildProductRecord.title;
-                          setState(() {});
-                        },
-                        child: ExploreOurProductCompWidget(
-                          key: Key(
-                              'Keyu9n_${columnIndex}_of_${columnBuildProductRecordList.length}'),
-                          productTitle: columnBuildProductRecord.title,
-                          productDescription:
-                              columnBuildProductRecord.description,
-                          imagePath: columnBuildProductRecord.image,
-                          isLeftsideText: columnIndex % 2 == 0 ? false : true,
-                          editDescription:
-                              columnBuildProductRecord.editDescription,
-                          viewmore: () async {
+                  return Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: List.generate(columnBuildProductRecordList.length,
+                        (columnIndex) {
+                      final columnBuildProductRecord =
+                          columnBuildProductRecordList[columnIndex];
+                      return Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            20.0, 20.0, 20.0, 0.0),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
                             logFirebaseEvent(
                                 'OUR_PRODUCT_COMPONENT_Container_u9ntarda');
 
@@ -201,14 +161,55 @@ class _OurProductComponentCompWidgetState
                                 columnBuildProductRecord.title;
                             setState(() {});
                           },
+                          child: ExploreOurProductCompWidget(
+                            key: Key(
+                                'Keyu9n_${columnIndex}_of_${columnBuildProductRecordList.length}'),
+                            productTitle: columnBuildProductRecord.title,
+                            productDescription:
+                                columnBuildProductRecord.description,
+                            imagePath: columnBuildProductRecord.image,
+                            isLeftsideText: columnIndex % 2 == 0 ? false : true,
+                            editDescription:
+                                columnBuildProductRecord.editDescription,
+                            viewmore: () async {
+                              logFirebaseEvent(
+                                  'OUR_PRODUCT_COMPONENT_Container_u9ntarda');
+
+                              context.pushNamed(
+                                'IndividualProductPage',
+                                queryParameters: {
+                                  'productRef': serializeParam(
+                                    columnBuildProductRecord,
+                                    ParamType.Document,
+                                  ),
+                                  'productTitle': serializeParam(
+                                    columnBuildProductRecord.title,
+                                    ParamType.String,
+                                  ),
+                                }.withoutNulls,
+                                extra: <String, dynamic>{
+                                  'productRef': columnBuildProductRecord,
+                                  kTransitionInfoKey: const TransitionInfo(
+                                    hasTransition: true,
+                                    transitionType: PageTransitionType.fade,
+                                    duration: Duration(milliseconds: 0),
+                                  ),
+                                },
+                              );
+
+                              FFAppState().selectedTitle =
+                                  columnBuildProductRecord.title;
+                              setState(() {});
+                            },
+                          ),
                         ),
-                      ),
-                    );
-                  }),
-                );
-              },
-            ),
-          ],
+                      );
+                    }),
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

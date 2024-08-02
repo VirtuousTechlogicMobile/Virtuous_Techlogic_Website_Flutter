@@ -73,7 +73,7 @@ class _IndividualCaseStudyCompWidgetState
           ))
             Container(
               width: double.infinity,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -81,8 +81,8 @@ class _IndividualCaseStudyCompWidgetState
                 children: [
                   Flexible(
                     child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 30.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          15.0, 0.0, 30.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -109,20 +109,20 @@ class _IndividualCaseStudyCompWidgetState
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .labelLargeFamily,
-                                  color: Color(0xFF676767),
+                                  color: const Color(0xFF676767),
                                   letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .labelLargeFamily),
                                 ),
                           ),
-                        ].divide(SizedBox(height: 5.0)),
+                        ].divide(const SizedBox(height: 5.0)),
                       ),
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 1.0, 0.0, 1.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        20.0, 1.0, 0.0, 1.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20.0),
                       child: Image.network(
@@ -151,15 +151,15 @@ class _IndividualCaseStudyCompWidgetState
           ))
             Container(
               width: double.infinity,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 1.0, 0.0, 1.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        20.0, 1.0, 0.0, 1.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20.0),
                       child: Image.network(
@@ -180,8 +180,8 @@ class _IndividualCaseStudyCompWidgetState
                   ),
                   Flexible(
                     child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          30.0, 0.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -209,7 +209,7 @@ class _IndividualCaseStudyCompWidgetState
                             defaultJsonData: widget.editDescription ?? '',
                             isMaxCharacterAllowOrNot: false,
                           ),
-                        ].divide(SizedBox(height: 20.0)),
+                        ].divide(const SizedBox(height: 20.0)),
                       ),
                     ),
                   ),
@@ -223,15 +223,15 @@ class _IndividualCaseStudyCompWidgetState
           ))
             Container(
               width: double.infinity,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 30.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        15.0, 0.0, 30.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -251,7 +251,7 @@ class _IndividualCaseStudyCompWidgetState
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 0.0),
                           child: Builder(
                             builder: (context) {
@@ -291,19 +291,19 @@ class _IndividualCaseStudyCompWidgetState
                                                           .labelLargeFamily),
                                             ),
                                       ),
-                                    ].divide(SizedBox(width: 5.0)),
+                                    ].divide(const SizedBox(width: 5.0)),
                                   );
-                                }).divide(SizedBox(height: 4.0)),
+                                }).divide(const SizedBox(height: 4.0)),
                               );
                             },
                           ),
                         ),
-                      ].divide(SizedBox(height: 5.0)),
+                      ].divide(const SizedBox(height: 5.0)),
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 1.0, 0.0, 1.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        20.0, 1.0, 0.0, 1.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20.0),
                       child: Image.network(
@@ -325,7 +325,7 @@ class _IndividualCaseStudyCompWidgetState
                 ],
               ),
             ),
-        ].divide(SizedBox(height: 40.0)),
+        ].divide(const SizedBox(height: 40.0)),
       ),
     );
   }

@@ -46,68 +46,107 @@ class _ExploreProductCompWidgetState extends State<ExploreProductCompWidget> {
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
-    return Container(
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            wrapWithModel(
-              model: _model.commonRichTextCompModel,
-              updateCallback: () => setState(() {}),
-              child: const CommonRichTextCompWidget(
-                richTextOne: 'Other ',
-                richTextTwo: ' Products',
-                texts:
-                    'We consider ourselves lucky to work on many innovative concepts with amazing companies. We absolutely love solving problems and transforming ideas into reality.',
-              ),
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          wrapWithModel(
+            model: _model.commonRichTextCompModel,
+            updateCallback: () => setState(() {}),
+            child: const CommonRichTextCompWidget(
+              richTextOne: 'Other ',
+              richTextTwo: ' Products',
+              texts:
+                  'We consider ourselves lucky to work on many innovative concepts with amazing companies. We absolutely love solving problems and transforming ideas into reality.',
             ),
-            StreamBuilder<List<BuildProductRecord>>(
-              stream: queryBuildProductRecord(
-                queryBuilder: (buildProductRecord) => buildProductRecord
-                    .where(
-                      'title',
-                      isNotEqualTo: FFAppState().selectedTitle,
-                    )
-                    .where(
-                      'status',
-                      isEqualTo: true,
-                    ),
-              ),
-              builder: (context, snapshot) {
-                if (!snapshot.hasData) {
-                  return Center(
-                    child: SizedBox(
-                      width: 50.0,
-                      height: 50.0,
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          FlutterFlowTheme.of(context).primary,
-                        ),
+          ),
+          StreamBuilder<List<BuildProductRecord>>(
+            stream: queryBuildProductRecord(
+              queryBuilder: (buildProductRecord) => buildProductRecord
+                  .where(
+                    'title',
+                    isNotEqualTo: FFAppState().selectedTitle,
+                  )
+                  .where(
+                    'status',
+                    isEqualTo: true,
+                  ),
+            ),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) {
+                return Center(
+                  child: SizedBox(
+                    width: 50.0,
+                    height: 50.0,
+                    child: CircularProgressIndicator(
+                      valueColor: AlwaysStoppedAnimation<Color>(
+                        FlutterFlowTheme.of(context).primary,
                       ),
                     ),
-                  );
-                }
-                List<BuildProductRecord> columnBuildProductRecordList =
-                    snapshot.data!;
+                  ),
+                );
+              }
+              List<BuildProductRecord> columnBuildProductRecordList =
+                  snapshot.data!;
 
-                return SingleChildScrollView(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: List.generate(columnBuildProductRecordList.length,
-                        (columnIndex) {
-                      final columnBuildProductRecord =
-                          columnBuildProductRecordList[columnIndex];
-                      return Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            0.0, 30.0, 0.0, 0.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
+              return SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: List.generate(columnBuildProductRecordList.length,
+                      (columnIndex) {
+                    final columnBuildProductRecord =
+                        columnBuildProductRecordList[columnIndex];
+                    return Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 30.0, 0.0, 0.0),
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          logFirebaseEvent(
+                              'EXPLORE_PRODUCT_Container_95fu6s8n_ON_TA');
+
+                          context.pushNamed(
+                            'IndividualProductPage',
+                            queryParameters: {
+                              'productRef': serializeParam(
+                                columnBuildProductRecord,
+                                ParamType.Document,
+                              ),
+                              'productTitle': serializeParam(
+                                columnBuildProductRecord.title,
+                                ParamType.String,
+                              ),
+                            }.withoutNulls,
+                            extra: <String, dynamic>{
+                              'productRef': columnBuildProductRecord,
+                              kTransitionInfoKey: const TransitionInfo(
+                                hasTransition: true,
+                                transitionType: PageTransitionType.fade,
+                                duration: Duration(milliseconds: 0),
+                              ),
+                            },
+                          );
+
+                          FFAppState().selectedTitle =
+                              columnBuildProductRecord.title;
+                          setState(() {});
+                        },
+                        child: ExploreOurProductCompWidget(
+                          key: Key(
+                              'Key95f_${columnIndex}_of_${columnBuildProductRecordList.length}'),
+                          productTitle: columnBuildProductRecord.title,
+                          productDescription:
+                              columnBuildProductRecord.description,
+                          imagePath: columnBuildProductRecord.image,
+                          isLeftsideText: columnIndex % 2 == 0 ? false : true,
+                          editDescription:
+                              columnBuildProductRecord.editDescription,
+                          viewmore: () async {
                             logFirebaseEvent(
-                                'EXPLORE_PRODUCT_Container_95fu6s8n_ON_TA');
+                                'EXPLORE_PRODUCT_Container_95fu6s8n_CALLB');
 
                             context.pushNamed(
                               'IndividualProductPage',
@@ -135,56 +174,15 @@ class _ExploreProductCompWidgetState extends State<ExploreProductCompWidget> {
                                 columnBuildProductRecord.title;
                             setState(() {});
                           },
-                          child: ExploreOurProductCompWidget(
-                            key: Key(
-                                'Key95f_${columnIndex}_of_${columnBuildProductRecordList.length}'),
-                            productTitle: columnBuildProductRecord.title,
-                            productDescription:
-                                columnBuildProductRecord.description,
-                            imagePath: columnBuildProductRecord.image,
-                            isLeftsideText: columnIndex % 2 == 0 ? false : true,
-                            editDescription:
-                                columnBuildProductRecord.editDescription,
-                            viewmore: () async {
-                              logFirebaseEvent(
-                                  'EXPLORE_PRODUCT_Container_95fu6s8n_CALLB');
-
-                              context.pushNamed(
-                                'IndividualProductPage',
-                                queryParameters: {
-                                  'productRef': serializeParam(
-                                    columnBuildProductRecord,
-                                    ParamType.Document,
-                                  ),
-                                  'productTitle': serializeParam(
-                                    columnBuildProductRecord.title,
-                                    ParamType.String,
-                                  ),
-                                }.withoutNulls,
-                                extra: <String, dynamic>{
-                                  'productRef': columnBuildProductRecord,
-                                  kTransitionInfoKey: const TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 0),
-                                  ),
-                                },
-                              );
-
-                              FFAppState().selectedTitle =
-                                  columnBuildProductRecord.title;
-                              setState(() {});
-                            },
-                          ),
                         ),
-                      );
-                    }).divide(const SizedBox(height: 10.0)),
-                  ),
-                );
-              },
-            ),
-          ],
-        ),
+                      ),
+                    );
+                  }).divide(const SizedBox(height: 10.0)),
+                ),
+              );
+            },
+          ),
+        ],
       ),
     );
   }

@@ -256,26 +256,35 @@ class _IndividualCaseStudyWidgetState extends State<IndividualCaseStudyWidget>
                                       Padding(
                                         padding: const EdgeInsetsDirectional
                                             .fromSTEB(30.0, 30.0, 30.0, 0.0),
-                                        child: wrapWithModel(
-                                          model: _model
-                                              .individualCaseStudyCompModel2,
-                                          updateCallback: () => setState(() {}),
-                                          child: IndividualCaseStudyCompWidget(
-                                            title: widget!.ref!.title,
-                                            introduction:
-                                                widget!.ref!.introduction,
-                                            description:
-                                                widget!.ref!.description,
-                                            mainImage: widget!.ref!.image,
-                                            descriptionImage:
-                                                widget!.ref!.descriptionImage,
-                                            featuresImage:
-                                                widget!.ref!.featureImage,
-                                            features: widget!.ref!.features,
-                                            editDescription:
-                                                valueOrDefault<String>(
-                                              widget!.ref?.editDescription,
-                                              '[{\"insert\":\"Case Studies\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"},{\"insert\":\"dasdssfsf\",\"attributes\":{\"bold\":true,\"underline\":true}},{\"insert\":\"\\n\",\"attributes\":{\"list\":\"bullet\"}}]',
+                                        child: Container(
+                                          child: wrapWithModel(
+                                            model: _model
+                                                .individualCaseStudyCompModel2,
+                                            updateCallback: () =>
+                                                setState(() {}),
+                                            child: Container(
+                                              constraints: BoxConstraints(
+                                                  maxWidth:
+                                                      getMaxWidth(context)),
+                                              child:
+                                                  IndividualCaseStudyCompWidget(
+                                                title: widget!.ref!.title,
+                                                introduction:
+                                                    widget!.ref!.introduction,
+                                                description:
+                                                    widget!.ref!.description,
+                                                mainImage: widget!.ref!.image,
+                                                descriptionImage: widget!
+                                                    .ref!.descriptionImage,
+                                                featuresImage:
+                                                    widget!.ref!.featureImage,
+                                                features: widget!.ref!.features,
+                                                editDescription:
+                                                    valueOrDefault<String>(
+                                                  widget!.ref?.editDescription,
+                                                  '[{\"insert\":\"Case Studies\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"},{\"insert\":\"dasdssfsf\",\"attributes\":{\"bold\":true,\"underline\":true}},{\"insert\":\"\\n\",\"attributes\":{\"list\":\"bullet\"}}]',
+                                                ),
+                                              ),
                                             ),
                                           ),
                                         ),
@@ -410,22 +419,28 @@ class _IndividualCaseStudyWidgetState extends State<IndividualCaseStudyWidget>
                                                     .individualCaseStudyCompModel3,
                                                 updateCallback: () =>
                                                     setState(() {}),
-                                                child:
-                                                    IndividualCaseStudyCompWidget(
-                                                  title: widget.ref?.title,
-                                                  introduction:
-                                                      widget.ref?.introduction,
-                                                  description:
-                                                      widget.ref?.description,
-                                                  mainImage: widget.ref?.image,
-                                                  descriptionImage: widget
-                                                      .ref?.descriptionImage,
-                                                  featuresImage:
-                                                      widget.ref?.featureImage,
-                                                  features:
-                                                      widget.ref?.features,
-                                                  editDescription: widget
-                                                      .ref?.editDescription,
+                                                child: Container(
+                                                  constraints: BoxConstraints(
+                                                      maxWidth:
+                                                          getMaxWidth(context)),
+                                                  child:
+                                                      IndividualCaseStudyCompWidget(
+                                                    title: widget.ref?.title,
+                                                    introduction: widget
+                                                        .ref?.introduction,
+                                                    description:
+                                                        widget.ref?.description,
+                                                    mainImage:
+                                                        widget.ref?.image,
+                                                    descriptionImage: widget
+                                                        .ref?.descriptionImage,
+                                                    featuresImage: widget
+                                                        .ref?.featureImage,
+                                                    features:
+                                                        widget.ref?.features,
+                                                    editDescription: widget
+                                                        .ref?.editDescription,
+                                                  ),
                                                 ),
                                               ),
                                             ),

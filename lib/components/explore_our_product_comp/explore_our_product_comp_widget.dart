@@ -61,189 +61,134 @@ class _ExploreOurProductCompWidgetState
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(),
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            if (responsiveVisibility(
-              context: context,
-              phone: false,
-              tablet: false,
-            ))
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  if (widget!.isLeftsideText)
-                    Expanded(
-                      flex: 5,
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              child: Text(
-                                widget!.productTitle!,
-                                style: FlutterFlowTheme.of(context)
-                                    .headlineSmall
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .headlineSmallFamily,
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.w600,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
-                                              FlutterFlowTheme.of(context)
-                                                  .headlineSmallFamily),
-                                    ),
-                              ),
-                            ),
-                            custom_widgets.DisplayQuillToHtml(
-                              width: double.infinity,
-                              height: MediaQuery.sizeOf(context).height * 0.05,
-                              defaultJsonData: widget!.editDescription!,
-                              isMaxCharacterAllowOrNot: true,
-                            ),
-                            if (responsiveVisibility(
-                              context: context,
-                              phone: false,
-                              tablet: false,
-                            ))
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0.0, 20.0, 0.0, 0.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    if (false)
-                                      wrapWithModel(
-                                        model:
-                                            _model.viewLiveAppButtonCompModel,
-                                        updateCallback: () => setState(() {}),
-                                        child: ViewLiveAppButtonCompWidget(
-                                          viewLiveApp: 'View Live App',
-                                        ),
-                                      ),
-                                    if (responsiveVisibility(
-                                      context: context,
-                                      phone: false,
-                                      tablet: false,
-                                      tabletLandscape: false,
-                                      desktop: false,
-                                    ))
-                                      wrapWithModel(
-                                        model: _model.getInTouchButtonCompModel,
-                                        updateCallback: () => setState(() {}),
-                                        child: GetInTouchButtonCompWidget(
-                                          buttonName: 'View More',
-                                          showIcon: false,
-                                          buttonAction: () async {
-                                            logFirebaseEvent(
-                                                'EXPLORE_OUR_PRODUCT_Container_loy5tuq3_C');
-                                            await widget.viewmore?.call();
-                                          },
-                                        ),
-                                      ),
-                                  ].divide(SizedBox(width: 20.0)),
-                                ),
-                              ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  if (responsiveVisibility(
-                    context: context,
-                    phone: false,
-                  ))
-                    Expanded(
-                      flex: 5,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
-                        child: CachedNetworkImage(
-                          fadeInDuration: Duration(milliseconds: 0),
-                          fadeOutDuration: Duration(milliseconds: 0),
-                          imageUrl: widget!.imagePath!,
-                          // width: 590.0,
-                          // height: 280.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  if (!widget!.isLeftsideText)
-                    Expanded(
-                      flex: 5,
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            SelectionArea(
-                                child: Text(
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          if (responsiveVisibility(
+            context: context,
+            phone: false,
+            tablet: false,
+          ))
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                if (widget!.isLeftsideText)
+                  Expanded(
+                    flex: 5,
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 0.0, 20.0, 0.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 0.0),
+                            child: Text(
                               widget!.productTitle!,
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .headlineSmallFamily,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryText,
                                     letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
                                                 .headlineSmallFamily),
                                   ),
-                            )),
-                            custom_widgets.DisplayQuillToHtml(
-                              width: MediaQuery.sizeOf(context).width * 1.0,
-                              height: MediaQuery.sizeOf(context).height * 0.05,
-                              defaultJsonData: widget!.editDescription!,
-                              isMaxCharacterAllowOrNot: true,
                             ),
-                          ].divide(SizedBox(height: 10.0)),
-                        ),
+                          ),
+                          custom_widgets.DisplayQuillToHtml(
+                            width: double.infinity,
+                            height: MediaQuery.sizeOf(context).height * 0.05,
+                            defaultJsonData: widget!.editDescription!,
+                            isMaxCharacterAllowOrNot: true,
+                          ),
+                          if (responsiveVisibility(
+                            context: context,
+                            phone: false,
+                            tablet: false,
+                          ))
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 20.0, 0.0, 0.0),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  if (false)
+                                    wrapWithModel(
+                                      model: _model.viewLiveAppButtonCompModel,
+                                      updateCallback: () => setState(() {}),
+                                      child: const ViewLiveAppButtonCompWidget(
+                                        viewLiveApp: 'View Live App',
+                                      ),
+                                    ),
+                                  if (responsiveVisibility(
+                                    context: context,
+                                    phone: false,
+                                    tablet: false,
+                                    tabletLandscape: false,
+                                    desktop: false,
+                                  ))
+                                    wrapWithModel(
+                                      model: _model.getInTouchButtonCompModel,
+                                      updateCallback: () => setState(() {}),
+                                      child: GetInTouchButtonCompWidget(
+                                        buttonName: 'View More',
+                                        showIcon: false,
+                                        buttonAction: () async {
+                                          logFirebaseEvent(
+                                              'EXPLORE_OUR_PRODUCT_Container_loy5tuq3_C');
+                                          await widget.viewmore?.call();
+                                        },
+                                      ),
+                                    ),
+                                ].divide(const SizedBox(width: 20.0)),
+                              ),
+                            ),
+                        ],
                       ),
                     ),
-                ],
-              ),
-            if (responsiveVisibility(
-              context: context,
-              tabletLandscape: false,
-              desktop: false,
-            ))
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: Image.network(
-                      widget!.imagePath!,
-                      fit: BoxFit.cover,
+                  ),
+                if (responsiveVisibility(
+                  context: context,
+                  phone: false,
+                ))
+                  Expanded(
+                    flex: 5,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: CachedNetworkImage(
+                        fadeInDuration: const Duration(milliseconds: 0),
+                        fadeOutDuration: const Duration(milliseconds: 0),
+                        imageUrl: widget!.imagePath!,
+                        // width: 590.0,
+                        // height: 280.0,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                  Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 0.0),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
-                              0.0, 8.0, 0.0, 0.0),
-                          child: SelectionArea(
+                if (!widget!.isLeftsideText)
+                  Expanded(
+                    flex: 5,
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          20.0, 0.0, 0.0, 0.0),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SelectionArea(
                               child: Text(
                             widget!.productTitle!,
                             style: FlutterFlowTheme.of(context)
@@ -251,29 +196,78 @@ class _ExploreOurProductCompWidgetState
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .headlineSmallFamily,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryText,
                                   letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w600,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
                                           .headlineSmallFamily),
                                 ),
                           )),
-                        ),
-                        custom_widgets.DisplayQuillToHtml(
-                          width: double.infinity,
-                          height: MediaQuery.sizeOf(context).height * 0.08,
-                          defaultJsonData: widget!.editDescription!,
-                          isMaxCharacterAllowOrNot: true,
-                        ),
-                      ].divide(SizedBox(height: 10.0)),
+                          custom_widgets.DisplayQuillToHtml(
+                            width: MediaQuery.sizeOf(context).width * 1.0,
+                            height: MediaQuery.sizeOf(context).height * 0.05,
+                            defaultJsonData: widget!.editDescription!,
+                            isMaxCharacterAllowOrNot: true,
+                          ),
+                        ].divide(const SizedBox(height: 10.0)),
+                      ),
                     ),
                   ),
-                ].addToStart(SizedBox(height: 10.0)),
-              ),
-          ],
-        ),
+              ],
+            ),
+          if (responsiveVisibility(
+            context: context,
+            tabletLandscape: false,
+            desktop: false,
+          ))
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Image.network(
+                    widget!.imagePath!,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      10.0, 10.0, 0.0, 0.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 8.0, 0.0, 0.0),
+                        child: SelectionArea(
+                            child: Text(
+                          widget.productTitle ?? "Product title",
+                          style: FlutterFlowTheme.of(context)
+                              .headlineSmall
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .headlineSmallFamily,
+                                color: FlutterFlowTheme.of(context).primaryText,
+                                letterSpacing: 0.0,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .headlineSmallFamily),
+                              ),
+                        )),
+                      ),
+                      custom_widgets.DisplayQuillToHtml(
+                        width: double.infinity,
+                        height: MediaQuery.sizeOf(context).height * 0.08,
+                        defaultJsonData: widget!.editDescription!,
+                        isMaxCharacterAllowOrNot: true,
+                      ),
+                    ].divide(const SizedBox(height: 10.0)),
+                  ),
+                ),
+              ].addToStart(const SizedBox(height: 10.0)),
+            ),
+        ],
       ),
     );
   }
