@@ -73,6 +73,7 @@ class _ExploreOurProductCompWidgetState
               tablet: false,
             ))
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   if (widget!.isLeftsideText)
@@ -84,10 +85,11 @@ class _ExploreOurProductCompWidgetState
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 10.0, 0.0, 0.0),
+                                  0.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 widget!.productTitle!,
                                 style: FlutterFlowTheme.of(context)
@@ -174,7 +176,7 @@ class _ExploreOurProductCompWidgetState
                           imageUrl: widget!.imagePath!,
                           // width: 590.0,
                           // height: 280.0,
-                          fit: BoxFit.fill,
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
@@ -185,8 +187,9 @@ class _ExploreOurProductCompWidgetState
                         padding:
                             EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                         child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             SelectionArea(
                                 child: Text(
@@ -227,35 +230,7 @@ class _ExploreOurProductCompWidgetState
                     borderRadius: BorderRadius.circular(20.0),
                     child: Image.network(
                       widget!.imagePath!,
-                      width: () {
-                        if (MediaQuery.sizeOf(context).width <
-                            kBreakpointSmall) {
-                          return 328.0;
-                        } else if (MediaQuery.sizeOf(context).width <
-                            kBreakpointMedium) {
-                          return 590.0;
-                        } else if (MediaQuery.sizeOf(context).width <
-                            kBreakpointLarge) {
-                          return 590.0;
-                        } else {
-                          return 590.0;
-                        }
-                      }(),
-                      height: () {
-                        if (MediaQuery.sizeOf(context).width <
-                            kBreakpointSmall) {
-                          return 280.0;
-                        } else if (MediaQuery.sizeOf(context).width <
-                            kBreakpointMedium) {
-                          return 280.0;
-                        } else if (MediaQuery.sizeOf(context).width <
-                            kBreakpointLarge) {
-                          return 280.0;
-                        } else {
-                          return 280.0;
-                        }
-                      }(),
-                      fit: BoxFit.fill,
+                      fit: BoxFit.cover,
                     ),
                   ),
                   Padding(

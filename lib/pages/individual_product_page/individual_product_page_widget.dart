@@ -160,29 +160,41 @@ class _IndividualProductPageWidgetState
                                         model:
                                             _model.ourProductDetailCompModel1,
                                         updateCallback: () => setState(() {}),
-                                        child: OurProductDetailCompWidget(
-                                          imagePath: widget.productRef?.image,
-                                          title: widget.productRef?.title ?? '',
-                                          description:
-                                              widget.productRef?.description ??
-                                                  '',
-                                          features: widget.productRef?.features,
-                                          editDescription:
-                                              valueOrDefault<String>(
-                                            widget.productRef?.editDescription,
-                                            '[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]',
+                                        child: Container(
+                                          constraints: BoxConstraints(
+                                              maxWidth: getMaxWidth(context)),
+                                          child: OurProductDetailCompWidget(
+                                            imagePath: widget.productRef?.image,
+                                            title:
+                                                widget.productRef?.title ?? '',
+                                            description: widget
+                                                    .productRef?.description ??
+                                                '',
+                                            features:
+                                                widget.productRef?.features,
+                                            editDescription:
+                                                valueOrDefault<String>(
+                                              widget
+                                                  .productRef?.editDescription,
+                                              '[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]',
+                                            ),
                                           ),
                                         ),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional
-                                            .fromSTEB(10.0, 40.0, 10.0, 0.0),
-                                        child: wrapWithModel(
-                                          model:
-                                              _model.exploreProductCompModel1,
-                                          updateCallback: () => setState(() {}),
-                                          child:
-                                              const ExploreProductCompWidget(),
+                                      Container(
+                                        constraints: BoxConstraints(
+                                            maxWidth: getMaxWidth(context)),
+                                        child: Padding(
+                                          padding: const EdgeInsetsDirectional
+                                              .fromSTEB(10.0, 40.0, 10.0, 0.0),
+                                          child: wrapWithModel(
+                                            model:
+                                                _model.exploreProductCompModel1,
+                                            updateCallback: () =>
+                                                setState(() {}),
+                                            child:
+                                                const ExploreProductCompWidget(),
+                                          ),
                                         ),
                                       ),
                                       Padding(
@@ -245,33 +257,43 @@ class _IndividualProductPageWidgetState
                                           model:
                                               _model.ourProductDetailCompModel2,
                                           updateCallback: () => setState(() {}),
-                                          child: OurProductDetailCompWidget(
-                                            imagePath: widget.productRef?.image,
-                                            title:
-                                                widget.productRef?.title ?? '',
-                                            description: widget
-                                                    .productRef?.description ??
-                                                '',
-                                            features:
-                                                widget.productRef?.features,
-                                            editDescription:
-                                                valueOrDefault<String>(
-                                              widget
-                                                  .productRef?.editDescription,
-                                              '[{\"insert\":\"ourCulture\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"},{\"insert\":\"dasdssfsf\",\"attributes\":{\"bold\":true,\"underline\":true}},{\"insert\":\"\\n\",\"attributes\":{\"list\":\"bullet\"}}]',
+                                          child: Container(
+                                            constraints: BoxConstraints(
+                                                maxWidth: getMaxWidth(context)),
+                                            child: OurProductDetailCompWidget(
+                                              imagePath:
+                                                  widget.productRef?.image,
+                                              title: widget.productRef?.title ??
+                                                  '',
+                                              description: widget.productRef
+                                                      ?.description ??
+                                                  '',
+                                              features:
+                                                  widget.productRef?.features,
+                                              editDescription:
+                                                  valueOrDefault<String>(
+                                                widget.productRef
+                                                    ?.editDescription,
+                                                '[{\"insert\":\"ourCulture\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"},{\"insert\":\"dasdssfsf\",\"attributes\":{\"bold\":true,\"underline\":true}},{\"insert\":\"\\n\",\"attributes\":{\"list\":\"bullet\"}}]',
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional
-                                            .fromSTEB(50.0, 30.0, 50.0, 0.0),
-                                        child: wrapWithModel(
-                                          model:
-                                              _model.exploreProductCompModel2,
-                                          updateCallback: () => setState(() {}),
-                                          child:
-                                              const ExploreProductCompWidget(),
+                                      Container(
+                                        constraints: BoxConstraints(
+                                            maxWidth: getMaxWidth(context)),
+                                        child: Padding(
+                                          padding: const EdgeInsetsDirectional
+                                              .fromSTEB(50.0, 30.0, 50.0, 0.0),
+                                          child: wrapWithModel(
+                                            model:
+                                                _model.exploreProductCompModel2,
+                                            updateCallback: () =>
+                                                setState(() {}),
+                                            child:
+                                                const ExploreProductCompWidget(),
+                                          ),
                                         ),
                                       ),
                                       Padding(
@@ -314,30 +336,40 @@ class _IndividualProductPageWidgetState
                                           model:
                                               _model.ourProductDetailCompModel3,
                                           updateCallback: () => setState(() {}),
-                                          child: OurProductDetailCompWidget(
-                                            imagePath:
-                                                widget.productRef?.image ?? '',
-                                            title: widget.productRef?.title ??
-                                                "title",
-                                            description: widget
-                                                    .productRef?.description ??
-                                                'description',
-                                            features:
-                                                widget.productRef?.features,
-                                            editDescription: widget
-                                                .productRef?.editDescription,
+                                          child: Container(
+                                            constraints: BoxConstraints(
+                                                maxWidth: getMaxWidth(context)),
+                                            child: OurProductDetailCompWidget(
+                                              imagePath:
+                                                  widget.productRef?.image ??
+                                                      '',
+                                              title: widget.productRef?.title ??
+                                                  "title",
+                                              description: widget.productRef
+                                                      ?.description ??
+                                                  'description',
+                                              features:
+                                                  widget.productRef?.features,
+                                              editDescription: widget
+                                                  .productRef?.editDescription,
+                                            ),
                                           ),
                                         ),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional
-                                            .fromSTEB(70.0, 50.0, 70.0, 0.0),
-                                        child: wrapWithModel(
-                                          model:
-                                              _model.exploreProductCompModel3,
-                                          updateCallback: () => setState(() {}),
-                                          child:
-                                              const ExploreProductCompWidget(),
+                                      Container(
+                                        constraints: BoxConstraints(
+                                            maxWidth: getMaxWidth(context)),
+                                        child: Padding(
+                                          padding: const EdgeInsetsDirectional
+                                              .fromSTEB(70.0, 50.0, 70.0, 0.0),
+                                          child: wrapWithModel(
+                                            model:
+                                                _model.exploreProductCompModel3,
+                                            updateCallback: () =>
+                                                setState(() {}),
+                                            child:
+                                                const ExploreProductCompWidget(),
+                                          ),
                                         ),
                                       ),
                                       Padding(

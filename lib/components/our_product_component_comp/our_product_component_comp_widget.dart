@@ -69,7 +69,7 @@ class _OurProductComponentCompWidgetState
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      constraints: BoxConstraints(maxWidth: getMaxWidth(context)),
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),

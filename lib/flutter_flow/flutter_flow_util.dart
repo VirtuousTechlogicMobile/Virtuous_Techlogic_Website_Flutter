@@ -216,6 +216,30 @@ bool get isWeb => kIsWeb;
 const double kBreakpointSmall = 600.0;
 const double kBreakpointMedium = 1024.0;
 const double kBreakpointLarge = 1440.0;
+double getMaxWidth(BuildContext context) {
+  double screenWidth = MediaQuery.of(context).size.width;
+
+  if (screenWidth < kBreakpointSmall) {
+    return 328.0;
+  } else if (screenWidth < kBreakpointMedium) {
+    return 590.0;
+  } else {
+    return 1200.0;
+  }
+}
+
+double getMaxHeight(BuildContext context) {
+  double screenHeight = MediaQuery.of(context).size.height;
+
+  if (screenHeight < kBreakpointSmall) {
+    return 200.0;
+  } else if (screenHeight < kBreakpointMedium) {
+    return 472.0;
+  } else {
+    return 472.0;
+  }
+}
+
 bool isMobileWidth(BuildContext context) =>
     MediaQuery.sizeOf(context).width < kBreakpointSmall;
 bool responsiveVisibility({
