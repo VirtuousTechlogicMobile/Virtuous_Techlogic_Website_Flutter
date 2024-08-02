@@ -1,15 +1,13 @@
-import 'package:provider/provider.dart';
-import 'package:flutter/gestures.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
-import 'backend/firebase/firebase_config.dart';
-import 'flutter_flow/flutter_flow_theme.dart';
-import 'flutter_flow/flutter_flow_util.dart';
-import 'flutter_flow/nav/nav.dart';
-import 'index.dart';
+import 'package:meta_seo/meta_seo.dart';
+import 'package:provider/provider.dart';
+
 import '/backend/firebase_dynamic_links/firebase_dynamic_links.dart';
+import 'backend/firebase/firebase_config.dart';
+import 'flutter_flow/flutter_flow_util.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +17,11 @@ void main() async {
 
   final appState = FFAppState(); // Initialize FFAppState
   await appState.initializePersistedState();
-
+  // It is required to add the following to run the meta_seo package correctly
+  // before the running of the Flutter app
+  if (kIsWeb) {
+    MetaSEO().config();
+  }
   runApp(ChangeNotifierProvider(
     create: (context) => appState,
     child: MyApp(),
@@ -62,6 +64,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'HomePage',
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,

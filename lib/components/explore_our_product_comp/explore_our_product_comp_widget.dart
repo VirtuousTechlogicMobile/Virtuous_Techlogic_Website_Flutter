@@ -1,13 +1,14 @@
-import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
-import '/button_component/view_live_app_button_comp/view_live_app_button_comp_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
+import '/button_component/view_live_app_button_comp/view_live_app_button_comp_widget.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'explore_our_product_comp_model.dart';
+
 export 'explore_our_product_comp_model.dart';
 
 class ExploreOurProductCompWidget extends StatefulWidget {
@@ -72,20 +73,23 @@ class _ExploreOurProductCompWidgetState
               tablet: false,
             ))
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   if (widget!.isLeftsideText)
                     Expanded(
+                      flex: 5,
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 10.0, 0.0, 0.0),
+                                  0.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 widget!.productTitle!,
                                 style: FlutterFlowTheme.of(context)
@@ -162,25 +166,30 @@ class _ExploreOurProductCompWidgetState
                     context: context,
                     phone: false,
                   ))
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(20.0),
-                      child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 0),
-                        fadeOutDuration: Duration(milliseconds: 0),
-                        imageUrl: widget!.imagePath!,
-                        width: 590.0,
-                        height: 280.0,
-                        fit: BoxFit.fill,
+                    Expanded(
+                      flex: 5,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: CachedNetworkImage(
+                          fadeInDuration: Duration(milliseconds: 0),
+                          fadeOutDuration: Duration(milliseconds: 0),
+                          imageUrl: widget!.imagePath!,
+                          // width: 590.0,
+                          // height: 280.0,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   if (!widget!.isLeftsideText)
                     Expanded(
+                      flex: 5,
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                         child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             SelectionArea(
                                 child: Text(
@@ -221,35 +230,7 @@ class _ExploreOurProductCompWidgetState
                     borderRadius: BorderRadius.circular(20.0),
                     child: Image.network(
                       widget!.imagePath!,
-                      width: () {
-                        if (MediaQuery.sizeOf(context).width <
-                            kBreakpointSmall) {
-                          return 328.0;
-                        } else if (MediaQuery.sizeOf(context).width <
-                            kBreakpointMedium) {
-                          return 590.0;
-                        } else if (MediaQuery.sizeOf(context).width <
-                            kBreakpointLarge) {
-                          return 590.0;
-                        } else {
-                          return 590.0;
-                        }
-                      }(),
-                      height: () {
-                        if (MediaQuery.sizeOf(context).width <
-                            kBreakpointSmall) {
-                          return 280.0;
-                        } else if (MediaQuery.sizeOf(context).width <
-                            kBreakpointMedium) {
-                          return 280.0;
-                        } else if (MediaQuery.sizeOf(context).width <
-                            kBreakpointLarge) {
-                          return 280.0;
-                        } else {
-                          return 280.0;
-                        }
-                      }(),
-                      fit: BoxFit.fill,
+                      fit: BoxFit.cover,
                     ),
                   ),
                   Padding(

@@ -1,10 +1,10 @@
+import 'package:flutter/material.dart';
+
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'mobile_header_comp_model.dart';
+
 export 'mobile_header_comp_model.dart';
 
 class MobileHeaderCompWidget extends StatefulWidget {
@@ -49,9 +49,6 @@ class _MobileHeaderCompWidgetState extends State<MobileHeaderCompWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).secondaryBackground,
-      ),
       child: Padding(
         padding: EdgeInsets.all(20.0),
         child: Row(

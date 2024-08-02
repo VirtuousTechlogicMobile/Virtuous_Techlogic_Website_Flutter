@@ -1,16 +1,8 @@
-// Automatic FlutterFlow imports
-import '/backend/backend.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/material.dart';
+
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'index.dart'; // Imports other custom widgets
-import '/custom_code/actions/index.dart'; // Imports custom actions
-import '/flutter_flow/custom_functions.dart'; // Imports custom functions
-import 'package:flutter/material.dart';
-// Begin custom widget code
-// DO NOT REMOVE OR MODIFY THE CODE ABOVE!
-
-import 'package:auto_size_text/auto_size_text.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class BredCrumbsUrl extends StatefulWidget {
   const BredCrumbsUrl({
@@ -22,7 +14,7 @@ class BredCrumbsUrl extends StatefulWidget {
     this.title,
     this.webOnPressEvent,
     this.bredcrumbsIcon,
-    this.pageOnPressevent,
+    this.pageOnPressEvent,
     this.webColor,
     this.pageColor,
     this.titleColor,
@@ -36,7 +28,7 @@ class BredCrumbsUrl extends StatefulWidget {
   final String? title;
   final Future Function()? webOnPressEvent;
   final String? bredcrumbsIcon;
-  final Future Function()? pageOnPressevent;
+  final Future Function()? pageOnPressEvent;
   final Color? webColor;
   final Color? pageColor;
   final Color? titleColor;
@@ -53,79 +45,82 @@ class _BredCrumbsUrlState extends State<BredCrumbsUrl> {
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
-          GestureDetector(
-            onTap: () async {
-              await widget.webOnPressEvent!();
-            },
-            child: Text(
-              widget.webName ?? 'webname',
-              style: FlutterFlowTheme.of(context)
-                  .labelLarge
-                  .override(
-                    fontFamily: 'Raleway',
-                    color: widget.webColor,
-                    letterSpacing: 0,
-                    useGoogleFonts: GoogleFonts.asMap().containsKey('Raleway'),
-                  )
-                  .copyWith(fontWeight: FontWeight.bold, fontSize: 15),
+          Flexible(
+            flex: 1,
+            child: InkWell(
+              onTap: widget.webOnPressEvent,
+              child: AutoSizeText(
+                widget.webName ?? 'webname',
+                maxFontSize: 15,
+                minFontSize: 8,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: FlutterFlowTheme.of(context).labelLarge.copyWith(
+                      fontFamily: 'Raleway',
+                      color: widget.webColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    ),
+              ),
             ),
           ),
-          Text(
-            widget.bredcrumbsIcon ?? '/',
-            style: FlutterFlowTheme.of(context)
-                .headlineSmall
-                .override(
-                  fontFamily: FlutterFlowTheme.of(context).headlineSmallFamily,
-                  letterSpacing: 0,
-                  color: widget.bredcrumbColor,
-                  useGoogleFonts: GoogleFonts.asMap().containsKey(
-                      FlutterFlowTheme.of(context).headlineSmallFamily),
-                )
-                .copyWith(fontSize: 15),
-          ),
-          GestureDetector(
-            onTap: () async {
-              await widget.pageOnPressevent!();
-            },
-            child: Text(
-              widget.pageName ?? 'pagename',
-              style: FlutterFlowTheme.of(context)
-                  .titleMedium
-                  .override(
-                    fontFamily: 'Raleway',
-                    color: widget.pageColor,
+          Flexible(
+            flex: 1,
+            child: AutoSizeText(
+              widget.bredcrumbsIcon ?? '/',
+              maxFontSize: 15,
+              minFontSize: 10,
+              overflow: TextOverflow.ellipsis,
+              style: FlutterFlowTheme.of(context).headlineSmall.copyWith(
                     letterSpacing: 0,
-                    useGoogleFonts: GoogleFonts.asMap().containsKey('Raleway'),
-                  )
-                  .copyWith(fontSize: 15),
+                    color: widget.bredcrumbColor,
+                    fontSize: 15,
+                  ),
             ),
           ),
-          Text(
-            widget.bredcrumbsIcon ?? '/',
-            style: FlutterFlowTheme.of(context)
-                .headlineSmall
-                .override(
-                  fontFamily: FlutterFlowTheme.of(context).headlineSmallFamily,
-                  letterSpacing: 0,
-                  color: widget.bredcrumbColor,
-                  useGoogleFonts: GoogleFonts.asMap().containsKey(
-                      FlutterFlowTheme.of(context).headlineSmallFamily),
-                )
-                .copyWith(fontSize: 15),
+          Flexible(
+            child: InkWell(
+              onTap: widget.pageOnPressEvent,
+              child: AutoSizeText(
+                maxFontSize: 15,
+                minFontSize: 5,
+                overflow: TextOverflow.ellipsis,
+                widget.pageName ?? 'pagename',
+                style: FlutterFlowTheme.of(context).titleMedium.copyWith(
+                      fontFamily: 'Raleway',
+                      color: widget.pageColor,
+                      fontSize: 15,
+                    ),
+              ),
+            ),
           ),
-          AutoSizeText(
-            valueOrDefault<String>(widget.title ?? 'title', 'title'),
-            style: FlutterFlowTheme.of(context)
-                .titleMedium
-                .override(
-                  fontFamily: 'Raleway',
-                  color: widget.titleColor,
-                  letterSpacing: 0,
-                  useGoogleFonts: GoogleFonts.asMap().containsKey('Raleway'),
-                )
-                .copyWith(fontSize: 15),
+          Flexible(
+            child: AutoSizeText(
+              widget.bredcrumbsIcon ?? '/',
+              maxFontSize: 15,
+              minFontSize: 8,
+              overflow: TextOverflow.ellipsis,
+              style: FlutterFlowTheme.of(context).headlineSmall.copyWith(
+                    letterSpacing: 0,
+                    color: widget.bredcrumbColor,
+                    fontSize: 15,
+                  ),
+            ),
           ),
-        ].divide(SizedBox(width: 8)),
+          Flexible(
+            child: AutoSizeText(
+              widget.title ?? 'title',
+              maxFontSize: 15,
+              minFontSize: 8,
+              overflow: TextOverflow.ellipsis,
+              style: FlutterFlowTheme.of(context).titleMedium.copyWith(
+                    fontFamily: 'Raleway',
+                    color: widget.titleColor,
+                    fontSize: 15,
+                  ),
+            ),
+          ),
+        ].divide(const SizedBox(width: 8)),
       ),
     );
   }

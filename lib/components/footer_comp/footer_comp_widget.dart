@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'footer_comp_model.dart';
+
 export 'footer_comp_model.dart';
 
 class FooterCompWidget extends StatefulWidget {
@@ -55,18 +56,19 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                 color: FlutterFlowTheme.of(context).footer,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(50.0, 20.0, 50.0, 25.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(
+                    50.0, 20.0, 50.0, 25.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 10.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 20.0, 0.0, 10.0),
                       child: Container(
                         width: double.infinity,
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               50.0, 0.0, 50.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -139,8 +141,8 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                                       .primary,
                                             ),
                                           ),
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kfacebook,
                                             color: FlutterFlowTheme.of(context)
@@ -171,8 +173,8 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                                       .primary,
                                             ),
                                           ),
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kinstagram,
                                             color: FlutterFlowTheme.of(context)
@@ -203,8 +205,8 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                                       .primary,
                                             ),
                                           ),
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Icon(
                                             FFIcons.klinkedin,
                                             color: FlutterFlowTheme.of(context)
@@ -235,8 +237,8 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                                       .primary,
                                             ),
                                           ),
-                                          alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                          alignment: const AlignmentDirectional(
+                                              0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kx,
                                             color: FlutterFlowTheme.of(context)
@@ -245,9 +247,9 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 15.0)),
+                                    ].divide(const SizedBox(width: 15.0)),
                                   ),
-                                ].divide(SizedBox(height: 35.0)),
+                                ].divide(const SizedBox(height: 35.0)),
                               ),
                               Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -413,7 +415,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                           ),
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 14.0)),
+                                ].divide(const SizedBox(height: 14.0)),
                               ),
                               Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -511,7 +513,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                           ),
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 14.0)),
+                                ].divide(const SizedBox(height: 14.0)),
                               ),
                               Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -723,79 +725,33 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                           ),
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 14.0)),
+                                ].divide(const SizedBox(height: 14.0)),
                               ),
                             ],
                           ),
                         ),
                       ),
                     ),
-                    Divider(
+                    const Divider(
                       thickness: 2.0,
                       indent: 40.0,
                       endIndent: 40.0,
                       color: Color(0xFF1E4866),
                     ),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SelectionArea(
-                            child: Text(
-                          ' © 2024 Virtuous Techlogic All Rights Reserved',
-                          style: FlutterFlowTheme.of(context)
-                              .titleSmall
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .titleSmallFamily,
-                                letterSpacing: 0.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .titleSmallFamily),
-                              ),
-                        )),
-                        Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 12.0),
-                            child: Text(
-                              '.',
-                              textAlign: TextAlign.center,
-                              style: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .titleSmallFamily,
-                                    color:
-                                        FlutterFlowTheme.of(context).formColor,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .titleSmallFamily),
-                                  ),
+                    SelectionArea(
+                        child: Center(
+                      child: Text(
+                        ' © 2024 Virtuous Techlogic All Rights Reserved',
+                        style: FlutterFlowTheme.of(context).titleSmall.override(
+                              fontFamily:
+                                  FlutterFlowTheme.of(context).titleSmallFamily,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                  FlutterFlowTheme.of(context)
+                                      .titleSmallFamily),
                             ),
-                          ),
-                        ),
-                        SelectionArea(
-                            child: Text(
-                          'English',
-                          style: FlutterFlowTheme.of(context)
-                              .labelLarge
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .labelLargeFamily,
-                                color: FlutterFlowTheme.of(context).formColor,
-                                letterSpacing: 0.0,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .labelLargeFamily),
-                              ),
-                        )),
-                      ].divide(SizedBox(width: 8.0)),
-                    ),
+                      ),
+                    )),
                   ],
                 ),
               ),
@@ -811,7 +767,8 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                 color: FlutterFlowTheme.of(context).footer,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(
+                    10.0, 30.0, 10.0, 20.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -832,8 +789,9 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               context.pushNamed('homePage');
                             },
                             child: CachedNetworkImage(
-                              fadeInDuration: Duration(milliseconds: 100),
-                              fadeOutDuration: Duration(milliseconds: 100),
+                              fadeInDuration: const Duration(milliseconds: 100),
+                              fadeOutDuration:
+                                  const Duration(milliseconds: 100),
                               imageUrl:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/x8xgtezwma9b/logo.png',
                               width: 183.0,
@@ -841,7 +799,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 10.0, 0.0),
                             child: Text(
                               'Virtuous Techlogic is the process of exploring, creating and delivering value to meet the needs of  a great market in terms of IT Services, potentially.',
@@ -864,7 +822,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
@@ -892,7 +850,8 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                             .secondary,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Icon(
                                       FFIcons.kfacebook,
                                       color: FlutterFlowTheme.of(context)
@@ -922,7 +881,8 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                             .secondary,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Icon(
                                       FFIcons.kinstagram,
                                       color: FlutterFlowTheme.of(context)
@@ -952,7 +912,8 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                             .secondary,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Icon(
                                       FFIcons.klinkedin,
                                       color: FlutterFlowTheme.of(context)
@@ -981,7 +942,8 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                             .secondary,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 0.0),
                                     child: Icon(
                                       FFIcons.kx,
                                       color: FlutterFlowTheme.of(context)
@@ -990,20 +952,20 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(width: 15.0)),
+                              ].divide(const SizedBox(width: 15.0)),
                             ),
                           ),
-                        ].divide(SizedBox(height: 30.0)),
+                        ].divide(const SizedBox(height: 30.0)),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 30.0, 0.0, 30.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 20.0),
                               child: Text(
                                 'Quick Links',
@@ -1022,7 +984,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -1050,7 +1012,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x9AFFFFFF),
+                                        color: const Color(0x9AFFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1062,7 +1024,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -1090,7 +1052,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x9AFFFFFF),
+                                        color: const Color(0x9AFFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1109,7 +1071,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               desktop: false,
                             ))
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Text(
                                   'Achievements',
@@ -1118,7 +1080,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x99FFFFFF),
+                                        color: const Color(0x99FFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1129,7 +1091,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                 ),
                               ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -1149,7 +1111,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x9AFFFFFF),
+                                        color: const Color(0x9AFFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1186,7 +1148,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .labelLargeFamily,
-                                      color: Color(0x9AFFFFFF),
+                                      color: const Color(0x9AFFFFFF),
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
@@ -1200,14 +1162,14 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 0.0, 0.0, 30.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 20.0),
                               child: Text(
                                 'About Us',
@@ -1226,7 +1188,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -1254,7 +1216,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x9AFFFFFF),
+                                        color: const Color(0x9AFFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1266,7 +1228,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -1294,7 +1256,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x9AFFFFFF),
+                                        color: const Color(0x9AFFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1309,14 +1271,14 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 0.0, 0.0, 30.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 20.0),
                               child: Text(
                                 'Legal',
@@ -1335,7 +1297,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -1363,7 +1325,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x9AFFFFFF),
+                                        color: const Color(0x9AFFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1375,7 +1337,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -1403,7 +1365,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x9AFFFFFF),
+                                        color: const Color(0x9AFFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1415,7 +1377,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -1443,7 +1405,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x9AFFFFFF),
+                                        color: const Color(0x9AFFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1455,7 +1417,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -1483,7 +1445,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .labelLargeFamily,
-                                        color: Color(0x9AFFFFFF),
+                                        color: const Color(0x9AFFFFFF),
                                         letterSpacing: 0.0,
                                         fontWeight: FontWeight.w500,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -1520,7 +1482,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .labelLargeFamily,
-                                      color: Color(0x9AFFFFFF),
+                                      color: const Color(0x9AFFFFFF),
                                       letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: GoogleFonts.asMap()
@@ -1533,14 +1495,14 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                           ],
                         ),
                       ),
-                      Divider(
+                      const Divider(
                         thickness: 1.0,
                         color: Color(0xFF1E4866),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, -1.0),
+                        alignment: const AlignmentDirectional(0.0, -1.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Text(
                             '© 2024 Virtuous Techlogic \nAll Rights Reserved.',

@@ -1,21 +1,17 @@
 // Automatic FlutterFlow imports
-import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import 'index.dart'; // Imports other custom widgets
-import '/custom_code/actions/index.dart'; // Imports custom actions
-import '/flutter_flow/custom_functions.dart'; // Imports custom functions
-import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 import 'package:vsc_quill_delta_to_html/vsc_quill_delta_to_html.dart';
-import 'package:flutter_html/flutter_html.dart';
-import 'package:google_fonts/google_fonts.dart';
+
+import '/flutter_flow/flutter_flow_util.dart';
 
 class DisplayQuillToHtml extends StatefulWidget {
   const DisplayQuillToHtml({
@@ -121,13 +117,13 @@ class _HtmlViewerState extends State<_HtmlViewer> {
 
     if (widget.isMaxCharacterAllowOrNot == true) {
       // Limit the displayed text to 400 characters
-      final truncatedHtml = _html.substring(0, 450);
+      final truncatedHtml = _html.substring(0, 400);
       _html = Html(
             data: '<div>$truncatedHtml...</div>',
           ).data ??
           '';
     } else {
-      _html = '<div style="max-width: 800px;">$_html</div>';
+      _html = '<div>$_html</div>';
     }
 
     setState(() {});
@@ -137,7 +133,7 @@ class _HtmlViewerState extends State<_HtmlViewer> {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisSize: MainAxisSize.min,
+      mainAxisSize: MainAxisSize.max,
       children: [
         Padding(
           padding: const EdgeInsets.all(2.0),
@@ -146,8 +142,23 @@ class _HtmlViewerState extends State<_HtmlViewer> {
             if (_previewMode) {
               if (_isPreviewable) {
                 viewer = Html(
-                  data:
-                      '<html lang="en"><body style="font-family:Poppins;font-style: normal;font-size:16px; font-weight: normal;letter-spacing: 2px;line-height: 1.2;color:#676767;">$_html</body></html>',
+                  data: '''
+            <html lang="en">
+              <body style="
+                font-family: Poppins;
+                font-style: normal;
+                font-size: 16px;
+                font-weight: normal;
+                letter-spacing: 2px;
+                line-height: 1.2;
+                color: #676767;
+                margin: 0;  /* Remove margin */
+                padding: 0; /* Remove padding */
+              ">
+                $_html
+              </body>
+            </html>
+          ''',
                   onLinkTap: (url, _, ___) => launchURL(url!),
                 );
               } else {

@@ -1,13 +1,13 @@
+import 'package:flutter/material.dart';
+
 import '/backend/backend.dart';
 import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 import '/components/blog_comp/blog_comp_widget.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'explore_our_blogs_comp_model.dart';
+
 export 'explore_our_blogs_comp_model.dart';
 
 class ExploreOurBlogsCompWidget extends StatefulWidget {
@@ -52,23 +52,26 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
           wrapWithModel(
             model: _model.commonRichTextCompModel,
             updateCallback: () => setState(() {}),
-            child: CommonRichTextCompWidget(
+            child: const CommonRichTextCompWidget(
               richTextOne: 'Explore ',
               richTextTwo: 'Our Blogs',
               texts: 'Blogs & posts by our Team',
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: StreamBuilder<List<BlogDetailsRecord>>(
               stream: queryBlogDetailsRecord(
-                queryBuilder: (blogDetailsRecord) => blogDetailsRecord.where(
-                  'status',
-                  isEqualTo: true,
-                ),
+                queryBuilder: (blogDetailsRecord) {
+                  return blogDetailsRecord.where(
+                    'status',
+                    isEqualTo: true,
+                  );
+                },
                 limit: 2,
               ),
               builder: (context, snapshot) {
+                print("snapshot.data! = ${snapshot.data!.toString()}");
                 // Customize what your widget looks like when it's loading.
                 if (!snapshot.hasData) {
                   return Center(
@@ -76,6 +79,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                       width: 50.0,
                       height: 50.0,
                       child: CircularProgressIndicator(
+                        color: FlutterFlowTheme.of(context).primary,
                         valueColor: AlwaysStoppedAnimation<Color>(
                           FlutterFlowTheme.of(context).primary,
                         ),
@@ -121,38 +125,23 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                         ),
                         blogTag: columnBlogDetailsRecord.blogTags,
                         readmore: () async {
-                          logFirebaseEvent(
-                              'EXPLORE_OUR_BLOGS_Container_m5k9xx4f_CAL');
-
-                          context.pushNamed(
-                            'individualBlogPage',
-                            queryParameters: {
-                              'individualBlogRefpage': serializeParam(
-                                columnBlogDetailsRecord.reference,
-                                ParamType.DocumentReference,
-                              ),
-                              'blogTitle': serializeParam(
-                                columnBlogDetailsRecord.title,
-                                ParamType.String,
-                              ),
-                            }.withoutNulls,
-                          );
-
+                          final String blotitle = Uri.encodeComponent(
+                              columnBlogDetailsRecord.title);
+                          await launchURL('individualBlogPage/${blotitle}');
                           FFAppState().selectedTitle = valueOrDefault<String>(
                             columnBlogDetailsRecord.title,
                             'Title',
                           );
-                          setState(() {});
                         },
                       );
-                    }).divide(SizedBox(height: 20.0)),
+                    }).divide(const SizedBox(height: 20.0)),
                   ),
                 );
               },
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
             child: wrapWithModel(
               model: _model.getInTouchButtonCompModel,
               updateCallback: () => setState(() {}),
@@ -165,7 +154,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                   context.pushNamed(
                     'moreBlog',
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: TransitionInfo(
+                      kTransitionInfoKey: const TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.fade,
                       ),
@@ -175,7 +164,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
               ),
             ),
           ),
-        ].divide(SizedBox(height: 30.0)),
+        ].divide(const SizedBox(height: 30.0)),
       ),
     );
   }

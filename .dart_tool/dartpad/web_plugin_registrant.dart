@@ -13,6 +13,7 @@ import 'package:firebase_core_web/firebase_core_web.dart';
 import 'package:firebase_performance_web/firebase_performance_web.dart';
 import 'package:flutter_keyboard_visibility_web/flutter_keyboard_visibility_web.dart';
 import 'package:flutter_native_splash/flutter_native_splash_web.dart';
+import 'package:fluttertoast/fluttertoast_web.dart';
 import 'package:shared_preferences_web/shared_preferences_web.dart';
 import 'package:super_native_extensions/super_native_extensions_web.dart';
 import 'package:url_launcher_web/url_launcher_web.dart';
@@ -27,6 +28,7 @@ void registerPlugins([final Registrar? pluginRegistrar]) {
   FirebasePerformanceWeb.registerWith(registrar);
   FlutterKeyboardVisibilityPlugin.registerWith(registrar);
   FlutterNativeSplashWeb.registerWith(registrar);
+  FluttertoastWebPlugin.registerWith(registrar);
   SharedPreferencesPlugin.registerWith(registrar);
   SuperNativeExtensionsWeb.registerWith(registrar);
   UrlLauncherPlugin.registerWith(registrar);

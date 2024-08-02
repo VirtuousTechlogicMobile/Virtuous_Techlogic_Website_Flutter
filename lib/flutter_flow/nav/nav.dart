@@ -1,24 +1,21 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:meta_seo/meta_seo.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
 
-import '/index.dart';
-import '/main.dart';
+import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
+import '/index.dart';
 
 export 'package:go_router/go_router.dart';
-export 'serialization_util.dart';
+
 export '/backend/firebase_dynamic_links/firebase_dynamic_links.dart'
     show generateCurrentPageLink;
+export 'serialization_util.dart';
 
 const kTransitionInfoKey = '__transition_info__';
 
@@ -26,6 +23,7 @@ class AppStateNotifier extends ChangeNotifier {
   AppStateNotifier._();
 
   static AppStateNotifier? _instance;
+
   static AppStateNotifier get instance => _instance ??= AppStateNotifier._();
 
   bool showSplashImage = true;
@@ -56,87 +54,204 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   ),
                 ),
               )
-            : HomePageWidget(),
+            : const HomePageWidget(),
       ),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.showSplashImage
-              ? Builder(
-                  builder: (context) => Container(
-                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                    child: Center(
-                      child: Image.asset(
-                        'assets/images/logo.png',
-                        width: 300.0,
-                        height: 300.0,
-                        fit: BoxFit.contain,
+          builder: (context, _) {
+            // Add MetaSEO just into Web platform condition
+            if (kIsWeb && !appStateNotifier.showSplashImage) {
+              // Define MetaSEO object
+              MetaSEO meta = MetaSEO();
+              // add meta seo data for web app as you want
+              meta.ogTitle(
+                ogTitle: 'We are Flutter & FlutterFlow App Development Company',
+              );
+              meta.description(
+                description:
+                    'We are Top Rated App Development company who create amazing apps for world class companies 10X faster.',
+              );
+              meta.keywords(
+                keywords:
+                    'Flutter, FlutterFlow, Figma, bubble, Firebase,  Dart,',
+              );
+            }
+            return appStateNotifier.showSplashImage
+                ? Builder(
+                    builder: (context) => Container(
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
+                      child: Center(
+                        child: Image.asset(
+                          'assets/images/logo.png',
+                          width: 300.0,
+                          height: 300.0,
+                          fit: BoxFit.contain,
+                        ),
                       ),
                     ),
-                  ),
-                )
-              : HomePageWidget(),
+                  )
+                : const HomePageWidget();
+          },
           routes: [
             FFRoute(
               name: 'homePage',
               path: 'homePage',
-              builder: (context, params) => HomePageWidget(),
+              builder: (context, params) {
+                // Add MetaSEO just into Web platform condition
+                if (kIsWeb) {
+                  // Define MetaSEO object
+                  MetaSEO meta = MetaSEO();
+                  // add meta seo data for web app as you want
+                  meta.ogTitle(
+                    ogTitle:
+                        'We are Flutter & FlutterFlow App Development Company',
+                  );
+                  meta.description(
+                    description:
+                        'We are Top Rated App Development company who create amazing apps for world class companies 10X faster.',
+                  );
+                  meta.keywords(
+                    keywords:
+                        'Flutter, FlutterFlow, Figma, bubble, Firebase,  Dart,',
+                  );
+                }
+                return const HomePageWidget();
+              },
             ),
             FFRoute(
               name: 'aboutPage',
               path: 'aboutPage',
-              builder: (context, params) => AboutPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                // Add MetaSEO just into Web platform condition
+                if (kIsWeb) {
+                  // Define MetaSEO object
+                  MetaSEO meta = MetaSEO();
+                  // add meta seo data for web app as you want
+                  meta.ogTitle(
+                    ogTitle: 'We are  changing the whole game.',
+                  );
+                  meta.description(
+                    description:
+                        'We are Top Rated App Development company who create amazing apps for world class companies 10X faster.',
+                  );
+                  meta.keywords(
+                    keywords: 'Network, Office Culture, Festivals,',
+                  );
+                }
+                return AboutPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'servicesPage',
               path: 'servicesPage',
-              builder: (context, params) => ServicesPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                // Add MetaSEO just into Web platform condition
+                if (kIsWeb) {
+                  // Define MetaSEO object
+                  MetaSEO meta = MetaSEO();
+                  // add meta seo data for web app as you want
+                  meta.ogTitle(
+                    ogTitle: 'Explore Our Expertise',
+                  );
+                  meta.description(
+                    description: 'Fields where we are Best.',
+                  );
+                  meta.keywords(
+                    keywords:
+                        'FlutterFlow Development, Flutter Development, No code/ low code, UI/UX Design, iOS Advancement,Android Improvement,',
+                  );
+                }
+                return ServicesPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'ourProductsPage',
               path: 'ourProductsPage',
-              builder: (context, params) => OurProductsPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                // Add MetaSEO just into Web platform condition
+                if (kIsWeb) {
+                  // Define MetaSEO object
+                  MetaSEO meta = MetaSEO();
+                  // add meta seo data for web app as you want
+                  meta.ogTitle(
+                    ogTitle: 'Explore Our Own Area',
+                  );
+                  meta.description(
+                    description:
+                        'From retail to healthcare, our white-label solutions are tailored to fit your industry needs. Take your business to the next level with ease!',
+                  );
+                  meta.keywords(
+                    keywords:
+                        'Chatter, Vigoura App, VirChat an End to end AI Powered chatting application,',
+                  );
+                }
+                return OurProductsPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'caseStudiesPage',
               path: 'caseStudiesPage',
-              builder: (context, params) => CaseStudiesPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                // Add MetaSEO just into Web platform condition
+                if (kIsWeb) {
+                  // Define MetaSEO object
+                  MetaSEO meta = MetaSEO();
+                  // add meta seo data for web app as you want
+                  meta.ogTitle(
+                    ogTitle: 'Explore Our Case Studies',
+                  );
+                  meta.description(
+                    description:
+                        'We consider ourselves lucky to work on many innovative concepts with amazing companies. We absolutely love solving problems and transforming ideas into reality.',
+                  );
+                  meta.keywords(
+                    keywords:
+                        'Baseball tournament App, Astrology App, Chart App, Social Streaming App, Digital Gaming App, Chatting App',
+                  );
+                }
+                return CaseStudiesPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'contactUsPage',
               path: 'contactUsPage',
-              builder: (context, params) => ContactUsPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                return ContactUsPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'dedicatedServicePage',
               path: 'dedicatedServicePage',
-              builder: (context, params) => DedicatedServicePageWidget(),
+              builder: (context, params) {
+                return const DedicatedServicePageWidget();
+              },
             ),
             FFRoute(
               name: 'IndividualProductPage',
@@ -145,42 +260,46 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 'productRef':
                     getDoc(['buildProduct'], BuildProductRecord.fromSnapshot),
               },
-              builder: (context, params) => IndividualProductPageWidget(
-                productRef: params.getParam(
-                  'productRef',
-                  ParamType.Document,
-                ),
-                productTitle: params.getParam(
-                  'productTitle',
-                  ParamType.String,
-                ),
-              ),
+              builder: (context, params) {
+                return IndividualProductPageWidget(
+                  productRef: params.getParam(
+                    'productRef',
+                    ParamType.Document,
+                  ),
+                  productTitle: params.getParam(
+                    'productTitle',
+                    ParamType.String,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'moreBlog',
               path: 'moreBlog',
-              builder: (context, params) => MoreBlogWidget(),
+              builder: (context, params) {
+                return const MoreBlogWidget();
+              },
             ),
             FFRoute(
               name: 'stepsPage',
               path: 'stepsPage',
-              builder: (context, params) => StepsPageWidget(),
+              builder: (context, params) {
+                return const StepsPageWidget();
+              },
             ),
             FFRoute(
               name: 'individualBlogPage',
-              path: 'individualBlogPage',
-              builder: (context, params) => IndividualBlogPageWidget(
-                individualBlogRefpage: params.getParam(
-                  'individualBlogRefpage',
-                  ParamType.DocumentReference,
-                  isList: false,
-                  collectionNamePath: ['blogDetails'],
-                ),
-                blogTitle: params.getParam(
+              path: 'individualBlogPage/:blogTitle',
+              builder: (context, params) {
+                final String title = params.getParam(
                   'blogTitle',
                   ParamType.String,
-                ),
-              ),
+                );
+
+                return IndividualBlogPageWidget(
+                  blogTitle: title,
+                );
+              },
             ),
             FFRoute(
               name: 'individualCaseStudy',
@@ -188,82 +307,98 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               asyncParams: {
                 'ref': getDoc(['caseStudies'], CaseStudiesRecord.fromSnapshot),
               },
-              builder: (context, params) => IndividualCaseStudyWidget(
-                ref: params.getParam(
-                  'ref',
-                  ParamType.Document,
-                ),
-              ),
+              builder: (context, params) {
+                return IndividualCaseStudyWidget(
+                  ref: params.getParam(
+                    'ref',
+                    ParamType.Document,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'cookieSettingPage',
               path: 'cookieSettingPage',
-              builder: (context, params) => CookieSettingPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                return CookieSettingPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'brandGuidelinesPage',
               path: 'brandGuidelinesPage',
-              builder: (context, params) => BrandGuidelinesPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                return BrandGuidelinesPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'desclaimerPage',
               path: 'desclaimerPage',
-              builder: (context, params) => DesclaimerPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                return DesclaimerPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'termsServicePage',
               path: 'termsServicePage',
-              builder: (context, params) => TermsServicePageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                return TermsServicePageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'sitemapPage',
               path: 'sitemapPage',
-              builder: (context, params) => SitemapPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                return SitemapPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'faqPage',
               path: 'faqPage',
-              builder: (context, params) => FaqPageWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                return FaqPageWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             ),
             FFRoute(
               name: 'privacyPolicy',
               path: 'privacyPolicy',
-              builder: (context, params) => PrivacyPolicyWidget(
-                index: params.getParam(
-                  'index',
-                  ParamType.int,
-                ),
-              ),
+              builder: (context, params) {
+                return PrivacyPolicyWidget(
+                  index: params.getParam(
+                    'index',
+                    ParamType.int,
+                  ),
+                );
+              },
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
@@ -293,10 +428,12 @@ extension NavigationExtensions on BuildContext {
 extension _GoRouterStateExtensions on GoRouterState {
   Map<String, dynamic> get extraMap =>
       extra != null ? extra as Map<String, dynamic> : {};
+
   Map<String, dynamic> get allParams => <String, dynamic>{}
     ..addAll(pathParameters)
     ..addAll(uri.queryParameters)
     ..addAll(extraMap);
+
   TransitionInfo get transitionInfo => extraMap.containsKey(kTransitionInfoKey)
       ? extraMap[kTransitionInfoKey] as TransitionInfo
       : TransitionInfo.appDefault();
@@ -316,9 +453,12 @@ class FFParameters {
       state.allParams.isEmpty ||
       (state.allParams.length == 1 &&
           state.extraMap.containsKey(kTransitionInfoKey));
+
   bool isAsyncParam(MapEntry<String, dynamic> param) =>
       asyncParams.containsKey(param.key) && param.value is String;
+
   bool get hasFutures => state.allParams.entries.any(isAsyncParam);
+
   Future<bool> completeFutures() => Future.wait(
         state.allParams.entries.where(isAsyncParam).map(
           (param) async {
@@ -431,7 +571,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(
+  static TransitionInfo appDefault() => const TransitionInfo(
         hasTransition: true,
         transitionType: PageTransitionType.fade,
         duration: Duration(milliseconds: 0),
@@ -469,6 +609,7 @@ class _RouteErrorBuilderState extends State<_RouteErrorBuilder> {
 
 class RootPageContext {
   const RootPageContext(this.isRootPage, [this.errorRoute]);
+
   final bool isRootPage;
   final String? errorRoute;
 

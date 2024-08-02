@@ -203,6 +203,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             16.0, 40.0, 16.0, 0.0),
                                     child: wrapWithModel(
                                       model: _model.exploreOurBlogsCompModel1,
+                                      updateOnChange: true,
                                       updateCallback: () => setState(() {}),
                                       child: const ExploreOurBlogsCompWidget(),
                                     ),

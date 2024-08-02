@@ -4,12 +4,8 @@ import '/components/explore_our_product_comp/explore_our_product_comp_widget.dar
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'our_product_component_comp_model.dart';
 export 'our_product_component_comp_model.dart';
 
@@ -73,12 +69,12 @@ class _OurProductComponentCompWidgetState
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      constraints: BoxConstraints(maxWidth: getMaxWidth(context)),
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -86,7 +82,7 @@ class _OurProductComponentCompWidgetState
               wrapWithModel(
                 model: _model.commonRichTextCompModel,
                 updateCallback: () => setState(() {}),
-                child: CommonRichTextCompWidget(
+                child: const CommonRichTextCompWidget(
                   richTextOne: 'Explore Our ',
                   richTextTwo: 'Own Area',
                   texts:
@@ -129,8 +125,8 @@ class _OurProductComponentCompWidgetState
                       final columnBuildProductRecord =
                           columnBuildProductRecordList[columnIndex];
                       return Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            20.0, 20.0, 20.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -154,7 +150,7 @@ class _OurProductComponentCompWidgetState
                               }.withoutNulls,
                               extra: <String, dynamic>{
                                 'productRef': columnBuildProductRecord,
-                                kTransitionInfoKey: TransitionInfo(
+                                kTransitionInfoKey: const TransitionInfo(
                                   hasTransition: true,
                                   transitionType: PageTransitionType.fade,
                                   duration: Duration(milliseconds: 0),
@@ -194,7 +190,7 @@ class _OurProductComponentCompWidgetState
                                 }.withoutNulls,
                                 extra: <String, dynamic>{
                                   'productRef': columnBuildProductRecord,
-                                  kTransitionInfoKey: TransitionInfo(
+                                  kTransitionInfoKey: const TransitionInfo(
                                     hasTransition: true,
                                     transitionType: PageTransitionType.fade,
                                     duration: Duration(milliseconds: 0),

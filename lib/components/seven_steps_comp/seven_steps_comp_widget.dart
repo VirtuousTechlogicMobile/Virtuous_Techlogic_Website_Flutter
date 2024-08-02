@@ -135,8 +135,8 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       tablet: false,
                     ))
                       Container(
-                        width: 4.0,
-                        height: 220.0,
+                        // width: 4.0,
+                        // height: 220.0,
                         decoration: BoxDecoration(
                           color: Color(0xFFC7E8FF),
                         ),
@@ -146,7 +146,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 20.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
                     child: Container(
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -294,8 +294,8 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       tablet: false,
                     ))
                       Container(
-                        width: 4.0,
-                        height: 220.0,
+                        // width: 4.0,
+                        // height: 220.0,
                         decoration: BoxDecoration(
                           color: Color(0xFFC7E8FF),
                         ),
@@ -305,7 +305,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 20.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
                     child: Container(
                       width: () {
                         if (MediaQuery.sizeOf(context).width <
@@ -467,8 +467,8 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       tablet: false,
                     ))
                       Container(
-                        width: 4.0,
-                        height: 220.0,
+                        // width: 4.0,
+                        // height: 220.0,
                         decoration: BoxDecoration(
                           color: Color(0xFFC7E8FF),
                         ),
@@ -478,7 +478,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 20.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
                     child: Container(
                       width: () {
                         if (MediaQuery.sizeOf(context).width <
@@ -640,8 +640,8 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       tablet: false,
                     ))
                       Container(
-                        width: 4.0,
-                        height: 220.0,
+                        // width: 4.0,
+                        // height: 220.0,
                         decoration: BoxDecoration(
                           color: Color(0xFFC7E8FF),
                         ),
@@ -651,7 +651,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 20.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
                     child: Container(
                       width: () {
                         if (MediaQuery.sizeOf(context).width <
@@ -813,7 +813,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 20.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
                     child: Container(
                       width: () {
                         if (MediaQuery.sizeOf(context).width <

@@ -1,15 +1,9 @@
 // Automatic FlutterFlow imports
-import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'index.dart'; // Imports other custom widgets
-import '/custom_code/actions/index.dart'; // Imports custom actions
-import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
-
-import 'index.dart'; // Imports other custom widgets
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -34,10 +28,13 @@ class _ShareButtonState extends State<ShareButton> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () async {
-        whatsapp(widget.title);
+        logFirebaseEvent('WHATSAPP_Container_aam828j4_ON_TAP');
+        await launchURL('https://api.whatsapp.com/send/?phone=6354672876');
+
+        // whatsapp(widget.title);
       },
       style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
         backgroundColor: FlutterFlowTheme.of(context).primary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
@@ -68,6 +65,7 @@ whatsapp(String title) async {
       await launch(iosUrl);
     } else {
       await launch(androidUrl);
+      print("androidUrl = $androidUrl");
     }
   } on Exception catch (e) {
     print('Error: $e');
