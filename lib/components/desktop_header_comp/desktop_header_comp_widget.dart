@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:virtuous_techlogic_website/custom_code/widgets/index.dart';
 
 import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 import '/components/get_in_touch_component/get_in_touch_component_widget.dart';
@@ -69,17 +68,8 @@ class _DesktopHeaderCompWidgetState extends State<DesktopHeaderCompWidget> {
 
                 context.pushNamed('homePage');
               },
-              child: Image.network(
-                'assets/images/logo.webp',
-                loadingBuilder: (context, child, loadingProgress) {
-                  if (loadingProgress == null) {
-                    return child;
-                  } else {
-                    return const LoaderWidget(
-                      width: 50,
-                    );
-                  }
-                },
+              child: Image.asset(
+                'assets/images/logo.png',
                 width: 183,
                 height: 60,
               ),
