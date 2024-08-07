@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:virtuous_techlogic_website/custom_code/widgets/index.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -56,7 +57,8 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                 color: FlutterFlowTheme.of(context).secondaryBackground,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -64,8 +66,8 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 0),
-                        fadeOutDuration: Duration(milliseconds: 0),
+                        fadeInDuration: const Duration(milliseconds: 0),
+                        fadeOutDuration: const Duration(milliseconds: 0),
                         imageUrl:
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/mbh3nn6zxztb/flutterflowlogo.webp',
                         height: 36.0,
@@ -75,8 +77,6 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 0),
-                        fadeOutDuration: Duration(milliseconds: 0),
                         imageUrl:
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/0riln566p171/flutterlogo.webp',
                         height: 36.0,
@@ -86,8 +86,6 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 0),
-                        fadeOutDuration: Duration(milliseconds: 0),
                         imageUrl:
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/3hwo0f4bvbfe/figmalogo.webp',
                         height: 36.0,
@@ -97,8 +95,6 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 0),
-                        fadeOutDuration: Duration(milliseconds: 0),
                         imageUrl:
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/5t5pd7ilz4hd/bubblelogo.webp',
                         height: 36.0,
@@ -108,15 +104,13 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: CachedNetworkImage(
-                        fadeInDuration: Duration(milliseconds: 0),
-                        fadeOutDuration: Duration(milliseconds: 0),
                         imageUrl:
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/hs7ol5hxz9hr/firebaselogo.webp',
                         height: 36.0,
                         fit: BoxFit.cover,
                       ),
                     ),
-                  ].divide(SizedBox(width: 20.0)),
+                  ].divide(const SizedBox(width: 20.0)),
                 ),
               ),
             ),
@@ -126,14 +120,15 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
             desktop: false,
           ))
             AnimatedContainer(
-              duration: Duration(milliseconds: 50),
+              duration: const Duration(milliseconds: 50),
               curve: Curves.elasticOut,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).secondaryBackground,
               ),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
                 child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -143,8 +138,11 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: CachedNetworkImage(
-                          fadeInDuration: Duration(milliseconds: 0),
-                          fadeOutDuration: Duration(milliseconds: 0),
+                          placeholder: (context, url) {
+                            return const LoaderWidget(
+                              width: 50,
+                            );
+                          },
                           imageUrl:
                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/mbh3nn6zxztb/flutterflowlogo.webp',
                           height: 36.0,
@@ -154,8 +152,11 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: CachedNetworkImage(
-                          fadeInDuration: Duration(milliseconds: 0),
-                          fadeOutDuration: Duration(milliseconds: 0),
+                          placeholder: (context, url) {
+                            return const LoaderWidget(
+                              width: 50,
+                            );
+                          },
                           imageUrl:
                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/0riln566p171/flutterlogo.webp',
                           height: 36.0,
@@ -165,19 +166,25 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: CachedNetworkImage(
-                          fadeInDuration: Duration(milliseconds: 0),
-                          fadeOutDuration: Duration(milliseconds: 0),
+                          placeholder: (context, url) {
+                            return const LoaderWidget(
+                              width: 50,
+                            );
+                          },
                           imageUrl:
                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/3hwo0f4bvbfe/figmalogo.webp',
                           height: 36.0,
-                          fit: BoxFit.contain,
+                          fit: BoxFit.cover,
                         ),
                       ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: CachedNetworkImage(
-                          fadeInDuration: Duration(milliseconds: 0),
-                          fadeOutDuration: Duration(milliseconds: 0),
+                          placeholder: (context, url) {
+                            return const LoaderWidget(
+                              width: 50,
+                            );
+                          },
                           imageUrl:
                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/5t5pd7ilz4hd/bubblelogo.webp',
                           height: 36.0,
@@ -187,8 +194,11 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
                         child: CachedNetworkImage(
-                          fadeInDuration: Duration(milliseconds: 0),
-                          fadeOutDuration: Duration(milliseconds: 0),
+                          placeholder: (context, url) {
+                            return const LoaderWidget(
+                              width: 50,
+                            );
+                          },
                           imageUrl:
                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/hs7ol5hxz9hr/firebaselogo.webp',
                           height: 36.0,
@@ -196,9 +206,9 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                         ),
                       ),
                     ]
-                        .divide(SizedBox(width: 20.0))
-                        .addToStart(SizedBox(width: 10.0))
-                        .addToEnd(SizedBox(width: 10.0)),
+                        .divide(const SizedBox(width: 20.0))
+                        .addToStart(const SizedBox(width: 10.0))
+                        .addToEnd(const SizedBox(width: 10.0)),
                   ),
                 ),
               ),

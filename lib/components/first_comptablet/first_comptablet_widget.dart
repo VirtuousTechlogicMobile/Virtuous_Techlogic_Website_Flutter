@@ -454,7 +454,7 @@ class _FirstComptabletWidgetState extends State<FirstComptabletWidget>
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/images/Frame_8.png',
+                    'assets/images/Frame_8.webp',
                     fit: BoxFit.cover,
                     alignment: const Alignment(0.0, -1.0),
                   ),
@@ -476,7 +476,7 @@ class _FirstComptabletWidgetState extends State<FirstComptabletWidget>
                   shape: BoxShape.circle,
                 ),
                 child: Image.asset(
-                  'assets/images/Frame_10.png',
+                  'assets/images/Frame_10.webp',
                   fit: BoxFit.cover,
                   alignment: const Alignment(0.0, -1.0),
                 ),
@@ -500,7 +500,7 @@ class _FirstComptabletWidgetState extends State<FirstComptabletWidget>
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/images/Frame_5.png',
+                    'assets/images/Frame_5.webp',
                     fit: BoxFit.cover,
                     alignment: const Alignment(0.0, -1.0),
                   ),
@@ -525,7 +525,7 @@ class _FirstComptabletWidgetState extends State<FirstComptabletWidget>
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/images/Frame_5.png',
+                    'assets/images/Frame_5.webp',
                     fit: BoxFit.cover,
                     alignment: const Alignment(0.0, -1.0),
                   ),
@@ -550,7 +550,7 @@ class _FirstComptabletWidgetState extends State<FirstComptabletWidget>
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/images/Frame_10.png',
+                    'assets/images/Frame_10.webp',
                     fit: BoxFit.cover,
                     alignment: const Alignment(0.0, -1.0),
                   ),
@@ -575,7 +575,7 @@ class _FirstComptabletWidgetState extends State<FirstComptabletWidget>
                     shape: BoxShape.circle,
                   ),
                   child: Image.asset(
-                    'assets/images/Frame_8.png',
+                    'assets/images/Frame_8.webp',
                     fit: BoxFit.cover,
                     alignment: const Alignment(0.0, -1.0),
                   ),

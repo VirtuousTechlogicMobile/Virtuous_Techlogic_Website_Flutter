@@ -129,7 +129,7 @@ class _CaseStudyCompWidgetState extends State<CaseStudyCompWidget>
                       queryParameters: {
                         'ref': serializeParam(
                           wrapCaseStudiesRecord,
-                          ParamType.Document,
+                          ParamType.DocumentReference,
                         ),
                       }.withoutNulls,
                       extra: <String, dynamic>{

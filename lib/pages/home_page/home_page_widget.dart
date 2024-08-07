@@ -153,72 +153,39 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height: 100.0,
                                     ),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 16.0, 0.0),
-                                    child: wrapWithModel(
-                                      model:
-                                          _model.exploreOurOfferingCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child:
-                                          const ExploreOurOfferingCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.exploreOurOfferingCompModel1,
+                                    updateCallback: () => setState(() {}),
+                                    child: const ExploreOurOfferingCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 16.0, 0.0),
-                                    child: wrapWithModel(
-                                      model:
-                                          _model.whyChooseUsForMobileCompModel,
-                                      updateCallback: () => setState(() {}),
-                                      child:
-                                          const WhyChooseUsForMobileCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.whyChooseUsForMobileCompModel,
+                                    updateCallback: () => setState(() {}),
+                                    child:
+                                        const WhyChooseUsForMobileCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.ourCultureCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child: const OurCultureCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.ourCultureCompModel1,
+                                    updateCallback: () => setState(() {}),
+                                    child: const OurCultureCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 16.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.ourCustomerSaysCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child: const OurCustomerSaysCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.ourCustomerSaysCompModel1,
+                                    updateCallback: () => setState(() {}),
+                                    child: const OurCustomerSaysCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 16.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.exploreOurBlogsCompModel1,
-                                      updateOnChange: true,
-                                      updateCallback: () => setState(() {}),
-                                      child: const ExploreOurBlogsCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.exploreOurBlogsCompModel1,
+                                    updateOnChange: true,
+                                    updateCallback: () => setState(() {}),
+                                    child: const ExploreOurBlogsCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 40.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.footerCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child: const FooterCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.footerCompModel1,
+                                    updateCallback: () => setState(() {}),
+                                    child: const FooterCompWidget(),
                                   ),
-                                ],
+                                ].divide(const SizedBox(height: 40)),
                               ),
                             ),
                           ),

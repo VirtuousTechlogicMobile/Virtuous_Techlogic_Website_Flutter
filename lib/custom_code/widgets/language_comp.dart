@@ -46,7 +46,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/flutterflowlogo.png',
+                          'assets/images/flutterflowlogo.webp',
                           height: 36,
                           fit: BoxFit.cover,
                         ),
@@ -57,7 +57,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/flutterlogo.png',
+                          'assets/images/flutterlogo.webp',
                           height: 36,
                           fit: BoxFit.cover,
                         ),
@@ -68,7 +68,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/figmalogo.png',
+                          'assets/images/figmalogo.webp',
                           height: 36,
                           fit: BoxFit.contain,
                         ),
@@ -79,7 +79,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/bubblelogo.png',
+                          'assets/images/bubblelogo.webp',
                           height: 36,
                           fit: BoxFit.cover,
                         ),
@@ -90,7 +90,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/firebaselogo.png',
+                          'assets/images/firebaselogo.webp',
                           height: 36,
                           fit: BoxFit.cover,
                         ),

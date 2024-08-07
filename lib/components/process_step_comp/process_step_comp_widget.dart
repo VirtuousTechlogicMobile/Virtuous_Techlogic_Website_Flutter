@@ -92,7 +92,7 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
-                                    'assets/images/process1.png',
+                                    'assets/images/process1.webp',
                                     width: 200.0,
                                     fit: BoxFit.cover,
                                   ),
@@ -101,7 +101,7 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
-                                  'assets/images/process2.png',
+                                  'assets/images/process2.webp',
                                   width: 200.0,
                                   fit: BoxFit.contain,
                                 ),
@@ -109,7 +109,7 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
-                                  'assets/images/process3.png',
+                                  'assets/images/process3.webp',
                                   width: 200.0,
                                   fit: BoxFit.contain,
                                 ),
@@ -117,7 +117,7 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(8.0),
                                 child: Image.asset(
-                                  'assets/images/process4.png',
+                                  'assets/images/process4.webp',
                                   width: 150.0,
                                   fit: BoxFit.contain,
                                 ),

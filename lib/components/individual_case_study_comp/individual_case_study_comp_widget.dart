@@ -467,7 +467,7 @@ class _IndividualCaseStudyCompWidgetState
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    widget!.title!,
+                    widget.title ?? "title",
                     style: FlutterFlowTheme.of(context).displaySmall.override(
                           fontFamily: 'Open Sans',
                           letterSpacing: 0,
@@ -476,7 +476,7 @@ class _IndividualCaseStudyCompWidgetState
                         ),
                   ),
                   Text(
-                    widget!.introduction!,
+                    widget.introduction ?? "introduction",
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily:
@@ -493,7 +493,7 @@ class _IndividualCaseStudyCompWidgetState
                       fadeInDuration: const Duration(milliseconds: 200),
                       fadeOutDuration: const Duration(milliseconds: 200),
                       imageUrl: valueOrDefault<String>(
-                        widget!.mainImage,
+                        widget.mainImage,
                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/0cxs3r0venxs/vtlogo.png',
                       ),
                       width: () {

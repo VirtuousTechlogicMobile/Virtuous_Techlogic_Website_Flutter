@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '../../custom_code/widgets/loader_widget.dart';
 import 'language_with_details_comp_model.dart';
 
 export 'language_with_details_comp_model.dart';
@@ -183,7 +184,7 @@ class _LanguageWithDetailsCompWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.keyboard_arrow_right,
@@ -210,6 +211,11 @@ class _LanguageWithDetailsCompWidgetState
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: CachedNetworkImage(
+                    placeholder: (context, url) {
+                      return const LoaderWidget(
+                        width: 50,
+                      );
+                    },
                     fadeInDuration: const Duration(milliseconds: 100),
                     fadeOutDuration: const Duration(milliseconds: 100),
                     imageUrl: widget.languageWithDetailsImage!,
