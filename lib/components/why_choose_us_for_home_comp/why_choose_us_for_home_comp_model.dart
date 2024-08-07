@@ -1,15 +1,11 @@
-import '/backend/backend.dart';
+import 'package:flutter/material.dart';
+
 import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 import '/components/about_experience_comp/about_experience_comp_widget.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
-import '/components/company_comp/company_comp_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'why_choose_us_for_home_comp_widget.dart'
     show WhyChooseUsForHomeCompWidget;
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class WhyChooseUsForHomeCompModel
     extends FlutterFlowModel<WhyChooseUsForHomeCompWidget> {

@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'faq_textcomp_model.dart';
+
 export 'faq_textcomp_model.dart';
 
 class FaqTextcompWidget extends StatefulWidget {
@@ -56,7 +57,7 @@ class _FaqTextcompWidgetState extends State<FaqTextcompWidget> {
           BoxShadow(
             blurRadius: 4.0,
             color: FlutterFlowTheme.of(context).secondaryBackground,
-            offset: Offset(
+            offset: const Offset(
               0.0,
               2.0,
             ),
@@ -67,15 +68,15 @@ class _FaqTextcompWidgetState extends State<FaqTextcompWidget> {
         ),
       ),
       child: Container(
-        color: Color(0x00000000),
+        color: const Color(0x00000000),
         child: ExpandableNotifier(
           controller: _model.expandableExpandableController,
           child: ExpandablePanel(
             header: Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               child: Text(
                 valueOrDefault<String>(
-                  widget!.question,
+                  widget.question,
                   'hat makes Virtuous Technologic different from other app development companies?',
                 ),
                 style: FlutterFlowTheme.of(context).titleMedium.override(
@@ -89,10 +90,10 @@ class _FaqTextcompWidgetState extends State<FaqTextcompWidget> {
             ),
             collapsed: Container(),
             expanded: Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               child: Text(
                 valueOrDefault<String>(
-                  widget!.answer,
+                  widget.answer,
                   'Virtuous Technologic stands out with its personalized approach to digital solutions. We specialize in Flutter development and offer unique No Code, Low Code methodologies, ensuring rapid, user-friendly, and customized app development tailored to each client\'s specific needs.',
                 ),
                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -103,7 +104,7 @@ class _FaqTextcompWidgetState extends State<FaqTextcompWidget> {
                     ),
               ),
             ),
-            theme: ExpandableThemeData(
+            theme: const ExpandableThemeData(
               tapHeaderToExpand: true,
               tapBodyToExpand: true,
               tapBodyToCollapse: false,

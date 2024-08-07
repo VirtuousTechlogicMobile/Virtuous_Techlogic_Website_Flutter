@@ -54,7 +54,6 @@ class _CustomerReviewCompMobileWidgetState
         ),
       ),
       builder: (context, snapshot) {
-        // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
           return Center(
             child: SizedBox(
@@ -110,8 +109,12 @@ class _CustomerReviewCompMobileWidgetState
                               children: [
                                 ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.network(
-                                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/sgqk4wzety89/comma.png',
+                                  child: CachedNetworkImage(
+                                    imageUrl:
+                                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/sgqk4wzety89/comma.png',
+                                    placeholder: (context, url) {
+                                      return const CircularProgressIndicator();
+                                    },
                                     width: 68.0,
                                     height: 50.0,
                                     fit: BoxFit.cover,

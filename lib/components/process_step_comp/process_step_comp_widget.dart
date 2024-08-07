@@ -1,10 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:virtuous_techlogic_website/flutter_flow/flutter_flow_theme.dart';
 
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/components/seven_steps_comp/seven_steps_comp_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'process_step_comp_model.dart';
 
@@ -46,7 +46,7 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -57,7 +57,7 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
                 wrapWithModel(
                   model: _model.commonRichTextCompModel,
                   updateCallback: () => setState(() {}),
-                  child: CommonRichTextCompWidget(
+                  child: const CommonRichTextCompWidget(
                     richTextOne: 'Our Step wise ',
                     richTextTwo: 'Processes',
                     texts: 'Our Approach to find solution for your Problem',
@@ -81,9 +81,9 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
                       tablet: false,
                     ))
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
@@ -132,8 +132,8 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
                       desktop: false,
                     ))
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 20.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -141,8 +141,9 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
                             ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
                               child: CachedNetworkImage(
-                                fadeInDuration: Duration(milliseconds: 200),
-                                fadeOutDuration: Duration(milliseconds: 200),
+                                fadeInDuration: const Duration(milliseconds: 0),
+                                fadeOutDuration:
+                                    const Duration(milliseconds: 0),
                                 imageUrl:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/6xcgolrot1o7/Frame_252(1).webp',
                                 fit: BoxFit.none,
@@ -155,14 +156,15 @@ class _ProcessStepCompWidgetState extends State<ProcessStepCompWidget> {
                 ),
                 collapsed: Container(),
                 expanded: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                   child: wrapWithModel(
                     model: _model.sevenStepsCompModel,
                     updateCallback: () => setState(() {}),
-                    child: SevenStepsCompWidget(),
+                    child: const SevenStepsCompWidget(),
                   ),
                 ),
-                theme: ExpandableThemeData(
+                theme: const ExpandableThemeData(
                   tapHeaderToExpand: true,
                   tapBodyToExpand: false,
                   tapBodyToCollapse: false,

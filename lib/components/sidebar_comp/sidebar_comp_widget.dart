@@ -165,7 +165,7 @@ class _SidebarCompWidgetState extends State<SidebarCompWidget> {
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
                                 color: valueOrDefault<Color>(
-                                  widget!.indexParameter == 1
+                                  widget.indexParameter == 1
                                       ? FlutterFlowTheme.of(context).primary
                                       : FlutterFlowTheme.of(context).secondary,
                                   FlutterFlowTheme.of(context).text16Color,
@@ -203,7 +203,7 @@ class _SidebarCompWidgetState extends State<SidebarCompWidget> {
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
                                 color: valueOrDefault<Color>(
-                                  widget!.indexParameter == 2
+                                  widget.indexParameter == 2
                                       ? FlutterFlowTheme.of(context).primary
                                       : FlutterFlowTheme.of(context).secondary,
                                   FlutterFlowTheme.of(context).text16Color,
@@ -241,7 +241,7 @@ class _SidebarCompWidgetState extends State<SidebarCompWidget> {
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
                                 color: valueOrDefault<Color>(
-                                  widget!.indexParameter == 3
+                                  widget.indexParameter == 3
                                       ? FlutterFlowTheme.of(context).primary
                                       : FlutterFlowTheme.of(context).secondary,
                                   FlutterFlowTheme.of(context).text16Color,
@@ -280,7 +280,7 @@ class _SidebarCompWidgetState extends State<SidebarCompWidget> {
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
                                 color: valueOrDefault<Color>(
-                                  widget!.indexParameter == 4
+                                  widget.indexParameter == 4
                                       ? FlutterFlowTheme.of(context).primary
                                       : FlutterFlowTheme.of(context).secondary,
                                   FlutterFlowTheme.of(context).text16Color,
@@ -318,7 +318,7 @@ class _SidebarCompWidgetState extends State<SidebarCompWidget> {
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .labelLargeFamily,
                                 color: valueOrDefault<Color>(
-                                  widget!.indexParameter == 5
+                                  widget.indexParameter == 5
                                       ? FlutterFlowTheme.of(context).primary
                                       : FlutterFlowTheme.of(context).secondary,
                                   FlutterFlowTheme.of(context).text16Color,

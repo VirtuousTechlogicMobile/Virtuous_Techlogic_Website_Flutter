@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
@@ -5,13 +7,8 @@ import '/components/sidebar_comp/sidebar_comp_widget.dart';
 import '/components/sitemap_text_comp/sitemap_text_comp_widget.dart';
 import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'sitemap_page_widget.dart' show SitemapPageWidget;
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class SitemapPageModel extends FlutterFlowModel<SitemapPageWidget> {
   ///  State fields for stateful widgets in this page.

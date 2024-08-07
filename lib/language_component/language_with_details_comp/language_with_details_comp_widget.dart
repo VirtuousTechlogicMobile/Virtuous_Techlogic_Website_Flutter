@@ -1,11 +1,12 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'language_with_details_comp_model.dart';
+
 export 'language_with_details_comp_model.dart';
 
 class LanguageWithDetailsCompWidget extends StatefulWidget {
@@ -55,22 +56,29 @@ class _LanguageWithDetailsCompWidgetState
     return MouseRegion(
       opaque: false,
       cursor: MouseCursor.defer ?? MouseCursor.defer,
+      onEnter: ((event) async {
+        setState(() => _model.mouseRegionHovered = true);
+      }),
+      onExit: ((event) async {
+        setState(() => _model.mouseRegionHovered = false);
+      }),
       child: Container(
-        decoration: BoxDecoration(),
+        decoration: const BoxDecoration(),
         child: Container(
           width: 387.0,
           height: 300.0,
           child: Stack(
-            alignment: AlignmentDirectional(0.0, -1.0),
+            alignment: const AlignmentDirectional(0.0, -1.0),
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                 child: Container(
                   width: 500.0,
                   height: 286.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         blurRadius: 50.0,
                         color: Color(0x1FF8AB27),
@@ -83,8 +91,8 @@ class _LanguageWithDetailsCompWidgetState
                     borderRadius: BorderRadius.circular(4.0),
                   ),
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 50.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -95,24 +103,24 @@ class _LanguageWithDetailsCompWidgetState
                           decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
-                                Color(0xFFAFD5F0),
+                                const Color(0xFFAFD5F0),
                                 FlutterFlowTheme.of(context).secondaryBackground
                               ],
-                              stops: [0.0, 1.0],
-                              begin: AlignmentDirectional(0.0, -1.0),
-                              end: AlignmentDirectional(0, 1.0),
+                              stops: const [0.0, 1.0],
+                              begin: const AlignmentDirectional(0.0, -1.0),
+                              end: const AlignmentDirectional(0, 1.0),
                             ),
                             borderRadius: BorderRadius.circular(24.0),
                             shape: BoxShape.rectangle,
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               5.0, 5.0, 5.0, 5.0),
                           child: SelectionArea(
                               child: Text(
                             valueOrDefault<String>(
-                              widget!.languageWithDetailsHeading,
+                              widget.languageWithDetailsHeading,
                               'Expertise',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -131,7 +139,7 @@ class _LanguageWithDetailsCompWidgetState
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 5.0, 15.0, 5.0, 10.0),
                             child: SelectionArea(
                                 child: AutoSizeText(
@@ -156,14 +164,14 @@ class _LanguageWithDetailsCompWidgetState
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 2.0),
                                 child: Text(
                                   'More',
@@ -179,7 +187,7 @@ class _LanguageWithDetailsCompWidgetState
                                       ),
                                 ),
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     5.0, 0.0, 0.0, 0.0),
                                 child: Icon(
@@ -197,7 +205,7 @@ class _LanguageWithDetailsCompWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: 88.0,
                   height: 88.0,
@@ -207,8 +215,8 @@ class _LanguageWithDetailsCompWidgetState
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: CachedNetworkImage(
-                      fadeInDuration: Duration(milliseconds: 100),
-                      fadeOutDuration: Duration(milliseconds: 100),
+                      fadeInDuration: const Duration(milliseconds: 100),
+                      fadeOutDuration: const Duration(milliseconds: 100),
                       imageUrl: widget!.languageWithDetailsImage!,
                       width: 88.0,
                       height: 88.0,
@@ -221,12 +229,6 @@ class _LanguageWithDetailsCompWidgetState
           ),
         ),
       ),
-      onEnter: ((event) async {
-        setState(() => _model.mouseRegionHovered = true);
-      }),
-      onExit: ((event) async {
-        setState(() => _model.mouseRegionHovered = false);
-      }),
     );
   }
 }

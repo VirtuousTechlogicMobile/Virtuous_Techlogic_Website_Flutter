@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'termstextcompcomp_model.dart';
 export 'termstextcompcomp_model.dart';
 
@@ -46,7 +45,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -55,17 +54,17 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
               wrapWithModel(
                 model: _model.termsRichTextcompModel,
                 updateCallback: () => setState(() {}),
-                child: TermsRichTextcompWidget(),
+                child: const TermsRichTextcompWidget(),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 10.0),
                       child: Text(
                         'Terms and Conditions',
                         style:
@@ -131,7 +130,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Column(
@@ -140,7 +139,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
                       'Cookies',
                       style:
@@ -167,7 +166,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                         ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                     child: Text(
                       'Most interactive websites use cookies to let us retrieve the user\'s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -179,17 +178,17 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                           ),
                     ),
                   ),
-                ].divide(SizedBox(height: 5.0)),
+                ].divide(const SizedBox(height: 5.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                       child: Text(
                         'License',
                         style:
@@ -225,11 +224,11 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 10.0),
                 child: Text(
                   'You must not:',
                   textAlign: TextAlign.start,
@@ -278,7 +277,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -312,7 +311,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -346,7 +345,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -380,12 +379,12 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
-                ].divide(SizedBox(height: 7.0)),
+                ].divide(const SizedBox(height: 7.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -432,8 +431,8 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                           ),
                     ),
                   ]
-                      .divide(SizedBox(height: 10.0))
-                      .addToStart(SizedBox(height: 20.0)),
+                      .divide(const SizedBox(height: 10.0))
+                      .addToStart(const SizedBox(height: 20.0)),
                 ),
               ),
               Column(
@@ -471,7 +470,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -505,7 +504,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -539,7 +538,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -573,12 +572,12 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
-                ].divide(SizedBox(height: 7.0)),
+                ].divide(const SizedBox(height: 7.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 10.0),
                 child: Text(
                   'You hereby grant Virtuous Techlogic a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.',
                   textAlign: TextAlign.start,
@@ -597,7 +596,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
                     child: Text(
                       'Hyperlinking to our Content',
                       style:
@@ -613,7 +612,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                     child: Text(
                       'The Service may contain links to external websites that are not provided or maintained by or in any way affiliated with the Company.',
                       textAlign: TextAlign.start,
@@ -654,7 +653,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                       .bodyMediumFamily),
                             ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -684,7 +683,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                       .bodyMediumFamily),
                             ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -714,7 +713,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                       .bodyMediumFamily),
                             ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -748,7 +747,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -782,7 +781,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Text(
                     'These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party\'s site.',
@@ -797,7 +796,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: Text(
                       'We may consider and approve other link requests from the following types of organizations:',
                       textAlign: TextAlign.start,
@@ -842,7 +841,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -872,7 +871,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                       .bodyMediumFamily),
                             ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -906,7 +905,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -936,7 +935,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                       .bodyMediumFamily),
                             ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -966,7 +965,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                       .bodyMediumFamily),
                             ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -1000,7 +999,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -1034,7 +1033,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Text(
                     'We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of Virtuous Techlogic; and (d) the link is in the context of general resource information.',
@@ -1082,7 +1081,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1115,7 +1114,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                         .bodyMediumFamily),
                               ),
                         ),
-                      ].divide(SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
                     ),
                   ),
                   Row(
@@ -1150,7 +1149,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -1184,11 +1183,11 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: Text(
                       'No use of Virtuous Techlogic\'s logo or other artwork will be allowed for linking absent a trademark license agreement.',
                       textAlign: TextAlign.start,
@@ -1201,10 +1200,10 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                           ),
                     ),
                   ),
-                ].divide(SizedBox(height: 7.0)),
+                ].divide(const SizedBox(height: 7.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -1233,11 +1232,11 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -1266,11 +1265,11 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -1299,11 +1298,11 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -1342,11 +1341,11 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -1366,7 +1365,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 2.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 2.0),
                       child: Text(
                         'To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:',
                         textAlign: TextAlign.start,
@@ -1414,7 +1413,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 ),
                           ),
                         ),
-                      ].divide(SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -1450,7 +1449,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 ),
                           ),
                         ),
-                      ].divide(SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -1486,7 +1485,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 ),
                           ),
                         ),
-                      ].divide(SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -1522,7 +1521,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 ),
                           ),
                         ),
-                      ].divide(SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
                     ),
                     Text(
                       'The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.',
@@ -1544,7 +1543,7 @@ class _TermstextcompcompWidgetState extends State<TermstextcompcompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 7.0)),
+                  ].divide(const SizedBox(height: 7.0)),
                 ),
               ),
             ],

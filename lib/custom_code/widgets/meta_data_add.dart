@@ -1,16 +1,9 @@
-// Automatic FlutterFlow imports
-import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import 'index.dart'; // Imports other custom widgets
-import '/custom_code/actions/index.dart'; // Imports custom actions
-import '/flutter_flow/custom_functions.dart'; // Imports custom functions
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:meta_seo/meta_seo.dart';
-import 'package:flutter/foundation.dart';
 
 class MetaDataAdd extends StatefulWidget {
   const MetaDataAdd({
@@ -32,9 +25,7 @@ class _MetaDataAddState extends State<MetaDataAdd> {
   @override
   void initState() {
     super.initState();
-    if (widget.title != null) {
-      metaData(widget.title!);
-    }
+    metaData(widget.title);
   }
 
   void metaData(String title) async {
@@ -47,10 +38,10 @@ class _MetaDataAddState extends State<MetaDataAdd> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: widget.width,
       height: widget.height,
-      child: Text('MetaDataAdd Widget'), // Placeholder widget content
+      child: const Text('MetaDataAdd Widget'), // Placeholder widget content
     );
   }
 }

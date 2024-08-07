@@ -68,8 +68,8 @@ class _MobileHeaderCompWidgetState extends State<MobileHeaderCompWidget> {
               },
               child: Image.asset(
                 'assets/images/logo.webp',
-                width: MediaQuery.sizeOf(context).width * 0.28,
-                fit: BoxFit.contain,
+                width: 122,
+                height: 40,
               ),
             ),
             FlutterFlowIconButton(

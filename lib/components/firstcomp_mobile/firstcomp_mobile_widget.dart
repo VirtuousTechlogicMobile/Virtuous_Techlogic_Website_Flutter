@@ -83,77 +83,84 @@ class _FirstcompMobileWidgetState extends State<FirstcompMobileWidget>
               child: Padding(
                 padding:
                     const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
-                child: RichText(
-                  textScaler: MediaQuery.of(context).textScaler,
-                  text: TextSpan(
-                    children: [
-                      const TextSpan(
-                        text: 'We are ',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
+                child: SelectionArea(
+                  child: RichText(
+                    textScaler: MediaQuery.of(context).textScaler,
+                    text: TextSpan(
+                      children: [
+                        const TextSpan(
+                          text: 'We are ',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      TextSpan(
-                        text: 'Flutter ',
-                        style: TextStyle(
-                          color: FlutterFlowTheme.of(context).primary,
+                        TextSpan(
+                          text: 'Flutter ',
+                          style: TextStyle(
+                            color: FlutterFlowTheme.of(context).primary,
+                          ),
                         ),
-                      ),
-                      const TextSpan(
-                        text: '& ',
-                        style: TextStyle(),
-                      ),
-                      TextSpan(
-                        text: 'FlutterFlow ',
-                        style: TextStyle(
-                          color: FlutterFlowTheme.of(context).primary,
+                        const TextSpan(
+                          text: '& ',
+                          style: TextStyle(),
                         ),
-                      ),
-                      const TextSpan(
-                        text: 'App\nDevelopment Company',
-                        style: TextStyle(),
-                      )
-                    ],
-                    style: FlutterFlowTheme.of(context).displayMedium.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).displayMediumFamily,
-                          fontSize: () {
-                            if (MediaQuery.sizeOf(context).width <
-                                kBreakpointSmall) {
-                              return 30.0;
-                            } else if (MediaQuery.sizeOf(context).width <
-                                kBreakpointMedium) {
-                              return 36.0;
-                            } else if (MediaQuery.sizeOf(context).width <
-                                kBreakpointLarge) {
-                              return 48.0;
-                            } else {
-                              return 48.0;
-                            }
-                          }(),
-                          letterSpacing: 0.0,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).displayMediumFamily),
+                        TextSpan(
+                          text: 'FlutterFlow ',
+                          style: TextStyle(
+                            color: FlutterFlowTheme.of(context).primary,
+                          ),
                         ),
+                        const TextSpan(
+                          text: 'App\nDevelopment Company',
+                          style: TextStyle(),
+                        )
+                      ],
+                      style:
+                          FlutterFlowTheme.of(context).displayMedium.override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .displayMediumFamily,
+                                fontSize: () {
+                                  if (MediaQuery.sizeOf(context).width <
+                                      kBreakpointSmall) {
+                                    return 30.0;
+                                  } else if (MediaQuery.sizeOf(context).width <
+                                      kBreakpointMedium) {
+                                    return 36.0;
+                                  } else if (MediaQuery.sizeOf(context).width <
+                                      kBreakpointLarge) {
+                                    return 48.0;
+                                  } else {
+                                    return 48.0;
+                                  }
+                                }(),
+                                letterSpacing: 0.0,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .displayMediumFamily),
+                              ),
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
               ),
             ),
             Padding(
               padding:
                   const EdgeInsetsDirectional.fromSTEB(25.0, 10.0, 25.0, 0.0),
-              child: Text(
-                'We are Top Rated App Development company who create \n amazing apps for world class companies 10X faster.',
-                textAlign: TextAlign.center,
-                style: FlutterFlowTheme.of(context).labelLarge.override(
-                      fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
-                      fontSize: 16,
-                      letterSpacing: 0.0,
-                      useGoogleFonts: GoogleFonts.asMap().containsKey(
-                          FlutterFlowTheme.of(context).labelLargeFamily),
-                      lineHeight: 1.5,
-                    ),
+              child: SelectionArea(
+                child: Text(
+                  'We are Top Rated App Development company who create \n amazing apps for world class companies 10X faster.',
+                  textAlign: TextAlign.center,
+                  style: FlutterFlowTheme.of(context).labelLarge.override(
+                        fontFamily:
+                            FlutterFlowTheme.of(context).labelLargeFamily,
+                        fontSize: 16,
+                        letterSpacing: 0.0,
+                        useGoogleFonts: GoogleFonts.asMap().containsKey(
+                            FlutterFlowTheme.of(context).labelLargeFamily),
+                        lineHeight: 1.5,
+                      ),
+                ),
               ),
             ),
             Padding(
@@ -191,13 +198,11 @@ class _FirstcompMobileWidgetState extends State<FirstcompMobileWidget>
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8.0),
                 child: CachedNetworkImage(
-                  fadeInDuration: const Duration(milliseconds: 0),
-                  fadeOutDuration: const Duration(milliseconds: 0),
                   imageUrl:
                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/mjobrghz7cg0/Group_4.webp',
                   width: () {
                     if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
-                      return 311.9;
+                      return 400.9;
                     } else if (MediaQuery.sizeOf(context).width <
                         kBreakpointMedium) {
                       return 642.52;
@@ -210,7 +215,7 @@ class _FirstcompMobileWidgetState extends State<FirstcompMobileWidget>
                   }(),
                   height: () {
                     if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
-                      return 194.17;
+                      return 200.17;
                     } else if (MediaQuery.sizeOf(context).width <
                         kBreakpointMedium) {
                       return 400.0;

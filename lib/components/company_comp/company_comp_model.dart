@@ -1,10 +1,7 @@
-import '/flutter_flow/flutter_flow_theme.dart';
+import 'package:flutter/material.dart';
+
 import '/flutter_flow/flutter_flow_util.dart';
 import 'company_comp_widget.dart' show CompanyCompWidget;
-import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class CompanyCompModel extends FlutterFlowModel<CompanyCompWidget> {
   ///  State fields for stateful widgets in this component.

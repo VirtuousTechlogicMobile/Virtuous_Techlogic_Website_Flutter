@@ -66,7 +66,7 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
           tablet: false,
         ))
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(60, 0, 60, 0),
+            padding: const EdgeInsetsDirectional.fromSTEB(100, 0, 100, 0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
@@ -232,19 +232,22 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                           fit: BoxFit.cover,
                         )),
                   ),
-                  Text(
-                    valueOrDefault<String>(
-                      widget.individualBlogDate,
-                      'BlogDate',
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text(
+                      valueOrDefault<String>(
+                        widget.individualBlogDate,
+                        'BlogDate',
+                      ),
+                      style: FlutterFlowTheme.of(context).labelLarge.override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).labelLargeFamily,
+                            color: FlutterFlowTheme.of(context).datecolor,
+                            letterSpacing: 0,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).labelLargeFamily),
+                          ),
                     ),
-                    style: FlutterFlowTheme.of(context).labelLarge.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).labelLargeFamily,
-                          color: FlutterFlowTheme.of(context).datecolor,
-                          letterSpacing: 0,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).labelLargeFamily),
-                        ),
                   ),
                   Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
@@ -256,6 +259,7 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                         'virtuous',
                       ),
                       isMaxCharacterAllowOrNot: false,
+                      showFullText: true,
                     ),
                   ),
                 ],
@@ -446,6 +450,7 @@ class _IndividualBlogCompWidgetState extends State<IndividualBlogCompWidget> {
                         'virtuous',
                       ),
                       isMaxCharacterAllowOrNot: false,
+                      showFullText: true,
                     ),
                   ),
                 ],

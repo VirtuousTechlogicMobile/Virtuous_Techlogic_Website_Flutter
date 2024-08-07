@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '/backend/backend.dart';
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/faq_comp/faq_comp_widget.dart';
@@ -9,11 +11,8 @@ import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'faq_page_model.dart';
+
 export 'faq_page_model.dart';
 
 class FaqPageWidget extends StatefulWidget {
@@ -63,7 +62,7 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
           child: wrapWithModel(
             model: _model.sidebarCompModel,
             updateCallback: () => setState(() {}),
-            child: SidebarCompWidget(),
+            child: const SidebarCompWidget(),
           ),
         ),
         body: SafeArea(
@@ -87,7 +86,7 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                 false,
               )) {
                 return Stack(
-                  alignment: AlignmentDirectional(1.0, 1.0),
+                  alignment: const AlignmentDirectional(1.0, 1.0),
                   children: [
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -114,7 +113,7 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                                 wrapWithModel(
                                   model: _model.faqCompModel1,
                                   updateCallback: () => setState(() {}),
-                                  child: FaqCompWidget(),
+                                  child: const FaqCompWidget(),
                                 ),
                                 StreamBuilder<List<FaqRecord>>(
                                   stream: queryFaqRecord(
@@ -155,9 +154,8 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                                             listViewFaqRecordList[
                                                 listViewIndex];
                                         return Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  20.0, 20.0, 20.0, 0.0),
+                                          padding: const EdgeInsetsDirectional
+                                              .fromSTEB(20.0, 20.0, 20.0, 0.0),
                                           child: FaqTextcompWidget(
                                             key: Key(
                                                 'Keyunz_${listViewIndex}_of_${listViewFaqRecordList.length}'),
@@ -171,14 +169,16 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                                   },
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  alignment:
+                                      const AlignmentDirectional(0.0, 1.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 30.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 30.0, 0.0, 0.0),
                                     child: wrapWithModel(
                                       model: _model.footerCompModel1,
                                       updateCallback: () => setState(() {}),
-                                      child: FooterCompWidget(),
+                                      child: const FooterCompWidget(),
                                     ),
                                   ),
                                 ),
@@ -189,12 +189,12 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                       ],
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 40.0, 50.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 0.0, 40.0, 50.0),
                       child: wrapWithModel(
                         model: _model.whatsapStickyCompModel1,
                         updateCallback: () => setState(() {}),
-                        child: WhatsapStickyCompWidget(),
+                        child: const WhatsapStickyCompWidget(),
                       ),
                     ),
                   ],
@@ -216,7 +216,7 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                 false,
               )) {
                 return Stack(
-                  alignment: AlignmentDirectional(1.0, 1.0),
+                  alignment: const AlignmentDirectional(1.0, 1.0),
                   children: [
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -234,7 +234,7 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                         ),
                         Expanded(
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -243,7 +243,7 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                                   wrapWithModel(
                                     model: _model.faqCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: FaqCompWidget(),
+                                    child: const FaqCompWidget(),
                                   ),
                                   StreamBuilder<List<FaqRecord>>(
                                     stream: queryFaqRecord(
@@ -284,9 +284,9 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                                               listViewFaqRecordList[
                                                   listViewIndex];
                                           return Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    20.0, 20.0, 20.0, 0.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(
+                                                20.0, 20.0, 20.0, 0.0),
                                             child: FaqTextcompWidget(
                                               key: Key(
                                                   'Keyt5z_${listViewIndex}_of_${listViewFaqRecordList.length}'),
@@ -300,14 +300,16 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                                     },
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 30.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 30.0, 0.0, 0.0),
                                       child: wrapWithModel(
                                         model: _model.footerCompModel2,
                                         updateCallback: () => setState(() {}),
-                                        child: FooterCompWidget(),
+                                        child: const FooterCompWidget(),
                                       ),
                                     ),
                                   ),
@@ -319,19 +321,19 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                       ],
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 40.0, 50.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 0.0, 40.0, 50.0),
                       child: wrapWithModel(
                         model: _model.whatsapStickyCompModel2,
                         updateCallback: () => setState(() {}),
-                        child: WhatsapStickyCompWidget(),
+                        child: const WhatsapStickyCompWidget(),
                       ),
                     ),
                   ],
                 );
               } else {
                 return Stack(
-                  alignment: AlignmentDirectional(1.0, 1.0),
+                  alignment: const AlignmentDirectional(1.0, 1.0),
                   children: [
                     Column(
                       mainAxisSize: MainAxisSize.max,
@@ -340,11 +342,11 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                         wrapWithModel(
                           model: _model.desktopHeaderCompModel,
                           updateCallback: () => setState(() {}),
-                          child: DesktopHeaderCompWidget(),
+                          child: const DesktopHeaderCompWidget(),
                         ),
                         Expanded(
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -353,7 +355,7 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                                   wrapWithModel(
                                     model: _model.faqCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: FaqCompWidget(),
+                                    child: const FaqCompWidget(),
                                   ),
                                   StreamBuilder<List<FaqRecord>>(
                                     stream: queryFaqRecord(
@@ -394,9 +396,9 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                                               listViewFaqRecordList[
                                                   listViewIndex];
                                           return Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    20.0, 20.0, 20.0, 0.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(
+                                                20.0, 20.0, 20.0, 0.0),
                                             child: FaqTextcompWidget(
                                               key: Key(
                                                   'Key56r_${listViewIndex}_of_${listViewFaqRecordList.length}'),
@@ -410,14 +412,16 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                                     },
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                    alignment:
+                                        const AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 30.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 30.0, 0.0, 0.0),
                                       child: wrapWithModel(
                                         model: _model.footerCompModel3,
                                         updateCallback: () => setState(() {}),
-                                        child: FooterCompWidget(),
+                                        child: const FooterCompWidget(),
                                       ),
                                     ),
                                   ),
@@ -429,12 +433,12 @@ class _FaqPageWidgetState extends State<FaqPageWidget> {
                       ],
                     ),
                     Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 40.0, 50.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          0.0, 0.0, 40.0, 50.0),
                       child: wrapWithModel(
                         model: _model.whatsapStickyCompModel3,
                         updateCallback: () => setState(() {}),
-                        child: WhatsapStickyCompWidget(),
+                        child: const WhatsapStickyCompWidget(),
                       ),
                     ),
                   ],

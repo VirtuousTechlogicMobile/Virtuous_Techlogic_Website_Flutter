@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
 import 'seven_steps_comp_model.dart';
 export 'seven_steps_comp_model.dart';
 
@@ -40,7 +41,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.sizeOf(context).width * 1.0,
+      width: MediaQuery.sizeOf(context).width,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
@@ -91,39 +92,36 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0, 0),
                             child: Text(
                               '01',
                               style: FlutterFlowTheme.of(context)
                                   .displayLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .displayLargeFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    fontSize: () {
-                                      if (MediaQuery.sizeOf(context).width <
-                                          kBreakpointSmall) {
-                                        return 30.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointMedium) {
-                                        return 48.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointLarge) {
-                                        return 48.0;
-                                      } else {
-                                        return 48.0;
-                                      }
-                                    }(),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .displayLargeFamily),
-                                  ),
+                                fontFamily: 'Poppins',
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                fontSize: () {
+                                  if (MediaQuery.sizeOf(context).width <
+                                      kBreakpointSmall) {
+                                    return 30.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointMedium) {
+                                    return 48.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointLarge) {
+                                    return 48.0;
+                                  } else {
+                                    return 48.0;
+                                  }
+                                }(),
+                                letterSpacing: 0,
+                                fontWeight: FontWeight.bold,
+                                useGoogleFonts: GoogleFonts.asMap()
+                                    .containsKey('Poppins'),
+                              ),
                             ),
                           ),
                         ),
@@ -135,8 +133,8 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       tablet: false,
                     ))
                       Container(
-                        // width: 4.0,
-                        // height: 220.0,
+                        width: 4,
+                        height: 220,
                         decoration: BoxDecoration(
                           color: Color(0xFFC7E8FF),
                         ),
@@ -145,61 +143,60 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 20),
                     child: Container(
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [Colors.white, Color(0xFFEFF6FD)],
-                          stops: [0.0, 0.8],
-                          begin: AlignmentDirectional(-1.0, 0.0),
-                          end: AlignmentDirectional(1.0, 0),
+                          stops: [0, 0.8],
+                          begin: AlignmentDirectional(-1, 0),
+                          end: AlignmentDirectional(1, 0),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8),
                         border: Border.all(
                           color: Color(0xFFE5F3FD),
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(30.0),
+                        padding: EdgeInsets.all(30),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SelectionArea(
                                 child: Text(
-                              'Conceptualization:(Dream Crafting)',
-                              style: FlutterFlowTheme.of(context)
-                                  .headlineSmall
-                                  .override(
+                                  'Conceptualization:(Dream Crafting)',
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .override(
                                     fontFamily: 'Raleway',
                                     color: FlutterFlowTheme.of(context).black,
-                                    letterSpacing: 0.0,
+                                    letterSpacing: 0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('Raleway'),
                                   ),
-                            )),
+                                )),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 5.0, 0.0, 0.0),
+                              padding:
+                              EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                               child: SelectionArea(
                                   child: Text(
-                                'Every groundbreaking app begins with a spark of imagination. At Virtuous Technologic, our Conceptualization stage is where ideas take shape. Collaborating closely with clients, we explore and refine concepts, ensuring that each app starts with a strong, innovative foundation that aligns perfectly with our client\'s vision.',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
+                                    'Every groundbreaking app begins with a spark of imagination. At Virtuous Technologic, our Conceptualization stage is where ideas take shape. Collaborating closely with clients, we explore and refine concepts, ensuring that each app starts with a strong, innovative foundation that aligns perfectly with our client\'s vision.',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelLarge
+                                        .override(
                                       fontFamily: 'Poppins',
                                       color: FlutterFlowTheme.of(context)
                                           .text16Colo2,
-                                      letterSpacing: 0.0,
+                                      letterSpacing: 0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey('Poppins'),
                                     ),
-                              )),
+                                  )),
                             ),
-                          ].divide(SizedBox(height: 15.0)),
+                          ].divide(SizedBox(height: 15)),
                         ),
                       ),
                     ),
@@ -250,39 +247,36 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0, 0),
                             child: Text(
                               '02',
                               style: FlutterFlowTheme.of(context)
                                   .displayLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .displayLargeFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    fontSize: () {
-                                      if (MediaQuery.sizeOf(context).width <
-                                          kBreakpointSmall) {
-                                        return 30.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointMedium) {
-                                        return 48.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointLarge) {
-                                        return 48.0;
-                                      } else {
-                                        return 48.0;
-                                      }
-                                    }(),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .displayLargeFamily),
-                                  ),
+                                fontFamily: 'Poppins',
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                fontSize: () {
+                                  if (MediaQuery.sizeOf(context).width <
+                                      kBreakpointSmall) {
+                                    return 30.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointMedium) {
+                                    return 48.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointLarge) {
+                                    return 48.0;
+                                  } else {
+                                    return 48.0;
+                                  }
+                                }(),
+                                letterSpacing: 0,
+                                fontWeight: FontWeight.bold,
+                                useGoogleFonts: GoogleFonts.asMap()
+                                    .containsKey('Poppins'),
+                              ),
                             ),
                           ),
                         ),
@@ -294,8 +288,8 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       tablet: false,
                     ))
                       Container(
-                        // width: 4.0,
-                        // height: 220.0,
+                        width: 4,
+                        height: 220,
                         decoration: BoxDecoration(
                           color: Color(0xFFC7E8FF),
                         ),
@@ -304,8 +298,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 20),
                     child: Container(
                       width: () {
                         if (MediaQuery.sizeOf(context).width <
@@ -324,55 +317,55 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [Colors.white, Color(0xFFFBF9F3)],
-                          stops: [0.0, 0.8],
-                          begin: AlignmentDirectional(-1.0, 0.0),
-                          end: AlignmentDirectional(1.0, 0),
+                          stops: [0, 0.8],
+                          begin: AlignmentDirectional(-1, 0),
+                          end: AlignmentDirectional(1, 0),
                         ),
-                        borderRadius: BorderRadius.circular(24.0),
+                        borderRadius: BorderRadius.circular(24),
                         border: Border.all(
                           color: Color(0xFFFBF7E8),
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(30.0),
+                        padding: EdgeInsets.all(30),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SelectionArea(
                                 child: Text(
-                              'Designing the User Experience(Design Delight)',
-                              style: FlutterFlowTheme.of(context)
-                                  .headlineMedium
-                                  .override(
+                                  'Designing the User Experience(Design Delight)',
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineMedium
+                                      .override(
                                     fontFamily: 'Raleway',
                                     color: FlutterFlowTheme.of(context).black,
-                                    letterSpacing: 0.0,
+                                    letterSpacing: 0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('Raleway'),
                                   ),
-                            )),
+                                )),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 5.0, 0.0, 0.0),
+                              padding:
+                              EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                               child: SelectionArea(
                                   child: Text(
-                                'Design is at the heart of what we do. In this phase, Virtuous Technologic\'s skilled designers craft intuitive and aesthetically pleasing user interfaces. We focus on creating a seamless user experience that embodies functionality and elegance, making every interaction with our apps an enjoyable and efficient journey for the user.',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
+                                    'Design is at the heart of what we do. In this phase, Virtuous Technologic\'s skilled designers craft intuitive and aesthetically pleasing user interfaces. We focus on creating a seamless user experience that embodies functionality and elegance, making every interaction with our apps an enjoyable and efficient journey for the user.',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelLarge
+                                        .override(
                                       fontFamily: 'Poppins',
                                       color: FlutterFlowTheme.of(context)
                                           .text16Colo2,
-                                      letterSpacing: 0.0,
+                                      letterSpacing: 0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey('Poppins'),
                                     ),
-                              )),
+                                  )),
                             ),
-                          ].divide(SizedBox(height: 15.0)),
+                          ].divide(SizedBox(height: 15)),
                         ),
                       ),
                     ),
@@ -423,39 +416,36 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0, 0),
                             child: Text(
                               '03',
                               style: FlutterFlowTheme.of(context)
                                   .displayLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .displayLargeFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    fontSize: () {
-                                      if (MediaQuery.sizeOf(context).width <
-                                          kBreakpointSmall) {
-                                        return 30.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointMedium) {
-                                        return 48.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointLarge) {
-                                        return 48.0;
-                                      } else {
-                                        return 48.0;
-                                      }
-                                    }(),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .displayLargeFamily),
-                                  ),
+                                fontFamily: 'Poppins',
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                fontSize: () {
+                                  if (MediaQuery.sizeOf(context).width <
+                                      kBreakpointSmall) {
+                                    return 30.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointMedium) {
+                                    return 48.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointLarge) {
+                                    return 48.0;
+                                  } else {
+                                    return 48.0;
+                                  }
+                                }(),
+                                letterSpacing: 0,
+                                fontWeight: FontWeight.bold,
+                                useGoogleFonts: GoogleFonts.asMap()
+                                    .containsKey('Poppins'),
+                              ),
                             ),
                           ),
                         ),
@@ -467,8 +457,8 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       tablet: false,
                     ))
                       Container(
-                        // width: 4.0,
-                        // height: 220.0,
+                        width: 4,
+                        height: 220,
                         decoration: BoxDecoration(
                           color: Color(0xFFC7E8FF),
                         ),
@@ -477,8 +467,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 20),
                     child: Container(
                       width: () {
                         if (MediaQuery.sizeOf(context).width <
@@ -497,55 +486,55 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [Colors.white, Color(0xFFEFF6FD)],
-                          stops: [0.0, 0.8],
-                          begin: AlignmentDirectional(-1.0, 0.0),
-                          end: AlignmentDirectional(1.0, 0),
+                          stops: [0, 0.8],
+                          begin: AlignmentDirectional(-1, 0),
+                          end: AlignmentDirectional(1, 0),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8),
                         border: Border.all(
                           color: Color(0xFFE5F3FD),
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(30.0),
+                        padding: EdgeInsets.all(30),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SelectionArea(
                                 child: Text(
-                              'Agile Development:(Build Brilliance)',
-                              style: FlutterFlowTheme.of(context)
-                                  .headlineSmall
-                                  .override(
+                                  'Agile Development:(Build Brilliance)',
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .override(
                                     fontFamily: 'Raleway',
                                     color: FlutterFlowTheme.of(context).black,
-                                    letterSpacing: 0.0,
+                                    letterSpacing: 0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('Raleway'),
                                   ),
-                            )),
+                                )),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 5.0, 0.0, 0.0),
+                              padding:
+                              EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                               child: SelectionArea(
                                   child: Text(
-                                'Our development phase is characterized by agility and precision. Employing the latest technologies and an agile methodology, Virtuous Technologic\'s development team transforms designs into reality. We prioritize flexibility and efficiency, adapting to changes swiftly to deliver high-quality, robust apps tailored to specific user needs.',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
+                                    'Our development phase is characterized by agility and precision. Employing the latest technologies and an agile methodology, Virtuous Technologic\'s development team transforms designs into reality. We prioritize flexibility and efficiency, adapting to changes swiftly to deliver high-quality, robust apps tailored to specific user needs.',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelLarge
+                                        .override(
                                       fontFamily: 'Poppins',
                                       color: FlutterFlowTheme.of(context)
                                           .text16Colo2,
-                                      letterSpacing: 0.0,
+                                      letterSpacing: 0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey('Poppins'),
                                     ),
-                              )),
+                                  )),
                             ),
-                          ].divide(SizedBox(height: 15.0)),
+                          ].divide(SizedBox(height: 15)),
                         ),
                       ),
                     ),
@@ -596,39 +585,36 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0, 0),
                             child: Text(
                               '04',
                               style: FlutterFlowTheme.of(context)
                                   .displayLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .displayLargeFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    fontSize: () {
-                                      if (MediaQuery.sizeOf(context).width <
-                                          kBreakpointSmall) {
-                                        return 30.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointMedium) {
-                                        return 48.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointLarge) {
-                                        return 48.0;
-                                      } else {
-                                        return 48.0;
-                                      }
-                                    }(),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .displayLargeFamily),
-                                  ),
+                                fontFamily: 'Poppins',
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                fontSize: () {
+                                  if (MediaQuery.sizeOf(context).width <
+                                      kBreakpointSmall) {
+                                    return 30.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointMedium) {
+                                    return 48.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointLarge) {
+                                    return 48.0;
+                                  } else {
+                                    return 48.0;
+                                  }
+                                }(),
+                                letterSpacing: 0,
+                                fontWeight: FontWeight.bold,
+                                useGoogleFonts: GoogleFonts.asMap()
+                                    .containsKey('Poppins'),
+                              ),
                             ),
                           ),
                         ),
@@ -640,8 +626,8 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       tablet: false,
                     ))
                       Container(
-                        // width: 4.0,
-                        // height: 220.0,
+                        width: 4,
+                        height: 220,
                         decoration: BoxDecoration(
                           color: Color(0xFFC7E8FF),
                         ),
@@ -650,8 +636,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 20),
                     child: Container(
                       width: () {
                         if (MediaQuery.sizeOf(context).width <
@@ -670,56 +655,56 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [Colors.white, Color(0xFFFBF9F3)],
-                          stops: [0.0, 0.8],
-                          begin: AlignmentDirectional(-1.0, 0.0),
-                          end: AlignmentDirectional(1.0, 0),
+                          stops: [0, 0.8],
+                          begin: AlignmentDirectional(-1, 0),
+                          end: AlignmentDirectional(1, 0),
                         ),
-                        borderRadius: BorderRadius.circular(24.0),
+                        borderRadius: BorderRadius.circular(24),
                         border: Border.all(
                           color: Color(0xFFFBF7E8),
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(30.0),
+                        padding: EdgeInsets.all(30),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SelectionArea(
                                 child: Text(
-                              'Testing and Quality Assurance:(Trust Tests)',
-                              style: FlutterFlowTheme.of(context)
-                                  .headlineSmall
-                                  .override(
+                                  'Testing and Quality Assurance:(Trust Tests)',
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .override(
                                     fontFamily: FlutterFlowTheme.of(context)
                                         .headlineSmallFamily,
-                                    letterSpacing: 0.0,
+                                    letterSpacing: 0,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .headlineSmallFamily),
+                                        FlutterFlowTheme.of(context)
+                                            .headlineSmallFamily),
                                   ),
-                            )),
+                                )),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 5.0, 0.0, 0.0),
+                              padding:
+                              EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                               child: SelectionArea(
                                   child: Text(
-                                'Quality is non-negotiable at Virtuous Technologic. This stage is dedicated to exhaustive testing, ensuring each app\'s performance, security, and user experience meet our stringent standards. Our QA team rigorously tests every feature, providing the necessary polish to guarantee a flawless and reliable final product.',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
+                                    'Quality is non-negotiable at Virtuous Technologic. This stage is dedicated to exhaustive testing, ensuring each app\'s performance, security, and user experience meet our stringent standards. Our QA team rigorously tests every feature, providing the necessary polish to guarantee a flawless and reliable final product.',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelLarge
+                                        .override(
                                       fontFamily: 'Open Sans',
                                       color: FlutterFlowTheme.of(context)
                                           .text16Colo2,
-                                      letterSpacing: 0.0,
+                                      letterSpacing: 0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey('Open Sans'),
                                     ),
-                              )),
+                                  )),
                             ),
-                          ].divide(SizedBox(height: 15.0)),
+                          ].divide(SizedBox(height: 15)),
                         ),
                       ),
                     ),
@@ -770,39 +755,36 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0, 0),
                             child: Text(
                               '05',
                               style: FlutterFlowTheme.of(context)
                                   .displayLarge
                                   .override(
-                                    fontFamily: FlutterFlowTheme.of(context)
-                                        .displayLargeFamily,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
-                                    fontSize: () {
-                                      if (MediaQuery.sizeOf(context).width <
-                                          kBreakpointSmall) {
-                                        return 30.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointMedium) {
-                                        return 48.0;
-                                      } else if (MediaQuery.sizeOf(context)
-                                              .width <
-                                          kBreakpointLarge) {
-                                        return 48.0;
-                                      } else {
-                                        return 48.0;
-                                      }
-                                    }(),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                    useGoogleFonts: GoogleFonts.asMap()
-                                        .containsKey(
-                                            FlutterFlowTheme.of(context)
-                                                .displayLargeFamily),
-                                  ),
+                                fontFamily: 'Poppins',
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                                fontSize: () {
+                                  if (MediaQuery.sizeOf(context).width <
+                                      kBreakpointSmall) {
+                                    return 30.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointMedium) {
+                                    return 48.0;
+                                  } else if (MediaQuery.sizeOf(context)
+                                      .width <
+                                      kBreakpointLarge) {
+                                    return 48.0;
+                                  } else {
+                                    return 48.0;
+                                  }
+                                }(),
+                                letterSpacing: 0,
+                                fontWeight: FontWeight.bold,
+                                useGoogleFonts: GoogleFonts.asMap()
+                                    .containsKey('Poppins'),
+                              ),
                             ),
                           ),
                         ),
@@ -812,8 +794,7 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 80.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(15, 0, 0, 20),
                     child: Container(
                       width: () {
                         if (MediaQuery.sizeOf(context).width <
@@ -832,55 +813,55 @@ class _SevenStepsCompWidgetState extends State<SevenStepsCompWidget> {
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
                           colors: [Colors.white, Color(0xFFEFF6FD)],
-                          stops: [0.0, 0.8],
-                          begin: AlignmentDirectional(-1.0, 0.0),
-                          end: AlignmentDirectional(1.0, 0),
+                          stops: [0, 0.8],
+                          begin: AlignmentDirectional(-1, 0),
+                          end: AlignmentDirectional(1, 0),
                         ),
-                        borderRadius: BorderRadius.circular(8.0),
+                        borderRadius: BorderRadius.circular(8),
                         border: Border.all(
                           color: Color(0xFFE5F3FD),
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.all(30.0),
+                        padding: EdgeInsets.all(30),
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SelectionArea(
                                 child: Text(
-                              'Launch and ContinuousImprovement:(Next Now)',
-                              style: FlutterFlowTheme.of(context)
-                                  .headlineSmall
-                                  .override(
+                                  'Launch and ContinuousImprovement:(Next Now)',
+                                  style: FlutterFlowTheme.of(context)
+                                      .headlineSmall
+                                      .override(
                                     fontFamily: 'Raleway',
                                     color: FlutterFlowTheme.of(context).black,
-                                    letterSpacing: 0.0,
+                                    letterSpacing: 0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey('Raleway'),
                                   ),
-                            )),
+                                )),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 5.0, 0.0, 0.0),
+                              padding:
+                              EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                               child: SelectionArea(
                                   child: Text(
-                                'Launching an app is just the beginning of its journey. At Virtuous Technologic, we monitor post-launch performance and gather user feedback to continuously refine and update our apps. This commitment to ongoing improvement ensures our apps not only meet but exceed user expectations, today and in the future.',
-                                textAlign: TextAlign.start,
-                                style: FlutterFlowTheme.of(context)
-                                    .labelLarge
-                                    .override(
+                                    'Launching an app is just the beginning of its journey. At Virtuous Technologic, we monitor post-launch performance and gather user feedback to continuously refine and update our apps. This commitment to ongoing improvement ensures our apps not only meet but exceed user expectations, today and in the future.',
+                                    textAlign: TextAlign.start,
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelLarge
+                                        .override(
                                       fontFamily: 'Poppins',
                                       color: FlutterFlowTheme.of(context)
                                           .text16Colo2,
-                                      letterSpacing: 0.0,
+                                      letterSpacing: 0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey('Poppins'),
                                     ),
-                              )),
+                                  )),
                             ),
-                          ].divide(SizedBox(height: 15.0)),
+                          ].divide(SizedBox(height: 15)),
                         ),
                       ),
                     ),

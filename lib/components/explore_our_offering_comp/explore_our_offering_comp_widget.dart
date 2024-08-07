@@ -58,6 +58,7 @@ class _ExploreOurOfferingCompWidgetState
                 richTextOne: 'Explore Our ',
                 richTextTwo: 'Expertise',
                 texts: 'Fields where we are Best.',
+                showShadow: false,
               ),
             ),
           ),

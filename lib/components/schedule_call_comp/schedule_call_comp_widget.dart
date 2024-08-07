@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'schedule_call_comp_model.dart';
 export 'schedule_call_comp_model.dart';
 
@@ -88,7 +87,7 @@ class _ScheduleCallCompWidgetState extends State<ScheduleCallCompWidget> {
               highlightColor: Colors.transparent,
               onTap: () async {
                 logFirebaseEvent('SCHEDULE_CALL_Column_toys34l6_ON_TAP');
-                await launchURL(containerScheduleCallRecord!.calendlyLink);
+                await launchURL(containerScheduleCallRecord.calendlyLink);
               },
               child: SingleChildScrollView(
                 child: Column(
@@ -102,12 +101,12 @@ class _ScheduleCallCompWidgetState extends State<ScheduleCallCompWidget> {
                       desktop: false,
                     ))
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 100.0, 0.0, 0.0),
                         child: wrapWithModel(
                           model: _model.commonRichTextCompModel,
                           updateCallback: () => setState(() {}),
-                          child: CommonRichTextCompWidget(
+                          child: const CommonRichTextCompWidget(
                             richTextOne: 'Want to ',
                             richTextTwo: 'schedule a call?',
                             texts:
@@ -117,7 +116,7 @@ class _ScheduleCallCompWidgetState extends State<ScheduleCallCompWidget> {
                       ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(24.0),
                         child: Image.network(
@@ -143,9 +142,9 @@ class _ScheduleCallCompWidgetState extends State<ScheduleCallCompWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                       child: Text(
-                        containerScheduleCallRecord!.name,
+                        containerScheduleCallRecord.name,
                         style:
                             FlutterFlowTheme.of(context).headlineSmall.override(
                                   fontFamily: FlutterFlowTheme.of(context)
@@ -160,9 +159,9 @@ class _ScheduleCallCompWidgetState extends State<ScheduleCallCompWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                       child: Text(
-                        containerScheduleCallRecord!.designation,
+                        containerScheduleCallRecord.designation,
                         style: FlutterFlowTheme.of(context).labelLarge.override(
                               fontFamily:
                                   FlutterFlowTheme.of(context).labelLargeFamily,
@@ -176,7 +175,7 @@ class _ScheduleCallCompWidgetState extends State<ScheduleCallCompWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                       child: Text(
                         'Custom software design & development services',
                         style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -192,22 +191,22 @@ class _ScheduleCallCompWidgetState extends State<ScheduleCallCompWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 30.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           logFirebaseEvent('SCHEDULE_CALL_SCHEDULE_BTN_ON_TAP');
                           await launchURL('https://calendly.com/');
                         },
                         text: 'Schedule',
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.calendar_month_outlined,
                           size: 15.0,
                         ),
                         options: FFButtonOptions(
                           height: 40.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 24.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle: FlutterFlowTheme.of(context)
@@ -223,7 +222,7 @@ class _ScheduleCallCompWidgetState extends State<ScheduleCallCompWidget> {
                                         .titleSmallFamily),
                               ),
                           elevation: 3.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),

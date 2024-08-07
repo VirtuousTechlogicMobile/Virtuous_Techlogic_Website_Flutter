@@ -1,12 +1,12 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'our_culture_image_comp_model.dart';
+
 export 'our_culture_image_comp_model.dart';
 
 class OurCultureImageCompWidget extends StatefulWidget {
@@ -17,7 +17,7 @@ class OurCultureImageCompWidget extends StatefulWidget {
     required this.richText2,
     required this.textforDesc,
     bool? isUpsideText,
-  }) : this.isUpsideText = isUpsideText ?? false;
+  }) : isUpsideText = isUpsideText ?? false;
 
   final String? image;
   final String? richText1;
@@ -58,7 +58,7 @@ class _OurCultureImageCompWidgetState extends State<OurCultureImageCompWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: 380.0,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -67,13 +67,13 @@ class _OurCultureImageCompWidgetState extends State<OurCultureImageCompWidget> {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                if (widget!.isUpsideText)
+                if (widget.isUpsideText)
                   RichText(
                     textScaler: MediaQuery.of(context).textScaler,
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: widget!.richText1!,
+                          text: widget.richText1 ?? "Text1",
                           style: FlutterFlowTheme.of(context)
                               .headlineSmall
                               .override(
@@ -87,7 +87,7 @@ class _OurCultureImageCompWidgetState extends State<OurCultureImageCompWidget> {
                               ),
                         ),
                         TextSpan(
-                          text: widget!.richText2!,
+                          text: widget.richText2 ?? "Text2",
                           style: FlutterFlowTheme.of(context)
                               .headlineSmall
                               .override(
@@ -113,12 +113,12 @@ class _OurCultureImageCompWidgetState extends State<OurCultureImageCompWidget> {
                               ),
                     ),
                   ),
-                if (widget!.isUpsideText)
+                if (widget.isUpsideText)
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 15.0, 0.0, 15.0),
                     child: Text(
-                      widget!.textforDesc!,
+                      widget.textforDesc ?? "Description",
                       style: FlutterFlowTheme.of(context).labelLarge.override(
                             fontFamily:
                                 FlutterFlowTheme.of(context).labelLargeFamily,
@@ -131,25 +131,24 @@ class _OurCultureImageCompWidgetState extends State<OurCultureImageCompWidget> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(24.0),
                   child: CachedNetworkImage(
-                    fadeInDuration: Duration(milliseconds: 100),
-                    fadeOutDuration: Duration(milliseconds: 100),
-                    imageUrl: widget!.image!,
+                    imageUrl: widget.image ??
+                        "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
                     width: 386.0,
                     height: 580.0,
                     fit: BoxFit.cover,
                   ),
                 ),
-                if (!widget!.isUpsideText)
+                if (!widget.isUpsideText)
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 15.0, 0.0, 10.0),
                         child: SelectionArea(
                             child: AutoSizeText(
                           valueOrDefault<String>(
-                            widget!.richText1,
+                            widget.richText1,
                             'Our',
                           ),
                           textAlign: TextAlign.start,
@@ -166,12 +165,12 @@ class _OurCultureImageCompWidgetState extends State<OurCultureImageCompWidget> {
                         )),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 15.0, 10.0, 10.0),
                         child: SelectionArea(
                             child: AutoSizeText(
                           valueOrDefault<String>(
-                            widget!.richText2,
+                            widget.richText2,
                             'Culture',
                           ),
                           textAlign: TextAlign.start,
@@ -188,16 +187,16 @@ class _OurCultureImageCompWidgetState extends State<OurCultureImageCompWidget> {
                               ),
                         )),
                       ),
-                    ].divide(SizedBox(width: 10.0)),
+                    ].divide(const SizedBox(width: 10.0)),
                   ),
-                if (!widget!.isUpsideText)
+                if (!widget.isUpsideText)
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 10.0, 10.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 15.0, 10.0, 10.0),
                     child: SelectionArea(
                         child: AutoSizeText(
                       valueOrDefault<String>(
-                        widget!.textforDesc,
+                        widget.textforDesc,
                         'We are not just Developing App but also Celebrate different festival.',
                       ),
                       textAlign: TextAlign.start,

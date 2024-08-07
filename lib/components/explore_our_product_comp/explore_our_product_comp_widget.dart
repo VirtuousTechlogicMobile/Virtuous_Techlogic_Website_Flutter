@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
-import '/button_component/view_live_app_button_comp/view_live_app_button_comp_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -20,7 +19,7 @@ class ExploreOurProductCompWidget extends StatefulWidget {
     bool? isLeftsideText,
     this.editDescription,
     this.viewmore,
-  }) : this.isLeftsideText = isLeftsideText ?? false;
+  }) : isLeftsideText = isLeftsideText ?? false;
 
   final String? productTitle;
   final String? productDescription;
@@ -74,7 +73,7 @@ class _ExploreOurProductCompWidgetState
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.max,
               children: [
-                if (widget!.isLeftsideText)
+                if (widget.isLeftsideText)
                   Expanded(
                     flex: 5,
                     child: Padding(
@@ -89,7 +88,7 @@ class _ExploreOurProductCompWidgetState
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              widget!.productTitle!,
+                              widget.productTitle ?? "Product Title",
                               style: FlutterFlowTheme.of(context)
                                   .headlineSmall
                                   .override(
@@ -109,7 +108,8 @@ class _ExploreOurProductCompWidgetState
                           custom_widgets.DisplayQuillToHtml(
                             width: double.infinity,
                             height: MediaQuery.sizeOf(context).height * 0.05,
-                            defaultJsonData: widget!.editDescription!,
+                            defaultJsonData: widget.editDescription ??
+                                "[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]",
                             isMaxCharacterAllowOrNot: true,
                           ),
                           if (responsiveVisibility(
@@ -124,14 +124,6 @@ class _ExploreOurProductCompWidgetState
                                 mainAxisSize: MainAxisSize.min,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  if (false)
-                                    wrapWithModel(
-                                      model: _model.viewLiveAppButtonCompModel,
-                                      updateCallback: () => setState(() {}),
-                                      child: const ViewLiveAppButtonCompWidget(
-                                        viewLiveApp: 'View Live App',
-                                      ),
-                                    ),
                                   if (responsiveVisibility(
                                     context: context,
                                     phone: false,
@@ -170,14 +162,41 @@ class _ExploreOurProductCompWidgetState
                       child: CachedNetworkImage(
                         fadeInDuration: const Duration(milliseconds: 0),
                         fadeOutDuration: const Duration(milliseconds: 0),
-                        imageUrl: widget!.imagePath!,
-                        // width: 590.0,
-                        // height: 280.0,
+                        imageUrl: widget.imagePath ??
+                            "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
+                        width: () {
+                          if (MediaQuery.sizeOf(context).width <
+                              kBreakpointSmall) {
+                            return 328.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointMedium) {
+                            return 590.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointLarge) {
+                            return 590.0;
+                          } else {
+                            return 590.0;
+                          }
+                        }(),
+                        height: () {
+                          if (MediaQuery.sizeOf(context).width <
+                              kBreakpointSmall) {
+                            return 240.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointMedium) {
+                            return 280.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointLarge) {
+                            return 280.0;
+                          } else {
+                            return 280.0;
+                          }
+                        }(),
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                if (!widget!.isLeftsideText)
+                if (!widget.isLeftsideText)
                   Expanded(
                     flex: 5,
                     child: Padding(
@@ -190,7 +209,7 @@ class _ExploreOurProductCompWidgetState
                         children: [
                           SelectionArea(
                               child: Text(
-                            widget!.productTitle!,
+                            widget.productTitle ?? "Product Title",
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -205,7 +224,8 @@ class _ExploreOurProductCompWidgetState
                           custom_widgets.DisplayQuillToHtml(
                             width: MediaQuery.sizeOf(context).width * 1.0,
                             height: MediaQuery.sizeOf(context).height * 0.05,
-                            defaultJsonData: widget!.editDescription!,
+                            defaultJsonData: widget.editDescription ??
+                                '[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]',
                             isMaxCharacterAllowOrNot: true,
                           ),
                         ].divide(const SizedBox(height: 10.0)),
@@ -225,8 +245,42 @@ class _ExploreOurProductCompWidgetState
                 ClipRRect(
                   borderRadius: BorderRadius.circular(20.0),
                   child: Image.network(
-                    widget!.imagePath!,
+                    widget.imagePath ??
+                        "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
                     fit: BoxFit.cover,
+                    width: () {
+                      if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                        return 328.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
+                        return 590.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
+                        return 590.0;
+                      } else {
+                        return 590.0;
+                      }
+                    }(),
+                    height: () {
+                      if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                        return 240.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
+                        return 280.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
+                        return 280.0;
+                      } else {
+                        return 280.0;
+                      }
+                    }(),
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) {
+                        return child;
+                      } else {
+                        return const CircularProgressIndicator();
+                      }
+                    },
                   ),
                 ),
                 Padding(
@@ -259,7 +313,8 @@ class _ExploreOurProductCompWidgetState
                       custom_widgets.DisplayQuillToHtml(
                         width: double.infinity,
                         height: MediaQuery.sizeOf(context).height * 0.08,
-                        defaultJsonData: widget!.editDescription!,
+                        defaultJsonData: widget.editDescription ??
+                            '[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]',
                         isMaxCharacterAllowOrNot: true,
                       ),
                     ].divide(const SizedBox(height: 10.0)),

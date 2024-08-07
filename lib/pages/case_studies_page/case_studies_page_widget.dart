@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -27,7 +29,8 @@ class CaseStudiesPageWidget extends StatefulWidget {
   State<CaseStudiesPageWidget> createState() => _CaseStudiesPageWidgetState();
 }
 
-class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with TickerProviderStateMixin {
+class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget>
+    with TickerProviderStateMixin {
   late CaseStudiesPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -39,7 +42,8 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
     super.initState();
     _model = createModel(context, () => CaseStudiesPageModel());
 
-    logFirebaseEvent('screen_view', parameters: {'screen_name': 'caseStudiesPage'});
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'caseStudiesPage'});
     animationsMap.addAll({
       'endDrawerOnActionTriggerAnimation': AnimationInfo(
         trigger: AnimationTrigger.onActionTrigger,
@@ -56,7 +60,9 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
       ),
     });
     setupAnimations(
-      animationsMap.values.where((anim) => anim.trigger == AnimationTrigger.onActionTrigger || !anim.applyInitialState),
+      animationsMap.values.where((anim) =>
+          anim.trigger == AnimationTrigger.onActionTrigger ||
+          !anim.applyInitialState),
       this,
     );
 
@@ -73,7 +79,9 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
+      onTap: () => _model.unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+          : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -84,7 +92,9 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
             updateCallback: () => setState(() {}),
             child: const SidebarCompWidget(),
           ),
-        ).animateOnActionTrigger(animationsMap['endDrawerOnActionTriggerAnimation']!, hasBeenTriggered: hasEndDrawerTriggered),
+        ).animateOnActionTrigger(
+            animationsMap['endDrawerOnActionTriggerAnimation']!,
+            hasBeenTriggered: hasEndDrawerTriggered),
         body: SafeArea(
           top: true,
           child: Stack(
@@ -96,9 +106,11 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
                     () {
                       if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
                         return true;
-                      } else if (MediaQuery.sizeOf(context).width < kBreakpointMedium) {
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
                         return false;
-                      } else if (MediaQuery.sizeOf(context).width < kBreakpointLarge) {
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
                         return false;
                       } else {
                         return false;
@@ -115,7 +127,8 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
                           child: MobileHeaderCompWidget(
                             index: 4,
                             drawerCallBack: () async {
-                              logFirebaseEvent('CASE_STUDIES_Container_29cojv7g_CALLBACK');
+                              logFirebaseEvent(
+                                  'CASE_STUDIES_Container_29cojv7g_CALLBACK');
                               scaffoldKey.currentState!.openEndDrawer();
                             },
                           ),
@@ -126,18 +139,20 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      48.0, 40.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.caseStudyCompModel1,
                                     updateCallback: () => setState(() {}),
                                     child: Container(
-                                      constraints: BoxConstraints(maxWidth: getMaxWidth(context), maxHeight: getMaxHeight(context)),
-                                      child: const CaseStudyCompWidget(),
-                                    ),
+                                        constraints: BoxConstraints(
+                                            maxWidth: getMaxWidth(context)),
+                                        child: const CaseStudyCompWidget()),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 60.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel1,
                                     updateCallback: () => setState(() {}),
@@ -154,9 +169,11 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
                     () {
                       if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
                         return false;
-                      } else if (MediaQuery.sizeOf(context).width < kBreakpointMedium) {
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
                         return true;
-                      } else if (MediaQuery.sizeOf(context).width < kBreakpointLarge) {
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
                         return false;
                       } else {
                         return false;
@@ -172,7 +189,8 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
                           updateCallback: () => setState(() {}),
                           child: TabletHeaderCompWidget(
                             drawerCallback: () async {
-                              logFirebaseEvent('CASE_STUDIES_Container_kw56r0v8_CALLBACK');
+                              logFirebaseEvent(
+                                  'CASE_STUDIES_Container_kw56r0v8_CALLBACK');
                               scaffoldKey.currentState!.openEndDrawer();
                             },
                           ),
@@ -183,15 +201,20 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(48.0, 40.0, 48.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      48.0, 40.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.caseStudyCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: Container(constraints: BoxConstraints(maxWidth: getMaxWidth(context)), child: const CaseStudyCompWidget()),
+                                    child: Container(
+                                        constraints: BoxConstraints(
+                                            maxWidth: getMaxWidth(context)),
+                                        child: const CaseStudyCompWidget()),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 60.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
@@ -219,77 +242,95 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
                           child: Stack(
                             alignment: Alignment.topCenter,
                             children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                children: [
-                                  Expanded(
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(80, 400, 0, 0),
-                                      child: Container(
-                                        height: 200,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFD2E8F6),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                              blurRadius: 100,
-                                              color: Color(0xFFD2E5F2),
-                                              offset: Offset(
-                                                0.0,
-                                                0,
-                                              ),
-                                              spreadRadius: 100,
-                                            )
-                                          ],
-                                          borderRadius: BorderRadius.circular(500),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      decoration: const BoxDecoration(),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(0, 50, 300, 0),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 100),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              80, 200, 0, 0),
+                                      child: BackdropFilter(
+                                        filter: ImageFilter.blur(
+                                            sigmaX: 0.2, sigmaY: 0.2),
                                         child: Container(
-                                          height: 350,
+                                          height: 100,
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFFF8E5CB),
+                                            color: const Color(0xFFD2E8F6),
                                             boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 100,
-                                                color: Color(0xFFF4E3C8),
+                                                color: Color(0xFFD2E5F2),
                                                 offset: Offset(
-                                                  15,
+                                                  0.0,
                                                   0,
                                                 ),
-                                                spreadRadius: 80,
+                                                spreadRadius: 200,
                                               )
                                             ],
-                                            borderRadius: BorderRadius.circular(500),
+                                            borderRadius:
+                                                BorderRadius.circular(500),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              80, 200, 0, 0),
+                                      child: BackdropFilter(
+                                        filter: ImageFilter.blur(
+                                            sigmaX: 0.2,
+                                            sigmaY: 0.2), // Blur effect
+                                        child: Container(
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xf2f1e5d6),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 80,
+                                                color: Color(0xECF5E5D6),
+                                                offset: Offset(
+                                                  15,
+                                                  0,
+                                                ),
+                                                spreadRadius: 300,
+                                              )
+                                            ],
+                                            borderRadius:
+                                                BorderRadius.circular(500),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                               SingleChildScrollView(
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 30.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              30.0, 30.0, 30.0, 0.0),
                                       child: wrapWithModel(
                                         model: _model.caseStudyCompModel3,
                                         updateCallback: () => setState(() {}),
                                         child: Container(
-                                            constraints: BoxConstraints(maxWidth: getMaxWidth(context)), child: const CaseStudyCompWidget()),
+                                            constraints: BoxConstraints(
+                                                maxWidth: getMaxWidth(context)),
+                                            child: const CaseStudyCompWidget()),
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 50.0, 0.0, 0.0),
                                       child: wrapWithModel(
                                         model: _model.footerCompModel3,
                                         updateCallback: () => setState(() {}),
@@ -308,7 +349,8 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget> with Tick
                 },
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
                 child: wrapWithModel(
                   model: _model.whatsapStickyCompModel,
                   updateCallback: () => setState(() {}),

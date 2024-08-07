@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
@@ -7,11 +9,8 @@ import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'privacy_policy_model.dart';
+
 export 'privacy_policy_model.dart';
 
 class PrivacyPolicyWidget extends StatefulWidget {
@@ -62,13 +61,13 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
           child: wrapWithModel(
             model: _model.sidebarCompModel,
             updateCallback: () => setState(() {}),
-            child: SidebarCompWidget(),
+            child: const SidebarCompWidget(),
           ),
         ),
         body: SafeArea(
           top: true,
           child: Stack(
-            alignment: AlignmentDirectional(1.0, 1.0),
+            alignment: const AlignmentDirectional(1.0, 1.0),
             children: [
               Builder(
                 builder: (context) {
@@ -109,21 +108,21 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.privacyPolicytextcompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: PrivacyPolicytextcompWidget(),
+                                    child: const PrivacyPolicytextcompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 100.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -168,21 +167,21 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 10.0, 30.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.privacyPolicytextcompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: PrivacyPolicytextcompWidget(),
+                                    child: const PrivacyPolicytextcompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -198,7 +197,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                         wrapWithModel(
                           model: _model.desktopHeaderCompModel,
                           updateCallback: () => setState(() {}),
-                          child: DesktopHeaderCompWidget(
+                          child: const DesktopHeaderCompWidget(
                             indexParameter: 0,
                           ),
                         ),
@@ -212,21 +211,24 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        30.0, 0.0, 30.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            30.0, 0.0, 30.0, 0.0),
                                     child: wrapWithModel(
                                       model: _model.privacyPolicytextcompModel3,
                                       updateCallback: () => setState(() {}),
-                                      child: PrivacyPolicytextcompWidget(),
+                                      child:
+                                          const PrivacyPolicytextcompWidget(),
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 30.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 30.0, 0.0, 0.0),
                                     child: wrapWithModel(
                                       model: _model.footerCompModel3,
                                       updateCallback: () => setState(() {}),
-                                      child: FooterCompWidget(),
+                                      child: const FooterCompWidget(),
                                     ),
                                   ),
                                 ],
@@ -239,11 +241,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                 },
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
                 child: wrapWithModel(
                   model: _model.whatsapStickyCompModel,
                   updateCallback: () => setState(() {}),
-                  child: WhatsapStickyCompWidget(),
+                  child: const WhatsapStickyCompWidget(),
                 ),
               ),
             ],

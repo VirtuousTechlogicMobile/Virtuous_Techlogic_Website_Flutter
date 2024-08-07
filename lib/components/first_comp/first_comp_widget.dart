@@ -106,27 +106,25 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 250, 0, 0),
-                    child: Container(
-                      child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            200, 100, 0, 0),
-                        child: Container(
-                          height: 300,
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFD2E5F2),
-                            boxShadow: const [
-                              BoxShadow(
-                                blurRadius: 100,
-                                color: Color(0xFFD2E5F2),
-                                offset: Offset(
-                                  0.0,
-                                  0,
-                                ),
-                                spreadRadius: 115,
-                              )
-                            ],
-                            borderRadius: BorderRadius.circular(500),
-                          ),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(200, 100, 0, 0),
+                      child: Container(
+                        height: 300,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFD2E5F2),
+                          boxShadow: const [
+                            BoxShadow(
+                              blurRadius: 100,
+                              color: Color(0xFFD2E5F2),
+                              offset: Offset(
+                                0.0,
+                                0,
+                              ),
+                              spreadRadius: 115,
+                            )
+                          ],
+                          borderRadius: BorderRadius.circular(500),
                         ),
                       ),
                     ),
@@ -232,7 +230,6 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
                         fadeOutDuration: const Duration(milliseconds: 0),
                         imageUrl:
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/mjobrghz7cg0/Group_4.webp',
-                        width: MediaQuery.sizeOf(context).width * 0.64,
                         fit: BoxFit.contain,
                       ),
                     ).animateOnPageLoad(

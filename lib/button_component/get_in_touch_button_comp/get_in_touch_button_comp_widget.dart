@@ -62,13 +62,15 @@ class _GetInTouchButtonCompWidgetState
         size: 15.0,
       ),
       options: FFButtonOptions(
-        height: 40.0,
-        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 24.0, 0.0),
+        // height: 43.0,
+        padding: const EdgeInsetsDirectional.fromSTEB(24.0, 20.0, 24.0, 20.0),
         iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
         color: FlutterFlowTheme.of(context).primary,
         textStyle: FlutterFlowTheme.of(context).labelMedium.override(
               fontFamily: 'Plus Jakarta Sans',
               color: FlutterFlowTheme.of(context).secondaryBackground,
+              fontWeight: FontWeight.w600,
+              fontSize: 16,
               letterSpacing: 0.0,
               useGoogleFonts:
                   GoogleFonts.asMap().containsKey('Plus Jakarta Sans'),

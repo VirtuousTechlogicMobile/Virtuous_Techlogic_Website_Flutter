@@ -1,18 +1,11 @@
-import '/backend/backend.dart';
-import '/components/blog_comp/blog_comp_widget.dart';
-import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
-import '/flutter_flow/flutter_flow_choice_chips.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
-import 'more_blog_comp_widget.dart' show MoreBlogCompWidget;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/backend/backend.dart';
+import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
+import 'more_blog_comp_widget.dart' show MoreBlogCompWidget;
 
 class MoreBlogCompModel extends FlutterFlowModel<MoreBlogCompWidget> {
   ///  Local state fields for this component.

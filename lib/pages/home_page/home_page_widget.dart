@@ -5,7 +5,6 @@ import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/explore_our_blogs_comp/explore_our_blogs_comp_widget.dart';
 import '/components/explore_our_offering_comp/explore_our_offering_comp_widget.dart';
 import '/components/first_comp/first_comp_widget.dart';
-import '/components/first_comptablet/first_comptablet_widget.dart';
 import '/components/firstcomp_mobile/firstcomp_mobile_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
@@ -20,6 +19,7 @@ import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '../../components/first_comptablet/first_comptablet_widget.dart';
 import 'home_page_model.dart';
 
 export 'home_page_model.dart';
@@ -376,7 +376,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   wrapWithModel(
                                     model: _model.exploreOurBlogsCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: const ExploreOurBlogsCompWidget(),
+                                    child: const Padding(
+                                      padding:
+                                          EdgeInsets.only(right: 50, left: 50),
+                                      child: ExploreOurBlogsCompWidget(),
+                                    ),
                                   ),
                                   wrapWithModel(
                                     model: _model.footerCompModel3,

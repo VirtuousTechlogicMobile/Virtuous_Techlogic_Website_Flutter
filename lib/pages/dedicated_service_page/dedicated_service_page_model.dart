@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '/components/dedicated_services_comp/dedicated_services_comp_widget.dart';
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
@@ -6,17 +8,8 @@ import '/components/request_quote_comp/request_quote_comp_widget.dart';
 import '/components/sidebar_comp/sidebar_comp_widget.dart';
 import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
 import 'dedicated_service_page_widget.dart' show DedicatedServicePageWidget;
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class DedicatedServicePageModel
     extends FlutterFlowModel<DedicatedServicePageWidget> {

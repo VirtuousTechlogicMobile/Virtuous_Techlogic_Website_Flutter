@@ -1,13 +1,13 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import '/backend/backend.dart';
 import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'get_in_touch_component_model.dart';
+
 export 'get_in_touch_component_model.dart';
 
 class GetInTouchComponentWidget extends StatefulWidget {
@@ -21,7 +21,7 @@ class GetInTouchComponentWidget extends StatefulWidget {
     this.clientBudget,
     this.clientProject,
     bool? showIcon,
-  }) : this.showIcon = showIcon ?? false;
+  }) : showIcon = showIcon ?? false;
 
   final String? fullName;
   final String? clientEmailAddress;
@@ -52,15 +52,15 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
     _model = createModel(context, () => GetInTouchComponentModel());
 
     _model.clientEmailAddress12TextController ??=
-        TextEditingController(text: widget!.clientEmailAddress);
+        TextEditingController(text: widget.clientEmailAddress);
     _model.clientEmailAddress12FocusNode ??= FocusNode();
 
     _model.clientPhoneNumber12TextController ??=
-        TextEditingController(text: widget!.clientPhoneNumber);
+        TextEditingController(text: widget.clientPhoneNumber);
     _model.clientPhoneNumber12FocusNode ??= FocusNode();
 
     _model.clientProject12TextController ??=
-        TextEditingController(text: widget!.clientProject);
+        TextEditingController(text: widget.clientProject);
     _model.clientProject12FocusNode ??= FocusNode();
 
     _model.clientEmail11TextController ??= TextEditingController();
@@ -95,22 +95,23 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
         ))
           Container(
             decoration: BoxDecoration(
-              color: Color(0xFFF8FAFC),
+              color: const Color(0xFFF8FAFC),
               borderRadius: BorderRadius.circular(24.0),
             ),
             child: Form(
               key: _model.formKey2,
               autovalidateMode: AutovalidateMode.disabled,
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 30.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 30.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      if (widget!.showIcon == true ? true : false)
+                      if (widget.showIcon == true ? true : false)
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 60.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -137,9 +138,9 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                           ),
                         ),
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
-                        child: Container(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 25.0, 0.0, 0.0),
+                        child: SizedBox(
                           width: 514.0,
                           child: TextFormField(
                             controller:
@@ -164,28 +165,28 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                                 .labelLargeFamily),
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -194,7 +195,7 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                               filled: true,
                               fillColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              prefixIcon: Icon(
+                              prefixIcon: const Icon(
                                 Icons.email_outlined,
                               ),
                             ),
@@ -218,9 +219,9 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 8.0, 0.0),
-                        child: Container(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 20.0, 8.0, 0.0),
+                        child: SizedBox(
                           width: 514.0,
                           child: TextFormField(
                             controller:
@@ -245,28 +246,28 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                                 .labelLargeFamily),
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -275,7 +276,7 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                               filled: true,
                               fillColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              prefixIcon: Icon(
+                              prefixIcon: const Icon(
                                 Icons.phone_iphone,
                               ),
                             ),
@@ -309,9 +310,9 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                         ),
                       ),
                       Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 30.0, 8.0, 0.0),
-                        child: Container(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            8.0, 30.0, 8.0, 0.0),
+                        child: SizedBox(
                           width: 514.0,
                           child: TextFormField(
                             controller: _model.clientProject12TextController,
@@ -335,28 +336,28 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                                 .labelLargeFamily),
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -386,9 +387,9 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 40.0, 0.0, 0.0),
                           child: wrapWithModel(
                             model: _model.getInTouchButtonCompModel1,
@@ -401,7 +402,7 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                 logFirebaseEvent(
                                     'GET_IN_TOUCH_COMPONENT_Container_mxfa932');
                                 if (_model.formKey2.currentState == null ||
-                                    !_model.formKey2.currentState!.validate()) {
+                                    _model.formKey2.currentState!.validate()) {
                                   return;
                                 }
 
@@ -423,14 +424,14 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                   context: context,
                                   builder: (alertDialogContext) {
                                     return AlertDialog(
-                                      title: Text('Thank You'),
-                                      content:
-                                          Text('We will contact you soon.'),
+                                      title: const Text('Thank You'),
+                                      content: const Text(
+                                          'We will contact you soon.'),
                                       actions: [
                                         TextButton(
                                           onPressed: () =>
                                               Navigator.pop(alertDialogContext),
-                                          child: Text('Ok'),
+                                          child: const Text('Ok'),
                                         ),
                                       ],
                                     );
@@ -460,23 +461,24 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
           desktop: false,
         ))
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Container(
               decoration: BoxDecoration(
-                color: Color(0xFFF8FAFC),
+                color: const Color(0xFFF8FAFC),
                 borderRadius: BorderRadius.circular(24.0),
               ),
               child: Form(
                 key: _model.formKey1,
                 autovalidateMode: AutovalidateMode.disabled,
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      0.0, 20.0, 0.0, 20.0),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 15.0, 0.0),
                           child: TextFormField(
                             controller: _model.clientEmail11TextController,
@@ -500,28 +502,28 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                                 .labelLargeFamily),
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -530,7 +532,7 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                               filled: true,
                               fillColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              prefixIcon: Icon(
+                              prefixIcon: const Icon(
                                 Icons.email_outlined,
                               ),
                             ),
@@ -551,7 +553,7 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 15.0, 0.0),
                           child: TextFormField(
                             controller:
@@ -576,28 +578,28 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                                 .labelLargeFamily),
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -606,7 +608,7 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                               filled: true,
                               fillColor: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              prefixIcon: Icon(
+                              prefixIcon: const Icon(
                                 Icons.phone_iphone,
                               ),
                             ),
@@ -638,7 +640,7 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 15.0, 0.0),
                           child: TextFormField(
                             controller: _model.clientProject11TextController,
@@ -662,28 +664,28 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                                 .labelLargeFamily),
                                   ),
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               errorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
                                 borderRadius: BorderRadius.circular(22.0),
                               ),
                               focusedErrorBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0x00000000),
                                   width: 1.0,
                                 ),
@@ -711,9 +713,9 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 40.0, 0.0, 0.0),
                             child: wrapWithModel(
                               model: _model.getInTouchButtonCompModel2,
@@ -725,7 +727,7 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                   logFirebaseEvent(
                                       'GET_IN_TOUCH_COMPONENT_Container_5qfhk07');
                                   if (_model.formKey1.currentState == null ||
-                                      !_model.formKey1.currentState!
+                                      _model.formKey1.currentState!
                                           .validate()) {
                                     return;
                                   }
@@ -747,13 +749,13 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                                     context: context,
                                     builder: (alertDialogContext) {
                                       return AlertDialog(
-                                        content:
-                                            Text('We will contact you soon.'),
+                                        content: const Text(
+                                            'We will contact you soon.'),
                                         actions: [
                                           TextButton(
                                             onPressed: () => Navigator.pop(
                                                 alertDialogContext),
-                                            child: Text('Ok'),
+                                            child: const Text('Ok'),
                                           ),
                                         ],
                                       );
@@ -771,7 +773,7 @@ class _GetInTouchComponentWidgetState extends State<GetInTouchComponentWidget> {
                             ),
                           ),
                         ),
-                      ].divide(SizedBox(height: 20.0)),
+                      ].divide(const SizedBox(height: 20.0)),
                     ),
                   ),
                 ),

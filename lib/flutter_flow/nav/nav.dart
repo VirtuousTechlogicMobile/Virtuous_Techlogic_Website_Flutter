@@ -291,10 +291,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'individualBlogPage',
               path: 'individualBlogPage/:blogTitle',
               builder: (context, params) {
-                final String title = params.getParam(
-                  'blogTitle',
-                  ParamType.String,
-                );
+                final String title = params
+                    .getParam(
+                      'blogTitle',
+                      ParamType.String,
+                    )
+                    .replaceAll('+', ' '); //space to decode title
 
                 return IndividualBlogPageWidget(
                   blogTitle: title,
@@ -580,10 +582,9 @@ class TransitionInfo {
 
 class _RouteErrorBuilder extends StatefulWidget {
   const _RouteErrorBuilder({
-    Key? key,
     required this.state,
     required this.child,
-  }) : super(key: key);
+  });
 
   final GoRouterState state;
   final Widget child;

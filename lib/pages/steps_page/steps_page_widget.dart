@@ -1,3 +1,6 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
@@ -10,14 +13,8 @@ import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'steps_page_model.dart';
+
 export 'steps_page_model.dart';
 
 class StepsPageWidget extends StatefulWidget {
@@ -50,8 +47,8 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
             curve: Curves.easeOut,
             delay: 0.0.ms,
             duration: 1000.0.ms,
-            begin: Offset(100.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(100.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -87,7 +84,7 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
           child: wrapWithModel(
             model: _model.sidebarCompModel,
             updateCallback: () => setState(() {}),
-            child: SidebarCompWidget(),
+            child: const SidebarCompWidget(),
           ),
         ).animateOnActionTrigger(
             animationsMap['endDrawerOnActionTriggerAnimation']!,
@@ -128,7 +125,7 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
                     ),
                     Expanded(
                       child: Stack(
-                        alignment: AlignmentDirectional(1.0, 1.0),
+                        alignment: const AlignmentDirectional(1.0, 1.0),
                         children: [
                           SingleChildScrollView(
                             child: Column(
@@ -137,24 +134,24 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
                                 wrapWithModel(
                                   model: _model.processStepCompModel1,
                                   updateCallback: () => setState(() {}),
-                                  child: ProcessStepCompWidget(),
+                                  child: const ProcessStepCompWidget(),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 30.0, 20.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.sevenStepsCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: SevenStepsCompWidget(),
+                                    child: const SevenStepsCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.requestQuoteCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: RequestQuoteCompWidget(
+                                    child: const RequestQuoteCompWidget(
                                       email: 'info@virtuoustechlogic.com',
                                       callNumber: '6377231496',
                                       whatsappNumber: '6377231496',
@@ -166,18 +163,18 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
                                 wrapWithModel(
                                   model: _model.footerCompModel1,
                                   updateCallback: () => setState(() {}),
-                                  child: FooterCompWidget(),
+                                  child: const FooterCompWidget(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 40.0, 50.0),
                             child: wrapWithModel(
                               model: _model.whatsapStickyCompModel1,
                               updateCallback: () => setState(() {}),
-                              child: WhatsapStickyCompWidget(),
+                              child: const WhatsapStickyCompWidget(),
                             ),
                           ),
                         ],
@@ -221,37 +218,37 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                       ),
                       child: Stack(
-                        alignment: AlignmentDirectional(1.0, 1.0),
+                        alignment: const AlignmentDirectional(1.0, 1.0),
                         children: [
                           SingleChildScrollView(
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.processStepCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: ProcessStepCompWidget(),
+                                    child: const ProcessStepCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 30.0, 30.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.sevenStepsCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: SevenStepsCompWidget(),
+                                    child: const SevenStepsCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.requestQuoteCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: RequestQuoteCompWidget(
+                                    child: const RequestQuoteCompWidget(
                                       formImage:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/i7aqqef4x1j4/about2.png',
                                       email: 'info@virtuoustechlogic.com',
@@ -265,18 +262,18 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
                                 wrapWithModel(
                                   model: _model.footerCompModel2,
                                   updateCallback: () => setState(() {}),
-                                  child: FooterCompWidget(),
+                                  child: const FooterCompWidget(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 40.0, 50.0),
                             child: wrapWithModel(
                               model: _model.whatsapStickyCompModel2,
                               updateCallback: () => setState(() {}),
-                              child: WhatsapStickyCompWidget(),
+                              child: const WhatsapStickyCompWidget(),
                             ),
                           ),
                         ],
@@ -291,7 +288,7 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
                     wrapWithModel(
                       model: _model.desktopHeaderCompModel,
                       updateCallback: () => setState(() {}),
-                      child: DesktopHeaderCompWidget(
+                      child: const DesktopHeaderCompWidget(
                         indexParameter: 2,
                       ),
                     ),
@@ -302,37 +299,37 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
                         color: FlutterFlowTheme.of(context).secondaryBackground,
                       ),
                       child: Stack(
-                        alignment: AlignmentDirectional(1.0, 1.0),
+                        alignment: const AlignmentDirectional(1.0, 1.0),
                         children: [
                           SingleChildScrollView(
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 50.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.processStepCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: ProcessStepCompWidget(),
+                                    child: const ProcessStepCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       50.0, 30.0, 50.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.sevenStepsCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: SevenStepsCompWidget(),
+                                    child: const SevenStepsCompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 60.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.requestQuoteCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: RequestQuoteCompWidget(
+                                    child: const RequestQuoteCompWidget(
                                       formImage:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/i7aqqef4x1j4/about2.png',
                                       email: 'info@virtuoustechlogic.com',
@@ -346,18 +343,18 @@ class _StepsPageWidgetState extends State<StepsPageWidget>
                                 wrapWithModel(
                                   model: _model.footerCompModel3,
                                   updateCallback: () => setState(() {}),
-                                  child: FooterCompWidget(),
+                                  child: const FooterCompWidget(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 40.0, 50.0),
                             child: wrapWithModel(
                               model: _model.whatsapStickyCompModel3,
                               updateCallback: () => setState(() {}),
-                              child: WhatsapStickyCompWidget(),
+                              child: const WhatsapStickyCompWidget(),
                             ),
                           ),
                         ],

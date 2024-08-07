@@ -1,12 +1,13 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import '/backend/backend.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/components/explore_our_product_comp/explore_our_product_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'our_product_component_comp_copy_model.dart';
+
 export 'our_product_component_comp_copy_model.dart';
 
 class OurProductComponentCompCopyWidget extends StatefulWidget {
@@ -53,9 +54,9 @@ class _OurProductComponentCompCopyWidgetState
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
         child: SingleChildScrollView(
           controller: _model.columnController,
           child: Column(
@@ -64,7 +65,7 @@ class _OurProductComponentCompCopyWidgetState
               wrapWithModel(
                 model: _model.commonRichTextCompModel,
                 updateCallback: () => setState(() {}),
-                child: CommonRichTextCompWidget(
+                child: const CommonRichTextCompWidget(
                   richTextOne: 'Explore Our ',
                   richTextTwo: 'Own Area',
                   texts:
@@ -113,8 +114,8 @@ class _OurProductComponentCompCopyWidgetState
                       final wrapBuildProductRecord =
                           wrapBuildProductRecordList[wrapIndex];
                       return Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        padding: const EdgeInsetsDirectional.fromSTEB(
+                            0.0, 20.0, 0.0, 0.0),
                         child: ExploreOurProductCompWidget(
                           key: Key(
                               'Keyqjr_${wrapIndex}_of_${wrapBuildProductRecordList.length}'),
@@ -143,7 +144,7 @@ class _OurProductComponentCompCopyWidgetState
                               }.withoutNulls,
                               extra: <String, dynamic>{
                                 'productRef': wrapBuildProductRecord,
-                                kTransitionInfoKey: TransitionInfo(
+                                kTransitionInfoKey: const TransitionInfo(
                                   hasTransition: true,
                                   transitionType: PageTransitionType.fade,
                                   duration: Duration(milliseconds: 0),
@@ -174,7 +175,7 @@ class _OurProductComponentCompCopyWidgetState
                           'OUR_PRODUCT_COMPONENT_COPY_Container_pwo');
                       await _model.columnController?.animateTo(
                         0,
-                        duration: Duration(milliseconds: 100),
+                        duration: const Duration(milliseconds: 100),
                         curve: Curves.ease,
                       );
                     },
@@ -189,7 +190,7 @@ class _OurProductComponentCompCopyWidgetState
                         ),
                       ),
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           '1',
                           style: FlutterFlowTheme.of(context)

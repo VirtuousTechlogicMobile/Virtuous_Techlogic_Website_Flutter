@@ -1,13 +1,9 @@
+import 'package:flutter/material.dart';
+
 import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 import '/button_component/view_live_app_button_comp/view_live_app_button_comp_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'our_product_detail_comp_widget.dart' show OurProductDetailCompWidget;
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class OurProductDetailCompModel
     extends FlutterFlowModel<OurProductDetailCompWidget> {

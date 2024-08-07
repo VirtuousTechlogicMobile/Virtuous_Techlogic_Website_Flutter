@@ -123,7 +123,8 @@ class _LanguageWithDetailsCompWidgetState
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .headlineSmallFamily,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: FlutterFlowTheme.of(context)
+                                    .languagDetailscolor,
                                 letterSpacing: 0.0,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
@@ -148,6 +149,8 @@ class _LanguageWithDetailsCompWidgetState
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .labelLargeFamily,
+                                  color: FlutterFlowTheme.of(context)
+                                      .languagDetailscolor,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -171,20 +174,20 @@ class _LanguageWithDetailsCompWidgetState
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
-                                      fontFamily: 'Open Sans',
+                                      fontFamily: 'Poppins',
                                       color: FlutterFlowTheme.of(context).black,
                                       letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey('Open Sans'),
+                                          .containsKey('Poppins'),
                                     ),
                               ),
                             ),
-                            const Padding(
+                            Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.keyboard_arrow_right,
-                                color: Color(0xFF676767),
+                                color: FlutterFlowTheme.of(context).text16Colo2,
                                 size: 24.0,
                               ),
                             ),

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -5,7 +7,6 @@ import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
 import '/components/our_product_component_comp/our_product_component_comp_widget.dart';
-import '/components/request_quote_comp/request_quote_comp_widget.dart';
 import '/components/sidebar_comp/sidebar_comp_widget.dart';
 import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
@@ -28,7 +29,8 @@ class OurProductsPageWidget extends StatefulWidget {
   State<OurProductsPageWidget> createState() => _OurProductsPageWidgetState();
 }
 
-class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with TickerProviderStateMixin {
+class _OurProductsPageWidgetState extends State<OurProductsPageWidget>
+    with TickerProviderStateMixin {
   late OurProductsPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -40,7 +42,8 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
     super.initState();
     _model = createModel(context, () => OurProductsPageModel());
 
-    logFirebaseEvent('screen_view', parameters: {'screen_name': 'ourProductsPage'});
+    logFirebaseEvent('screen_view',
+        parameters: {'screen_name': 'ourProductsPage'});
     animationsMap.addAll({
       'endDrawerOnActionTriggerAnimation': AnimationInfo(
         trigger: AnimationTrigger.onActionTrigger,
@@ -57,7 +60,9 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
       ),
     });
     setupAnimations(
-      animationsMap.values.where((anim) => anim.trigger == AnimationTrigger.onActionTrigger || !anim.applyInitialState),
+      animationsMap.values.where((anim) =>
+          anim.trigger == AnimationTrigger.onActionTrigger ||
+          !anim.applyInitialState),
       this,
     );
 
@@ -74,7 +79,9 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
+      onTap: () => _model.unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+          : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
@@ -85,7 +92,9 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
             updateCallback: () => setState(() {}),
             child: const SidebarCompWidget(),
           ),
-        ).animateOnActionTrigger(animationsMap['endDrawerOnActionTriggerAnimation']!, hasBeenTriggered: hasEndDrawerTriggered),
+        ).animateOnActionTrigger(
+            animationsMap['endDrawerOnActionTriggerAnimation']!,
+            hasBeenTriggered: hasEndDrawerTriggered),
         body: SafeArea(
           top: true,
           child: Stack(
@@ -97,9 +106,11 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
                     () {
                       if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
                         return true;
-                      } else if (MediaQuery.sizeOf(context).width < kBreakpointMedium) {
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
                         return false;
-                      } else if (MediaQuery.sizeOf(context).width < kBreakpointLarge) {
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
                         return false;
                       } else {
                         return false;
@@ -116,7 +127,8 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
                           child: MobileHeaderCompWidget(
                             index: 3,
                             drawerCallBack: () async {
-                              logFirebaseEvent('OUR_PRODUCTS_Container_duuea92p_CALLBACK');
+                              logFirebaseEvent(
+                                  'OUR_PRODUCTS_Container_duuea92p_CALLBACK');
                               scaffoldKey.currentState!.openEndDrawer();
                             },
                           ),
@@ -130,30 +142,21 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            10.0, 0.0, 10.0, 0.0),
                                     child: wrapWithModel(
-                                      model: _model.ourProductComponentCompModel1,
+                                      model:
+                                          _model.ourProductComponentCompModel1,
                                       updateCallback: () => setState(() {}),
-                                      child: const OurProductComponentCompWidget(),
+                                      child:
+                                          const OurProductComponentCompWidget(),
                                     ),
                                   ),
-                                  if (false)
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
-                                      child: wrapWithModel(
-                                        model: _model.requestQuoteCompModel1,
-                                        updateCallback: () => setState(() {}),
-                                        child: const RequestQuoteCompWidget(
-                                          email: 'info@virtuoustechlogic.com',
-                                          callNumber: '6377231496',
-                                          whatsappNumber: '6377231496',
-                                          descriptionText:
-                                              'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
-                                        ),
-                                      ),
-                                    ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 40.0, 0.0, 0.0),
                                     child: wrapWithModel(
                                       model: _model.footerCompModel1,
                                       updateCallback: () => setState(() {}),
@@ -171,9 +174,11 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
                     () {
                       if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
                         return false;
-                      } else if (MediaQuery.sizeOf(context).width < kBreakpointMedium) {
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
                         return true;
-                      } else if (MediaQuery.sizeOf(context).width < kBreakpointLarge) {
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
                         return false;
                       } else {
                         return false;
@@ -189,7 +194,8 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
                           updateCallback: () => setState(() {}),
                           child: TabletHeaderCompWidget(
                             drawerCallback: () async {
-                              logFirebaseEvent('OUR_PRODUCTS_Container_6qsgepzj_CALLBACK');
+                              logFirebaseEvent(
+                                  'OUR_PRODUCTS_Container_6qsgepzj_CALLBACK');
                               scaffoldKey.currentState!.openEndDrawer();
                             },
                           ),
@@ -201,32 +207,18 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(48.0, 30.0, 48.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      48.0, 30.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.ourProductComponentCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: const OurProductComponentCompWidget(),
+                                    child:
+                                        const OurProductComponentCompWidget(),
                                   ),
                                 ),
-                                if (false)
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.requestQuoteCompModel2,
-                                      updateCallback: () => setState(() {}),
-                                      child: const RequestQuoteCompWidget(
-                                        formImage:
-                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/p356smxuzasu/AI_Chat_App_Thumbnail1-1_1.svg',
-                                        email: 'info@virtuoustechlogic.com',
-                                        callNumber: '6377231496',
-                                        whatsappNumber: '6377231496',
-                                        descriptionText:
-                                            'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
-                                      ),
-                                    ),
-                                  ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 50.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
@@ -257,48 +249,63 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(80, 400, 0, 0),
-                                    child: Container(
-                                      width: 200,
-                                      height: 200,
-                                      decoration: BoxDecoration(
-                                        color: const Color(0xFFD2E8F6),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 100,
-                                            color: Color(0xFFD2E5F2),
-                                            offset: Offset(
-                                              0.0,
-                                              0,
-                                            ),
-                                            spreadRadius: 200,
-                                          )
-                                        ],
-                                        borderRadius: BorderRadius.circular(500),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            80, 400, 0, 0),
+                                    child: BackdropFilter(
+                                      filter: ImageFilter.blur(
+                                          sigmaX: 0.2, sigmaY: 0.2),
+                                      child: Container(
+                                        width: 200,
+                                        height: 200,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFFD2E8F6),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 100,
+                                              color: Color(0xFFD2E5F2),
+                                              offset: Offset(
+                                                0.0,
+                                                0,
+                                              ),
+                                              spreadRadius: 200,
+                                            )
+                                          ],
+                                          borderRadius:
+                                              BorderRadius.circular(500),
+                                        ),
                                       ),
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(0, 0, 50, 0),
-                                    child: Container(
-                                      height: 100,
-                                      decoration: BoxDecoration(
-                                        color: const Color(0xFFE5D3B9),
-                                        boxShadow: const [
-                                          BoxShadow(
-                                            blurRadius: 100,
-                                            color: Color(0x7BECD6BC),
-                                            offset: Offset(
-                                              15,
-                                              0,
-                                            ),
-                                            spreadRadius: 300,
-                                          )
-                                        ],
-                                        borderRadius: BorderRadius.circular(500),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 50, 0),
+                                    child: BackdropFilter(
+                                      filter: ImageFilter.blur(
+                                          sigmaX: 0.4, sigmaY: 0.4),
+                                      child: Container(
+                                        height: 100,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xf2f1e5d6),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 100,
+                                              color: Color(0xECF5E5D6),
+                                              offset: Offset(
+                                                15,
+                                                0,
+                                              ),
+                                              spreadRadius: 300,
+                                            )
+                                          ],
+                                          borderRadius:
+                                              BorderRadius.circular(500),
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -310,15 +317,21 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(60.0, 40.0, 60.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 40.0, 60.0, 0.0),
                                       child: wrapWithModel(
-                                        model: _model.ourProductComponentCompModel3,
+                                        model: _model
+                                            .ourProductComponentCompModel3,
                                         updateCallback: () => setState(() {}),
-                                        child: const OurProductComponentCompWidget(),
+                                        child:
+                                            const OurProductComponentCompWidget(),
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 50.0, 0.0, 0.0),
                                       child: wrapWithModel(
                                         model: _model.footerCompModel3,
                                         updateCallback: () => setState(() {}),
@@ -337,7 +350,8 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget> with Tick
                 },
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 25.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 25.0),
                 child: wrapWithModel(
                   model: _model.whatsapStickyCompModel,
                   updateCallback: () => setState(() {}),

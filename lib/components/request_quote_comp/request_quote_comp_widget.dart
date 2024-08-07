@@ -4,15 +4,12 @@ import '/components/get_in_touch_component/get_in_touch_component_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'request_quote_comp_model.dart';
 export 'request_quote_comp_model.dart';
@@ -32,13 +29,13 @@ class RequestQuoteCompWidget extends StatefulWidget {
     this.services,
     this.clientBudget,
     this.clientProject,
-  })  : this.formImage = formImage ??
+  })  : formImage = formImage ??
             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
-        this.descriptionText = descriptionText ??
+        descriptionText = descriptionText ??
             'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
-        this.email = email ?? 'exmple@gmail.com',
-        this.callNumber = callNumber ?? '6377231496',
-        this.whatsappNumber = whatsappNumber ?? '6377231496';
+        email = email ?? 'exmple@gmail.com',
+        callNumber = callNumber ?? '6377231496',
+        whatsappNumber = whatsappNumber ?? '6377231496';
 
   final String formImage;
   final String descriptionText;
@@ -84,7 +81,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
             curve: Curves.easeInOut,
             delay: 10.0.ms,
             duration: 600.0.ms,
-            color: Color(0x80FFFFFF),
+            color: const Color(0x80FFFFFF),
             angle: 2.618,
           ),
         ],
@@ -141,7 +138,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
 
         return Container(
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
               image: CachedNetworkImageProvider(
@@ -150,18 +147,18 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
             ),
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                     child: wrapWithModel(
                       model: _model.commonRichTextCompModel,
                       updateCallback: () => setState(() {}),
-                      child: CommonRichTextCompWidget(
+                      child: const CommonRichTextCompWidget(
                         richTextOne: 'Ready for a ',
                         richTextTwo: 'Digital Leap?',
                         texts: 'Get in touch today!',
@@ -174,7 +171,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                     tablet: false,
                   ))
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           20.0, 30.0, 20.0, 30.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -194,9 +191,9 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                     borderRadius: BorderRadius.circular(24.0),
                                     child: CachedNetworkImage(
                                       fadeInDuration:
-                                          Duration(milliseconds: 100),
+                                          const Duration(milliseconds: 100),
                                       fadeOutDuration:
-                                          Duration(milliseconds: 100),
+                                          const Duration(milliseconds: 100),
                                       imageUrl:
                                           containerContactDetailsRecord!.image,
                                       width: 580.0,
@@ -208,10 +205,10 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                           'imageOnActionTriggerAnimation']!,
                                       hasBeenTriggered: hasImageTriggered),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: AutoSizeText(
-                                      containerContactDetailsRecord!
+                                      containerContactDetailsRecord
                                           .description,
                                       textAlign: TextAlign.start,
                                       style: FlutterFlowTheme.of(context)
@@ -231,18 +228,18 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                   Expanded(
                                     child: Align(
                                       alignment:
-                                          AlignmentDirectional(-1.0, 0.0),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             5.0, 10.0, 0.0, 0.0),
                                         child: Container(
                                           height: 216.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         2.0, 0.0, 2.0, 0.0),
                                                 child: InkWell(
@@ -266,7 +263,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     2.0,
                                                                     0.0,
@@ -280,7 +277,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                             color: FlutterFlowTheme
                                                                     .of(context)
                                                                 .secondaryBackground,
-                                                            boxShadow: [
+                                                            boxShadow: const [
                                                               BoxShadow(
                                                                 blurRadius: 4.0,
                                                                 color: Color(
@@ -307,14 +304,14 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          containerContactDetailsRecord!
+                                                          containerContactDetailsRecord
                                                               .email,
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -341,7 +338,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         2.0, 0.0, 2.0, 0.0),
                                                 child: InkWell(
@@ -367,7 +364,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     2.0,
                                                                     0.0,
@@ -381,7 +378,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                             color: FlutterFlowTheme
                                                                     .of(context)
                                                                 .secondaryBackground,
-                                                            boxShadow: [
+                                                            boxShadow: const [
                                                               BoxShadow(
                                                                 blurRadius: 4.0,
                                                                 color: Color(
@@ -408,7 +405,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -438,14 +435,14 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     0.0,
                                                                     0.0,
                                                                     0.0),
                                                         child: Text(
-                                                          containerContactDetailsRecord!
+                                                          containerContactDetailsRecord
                                                               .phoneNumber,
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -472,7 +469,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         2.0, 0.0, 2.0, 0.0),
                                                 child: InkWell(
@@ -496,7 +493,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     2.0,
                                                                     0.0,
@@ -510,7 +507,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                             color: FlutterFlowTheme
                                                                     .of(context)
                                                                 .secondaryBackground,
-                                                            boxShadow: [
+                                                            boxShadow: const [
                                                               BoxShadow(
                                                                 blurRadius: 4.0,
                                                                 color: Color(
@@ -528,7 +525,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                           ),
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: FaIcon(
                                                               FontAwesomeIcons
@@ -543,7 +540,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -574,14 +571,14 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                       Expanded(
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       5.0,
                                                                       0.0,
                                                                       0.0,
                                                                       0.0),
                                                           child: Text(
-                                                            containerContactDetailsRecord!
+                                                            containerContactDetailsRecord
                                                                 .whatsappNumber,
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -608,7 +605,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(height: 8.0)),
+                                            ].divide(const SizedBox(height: 8.0)),
                                           ),
                                         ),
                                       ),
@@ -621,11 +618,11 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                           wrapWithModel(
                             model: _model.getInTouchComponentModel1,
                             updateCallback: () => setState(() {}),
-                            child: GetInTouchComponentWidget(
+                            child: const GetInTouchComponentWidget(
                               showIcon: false,
                             ),
                           ),
-                        ].divide(SizedBox(width: 10.0)),
+                        ].divide(const SizedBox(width: 10.0)),
                       ),
                     ),
                   if (responsiveVisibility(
@@ -642,13 +639,13 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                             borderRadius: BorderRadius.circular(24.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(24.0),
@@ -676,12 +673,12 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: AutoSizeText(
                                     valueOrDefault<String>(
                                       containerContactDetailsRecord
-                                          ?.description,
+                                          .description,
                                       'Description',
                                     ),
                                     textAlign: TextAlign.start,
@@ -702,7 +699,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       2.0, 10.0, 2.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -720,7 +717,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   2.0, 0.0, 2.0, 0.0),
                                           child: Container(
                                             width: 50.0,
@@ -729,7 +726,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 4.0,
                                                   color: Color(0x33000000),
@@ -753,12 +750,12 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             valueOrDefault<String>(
                                               containerContactDetailsRecord
-                                                  ?.email,
+                                                  .email,
                                               'info@virtuoustechlogic.com',
                                             ),
                                             style: FlutterFlowTheme.of(context)
@@ -786,7 +783,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       2.0, 10.0, 2.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -806,7 +803,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   2.0, 0.0, 2.0, 0.0),
                                           child: Container(
                                             width: 50.0,
@@ -815,7 +812,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryBackground,
-                                              boxShadow: [
+                                              boxShadow: const [
                                                 BoxShadow(
                                                   blurRadius: 4.0,
                                                   color: Color(0x33000000),
@@ -839,7 +836,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             '+91',
@@ -865,12 +862,12 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   3.0, 0.0, 0.0, 0.0),
                                           child: Text(
                                             valueOrDefault<String>(
                                               containerContactDetailsRecord
-                                                  ?.phoneNumber,
+                                                  .phoneNumber,
                                               '6354672876',
                                             ),
                                             style: FlutterFlowTheme.of(context)
@@ -898,9 +895,9 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                   ),
                                 ),
                                 Container(
-                                  decoration: BoxDecoration(),
+                                  decoration: const BoxDecoration(),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         2.0, 10.0, 2.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -920,7 +917,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     2.0, 0.0, 5.0, 0.0),
                                             child: Container(
                                               width: 50.0,
@@ -929,7 +926,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                boxShadow: [
+                                                boxShadow: const [
                                                   BoxShadow(
                                                     blurRadius: 4.0,
                                                     color: Color(0x33000000),
@@ -943,7 +940,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                                     BorderRadius.circular(18.0),
                                               ),
                                               child: Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: FaIcon(
                                                   FontAwesomeIcons.whatsapp,
@@ -957,7 +954,7 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 0.0, 0.0),
                                             child: Text(
                                               '+91',
@@ -985,12 +982,12 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(3.0, 0.0, 0.0, 0.0),
                                               child: Text(
                                                 valueOrDefault<String>(
                                                   containerContactDetailsRecord
-                                                      ?.whatsappNumber,
+                                                      .whatsappNumber,
                                                   '6354672876',
                                                 ),
                                                 style:
@@ -1027,11 +1024,11 @@ class _RequestQuoteCompWidgetState extends State<RequestQuoteCompWidget>
                         wrapWithModel(
                           model: _model.getInTouchComponentModel2,
                           updateCallback: () => setState(() {}),
-                          child: GetInTouchComponentWidget(
+                          child: const GetInTouchComponentWidget(
                             showIcon: false,
                           ),
                         ),
-                      ].divide(SizedBox(height: 48.0)),
+                      ].divide(const SizedBox(height: 48.0)),
                     ),
                 ],
               ),

@@ -56,6 +56,7 @@ class _WhyChooseUsForHomeCompWidgetState
             richTextTwo: 'Choose Us?',
             texts:
                 'Flutterflow Development Company, an Extension of Your Technical Team',
+            showShadow: false,
           ),
         ),
         Padding(

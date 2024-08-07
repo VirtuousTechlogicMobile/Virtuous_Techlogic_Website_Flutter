@@ -62,8 +62,9 @@ class _OurCustomerSaysCompWidgetState extends State<OurCustomerSaysCompWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 SelectionArea(
-                  child: Column(
+                  child: Row(
                     mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         'Happy ',

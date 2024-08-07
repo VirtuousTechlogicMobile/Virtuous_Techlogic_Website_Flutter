@@ -1,10 +1,10 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'language_comp_desktop_model.dart';
+
 export 'language_comp_desktop_model.dart';
 
 class LanguageCompDesktopWidget extends StatefulWidget {
@@ -142,40 +142,55 @@ class _LanguageCompDesktopWidgetState extends State<LanguageCompDesktopWidget> {
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/flutterflowlogo.png',
+                        child: CachedNetworkImage(
+                          fadeInDuration: Duration(milliseconds: 0),
+                          fadeOutDuration: Duration(milliseconds: 0),
+                          imageUrl:
+                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/mbh3nn6zxztb/flutterflowlogo.webp',
                           height: 36.0,
                           fit: BoxFit.cover,
                         ),
                       ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/flutterlogo.png',
+                        child: CachedNetworkImage(
+                          fadeInDuration: Duration(milliseconds: 0),
+                          fadeOutDuration: Duration(milliseconds: 0),
+                          imageUrl:
+                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/0riln566p171/flutterlogo.webp',
                           height: 36.0,
                           fit: BoxFit.cover,
                         ),
                       ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/figmalogo.png',
+                        child: CachedNetworkImage(
+                          fadeInDuration: Duration(milliseconds: 0),
+                          fadeOutDuration: Duration(milliseconds: 0),
+                          imageUrl:
+                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/3hwo0f4bvbfe/figmalogo.webp',
                           height: 36.0,
                           fit: BoxFit.contain,
                         ),
                       ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/bubblelogo.png',
+                        child: CachedNetworkImage(
+                          fadeInDuration: Duration(milliseconds: 0),
+                          fadeOutDuration: Duration(milliseconds: 0),
+                          imageUrl:
+                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/5t5pd7ilz4hd/bubblelogo.webp',
                           height: 36.0,
                           fit: BoxFit.cover,
                         ),
                       ),
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          'assets/images/firebaselogo.png',
+                        child: CachedNetworkImage(
+                          fadeInDuration: Duration(milliseconds: 0),
+                          fadeOutDuration: Duration(milliseconds: 0),
+                          imageUrl:
+                              'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/hs7ol5hxz9hr/firebaselogo.webp',
                           height: 36.0,
                           fit: BoxFit.cover,
                         ),

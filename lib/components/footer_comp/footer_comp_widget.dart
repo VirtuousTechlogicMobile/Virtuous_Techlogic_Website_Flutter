@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:virtuous_techlogic_website/custom_code/widgets/index.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -767,8 +768,11 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                 color: FlutterFlowTheme.of(context).footer,
               ),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(
-                    10.0, 30.0, 10.0, 20.0),
+                padding: EdgeInsetsDirectional.fromSTEB(
+                    isMobileWidth(context) ? 16 : 200.0,
+                    30.0,
+                    isMobileWidth(context) ? 16 : 200.0,
+                    20.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -789,13 +793,13 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                               context.pushNamed('homePage');
                             },
                             child: CachedNetworkImage(
-                              fadeInDuration: const Duration(milliseconds: 100),
-                              fadeOutDuration:
-                                  const Duration(milliseconds: 100),
                               imageUrl:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/x8xgtezwma9b/logo.png',
                               width: 183.0,
                               fit: BoxFit.cover,
+                              placeholder: (context, url) {
+                                return const LoaderWidget();
+                              },
                             ),
                           ),
                           Padding(
