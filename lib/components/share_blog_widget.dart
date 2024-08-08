@@ -49,6 +49,10 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
     super.dispose();
   }
 
+  String encodeTitle(String title) {
+    return title.replaceAll(' ', '+');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -67,9 +71,10 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
           highlightColor: Colors.transparent,
           onTap: () async {
             logFirebaseEvent('SHARE_BLOG_COMP_Column_hlbm48wn_ON_TAP');
+            final String blogtitle = encodeTitle(widget.blogTitle!);
+            print("blogtitle ${blogtitle}");
             await Clipboard.setData(ClipboardData(
-                text:
-                    'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget.blogReference?.id}&blogTitle=${widget.blogTitle}'));
+                text: 'http://localhost:50149/individualBlogPage/$blogtitle'));
           },
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -124,8 +129,10 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                         onPressed: () async {
                           logFirebaseEvent(
                               'SHARE_BLOG_COMP_facebookF_ICN_ON_TAP');
+                          final String blogtitle =
+                              encodeTitle(widget.blogTitle!);
                           await launchURL(
-                              'https://www.facebook.com/sharer/sharer.php?u=https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget.blogTitle!))}');
+                              'https://www.facebook.com/sharer/sharer.php?u=http://localhost:50149/individualBlogPage/$blogtitle');
                         },
                       ),
                       Text(
@@ -163,8 +170,10 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                         onPressed: () async {
                           logFirebaseEvent(
                               'SHARE_BLOG_COMP_instagram_ICN_ON_TAP');
+                          final String blogtitle =
+                              encodeTitle(widget.blogTitle!);
                           await actions.socialMediablogShare(
-                            widget.blogTitle!,
+                            blogtitle,
                             'https://api.whatsapp.com/send?text=',
                           );
                         },
@@ -198,7 +207,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                         Flexible(
                           child: SelectionArea(
                               child: Text(
-                            'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget.blogTitle!))}',
+                            'http://localhost:50149/individualBlogPage/${encodeTitle(widget.blogTitle!)}',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -223,9 +232,12 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                               onTap: () async {
                                 logFirebaseEvent(
                                     'SHARE_BLOG_COMP_Icon_h3y7faep_ON_TAP');
+                                final String blogtitle =
+                                    encodeTitle(widget.blogTitle!);
+                                print("blogtitle ${blogtitle}");
                                 await Clipboard.setData(ClipboardData(
                                     text:
-                                        'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget.blogTitle!))}'));
+                                        'http://localhost:50149/individualBlogPage/$blogtitle'));
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
