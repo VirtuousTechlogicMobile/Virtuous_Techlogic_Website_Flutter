@@ -1,9 +1,11 @@
+import 'package:flutter/material.dart';
+
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/components/hiring_comp/hiring_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
 import 'dedicated_services_comp_model.dart';
+
 export 'dedicated_services_comp_model.dart';
 
 class DedicatedServicesCompWidget extends StatefulWidget {
@@ -53,14 +55,15 @@ class _DedicatedServicesCompWidgetState
             wrapWithModel(
               model: _model.commonRichTextCompModel,
               updateCallback: () => setState(() {}),
-              child: CommonRichTextCompWidget(
+              child: const CommonRichTextCompWidget(
                 richTextOne: 'Explore Our ',
                 richTextTwo: 'Expertise',
                 texts: 'Fields where we are Best.',
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 30.0),
+              padding:
+                  const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 30.0),
               child: Wrap(
                 spacing: 25.0,
                 runSpacing: 25.0,
@@ -74,7 +77,7 @@ class _DedicatedServicesCompWidgetState
                   wrapWithModel(
                     model: _model.hiringCompModel1,
                     updateCallback: () => setState(() {}),
-                    child: HiringCompWidget(
+                    child: const HiringCompWidget(
                       imagePath:
                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/8w8x2gnlyyl6/customer-service.svg',
                       jobTitle: 'Hire a full time developer',
@@ -90,7 +93,7 @@ class _DedicatedServicesCompWidgetState
                   wrapWithModel(
                     model: _model.hiringCompModel2,
                     updateCallback: () => setState(() {}),
-                    child: HiringCompWidget(
+                    child: const HiringCompWidget(
                       imagePath:
                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ch65ncjqbnqr/verified.svg',
                       jobTitle: 'Hire based on project idea',
@@ -106,7 +109,7 @@ class _DedicatedServicesCompWidgetState
                   wrapWithModel(
                     model: _model.hiringCompModel3,
                     updateCallback: () => setState(() {}),
-                    child: HiringCompWidget(
+                    child: const HiringCompWidget(
                       imagePath:
                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/n1d5bme8h4y2/full-time-job.svg',
                       jobTitle: 'Hire on Hourly Basis',

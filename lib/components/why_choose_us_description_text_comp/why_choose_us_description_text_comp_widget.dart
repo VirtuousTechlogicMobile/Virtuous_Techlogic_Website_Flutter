@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'why_choose_us_description_text_comp_model.dart';
 export 'why_choose_us_description_text_comp_model.dart';
 
@@ -53,10 +52,10 @@ class _WhyChooseUsDescriptionTextCompWidgetState
       children: [
         Flexible(
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
             child: Text(
               valueOrDefault<String>(
-                widget!.text1,
+                widget.text1,
                 'sd',
               ),
               textAlign: TextAlign.center,
@@ -73,7 +72,7 @@ class _WhyChooseUsDescriptionTextCompWidgetState
         Flexible(
           child: Text(
             valueOrDefault<String>(
-              widget!.text2,
+              widget.text2,
               'e',
             ),
             textAlign: TextAlign.center,

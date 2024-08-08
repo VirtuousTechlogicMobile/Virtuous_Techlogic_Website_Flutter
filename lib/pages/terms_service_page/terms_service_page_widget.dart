@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
@@ -7,11 +9,8 @@ import '/components/termstextcompcomp/termstextcompcomp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'terms_service_page_model.dart';
+
 export 'terms_service_page_model.dart';
 
 class TermsServicePageWidget extends StatefulWidget {
@@ -62,13 +61,13 @@ class _TermsServicePageWidgetState extends State<TermsServicePageWidget> {
           child: wrapWithModel(
             model: _model.sidebarCompModel,
             updateCallback: () => setState(() {}),
-            child: SidebarCompWidget(),
+            child: const SidebarCompWidget(),
           ),
         ),
         body: SafeArea(
           top: true,
           child: Stack(
-            alignment: AlignmentDirectional(1.0, 1.0),
+            alignment: const AlignmentDirectional(1.0, 1.0),
             children: [
               Builder(
                 builder: (context) {
@@ -109,21 +108,21 @@ class _TermsServicePageWidgetState extends State<TermsServicePageWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.termstextcompcompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: TermstextcompcompWidget(),
+                                    child: const TermstextcompcompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -168,21 +167,21 @@ class _TermsServicePageWidgetState extends State<TermsServicePageWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 10.0, 30.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.termstextcompcompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: TermstextcompcompWidget(),
+                                    child: const TermstextcompcompWidget(),
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -198,7 +197,7 @@ class _TermsServicePageWidgetState extends State<TermsServicePageWidget> {
                         wrapWithModel(
                           model: _model.desktopHeaderCompModel,
                           updateCallback: () => setState(() {}),
-                          child: DesktopHeaderCompWidget(
+                          child: const DesktopHeaderCompWidget(
                             indexParameter: 0,
                           ),
                         ),
@@ -212,21 +211,22 @@ class _TermsServicePageWidgetState extends State<TermsServicePageWidget> {
                                   phone: false,
                                 ))
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        20.0, 0.0, 20.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            20.0, 0.0, 20.0, 0.0),
                                     child: wrapWithModel(
                                       model: _model.termstextcompcompModel3,
                                       updateCallback: () => setState(() {}),
-                                      child: TermstextcompcompWidget(),
+                                      child: const TermstextcompcompWidget(),
                                     ),
                                   ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -239,11 +239,12 @@ class _TermsServicePageWidgetState extends State<TermsServicePageWidget> {
                 },
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
                 child: wrapWithModel(
                   model: _model.whatsapStickyCompModel,
                   updateCallback: () => setState(() {}),
-                  child: WhatsapStickyCompWidget(),
+                  child: const WhatsapStickyCompWidget(),
                 ),
               ),
             ],

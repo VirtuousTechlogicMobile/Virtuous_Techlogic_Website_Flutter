@@ -1,8 +1,9 @@
 import 'dart:async';
 
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
-import '../../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+
+import '../../flutter_flow/flutter_flow_util.dart';
 
 const _kDynamicLinksUrl = 'https://virtuoustechlogicwebsite.com';
 const _kAppBundleId = 'com.mycompany.virtuoustechlogicwebsite';
@@ -43,10 +44,10 @@ Future<String> generateCurrentPageLink(
 
 class DynamicLinksHandler extends StatefulWidget {
   const DynamicLinksHandler({
-    Key? key,
+    super.key,
     required this.router,
     required this.child,
-  }) : super(key: key);
+  });
 
   final GoRouter router;
   final Widget child;

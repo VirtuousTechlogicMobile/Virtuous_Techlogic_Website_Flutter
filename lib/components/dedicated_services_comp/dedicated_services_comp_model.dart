@@ -1,9 +1,9 @@
-import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
-import '/components/hiring_comp/hiring_comp_widget.dart';
-
-import '/flutter_flow/flutter_flow_util.dart';
-import 'dedicated_services_comp_widget.dart' show DedicatedServicesCompWidget;
 import 'package:flutter/material.dart';
+
+import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '../hiring_comp/hiring_comp_model.dart';
+import 'dedicated_services_comp_widget.dart' show DedicatedServicesCompWidget;
 
 class DedicatedServicesCompModel
     extends FlutterFlowModel<DedicatedServicesCompWidget> {

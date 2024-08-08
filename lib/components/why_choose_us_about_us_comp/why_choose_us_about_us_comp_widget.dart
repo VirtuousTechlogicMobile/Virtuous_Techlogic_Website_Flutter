@@ -1,13 +1,13 @@
+import 'package:flutter/material.dart';
+
 import '/backend/backend.dart';
 import '/components/about_experience_comp/about_experience_comp_widget.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/components/company_comp/company_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'why_choose_us_about_us_comp_model.dart';
+
 export 'why_choose_us_about_us_comp_model.dart';
 
 class WhyChooseUsAboutUsCompWidget extends StatefulWidget {
@@ -46,7 +46,7 @@ class _WhyChooseUsAboutUsCompWidgetState
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -54,24 +54,26 @@ class _WhyChooseUsAboutUsCompWidgetState
             wrapWithModel(
               model: _model.commonRichTextCompModel,
               updateCallback: () => setState(() {}),
-              child: CommonRichTextCompWidget(
+              child: const CommonRichTextCompWidget(
                 richTextOne: 'Why ',
                 richTextTwo: 'Choose Us?',
                 texts:
                     'Flutterflow Development Company, an Extension of Your Technical Team',
+                showShadow: false,
               ),
             ),
             wrapWithModel(
               model: _model.aboutExperienceCompModel,
               updateCallback: () => setState(() {}),
-              child: AboutExperienceCompWidget(
+              child: const AboutExperienceCompWidget(
                 projects: 200,
                 satisfiedClients: 50,
                 expertise: 10,
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+              padding:
+                  const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
               child: StreamBuilder<List<WhyChooseUsRecord>>(
                 stream: queryWhyChooseUsRecord(
                   queryBuilder: (whyChooseUsRecord) => whyChooseUsRecord.where(
@@ -122,7 +124,7 @@ class _WhyChooseUsAboutUsCompWidgetState
                 },
               ),
             ),
-          ].divide(SizedBox(height: 50.0)),
+          ].divide(const SizedBox(height: 50.0)),
         ),
       ),
     );

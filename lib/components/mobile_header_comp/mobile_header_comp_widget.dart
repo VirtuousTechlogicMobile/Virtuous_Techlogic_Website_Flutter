@@ -47,10 +47,10 @@ class _MobileHeaderCompWidgetState extends State<MobileHeaderCompWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,8 +68,8 @@ class _MobileHeaderCompWidgetState extends State<MobileHeaderCompWidget> {
               },
               child: Image.asset(
                 'assets/images/logo.webp',
-                width: MediaQuery.sizeOf(context).width * 0.28,
-                fit: BoxFit.contain,
+                width: 122,
+                height: 40,
               ),
             ),
             FlutterFlowIconButton(

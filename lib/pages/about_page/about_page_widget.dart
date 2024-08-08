@@ -4,7 +4,6 @@ import '/components/about_us_comp/about_us_comp_widget.dart';
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/language_comp/language_comp_widget.dart';
-import '/components/language_comp_desktop/language_comp_desktop_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
 import '/components/our_culture_comp/our_culture_comp_widget.dart';
 import '/components/sidebar_comp/sidebar_comp_widget.dart';
@@ -267,38 +266,22 @@ class _AboutPageWidgetState extends State<AboutPageWidget> {
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: Image.asset(
-                                        'assets/images/Group_5.png',
-                                      ).image,
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      48.0, 40.0, 48.0, 30.0),
+                                  child: wrapWithModel(
+                                    model: _model.aboutUsCompModel3,
+                                    updateCallback: () => setState(() {}),
+                                    child: const AboutUsCompWidget(
+                                      text:
+                                          'We are Top Rated App Development company who create',
+                                      richText1: 'We are  ',
+                                      richText2: 'changing ',
+                                      richText3: 'the whole game.',
+                                      text2:
+                                          'amazing apps for world class companies 10X faster.',
                                     ),
                                   ),
-                                  child: Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            48.0, 40.0, 48.0, 30.0),
-                                    child: wrapWithModel(
-                                      model: _model.aboutUsCompModel3,
-                                      updateCallback: () => setState(() {}),
-                                      child: const AboutUsCompWidget(
-                                        text:
-                                            'We are Top Rated App Development company who create',
-                                        richText1: 'We are  ',
-                                        richText2: 'changing ',
-                                        richText3: 'the whole game.',
-                                        text2:
-                                            'amazing apps for world class companies 10X faster.',
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                wrapWithModel(
-                                  model: _model.languageCompDesktopModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: const LanguageCompDesktopWidget(),
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(

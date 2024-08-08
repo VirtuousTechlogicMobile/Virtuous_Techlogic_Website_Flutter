@@ -1,12 +1,12 @@
-import '/components/expectation_comp/expectation_comp_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '/components/expectation_comp/expectation_comp_widget.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'hiring_comp_model.dart';
-export 'hiring_comp_model.dart';
 
 class HiringCompWidget extends StatefulWidget {
   const HiringCompWidget({
@@ -216,14 +216,10 @@ class _HiringCompWidgetState extends State<HiringCompWidget> {
                       child: Padding(
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 10.0, 0.0, 20.0),
-                        child: SizedBox(
+                        child: custom_widgets.ShareButton(
                           width: 150.0,
                           height: 42.0,
-                          child: custom_widgets.ShareButton(
-                            width: 150.0,
-                            height: 42.0,
-                            title: widget.jobTitle!,
-                          ),
+                          title: widget.jobTitle!,
                         ),
                       ),
                     ),
@@ -262,30 +258,18 @@ class _HiringCompWidgetState extends State<HiringCompWidget> {
                 Align(
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Container(
-                    width: 130.0,
-                    height: 20.0,
+                    width: 25.0,
                     decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        colors: [
-                          Color(0x00FFFFFF),
-                          Color(0x0A0586E2),
-                          Color(0x1F0586E2),
-                          Color(0x230586E2),
-                          Color(0x1F0586E2),
-                          Color(0x0A0586E2),
-                          Color(0x00FFFFFF)
-                        ],
-                        stops: [0.0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0],
-                        begin: AlignmentDirectional(0.0, -1.0),
-                        end: AlignmentDirectional(0, 1.0),
-                      ),
-                      borderRadius: BorderRadius.circular(8.0),
-                      shape: BoxShape.rectangle,
-                      border: Border.all(
-                        color: Colors.transparent,
-                      ),
+                      borderRadius: BorderRadius.circular(32.0),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.blue.withOpacity(0.70),
+                          spreadRadius: 1.5,
+                          blurRadius: 8,
+                          offset: const Offset(0.50, 0.85),
+                        ),
+                      ],
                     ),
-                    alignment: const AlignmentDirectional(0.0, 0.0),
                   ),
                 ),
               ].divide(const SizedBox(height: 5.0)),

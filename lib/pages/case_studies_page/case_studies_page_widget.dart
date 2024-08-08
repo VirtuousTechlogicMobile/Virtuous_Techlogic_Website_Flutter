@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 
@@ -138,16 +140,19 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget>
                               children: [
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      20.0, 0.0, 20.0, 0.0),
+                                      48.0, 40.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.caseStudyCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: const CaseStudyCompWidget(),
+                                    child: Container(
+                                        constraints: BoxConstraints(
+                                            maxWidth: getMaxWidth(context)),
+                                        child: const CaseStudyCompWidget()),
                                   ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 40.0, 0.0, 0.0),
+                                      0.0, 60.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel1,
                                     updateCallback: () => setState(() {}),
@@ -201,12 +206,15 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget>
                                   child: wrapWithModel(
                                     model: _model.caseStudyCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: const CaseStudyCompWidget(),
+                                    child: Container(
+                                        constraints: BoxConstraints(
+                                            maxWidth: getMaxWidth(context)),
+                                        child: const CaseStudyCompWidget()),
                                   ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 40.0, 0.0, 0.0),
+                                      0.0, 60.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
@@ -234,57 +242,34 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget>
                           child: Stack(
                             alignment: Alignment.topCenter,
                             children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Expanded(
-                                    child: Padding(
+                              Padding(
+                                padding: const EdgeInsets.only(top: 100),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
                                       padding:
                                           const EdgeInsetsDirectional.fromSTEB(
-                                              80, 400, 0, 0),
-                                      child: Container(
-                                        height: 200,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFD2E8F6),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                              blurRadius: 100,
-                                              color: Color(0xFFD2E5F2),
-                                              offset: Offset(
-                                                0.0,
-                                                0,
-                                              ),
-                                              spreadRadius: 100,
-                                            )
-                                          ],
-                                          borderRadius:
-                                              BorderRadius.circular(500),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Container(
-                                      decoration: const BoxDecoration(),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional
-                                            .fromSTEB(0, 50, 300, 0),
+                                              80, 200, 0, 0),
+                                      child: BackdropFilter(
+                                        filter: ImageFilter.blur(
+                                            sigmaX: 0.2, sigmaY: 0.2),
                                         child: Container(
-                                          height: 350,
+                                          height: 100,
                                           decoration: BoxDecoration(
-                                            color: const Color(0xFFF8E5CB),
+                                            color: const Color(0xFFD2E8F6),
                                             boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 100,
-                                                color: Color(0xFFF4E3C8),
+                                                color: Color(0xFFD2E5F2),
                                                 offset: Offset(
-                                                  15,
+                                                  0.0,
                                                   0,
                                                 ),
-                                                spreadRadius: 80,
+                                                spreadRadius: 200,
                                               )
                                             ],
                                             borderRadius:
@@ -293,8 +278,37 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget>
                                         ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              80, 200, 0, 0),
+                                      child: BackdropFilter(
+                                        filter: ImageFilter.blur(
+                                            sigmaX: 0.2,
+                                            sigmaY: 0.2), // Blur effect
+                                        child: Container(
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xf2f1e5d6),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 80,
+                                                color: Color(0xECF5E5D6),
+                                                offset: Offset(
+                                                  15,
+                                                  0,
+                                                ),
+                                                spreadRadius: 300,
+                                              )
+                                            ],
+                                            borderRadius:
+                                                BorderRadius.circular(500),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                               SingleChildScrollView(
                                 child: Column(
@@ -307,7 +321,10 @@ class _CaseStudiesPageWidgetState extends State<CaseStudiesPageWidget>
                                       child: wrapWithModel(
                                         model: _model.caseStudyCompModel3,
                                         updateCallback: () => setState(() {}),
-                                        child: const CaseStudyCompWidget(),
+                                        child: Container(
+                                            constraints: BoxConstraints(
+                                                maxWidth: getMaxWidth(context)),
+                                            child: const CaseStudyCompWidget()),
                                       ),
                                     ),
                                     Padding(

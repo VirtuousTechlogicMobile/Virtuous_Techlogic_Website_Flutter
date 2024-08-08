@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '../../custom_code/widgets/loader_widget.dart';
 import 'language_with_details_comp_model.dart';
 
 export 'language_with_details_comp_model.dart';
@@ -123,7 +124,8 @@ class _LanguageWithDetailsCompWidgetState
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
                                     .headlineSmallFamily,
-                                color: FlutterFlowTheme.of(context).primaryText,
+                                color: FlutterFlowTheme.of(context)
+                                    .languagDetailscolor,
                                 letterSpacing: 0.0,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
@@ -148,6 +150,8 @@ class _LanguageWithDetailsCompWidgetState
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .labelLargeFamily,
+                                  color: FlutterFlowTheme.of(context)
+                                      .languagDetailscolor,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -171,20 +175,20 @@ class _LanguageWithDetailsCompWidgetState
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
-                                      fontFamily: 'Open Sans',
+                                      fontFamily: 'Poppins',
                                       color: FlutterFlowTheme.of(context).black,
                                       letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey('Open Sans'),
+                                          .containsKey('Poppins'),
                                     ),
                               ),
                             ),
-                            const Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 0.0, 0.0),
                               child: Icon(
                                 Icons.keyboard_arrow_right,
-                                color: Color(0xFF676767),
+                                color: FlutterFlowTheme.of(context).text16Colo2,
                                 size: 24.0,
                               ),
                             ),
@@ -207,6 +211,11 @@ class _LanguageWithDetailsCompWidgetState
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: CachedNetworkImage(
+                    placeholder: (context, url) {
+                      return const LoaderWidget(
+                        width: 50,
+                      );
+                    },
                     fadeInDuration: const Duration(milliseconds: 100),
                     fadeOutDuration: const Duration(milliseconds: 100),
                     imageUrl: widget.languageWithDetailsImage!,
