@@ -145,7 +145,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                                     columnBlogDetailsRecord.title)
                                 .replaceAll('%20', '+');
 
-                            await launchURL('individualBlogPage/$blogtitle');
+                            await launchURL('/individualBlogPage/$blogtitle');
                             FFAppState().selectedTitle = valueOrDefault<String>(
                               columnBlogDetailsRecord.title,
                               'Title',
