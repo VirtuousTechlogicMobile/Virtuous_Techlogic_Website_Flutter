@@ -142,7 +142,7 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0, 50, 300, 0),
                       child: BackdropFilter(
-                        filter: ImageFilter.blur(sigmaX: 0.5, sigmaY: 0.5),
+                        filter: ImageFilter.blur(sigmaX: 0.8, sigmaY: 0.8),
                         child: Container(
                           height: 350,
                           decoration: BoxDecoration(

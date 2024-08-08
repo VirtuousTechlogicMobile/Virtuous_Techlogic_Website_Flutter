@@ -93,7 +93,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
   @override
   Widget build(BuildContext context) {
     final shareUrl =
-        'https://virtuoustechlogic.com/individualBlogPage/${Uri.encodeComponent(widget.blogTitle)}';
+        'https://virtuoustechlogic.com/individualBlogPage/${widget.blogTitle.replaceAll(' ', '+')}';
 
     return LayoutBuilder(
       builder: (context, constraints) {

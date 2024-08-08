@@ -8,7 +8,8 @@ Future socialMediablogShare(
   String blogTitle,
   String? socialurl,
 ) async {
-  final String encodedBlogTitle = Uri.encodeComponent(blogTitle);
+  final String encodedBlogTitle =
+      Uri.encodeComponent(blogTitle).replaceAll(' ', '+');
   final String blogUrl =
       '${socialurl}https://virtuoustechlogic.com/individualBlogPage/$encodedBlogTitle';
 
