@@ -142,7 +142,7 @@ class _MoreBlogCompWidgetState extends State<MoreBlogCompWidget> {
                                                         blogselectedItem.title)
                                                     .replaceAll('%20', '+');
                                             await launchURL(
-                                                'individualBlogPage/$blogtitle');
+                                                '/individualBlogPage/$blogtitle');
                                             FFAppState().selectedTitle =
                                                 valueOrDefault<String>(
                                               blogselectedItem.title,
