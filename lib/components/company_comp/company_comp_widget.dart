@@ -1,10 +1,11 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'company_comp_model.dart';
+
 export 'company_comp_model.dart';
 
 class CompanyCompWidget extends StatefulWidget {
@@ -61,7 +62,8 @@ class _CompanyCompWidgetState extends State<CompanyCompWidget> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image.network(
-                widget!.image!,
+                widget.image ??
+                    "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
                 height: 60.0,
                 fit: BoxFit.cover,
               ),
@@ -71,7 +73,7 @@ class _CompanyCompWidgetState extends State<CompanyCompWidget> {
             padding: EdgeInsetsDirectional.fromSTEB(5.0, 25.0, 5.0, 25.0),
             child: SelectionArea(
                 child: Text(
-              widget!.text!,
+              widget.text ?? "Text",
               textAlign: TextAlign.center,
               maxLines: 2,
               style: FlutterFlowTheme.of(context).titleSmall.override(

@@ -180,36 +180,54 @@ class _IndividualBlogPageWidgetState extends State<IndividualBlogPageWidget>
                               child: wrapWithModel(
                                 model: _model.individualBlogCompModel3,
                                 updateCallback: () => setState(() {}),
-                                child: IndividualBlogCompWidget(
-                                  individualBlogImage: valueOrDefault<String>(
-                                    _model.individualBlogResult?.image,
-                                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
-                                  ),
-                                  individualBlogTitle: valueOrDefault<String>(
-                                    _model.individualBlogResult?.title,
-                                    'Blog title',
-                                  ),
-                                  individualBlogDate: valueOrDefault<String>(
-                                    _model.individualBlogResult?.name,
-                                    'blog Date',
-                                  ),
-                                  individualBlogDescription:
-                                      valueOrDefault<String>(
-                                    _model.individualBlogResult?.description,
-                                    'Description',
-                                  ),
-                                  individualeditdescription:
-                                      valueOrDefault<String>(
-                                    _model
-                                        .individualBlogResult?.editDescription,
-                                    '[{\"insert\":\"ourCulture\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"},{\"insert\":\"dasdssfsf\",\"attributes\":{\"bold\":true,\"underline\":true}},{\"insert\":\"\\n\",\"attributes\":{\"list\":\"bullet\"}}]',
+                                child: Container(
+                                  constraints: BoxConstraints(maxWidth: () {
+                                    if (MediaQuery.sizeOf(context).width <
+                                        kBreakpointSmall) {
+                                      return 328.0;
+                                    } else if (MediaQuery.sizeOf(context)
+                                            .width <
+                                        kBreakpointMedium) {
+                                      return 750.0;
+                                    } else if (MediaQuery.sizeOf(context)
+                                            .width <
+                                        kBreakpointLarge) {
+                                      return 1500.0;
+                                    } else {
+                                      return 1500.0;
+                                    }
+                                  }()),
+                                  child: IndividualBlogCompWidget(
+                                    individualBlogImage: valueOrDefault<String>(
+                                      _model.individualBlogResult?.image,
+                                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
+                                    ),
+                                    individualBlogTitle: valueOrDefault<String>(
+                                      _model.individualBlogResult?.title,
+                                      'Blog title',
+                                    ),
+                                    individualBlogDate: valueOrDefault<String>(
+                                      _model.individualBlogResult?.name,
+                                      'blog Date',
+                                    ),
+                                    individualBlogDescription:
+                                        valueOrDefault<String>(
+                                      _model.individualBlogResult?.description,
+                                      'Description',
+                                    ),
+                                    individualeditdescription:
+                                        valueOrDefault<String>(
+                                      _model.individualBlogResult
+                                          ?.editDescription,
+                                      '[{\"insert\":\"ourCulture\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"},{\"insert\":\"dasdssfsf\",\"attributes\":{\"bold\":true,\"underline\":true}},{\"insert\":\"\\n\",\"attributes\":{\"list\":\"bullet\"}}]',
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 20.0, vertical: 30.0),
+                                  horizontal: 20.0, vertical: 40.0),
                               child: wrapWithModel(
                                 model: _model.relatedBlogCompModel1,
                                 updateCallback: () => setState(() {}),

@@ -1,11 +1,14 @@
 // Automatic FlutterFlow imports
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:url_launcher/url_launcher.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '../../flutter_flow/flutter_flow_widgets.dart';
 
 class ShareButton extends StatefulWidget {
   const ShareButton({
@@ -26,29 +29,45 @@ class ShareButton extends StatefulWidget {
 class _ShareButtonState extends State<ShareButton> {
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return FFButtonWidget(
+      icon: const Icon(
+        Icons.arrow_outward,
+        size: 15.0,
+      ),
+      text: 'Hire Now',
       onPressed: () async {
         logFirebaseEvent('WHATSAPP_Container_aam828j4_ON_TAP');
         await launchURL('https://api.whatsapp.com/send/?phone=6354672876');
 
         // whatsapp(widget.title);
       },
-      style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
-        backgroundColor: FlutterFlowTheme.of(context).primary,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-      ),
-      child: Text(
-        'Hire Now',
-        style: FlutterFlowTheme.of(context).labelLarge.override(
-              fontFamily: FlutterFlowTheme.of(context).labelLargeFamily,
+      options: FFButtonOptions(
+        height: 45.0,
+        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 24.0, 0.0),
+        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+        color: FlutterFlowTheme.of(context).primary,
+        textStyle: FlutterFlowTheme.of(context).labelMedium.override(
+              fontFamily: 'Plus Jakarta Sans',
               color: FlutterFlowTheme.of(context).secondaryBackground,
-              letterSpacing: 0,
               fontWeight: FontWeight.w600,
-              // Adjust additional text styles as needed
+              fontSize: 16,
+              letterSpacing: 0.0,
+              useGoogleFonts:
+                  GoogleFonts.asMap().containsKey('Plus Jakarta Sans'),
             ),
+        elevation: 3.0,
+        borderSide: const BorderSide(
+          color: Colors.transparent,
+          width: 1.0,
+        ),
+        borderRadius: BorderRadius.circular(20.0),
+        hoverColor: FlutterFlowTheme.of(context).secondaryBackground,
+        hoverBorderSide: BorderSide(
+          color: FlutterFlowTheme.of(context).buttonborderColor,
+          width: 1.0,
+        ),
+        hoverTextColor: FlutterFlowTheme.of(context).buttonborderColor,
+        hoverElevation: 3.0,
       ),
     );
   }

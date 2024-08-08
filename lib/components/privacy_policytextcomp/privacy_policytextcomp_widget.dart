@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'privacy_policytextcomp_model.dart';
 export 'privacy_policytextcomp_model.dart';
 
@@ -47,7 +46,7 @@ class _PrivacyPolicytextcompWidgetState
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -56,10 +55,10 @@ class _PrivacyPolicytextcompWidgetState
               wrapWithModel(
                 model: _model.privacyPolicyCompModel,
                 updateCallback: () => setState(() {}),
-                child: PrivacyPolicyCompWidget(),
+                child: const PrivacyPolicyCompWidget(),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                 child: Text(
                   'Last updated: April 01, 2024',
                   textAlign: TextAlign.start,
@@ -97,7 +96,7 @@ class _PrivacyPolicytextcompWidgetState
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
                     child: Text(
                       'Interpretation and Definitions',
                       textAlign: TextAlign.start,
@@ -113,7 +112,7 @@ class _PrivacyPolicytextcompWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
                       'Interpretation',
                       textAlign: TextAlign.start,
@@ -128,7 +127,7 @@ class _PrivacyPolicytextcompWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
                       'For the purposes of this Privacy Policy:',
                       textAlign: TextAlign.start,
@@ -147,7 +146,7 @@ class _PrivacyPolicytextcompWidgetState
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -184,7 +183,7 @@ class _PrivacyPolicytextcompWidgetState
                                     ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
                       ),
                       Row(
@@ -222,7 +221,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -259,7 +258,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -296,7 +295,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -333,7 +332,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -370,7 +369,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -407,7 +406,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -441,7 +440,7 @@ class _PrivacyPolicytextcompWidgetState
                                           .bodyMediumFamily),
                                 ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -478,7 +477,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -515,7 +514,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -580,7 +579,7 @@ class _PrivacyPolicytextcompWidgetState
                               ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -617,13 +616,13 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 20.0)),
                       ),
-                    ].divide(SizedBox(height: 10.0)),
+                    ].divide(const SizedBox(height: 10.0)),
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                     child: Text(
                       'Collecting and Using Your Personal Data',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -639,7 +638,7 @@ class _PrivacyPolicytextcompWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Text(
                       'Types of Data Collected',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -655,14 +654,14 @@ class _PrivacyPolicytextcompWidgetState
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 10.0, 0.0, 10.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 'Personal Data',
@@ -698,7 +697,7 @@ class _PrivacyPolicytextcompWidgetState
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 2.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -726,7 +725,7 @@ class _PrivacyPolicytextcompWidgetState
                                                           .bodyMediumFamily),
                                             ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                 ),
                                 Row(
@@ -757,7 +756,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -783,7 +782,7 @@ class _PrivacyPolicytextcompWidgetState
                                                         .bodyMediumFamily),
                                           ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                               ],
                             ),
@@ -908,7 +907,7 @@ class _PrivacyPolicytextcompWidgetState
                                                     .bodyMediumFamily),
                                       ),
                                 ),
-                              ].divide(SizedBox(width: 20.0)),
+                              ].divide(const SizedBox(width: 20.0)),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
@@ -933,7 +932,7 @@ class _PrivacyPolicytextcompWidgetState
                                                     .bodyMediumFamily),
                                       ),
                                 ),
-                              ].divide(SizedBox(width: 20.0)),
+                              ].divide(const SizedBox(width: 20.0)),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
@@ -958,7 +957,7 @@ class _PrivacyPolicytextcompWidgetState
                                                     .bodyMediumFamily),
                                       ),
                                 ),
-                              ].divide(SizedBox(width: 20.0)),
+                              ].divide(const SizedBox(width: 20.0)),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
@@ -983,7 +982,7 @@ class _PrivacyPolicytextcompWidgetState
                                                     .bodyMediumFamily),
                                       ),
                                 ),
-                              ].divide(SizedBox(width: 20.0)),
+                              ].divide(const SizedBox(width: 20.0)),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
@@ -1008,7 +1007,7 @@ class _PrivacyPolicytextcompWidgetState
                                                     .bodyMediumFamily),
                                       ),
                                 ),
-                              ].divide(SizedBox(width: 20.0)),
+                              ].divide(const SizedBox(width: 20.0)),
                             ),
                             Text(
                               'If You decide to register through or otherwise grant us access to a Third-Party Social Media Service, We may collect Personal data that is already associated with Your Third-Party Social Media Service\'s account, such as Your name, Your email address, Your activities or Your contact list associated with that account.',
@@ -1056,7 +1055,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: Text(
                                 'We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons,tags, and scripts to collect and track information and to improve and analyzeOur Service. The technologies We use may include:',
@@ -1075,7 +1074,7 @@ class _PrivacyPolicytextcompWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 2.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1103,11 +1102,11 @@ class _PrivacyPolicytextcompWidgetState
                                           ),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 2.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1135,11 +1134,11 @@ class _PrivacyPolicytextcompWidgetState
                                           ),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 'Cookies can be \"Persistent\" or \"Session\" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on internet.',
@@ -1172,7 +1171,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 2.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1260,14 +1259,14 @@ class _PrivacyPolicytextcompWidgetState
                                                             .bodyMediumFamily),
                                               ),
                                         ),
-                                      ].divide(SizedBox(height: 10.0)),
+                                      ].divide(const SizedBox(height: 10.0)),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 2.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1338,14 +1337,14 @@ class _PrivacyPolicytextcompWidgetState
                                                             .bodyMediumFamily),
                                               ),
                                         ),
-                                      ].divide(SizedBox(height: 10.0)),
+                                      ].divide(const SizedBox(height: 10.0)),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 2.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1434,14 +1433,14 @@ class _PrivacyPolicytextcompWidgetState
                                                             .bodyMediumFamily),
                                               ),
                                         ),
-                                      ].divide(SizedBox(height: 10.0)),
+                                      ].divide(const SizedBox(height: 10.0)),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 'For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.',
@@ -1459,7 +1458,7 @@ class _PrivacyPolicytextcompWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 10.0),
                               child: Text(
                                 'Use of Your Personal Data',
@@ -1481,7 +1480,7 @@ class _PrivacyPolicytextcompWidgetState
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 10.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1528,7 +1527,7 @@ class _PrivacyPolicytextcompWidgetState
                                               ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                 ),
                                 Row(
@@ -1572,7 +1571,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1615,7 +1614,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1658,7 +1657,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1701,7 +1700,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1744,7 +1743,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1787,7 +1786,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1830,12 +1829,12 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
-                              ].divide(SizedBox(height: 10.0)),
+                              ].divide(const SizedBox(height: 10.0)),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 'We may share Your personal information in the following situations:',
@@ -1897,7 +1896,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1940,7 +1939,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1983,7 +1982,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -2026,7 +2025,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -2069,7 +2068,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -2112,12 +2111,12 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
-                              ].divide(SizedBox(height: 10.0)),
+                              ].divide(const SizedBox(height: 10.0)),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 'Retention of Your Personal Data',
@@ -2177,7 +2176,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -2319,11 +2318,11 @@ class _PrivacyPolicytextcompWidgetState
                                                       .bodyMediumFamily),
                                         ),
                                   ),
-                                ].divide(SizedBox(height: 10.0)),
+                                ].divide(const SizedBox(height: 10.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 'Business Transactions',
@@ -2357,7 +2356,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 'Law enforcement',
@@ -2421,7 +2420,7 @@ class _PrivacyPolicytextcompWidgetState
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 2.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -2451,7 +2450,7 @@ class _PrivacyPolicytextcompWidgetState
                                               ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                 ),
                                 Row(
@@ -2482,7 +2481,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -2512,7 +2511,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -2542,7 +2541,7 @@ class _PrivacyPolicytextcompWidgetState
                                             ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                                 Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -2568,7 +2567,7 @@ class _PrivacyPolicytextcompWidgetState
                                                         .bodyMediumFamily),
                                           ),
                                     ),
-                                  ].divide(SizedBox(width: 20.0)),
+                                  ].divide(const SizedBox(width: 20.0)),
                                 ),
                               ],
                             ),
@@ -2588,7 +2587,7 @@ class _PrivacyPolicytextcompWidgetState
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -2872,7 +2871,7 @@ class _PrivacyPolicytextcompWidgetState
                                           ],
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -2915,7 +2914,7 @@ class _PrivacyPolicytextcompWidgetState
                                               ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -2958,19 +2957,19 @@ class _PrivacyPolicytextcompWidgetState
                                               ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
-                                ].divide(SizedBox(height: 10.0)),
+                                ].divide(const SizedBox(height: 10.0)),
                               ),
                             ),
-                          ].divide(SizedBox(height: 7.0)),
+                          ].divide(const SizedBox(height: 7.0)),
                         ),
                       ),
-                    ].divide(SizedBox(height: 10.0)),
+                    ].divide(const SizedBox(height: 10.0)),
                   ),
                 ],
               ),
-            ].divide(SizedBox(height: 10.0)),
+            ].divide(const SizedBox(height: 10.0)),
           ),
         ),
       ),

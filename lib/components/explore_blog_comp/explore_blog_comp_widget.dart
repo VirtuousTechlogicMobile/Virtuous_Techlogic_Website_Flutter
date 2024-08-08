@@ -1,10 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 import '/button_component/view_live_app_button_comp/view_live_app_button_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'explore_blog_comp_model.dart';
+
 export 'explore_blog_comp_model.dart';
 
 class ExploreBlogCompWidget extends StatefulWidget {
@@ -53,7 +55,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.sizeOf(context).width * 0.8,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -69,6 +71,13 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                   borderRadius: BorderRadius.circular(24.0),
                   child: Image.network(
                     widget!.exblogimg!,
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) {
+                        return child;
+                      } else {
+                        return const CircularProgressIndicator();
+                      }
+                    },
                     width: 590.0,
                     height: 280.0,
                     fit: BoxFit.cover,
@@ -76,8 +85,8 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                 ),
                 Expanded(
                   child: Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        20.0, 0.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -97,7 +106,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Text(
                             widget!.title!,
@@ -117,7 +126,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Text(
                             widget!.description!,
@@ -145,7 +154,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                           desktop: false,
                         ))
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
@@ -154,7 +163,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                 wrapWithModel(
                                   model: _model.viewLiveAppButtonCompModel1,
                                   updateCallback: () => setState(() {}),
-                                  child: ViewLiveAppButtonCompWidget(
+                                  child: const ViewLiveAppButtonCompWidget(
                                     viewLiveApp: 'View Live App',
                                   ),
                                 ),
@@ -166,7 +175,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                     buttonAction: () async {},
                                   ),
                                 ),
-                              ].divide(SizedBox(width: 20.0)),
+                              ].divide(const SizedBox(width: 20.0)),
                             ),
                           ),
                       ],
@@ -186,11 +195,18 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, -1.0),
+                    alignment: const AlignmentDirectional(0.0, -1.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(24.0),
                       child: Image.network(
-                        widget!.exblogimg!,
+                        widget.exblogimg ?? '',
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress == null) {
+                            return child;
+                          } else {
+                            return const CircularProgressIndicator();
+                          }
+                        },
                         width: 590.0,
                         height: 280.0,
                         fit: BoxFit.cover,
@@ -202,7 +218,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -215,7 +231,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .bodyLargeFamily,
-                                      color: Color(0xFFA6A6A6),
+                                      color: const Color(0xFFA6A6A6),
                                       letterSpacing: 0.0,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
@@ -224,7 +240,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                     ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Text(
                                   widget!.title!,
@@ -245,7 +261,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Text(
                                   widget!.description!,
@@ -256,7 +272,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                       .override(
                                         fontFamily: FlutterFlowTheme.of(context)
                                             .bodyMediumFamily,
-                                        color: Color(0xFF676767),
+                                        color: const Color(0xFF676767),
                                         fontSize: 16.0,
                                         letterSpacing: 0.0,
                                         useGoogleFonts: GoogleFonts.asMap()
@@ -271,7 +287,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                 tablet: false,
                               ))
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -282,7 +298,8 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                         model:
                                             _model.viewLiveAppButtonCompModel2,
                                         updateCallback: () => setState(() {}),
-                                        child: ViewLiveAppButtonCompWidget(
+                                        child:
+                                            const ViewLiveAppButtonCompWidget(
                                           viewLiveApp: 'View Live App',
                                         ),
                                       ),
@@ -295,7 +312,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                           buttonAction: () async {},
                                         ),
                                       ),
-                                    ].divide(SizedBox(height: 20.0)),
+                                    ].divide(const SizedBox(height: 20.0)),
                                   ),
                                 ),
                               if (responsiveVisibility(
@@ -303,10 +320,12 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                 phone: false,
                               ))
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment:
+                                      const AlignmentDirectional(0.0, -1.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 20.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 20.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment:
@@ -316,7 +335,8 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                           model: _model
                                               .viewLiveAppButtonCompModel3,
                                           updateCallback: () => setState(() {}),
-                                          child: ViewLiveAppButtonCompWidget(
+                                          child:
+                                              const ViewLiveAppButtonCompWidget(
                                             viewLiveApp: 'View Live App',
                                           ),
                                         ),
@@ -329,7 +349,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                             buttonAction: () async {},
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 20.0)),
+                                      ].divide(const SizedBox(width: 20.0)),
                                     ),
                                   ),
                                 ),

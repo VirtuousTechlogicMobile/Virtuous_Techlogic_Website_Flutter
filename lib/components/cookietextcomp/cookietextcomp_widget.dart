@@ -43,7 +43,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -74,10 +74,10 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                               FlutterFlowTheme.of(context).displayMediumFamily),
                         ),
                   ),
-                ].divide(SizedBox(width: 5.0)).addToEnd(SizedBox(width: 10.0)),
+                ].divide(const SizedBox(width: 5.0)).addToEnd(const SizedBox(width: 10.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                 child: Text(
                   'Last updated: April 01, 2024',
                   textAlign: TextAlign.start,
@@ -126,7 +126,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
                       'Interpretation and Definitions',
                       textAlign: TextAlign.start,
@@ -142,7 +142,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
                       'Interpretation',
                       textAlign: TextAlign.start,
@@ -157,7 +157,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
                       'For the purposes of this Privacy Policy:',
                       textAlign: TextAlign.start,
@@ -173,7 +173,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -213,7 +213,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                     ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -251,7 +251,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                     ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -301,7 +301,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                 ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -339,7 +339,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                     ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -405,7 +405,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                 ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
                         Row(
                           mainAxisSize: MainAxisSize.max,
@@ -443,14 +443,14 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                     ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 20.0)),
+                          ].divide(const SizedBox(width: 20.0)),
                         ),
-                      ].divide(SizedBox(height: 7.0)),
+                      ].divide(const SizedBox(height: 7.0)),
                     ),
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                     child: Text(
                       'The use of the Cookies',
                       style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -466,7 +466,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                     child: Text(
                       'Type of Cookies We Use',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -483,7 +483,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -561,7 +561,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 2.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -649,14 +649,14 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                                             .bodyMediumFamily),
                                               ),
                                         ),
-                                      ].divide(SizedBox(height: 10.0)),
+                                      ].divide(const SizedBox(height: 10.0)),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 2.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -745,14 +745,14 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                                             .bodyMediumFamily),
                                               ),
                                         ),
-                                      ].divide(SizedBox(height: 10.0)),
+                                      ].divide(const SizedBox(height: 10.0)),
                                     ),
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 'Your Choices Regarding Cookies',
@@ -812,7 +812,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                   ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -905,7 +905,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                           ],
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -994,7 +994,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                           ],
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1083,7 +1083,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                           ],
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1172,13 +1172,13 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                           ],
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
-                                ].divide(SizedBox(height: 10.0)),
+                                ].divide(const SizedBox(height: 10.0)),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Text(
                                 'For any other web browser, please visit your web browser\'s official web pages.',
@@ -1261,7 +1261,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                               ],
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -1381,7 +1381,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                           ],
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1424,7 +1424,7 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                               ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1467,19 +1467,19 @@ class _CookietextcompWidgetState extends State<CookietextcompWidget> {
                                               ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 20.0)),
+                                    ].divide(const SizedBox(width: 20.0)),
                                   ),
-                                ].divide(SizedBox(height: 10.0)),
+                                ].divide(const SizedBox(height: 10.0)),
                               ),
                             ),
-                          ].divide(SizedBox(height: 10.0)),
+                          ].divide(const SizedBox(height: 10.0)),
                         ),
                       ),
-                    ].divide(SizedBox(height: 10.0)),
+                    ].divide(const SizedBox(height: 10.0)),
                   ),
                 ],
               ),
-            ].divide(SizedBox(height: 10.0)),
+            ].divide(const SizedBox(height: 10.0)),
           ),
         ),
       ),

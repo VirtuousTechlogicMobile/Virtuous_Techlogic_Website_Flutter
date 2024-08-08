@@ -110,27 +110,46 @@ class _MoreBlogCompWidgetState extends State<MoreBlogCompWidget> {
                                         (blogselectedIndex) {
                                       final blogselectedItem =
                                           blogselected[blogselectedIndex];
-                                      return BlogCompWidget(
-                                        key: Key(
-                                            'Key2ne_${blogselectedIndex}_of_${blogselected.length}'),
-                                        blogimage: blogselectedItem.image,
-                                        blogTitleText: blogselectedItem.title,
-                                        blogDescription:
-                                            blogselectedItem.description,
-                                        blogDate: blogselectedItem.name,
-                                        blogTag: blogselectedItem.blogTags,
-                                        readmore: () async {
-                                          final String blotitle =
-                                              Uri.encodeComponent(
-                                                  blogselectedItem.title);
-                                          await launchURL(
-                                              'individualBlogPage/$blotitle');
-                                          FFAppState().selectedTitle =
-                                              valueOrDefault<String>(
-                                            blogselectedItem.title,
-                                            'Title',
-                                          );
-                                        },
+                                      return SizedBox(
+                                        width: () {
+                                          if (MediaQuery.sizeOf(context).width <
+                                              kBreakpointSmall) {
+                                            return 328.0;
+                                          } else if (MediaQuery.sizeOf(context)
+                                                  .width <
+                                              kBreakpointMedium) {
+                                            return 480.0;
+                                          } else if (MediaQuery.sizeOf(context)
+                                                  .width <
+                                              kBreakpointLarge) {
+                                            return 1500.0;
+                                          } else {
+                                            return 1500.0;
+                                          }
+                                        }(),
+                                        child: BlogCompWidget(
+                                          key: Key(
+                                              'Key2ne_${blogselectedIndex}_of_${blogselected.length}'),
+                                          blogimage: blogselectedItem.image,
+                                          blogTitleText: blogselectedItem.title,
+                                          blogDescription:
+                                              blogselectedItem.description,
+                                          blogDate: blogselectedItem.name,
+                                          blogTag: blogselectedItem.blogTags,
+                                          readmore: () async {
+                                            final String blogtitle =
+                                                Uri.encodeComponent(
+                                                        blogselectedItem.title)
+                                                    .replaceAll('%20', '+');
+                                            await launchURL(
+                                                'individualBlogPage/$blogtitle');
+                                            FFAppState().selectedTitle =
+                                                valueOrDefault<String>(
+                                              blogselectedItem.title,
+                                              'Title',
+                                            );
+                                          },
+                                        ),
                                       );
                                     }).divide(const SizedBox(height: 15)),
                                   ),

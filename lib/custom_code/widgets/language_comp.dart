@@ -1,15 +1,11 @@
 // Automatic FlutterFlow imports
-import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import 'index.dart'; // Imports other custom widgets
-import '/custom_code/actions/index.dart'; // Imports custom actions
-import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
 import 'package:scroll_loop_auto_scroll/scroll_loop_auto_scroll.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
 
 class LanguageComp extends StatefulWidget {
   const LanguageComp({
@@ -40,7 +36,7 @@ class _LanguageCompState extends State<LanguageComp> {
             SizedBox(
               child: ScrollLoopAutoScroll(
                 scrollDirection: Axis.horizontal,
-                duration: Duration(seconds: 150),
+                duration: const Duration(seconds: 150),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,7 +46,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/flutterflowlogo.png',
+                          'assets/images/flutterflowlogo.webp',
                           height: 36,
                           fit: BoxFit.cover,
                         ),
@@ -61,7 +57,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/flutterlogo.png',
+                          'assets/images/flutterlogo.webp',
                           height: 36,
                           fit: BoxFit.cover,
                         ),
@@ -72,7 +68,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/figmalogo.png',
+                          'assets/images/figmalogo.webp',
                           height: 36,
                           fit: BoxFit.contain,
                         ),
@@ -83,7 +79,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/bubblelogo.png',
+                          'assets/images/bubblelogo.webp',
                           height: 36,
                           fit: BoxFit.cover,
                         ),
@@ -94,7 +90,7 @@ class _LanguageCompState extends State<LanguageComp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(
-                          'assets/images/firebaselogo.png',
+                          'assets/images/firebaselogo.webp',
                           height: 36,
                           fit: BoxFit.cover,
                         ),

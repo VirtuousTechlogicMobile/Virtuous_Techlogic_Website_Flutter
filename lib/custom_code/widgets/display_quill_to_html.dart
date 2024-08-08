@@ -1,7 +1,3 @@
-// Automatic FlutterFlow imports
-// Begin custom widget code
-// DO NOT REMOVE OR MODIFY THE CODE ABOVE!
-
 import 'dart:convert';
 import 'dart:io';
 
@@ -12,6 +8,7 @@ import 'package:flutter_quill/flutter_quill.dart';
 import 'package:vsc_quill_delta_to_html/vsc_quill_delta_to_html.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
+import '../../button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 
 class DisplayQuillToHtml extends StatefulWidget {
   const DisplayQuillToHtml({
@@ -20,29 +17,34 @@ class DisplayQuillToHtml extends StatefulWidget {
     this.height,
     required this.defaultJsonData,
     required this.isMaxCharacterAllowOrNot,
+    this.characterSetInHtmlView,
+    this.onPressViewMoreBtn,
+    this.showFullText,
   });
 
   final double? width;
   final double? height;
   final String defaultJsonData;
   final bool isMaxCharacterAllowOrNot;
+  final int? characterSetInHtmlView;
+  final Future Function()? onPressViewMoreBtn;
+  final bool? showFullText;
 
   @override
   State<DisplayQuillToHtml> createState() => _DisplayQuillToHtmlState();
 }
 
 class _DisplayQuillToHtmlState extends State<DisplayQuillToHtml> {
-  late final quillController;
+  late final QuillController quillController;
 
   @override
   void initState() {
     super.initState();
 
-    if (widget.defaultJsonData != null &&
-        (widget.defaultJsonData?.length ?? 0) > 0) {
-      List decodeJson = json.decode(widget.defaultJsonData!);
+    if (widget.defaultJsonData.isNotEmpty) {
+      List decodeJson = json.decode(widget.defaultJsonData);
       quillController = QuillController(
-        document: Document.fromJson(decodeJson ?? []),
+        document: Document.fromJson(decodeJson),
         selection: const TextSelection.collapsed(offset: 0),
       );
     } else {
@@ -57,25 +59,36 @@ class _DisplayQuillToHtmlState extends State<DisplayQuillToHtml> {
 
   @override
   void dispose() {
-    super.dispose();
     quillController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return _HtmlViewer(
-        quillController: quillController,
-        isMaxCharacterAllowOrNot: widget.isMaxCharacterAllowOrNot);
+      quillController: quillController,
+      isMaxCharacterAllowOrNot: widget.isMaxCharacterAllowOrNot,
+      characterSetInHtmlView: widget.characterSetInHtmlView,
+      onPressViewMoreBtn: widget.onPressViewMoreBtn,
+      showFullText: widget.showFullText,
+    );
   }
 }
 
 class _HtmlViewer extends StatefulWidget {
   final bool isMaxCharacterAllowOrNot;
-  const _HtmlViewer(
-      {Key? key,
-      required this.quillController,
-      required this.isMaxCharacterAllowOrNot})
-      : super(key: key);
+  final int? characterSetInHtmlView;
+  final Future Function()? onPressViewMoreBtn;
+  final bool? showFullText;
+
+  const _HtmlViewer({
+    super.key,
+    required this.quillController,
+    required this.isMaxCharacterAllowOrNot,
+    this.characterSetInHtmlView,
+    this.onPressViewMoreBtn,
+    this.showFullText,
+  });
 
   final QuillController quillController;
 
@@ -87,7 +100,7 @@ class _HtmlViewerState extends State<_HtmlViewer> {
   String _html = '';
   bool _previewMode = true;
   bool _isPreviewable = false;
-
+  bool showFullText = false;
   @override
   void initState() {
     super.initState();
@@ -95,6 +108,7 @@ class _HtmlViewerState extends State<_HtmlViewer> {
     _onDocumentUpdated();
     _isPreviewable = kIsWeb || Platform.isAndroid || Platform.isIOS;
     _previewMode = _isPreviewable;
+    showFullText = widget.showFullText ?? false;
   }
 
   void _onDocumentUpdated() {
@@ -114,6 +128,7 @@ class _HtmlViewerState extends State<_HtmlViewer> {
     );
 
     _html = converter.convert();
+    int characterLimit = widget.characterSetInHtmlView ?? 400;
 
     if (widget.isMaxCharacterAllowOrNot == true) {
       // Limit the displayed text to 400 characters
@@ -123,14 +138,37 @@ class _HtmlViewerState extends State<_HtmlViewer> {
           ).data ??
           '';
     } else {
-      _html = '<div>$_html</div>';
+      if (widget.showFullText == true &&
+          widget.characterSetInHtmlView == null) {
+        _showFullHtmlContent();
+      } else {
+        final limit =
+            characterLimit < _html.length ? characterLimit : _html.length;
+        final truncatedHtml =
+            _html.length > limit ? _html.substring(0, limit) : _html;
+        _html = '''
+      <div>
+        $truncatedHtml${_html.length > limit ? '...' : ''}
+      </div>
+    ''';
+      }
     }
 
     setState(() {});
   }
 
+  void _showFullHtmlContent() {
+    setState(() {
+      showFullText = true;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    final bool shouldShowViewMoreButton = widget.characterSetInHtmlView != null
+        ? _html.length >= 450
+        : false; // Show button only if content length >= 450
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.max,
@@ -143,35 +181,60 @@ class _HtmlViewerState extends State<_HtmlViewer> {
               if (_isPreviewable) {
                 viewer = Html(
                   data: '''
-            <html lang="en">
-              <body style="
-                font-family: Poppins;
-                font-style: normal;
-                font-size: 16px;
-                font-weight: normal;
-                letter-spacing: 2px;
-                line-height: 1.2;
-                color: #676767;
-                margin: 0;  /* Remove margin */
-                padding: 0; /* Remove padding */
-              ">
-                $_html
-              </body>
-            </html>
-          ''',
-                  onLinkTap: (url, _, ___) => launchURL(url!),
+                    <html lang="en">
+                      <body style="
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-size: 16px;
+                        font-weight: normal;
+                        letter-spacing: 2px;
+                        line-height: 1.2;
+                        color: #676767;
+                        margin: 0;  /* Remove margin */
+                        padding: 0; /* Remove padding */
+                      ">
+                         $_html
+                      </body>
+                    </html>
+                  ''',
+                  onLinkTap: (url, _, ___) {
+                    if (url == '#readMore') {
+                      _showFullHtmlContent();
+                      if (widget.onPressViewMoreBtn != null) {
+                        widget.onPressViewMoreBtn!();
+                      }
+                    } else if (url != null) {
+                      launchURL(url);
+                    }
+                  },
                 );
               } else {
                 viewer = const Text(
-                    'No HTML preview is available for this platform. Try running for web.');
+                  'No HTML preview is available for this platform. Try running for web.',
+                );
               }
             } else {
-              viewer = SelectableText(_html);
+              viewer = SingleChildScrollView(
+                child: Html(
+                  data: _html,
+                ),
+              );
             }
 
             return viewer;
           }),
         ),
+        if (shouldShowViewMoreButton)
+          GetInTouchButtonCompWidget(
+            buttonName: 'View more',
+            showIcon: false,
+            buttonAction: () async {
+              _showFullHtmlContent();
+              if (widget.onPressViewMoreBtn != null) {
+                widget.onPressViewMoreBtn!();
+              }
+            },
+          ),
       ],
     );
   }

@@ -56,6 +56,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
               richTextOne: 'Explore ',
               richTextTwo: 'Our Blogs',
               texts: 'Blogs & posts by our Team',
+              showShadow: false,
             ),
           ),
           Align(
@@ -71,7 +72,7 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                 limit: 2,
               ),
               builder: (context, snapshot) {
-                print("snapshot.data! = ${snapshot.data!.toString()}");
+                print("snapshot.data! = ${snapshot.data?.toString()}");
                 // Customize what your widget looks like when it's loading.
                 if (!snapshot.hasData) {
                   return Center(
@@ -104,35 +105,53 @@ class _ExploreOurBlogsCompWidgetState extends State<ExploreOurBlogsCompWidget> {
                         (columnIndex) {
                       final columnBlogDetailsRecord =
                           columnBlogDetailsRecordList[columnIndex];
-                      return BlogCompWidget(
-                        key: Key(
-                            'Keym5k_${columnIndex}_of_${columnBlogDetailsRecordList.length}'),
-                        blogimage: valueOrDefault<String>(
-                          columnBlogDetailsRecord.image,
-                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
-                        ),
-                        blogTitleText: valueOrDefault<String>(
-                          columnBlogDetailsRecord.title,
-                          'Title',
-                        ),
-                        blogDescription: valueOrDefault<String>(
-                          columnBlogDetailsRecord.description,
-                          'description',
-                        ),
-                        blogDate: valueOrDefault<String>(
-                          columnBlogDetailsRecord.name,
-                          'name',
-                        ),
-                        blogTag: columnBlogDetailsRecord.blogTags,
-                        readmore: () async {
-                          final String blotitle = Uri.encodeComponent(
-                              columnBlogDetailsRecord.title);
-                          await launchURL('individualBlogPage/${blotitle}');
-                          FFAppState().selectedTitle = valueOrDefault<String>(
+                      return SizedBox(
+                        width: () {
+                          if (MediaQuery.sizeOf(context).width <
+                              kBreakpointSmall) {
+                            return 400.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointMedium) {
+                            return 500.0;
+                          } else if (MediaQuery.sizeOf(context).width <
+                              kBreakpointLarge) {
+                            return 1500.0;
+                          } else {
+                            return 1500.0;
+                          }
+                        }(),
+                        child: BlogCompWidget(
+                          key: Key(
+                              'Keym5k_${columnIndex}_of_${columnBlogDetailsRecordList.length}'),
+                          blogimage: valueOrDefault<String>(
+                            columnBlogDetailsRecord.image,
+                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
+                          ),
+                          blogTitleText: valueOrDefault<String>(
                             columnBlogDetailsRecord.title,
                             'Title',
-                          );
-                        },
+                          ),
+                          blogDescription: valueOrDefault<String>(
+                            columnBlogDetailsRecord.description,
+                            'description',
+                          ),
+                          blogDate: valueOrDefault<String>(
+                            columnBlogDetailsRecord.name,
+                            'name',
+                          ),
+                          blogTag: columnBlogDetailsRecord.blogTags,
+                          readmore: () async {
+                            final String blogtitle = Uri.encodeComponent(
+                                    columnBlogDetailsRecord.title)
+                                .replaceAll('%20', '+');
+
+                            await launchURL('/individualBlogPage/$blogtitle');
+                            FFAppState().selectedTitle = valueOrDefault<String>(
+                              columnBlogDetailsRecord.title,
+                              'Title',
+                            );
+                          },
+                        ),
                       );
                     }).divide(const SizedBox(height: 20.0)),
                   ),

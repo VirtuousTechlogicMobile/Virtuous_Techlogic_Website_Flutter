@@ -108,7 +108,7 @@ class _IndividualProductPageWidgetState
         body: SafeArea(
           top: true,
           child: _isLoading // Check if loading
-              ? Center(
+              ? const Center(
                   child:
                       CircularProgressIndicator(), // Display loading indicator
                 )
@@ -160,24 +160,21 @@ class _IndividualProductPageWidgetState
                                         model:
                                             _model.ourProductDetailCompModel1,
                                         updateCallback: () => setState(() {}),
-                                        child: Container(
-                                          constraints: BoxConstraints(
-                                              maxWidth: getMaxWidth(context)),
-                                          child: OurProductDetailCompWidget(
-                                            imagePath: widget.productRef?.image,
-                                            title:
-                                                widget.productRef?.title ?? '',
-                                            description: widget
-                                                    .productRef?.description ??
-                                                '',
-                                            features:
-                                                widget.productRef?.features,
-                                            editDescription:
-                                                valueOrDefault<String>(
-                                              widget
-                                                  .productRef?.editDescription,
-                                              '[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]',
-                                            ),
+                                        child: OurProductDetailCompWidget(
+                                          imagePath: widget.productRef?.image ??
+                                              "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
+                                          title: widget.productRef?.title ??
+                                              'Title',
+                                          description:
+                                              widget.productRef?.description ??
+                                                  'Description',
+                                          features:
+                                              widget.productRef?.features ??
+                                                  ["Features1", "Features2"],
+                                          editDescription:
+                                              valueOrDefault<String>(
+                                            widget.productRef?.editDescription,
+                                            '[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]',
                                           ),
                                         ),
                                       ),
@@ -261,20 +258,22 @@ class _IndividualProductPageWidgetState
                                             constraints: BoxConstraints(
                                                 maxWidth: getMaxWidth(context)),
                                             child: OurProductDetailCompWidget(
-                                              imagePath:
-                                                  widget.productRef?.image,
+                                              imagePath: widget
+                                                      .productRef?.image ??
+                                                  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
                                               title: widget.productRef?.title ??
-                                                  '',
+                                                  'Title',
                                               description: widget.productRef
                                                       ?.description ??
-                                                  '',
-                                              features:
-                                                  widget.productRef?.features,
+                                                  'Description',
+                                              features: widget
+                                                      .productRef?.features ??
+                                                  ["Features1", "Features2"],
                                               editDescription:
                                                   valueOrDefault<String>(
                                                 widget.productRef
                                                     ?.editDescription,
-                                                '[{\"insert\":\"ourCulture\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"},{\"insert\":\"dasdssfsf\",\"attributes\":{\"bold\":true,\"underline\":true}},{\"insert\":\"\\n\",\"attributes\":{\"list\":\"bullet\"}}]',
+                                                '[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]',
                                               ),
                                             ),
                                           ),
@@ -340,18 +339,23 @@ class _IndividualProductPageWidgetState
                                             constraints: BoxConstraints(
                                                 maxWidth: getMaxWidth(context)),
                                             child: OurProductDetailCompWidget(
-                                              imagePath:
-                                                  widget.productRef?.image ??
-                                                      '',
+                                              imagePath: widget
+                                                      .productRef?.image ??
+                                                  "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
                                               title: widget.productRef?.title ??
-                                                  "title",
+                                                  'Title',
                                               description: widget.productRef
                                                       ?.description ??
-                                                  'description',
-                                              features:
-                                                  widget.productRef?.features,
-                                              editDescription: widget
-                                                  .productRef?.editDescription,
+                                                  'Description',
+                                              features: widget
+                                                      .productRef?.features ??
+                                                  ["Features1", "Features2"],
+                                              editDescription:
+                                                  valueOrDefault<String>(
+                                                widget.productRef
+                                                    ?.editDescription,
+                                                '[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]',
+                                              ),
                                             ),
                                           ),
                                         ),

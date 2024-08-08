@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
@@ -7,11 +9,8 @@ import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'sitemap_page_model.dart';
+
 export 'sitemap_page_model.dart';
 
 class SitemapPageWidget extends StatefulWidget {
@@ -61,7 +60,7 @@ class _SitemapPageWidgetState extends State<SitemapPageWidget> {
           child: wrapWithModel(
             model: _model.sidebarCompModel,
             updateCallback: () => setState(() {}),
-            child: SidebarCompWidget(),
+            child: const SidebarCompWidget(),
           ),
         ),
         body: SafeArea(
@@ -101,7 +100,7 @@ class _SitemapPageWidgetState extends State<SitemapPageWidget> {
                     ),
                     Expanded(
                       child: Stack(
-                        alignment: AlignmentDirectional(1.0, 1.0),
+                        alignment: const AlignmentDirectional(1.0, 1.0),
                         children: [
                           SingleChildScrollView(
                             child: Column(
@@ -110,27 +109,27 @@ class _SitemapPageWidgetState extends State<SitemapPageWidget> {
                                 wrapWithModel(
                                   model: _model.sitemapTextCompModel1,
                                   updateCallback: () => setState(() {}),
-                                  child: SitemapTextCompWidget(),
+                                  child: const SitemapTextCompWidget(),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 40.0, 50.0),
                             child: wrapWithModel(
                               model: _model.whatsapStickyCompModel1,
                               updateCallback: () => setState(() {}),
-                              child: WhatsapStickyCompWidget(),
+                              child: const WhatsapStickyCompWidget(),
                             ),
                           ),
                         ],
@@ -170,7 +169,7 @@ class _SitemapPageWidgetState extends State<SitemapPageWidget> {
                     ),
                     Expanded(
                       child: Stack(
-                        alignment: AlignmentDirectional(1.0, 1.0),
+                        alignment: const AlignmentDirectional(1.0, 1.0),
                         children: [
                           SingleChildScrollView(
                             child: Column(
@@ -179,27 +178,27 @@ class _SitemapPageWidgetState extends State<SitemapPageWidget> {
                                 wrapWithModel(
                                   model: _model.sitemapTextCompModel2,
                                   updateCallback: () => setState(() {}),
-                                  child: SitemapTextCompWidget(),
+                                  child: const SitemapTextCompWidget(),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 40.0, 50.0),
                             child: wrapWithModel(
                               model: _model.whatsapStickyCompModel2,
                               updateCallback: () => setState(() {}),
-                              child: WhatsapStickyCompWidget(),
+                              child: const WhatsapStickyCompWidget(),
                             ),
                           ),
                         ],
@@ -214,13 +213,13 @@ class _SitemapPageWidgetState extends State<SitemapPageWidget> {
                     wrapWithModel(
                       model: _model.desktopHeaderCompModel,
                       updateCallback: () => setState(() {}),
-                      child: DesktopHeaderCompWidget(
+                      child: const DesktopHeaderCompWidget(
                         indexParameter: 1,
                       ),
                     ),
                     Expanded(
                       child: Stack(
-                        alignment: AlignmentDirectional(1.0, 1.0),
+                        alignment: const AlignmentDirectional(1.0, 1.0),
                         children: [
                           SingleChildScrollView(
                             child: Column(
@@ -230,23 +229,23 @@ class _SitemapPageWidgetState extends State<SitemapPageWidget> {
                                 wrapWithModel(
                                   model: _model.sitemapTextCompModel3,
                                   updateCallback: () => setState(() {}),
-                                  child: SitemapTextCompWidget(),
+                                  child: const SitemapTextCompWidget(),
                                 ),
                                 wrapWithModel(
                                   model: _model.footerCompModel3,
                                   updateCallback: () => setState(() {}),
-                                  child: FooterCompWidget(),
+                                  child: const FooterCompWidget(),
                                 ),
                               ],
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 40.0, 50.0),
                             child: wrapWithModel(
                               model: _model.whatsapStickyCompModel3,
                               updateCallback: () => setState(() {}),
-                              child: WhatsapStickyCompWidget(),
+                              child: const WhatsapStickyCompWidget(),
                             ),
                           ),
                         ],

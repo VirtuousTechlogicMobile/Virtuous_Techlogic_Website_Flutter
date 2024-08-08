@@ -48,6 +48,7 @@ abstract class FlutterFlowTheme {
   late Color footerTextColor;
   late Color formColor;
   late Color buttonborderColor;
+  late Color languagDetailscolor;
 
   @Deprecated('Use displaySmallFamily instead')
   String get title1Family => displaySmallFamily;
@@ -159,6 +160,7 @@ class LightModeTheme extends FlutterFlowTheme {
   late Color footerTextColor = Color(0x98FFFFFF);
   late Color formColor = Color(0xFFA7A7A7);
   late Color buttonborderColor = Color(0xFFE29C23);
+  late Color languagDetailscolor = Color(0xFF1E1E1E);
 }
 
 abstract class Typography {

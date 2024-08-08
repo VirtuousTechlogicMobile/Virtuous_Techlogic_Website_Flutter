@@ -13,11 +13,13 @@ class CommonRichTextCompWidget extends StatefulWidget {
     required this.richTextOne,
     required this.richTextTwo,
     required this.texts,
+    this.showShadow = true,
   });
 
   final String? richTextOne;
   final String? richTextTwo;
   final String? texts;
+  final bool showShadow;
 
   @override
   State<CommonRichTextCompWidget> createState() =>
@@ -143,11 +145,12 @@ class _CommonRichTextCompWidgetState extends State<CommonRichTextCompWidget> {
         ),
       Stack(
         children: [
-          if (responsiveVisibility(
-            context: context,
-            tabletLandscape: false,
-            desktop: false,
-          ))
+          if (widget.showShadow &&
+              responsiveVisibility(
+                context: context,
+                tabletLandscape: false,
+                desktop: false,
+              ))
             Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

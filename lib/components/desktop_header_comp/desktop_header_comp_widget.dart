@@ -13,7 +13,7 @@ class DesktopHeaderCompWidget extends StatefulWidget {
   const DesktopHeaderCompWidget({
     super.key,
     int? indexParameter,
-  }) : this.indexParameter = indexParameter ?? 0;
+  }) : indexParameter = indexParameter ?? 0;
 
   final int indexParameter;
 
@@ -51,8 +51,9 @@ class _DesktopHeaderCompWidgetState extends State<DesktopHeaderCompWidget> {
     return Container(
       width: double.infinity,
       height: MediaQuery.sizeOf(context).height * 0.1,
+      color: FlutterFlowTheme.of(context).secondaryBackground,
       child: Padding(
-        padding: EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(25.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -68,8 +69,9 @@ class _DesktopHeaderCompWidgetState extends State<DesktopHeaderCompWidget> {
                 context.pushNamed('homePage');
               },
               child: Image.asset(
-                'assets/images/logo.webp',
-                fit: BoxFit.contain,
+                'assets/images/logo.png',
+                width: 183,
+                height: 60,
               ),
             ),
             Row(
@@ -91,7 +93,7 @@ class _DesktopHeaderCompWidgetState extends State<DesktopHeaderCompWidget> {
                     style: FlutterFlowTheme.of(context).bodyLarge.override(
                           fontFamily: 'Plus Jakarta Sans',
                           color: valueOrDefault<Color>(
-                            widget!.indexParameter == 0
+                            widget.indexParameter == 0
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondary,
                             FlutterFlowTheme.of(context).text16Color,
@@ -125,7 +127,7 @@ class _DesktopHeaderCompWidgetState extends State<DesktopHeaderCompWidget> {
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Plus Jakarta Sans',
                           color: valueOrDefault<Color>(
-                            widget!.indexParameter == 1
+                            widget.indexParameter == 1
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondary,
                             FlutterFlowTheme.of(context).text16Color,
@@ -159,7 +161,7 @@ class _DesktopHeaderCompWidgetState extends State<DesktopHeaderCompWidget> {
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Plus Jakarta Sans',
                           color: valueOrDefault<Color>(
-                            widget!.indexParameter == 2
+                            widget.indexParameter == 2
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondary,
                             FlutterFlowTheme.of(context).text16Color,
@@ -193,7 +195,7 @@ class _DesktopHeaderCompWidgetState extends State<DesktopHeaderCompWidget> {
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Plus Jakarta Sans',
                           color: valueOrDefault<Color>(
-                            widget!.indexParameter == 3
+                            widget.indexParameter == 3
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondary,
                             FlutterFlowTheme.of(context).text16Color,
@@ -227,7 +229,7 @@ class _DesktopHeaderCompWidgetState extends State<DesktopHeaderCompWidget> {
                     style: FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Plus Jakarta Sans',
                           color: valueOrDefault<Color>(
-                            widget!.indexParameter == 4
+                            widget.indexParameter == 4
                                 ? FlutterFlowTheme.of(context).primary
                                 : FlutterFlowTheme.of(context).secondary,
                             FlutterFlowTheme.of(context).text16Color,

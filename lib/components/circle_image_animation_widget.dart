@@ -59,18 +59,18 @@ class _CircleImageAnimationWidgetState extends State<CircleImageAnimationWidget>
           MoveEffect(
             curve: Curves.easeInOut,
             delay: valueOrDefault<double>(
-              widget!.delayAnimationTime,
+              widget.delayAnimationTime,
               100.0,
             ).ms,
             duration: valueOrDefault<double>(
-              widget!.durationAnimation,
+              widget.durationAnimation,
               100.0,
             ).ms,
             begin: const Offset(0.0, 0.0),
             end: Offset(
                 0.0,
                 valueOrDefault<double>(
-                  widget!.finalPosition,
+                  widget.finalPosition,
                   10.0,
                 )),
           ),
@@ -93,16 +93,16 @@ class _CircleImageAnimationWidgetState extends State<CircleImageAnimationWidget>
     return Align(
       alignment: AlignmentDirectional(
           valueOrDefault<double>(
-            widget!.xPosition,
+            widget.xPosition,
             0.0,
           ),
           valueOrDefault<double>(
-            widget!.yPosition,
+            widget.yPosition,
             0.0,
           )),
       child: Container(
-        width: widget!.diameterWidth,
-        height: widget!.diameterWidth,
+        width: widget.diameterWidth,
+        height: widget.diameterWidth,
         clipBehavior: Clip.antiAlias,
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
@@ -110,7 +110,7 @@ class _CircleImageAnimationWidgetState extends State<CircleImageAnimationWidget>
         child: CachedNetworkImage(
           fadeInDuration: Duration(milliseconds: 0),
           fadeOutDuration: Duration(milliseconds: 0),
-          imageUrl: widget!.imageName!,
+          imageUrl: widget.imageName ?? "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
           fit: BoxFit.cover,
         ),
       ).animateOnPageLoad(animationsMap['circleImageOnPageLoadAnimation']!),

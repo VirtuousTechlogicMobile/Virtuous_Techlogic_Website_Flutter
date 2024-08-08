@@ -1,17 +1,9 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
-import '/button_component/view_live_app_button_comp/view_live_app_button_comp_widget.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'our_product_detail_comp_model.dart';
 
 export 'our_product_detail_comp_model.dart';
@@ -42,7 +34,7 @@ class _OurProductDetailCompWidgetState
   late OurProductDetailCompModel _model;
 
   @override
-  void setState(VoidCallback callback) {
+  Future<void> setState(VoidCallback callback) async {
     super.setState(callback);
     _model.onUpdate();
   }
@@ -74,10 +66,16 @@ class _OurProductDetailCompWidgetState
             alignment: const AlignmentDirectional(0.0, 0.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(24.0),
-              child: CachedNetworkImage(
-                fadeInDuration: const Duration(milliseconds: 5),
-                fadeOutDuration: const Duration(milliseconds: 5),
-                imageUrl: widget.imagePath!,
+              child: Image.network(
+                widget.imagePath ??
+                    "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
+                loadingBuilder: (context, child, loadingProgress) {
+                  if (loadingProgress == null) {
+                    return child;
+                  } else {
+                    return const CircularProgressIndicator();
+                  }
+                },
                 width: () {
                   if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
                     return 328.0;
@@ -104,13 +102,13 @@ class _OurProductDetailCompWidgetState
                     return 472.0;
                   }
                 }(),
-                fit: BoxFit.fill,
+                fit: BoxFit.cover,
               ),
             ),
           ),
           SelectionArea(
               child: Text(
-            widget.title!,
+            widget.title ?? "Product Title",
             style: FlutterFlowTheme.of(context).displaySmall.override(
                   fontFamily: FlutterFlowTheme.of(context).displaySmallFamily,
                   letterSpacing: 0.0,
@@ -118,61 +116,6 @@ class _OurProductDetailCompWidgetState
                       FlutterFlowTheme.of(context).displaySmallFamily),
                 ),
           )),
-          if (responsiveVisibility(
-            context: context,
-            phone: false,
-            tablet: false,
-            tabletLandscape: false,
-            desktop: false,
-          ))
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                wrapWithModel(
-                  model: _model.viewLiveAppButtonCompModel1,
-                  updateCallback: () => setState(() {}),
-                  child: const ViewLiveAppButtonCompWidget(
-                    viewLiveApp: 'View Live App',
-                  ),
-                ),
-                wrapWithModel(
-                  model: _model.getInTouchButtonCompModel1,
-                  updateCallback: () => setState(() {}),
-                  child: GetInTouchButtonCompWidget(
-                    buttonName: 'Contact for Pricing',
-                    buttonAction: () async {},
-                  ),
-                ),
-              ].divide(const SizedBox(width: 20.0)),
-            ),
-          if (responsiveVisibility(
-            context: context,
-            phone: false,
-            tablet: false,
-            tabletLandscape: false,
-            desktop: false,
-          ))
-            Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                wrapWithModel(
-                  model: _model.viewLiveAppButtonCompModel2,
-                  updateCallback: () => setState(() {}),
-                  child: const ViewLiveAppButtonCompWidget(
-                    viewLiveApp: 'View Live App',
-                  ),
-                ),
-                wrapWithModel(
-                  model: _model.getInTouchButtonCompModel2,
-                  updateCallback: () => setState(() {}),
-                  child: GetInTouchButtonCompWidget(
-                    buttonName: 'Contact for Pricing',
-                    buttonAction: () async {},
-                  ),
-                ),
-              ].divide(const SizedBox(height: 20.0)),
-            ),
           Text(
             'Description',
             style: FlutterFlowTheme.of(context).headlineSmall.override(
@@ -186,7 +129,8 @@ class _OurProductDetailCompWidgetState
           custom_widgets.DisplayQuillToHtml(
             width: MediaQuery.sizeOf(context).width * 1.0,
             height: MediaQuery.sizeOf(context).height * 0.08,
-            defaultJsonData: widget.editDescription!,
+            defaultJsonData: widget.editDescription ??
+                '[{\"insert\":\"Product\",\"attributes\":{\"bold\":true}},{\"insert\":\"\\n\"}]',
             isMaxCharacterAllowOrNot: false,
           ),
           Padding(

@@ -105,7 +105,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
             borderRadius: BorderRadius.circular(16.0),
           ),
           child: Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(16.0),
             child: InkWell(
               splashColor: Colors.transparent,
               focusColor: Colors.transparent,
@@ -134,7 +134,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                             ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(1, -1),
+                        alignment: const AlignmentDirectional(1, -1),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -218,7 +218,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       8.0, 0.0, 0.0, 5.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,

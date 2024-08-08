@@ -5,7 +5,6 @@ import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/explore_our_blogs_comp/explore_our_blogs_comp_widget.dart';
 import '/components/explore_our_offering_comp/explore_our_offering_comp_widget.dart';
 import '/components/first_comp/first_comp_widget.dart';
-import '/components/first_comptablet/first_comptablet_widget.dart';
 import '/components/firstcomp_mobile/firstcomp_mobile_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
@@ -20,6 +19,7 @@ import '/custom_code/widgets/index.dart' as custom_widgets;
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '../../components/first_comptablet/first_comptablet_widget.dart';
 import 'home_page_model.dart';
 
 export 'home_page_model.dart';
@@ -153,72 +153,39 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       height: 100.0,
                                     ),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 16.0, 0.0),
-                                    child: wrapWithModel(
-                                      model:
-                                          _model.exploreOurOfferingCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child:
-                                          const ExploreOurOfferingCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.exploreOurOfferingCompModel1,
+                                    updateCallback: () => setState(() {}),
+                                    child: const ExploreOurOfferingCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 16.0, 0.0),
-                                    child: wrapWithModel(
-                                      model:
-                                          _model.whyChooseUsForMobileCompModel,
-                                      updateCallback: () => setState(() {}),
-                                      child:
-                                          const WhyChooseUsForMobileCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.whyChooseUsForMobileCompModel,
+                                    updateCallback: () => setState(() {}),
+                                    child:
+                                        const WhyChooseUsForMobileCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.ourCultureCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child: const OurCultureCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.ourCultureCompModel1,
+                                    updateCallback: () => setState(() {}),
+                                    child: const OurCultureCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 16.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.ourCustomerSaysCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child: const OurCustomerSaysCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.ourCustomerSaysCompModel1,
+                                    updateCallback: () => setState(() {}),
+                                    child: const OurCustomerSaysCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            16.0, 40.0, 16.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.exploreOurBlogsCompModel1,
-                                      updateOnChange: true,
-                                      updateCallback: () => setState(() {}),
-                                      child: const ExploreOurBlogsCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.exploreOurBlogsCompModel1,
+                                    updateOnChange: true,
+                                    updateCallback: () => setState(() {}),
+                                    child: const ExploreOurBlogsCompWidget(),
                                   ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 40.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.footerCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child: const FooterCompWidget(),
-                                    ),
+                                  wrapWithModel(
+                                    model: _model.footerCompModel1,
+                                    updateCallback: () => setState(() {}),
+                                    child: const FooterCompWidget(),
                                   ),
-                                ],
+                                ].divide(const SizedBox(height: 40)),
                               ),
                             ),
                           ),
@@ -376,7 +343,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                   wrapWithModel(
                                     model: _model.exploreOurBlogsCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: const ExploreOurBlogsCompWidget(),
+                                    child: const Padding(
+                                      padding:
+                                          EdgeInsets.only(right: 50, left: 50),
+                                      child: ExploreOurBlogsCompWidget(),
+                                    ),
                                   ),
                                   wrapWithModel(
                                     model: _model.footerCompModel3,

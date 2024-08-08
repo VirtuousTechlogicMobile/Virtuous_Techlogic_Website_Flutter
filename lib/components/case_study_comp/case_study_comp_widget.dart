@@ -66,11 +66,11 @@ class _CaseStudyCompWidgetState extends State<CaseStudyCompWidget>
       mainAxisSize: MainAxisSize.max,
       children: [
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 30.0),
           child: wrapWithModel(
             model: _model.commonRichTextCompModel,
             updateCallback: () => setState(() {}),
-            child: CommonRichTextCompWidget(
+            child: const CommonRichTextCompWidget(
               richTextOne: 'Explore our ',
               richTextTwo: 'Case Studies',
               texts:
@@ -129,7 +129,7 @@ class _CaseStudyCompWidgetState extends State<CaseStudyCompWidget>
                       queryParameters: {
                         'ref': serializeParam(
                           wrapCaseStudiesRecord,
-                          ParamType.Document,
+                          ParamType.DocumentReference,
                         ),
                       }.withoutNulls,
                       extra: <String, dynamic>{

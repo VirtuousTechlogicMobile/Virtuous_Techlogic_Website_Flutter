@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -106,10 +108,11 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0, 250, 0, 0),
-                    child: Container(
-                      child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
-                            200, 100, 0, 0),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(200, 100, 0, 0),
+                      child: BackdropFilter(
+                        filter: ImageFilter.blur(sigmaX: 0.3, sigmaY: 0.3),
                         child: Container(
                           height: 300,
                           decoration: BoxDecoration(
@@ -138,22 +141,25 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
                     child: Padding(
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0, 50, 300, 0),
-                      child: Container(
-                        height: 350,
-                        decoration: BoxDecoration(
-                          color: const Color(0xfff8e6ce),
-                          boxShadow: const [
-                            BoxShadow(
-                              blurRadius: 100,
-                              color: Color(0xFFF4E3C8),
-                              offset: Offset(
-                                0.0,
-                                0,
-                              ),
-                              spreadRadius: 80,
-                            )
-                          ],
-                          borderRadius: BorderRadius.circular(500),
+                      child: BackdropFilter(
+                        filter: ImageFilter.blur(sigmaX: 0.5, sigmaY: 0.5),
+                        child: Container(
+                          height: 350,
+                          decoration: BoxDecoration(
+                            color: const Color(0xfff8e6ce),
+                            boxShadow: const [
+                              BoxShadow(
+                                blurRadius: 100,
+                                color: Color(0xFFF4E3C8),
+                                offset: Offset(
+                                  0.0,
+                                  0,
+                                ),
+                                spreadRadius: 80,
+                              )
+                            ],
+                            borderRadius: BorderRadius.circular(500),
+                          ),
                         ),
                       ),
                     ),
@@ -228,11 +234,8 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(0),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 0),
-                        fadeOutDuration: const Duration(milliseconds: 0),
                         imageUrl:
                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/mjobrghz7cg0/Group_4.webp',
-                        width: MediaQuery.sizeOf(context).width * 0.64,
                         fit: BoxFit.contain,
                       ),
                     ).animateOnPageLoad(
@@ -288,7 +291,7 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
                 delayAnimationTime: 400.0,
                 diameterWidth: 40.0,
                 imageName:
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/t9oroe0hiawn/Frame_5.png',
+                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/hwfbx5qnm3y8/Frame_5.webp',
                 durationAnimation: 600.0,
                 finalPosition: 10.0,
                 xPosition: 0.435,
@@ -304,7 +307,7 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
                 delayAnimationTime: 100.0,
                 diameterWidth: 70.0,
                 imageName:
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/t9oroe0hiawn/Frame_5.png',
+                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/hwfbx5qnm3y8/Frame_5.webp',
                 durationAnimation: 600.0,
                 finalPosition: 10.0,
                 xPosition: -0.842,

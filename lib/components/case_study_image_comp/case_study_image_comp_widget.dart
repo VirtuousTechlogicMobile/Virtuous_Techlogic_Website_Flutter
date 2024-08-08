@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:virtuous_techlogic_website/custom_code/widgets/index.dart';
 
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -80,7 +81,7 @@ class _CaseStudyImageCompWidgetState extends State<CaseStudyImageCompWidget>
       onExit: ((event) async {
         setState(() => _model.mouseRegionHovered = false);
       }),
-      child: Container(
+      child: SizedBox(
         width: () {
           if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
             return 328.0;
@@ -92,11 +93,10 @@ class _CaseStudyImageCompWidgetState extends State<CaseStudyImageCompWidget>
             return 520.0;
           }
         }(),
-        decoration: const BoxDecoration(),
         child: Padding(
           padding: const EdgeInsets.only(
             left: 20.0,
-            bottom: 48,
+            bottom: 20,
           ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -105,9 +105,13 @@ class _CaseStudyImageCompWidgetState extends State<CaseStudyImageCompWidget>
               ClipRRect(
                 borderRadius: BorderRadius.circular(24.0),
                 child: CachedNetworkImage(
-                  fadeInDuration: const Duration(milliseconds: 100),
-                  fadeOutDuration: const Duration(milliseconds: 100),
-                  imageUrl: widget.imagepath!,
+                  placeholder: (context, url) {
+                    return const LoaderWidget(
+                      width: 50,
+                    );
+                  },
+                  imageUrl: widget.imagepath ??
+                      "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
                   width: () {
                     if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
                       return 328.0;
@@ -139,7 +143,7 @@ class _CaseStudyImageCompWidgetState extends State<CaseStudyImageCompWidget>
               ),
               Flexible(
                 child: Text(
-                  widget.title!,
+                  widget.title ?? "Case Study Title",
                   textAlign: TextAlign.start,
                   style: FlutterFlowTheme.of(context).headlineSmall.override(
                         fontFamily:

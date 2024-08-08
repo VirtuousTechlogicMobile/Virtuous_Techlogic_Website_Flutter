@@ -49,18 +49,16 @@ class _ViewLiveAppButtonCompWidgetState
   @override
   Widget build(BuildContext context) {
     return FFButtonWidget(
-      onPressed: () {
-        print('Button pressed ...');
-      },
+      onPressed: () {},
       text: widget.viewLiveApp ?? '',
-      icon: Icon(
+      icon: const Icon(
         Icons.arrow_outward,
         size: 15.0,
       ),
       options: FFButtonOptions(
         height: 48.0,
-        padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
         color: FlutterFlowTheme.of(context).secondaryBackground,
         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
               fontFamily: FlutterFlowTheme.of(context).titleSmallFamily,

@@ -1,22 +1,18 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+
 import '/components/dedicated_services_comp/dedicated_services_comp_widget.dart';
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
-import '/components/request_quote_comp/request_quote_comp_widget.dart';
 import '/components/sidebar_comp/sidebar_comp_widget.dart';
 import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'dedicated_service_page_model.dart';
+
 export 'dedicated_service_page_model.dart';
 
 class DedicatedServicePageWidget extends StatefulWidget {
@@ -51,8 +47,8 @@ class _DedicatedServicePageWidgetState extends State<DedicatedServicePageWidget>
             curve: Curves.easeOut,
             delay: 0.0.ms,
             duration: 1000.0.ms,
-            begin: Offset(100.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(100.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -88,7 +84,7 @@ class _DedicatedServicePageWidgetState extends State<DedicatedServicePageWidget>
           child: wrapWithModel(
             model: _model.sidebarCompModel,
             updateCallback: () => setState(() {}),
-            child: SidebarCompWidget(),
+            child: const SidebarCompWidget(),
           ),
         ).animateOnActionTrigger(
             animationsMap['endDrawerOnActionTriggerAnimation']!,
@@ -96,7 +92,7 @@ class _DedicatedServicePageWidgetState extends State<DedicatedServicePageWidget>
         body: SafeArea(
           top: true,
           child: Stack(
-            alignment: AlignmentDirectional(1.0, 1.0),
+            alignment: const AlignmentDirectional(1.0, 1.0),
             children: [
               Builder(
                 builder: (context) {
@@ -137,39 +133,21 @@ class _DedicatedServicePageWidgetState extends State<DedicatedServicePageWidget>
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.dedicatedServicesCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: DedicatedServicesCompWidget(),
+                                    child: const DedicatedServicesCompWidget(),
                                   ),
                                 ),
-                                if (false)
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 40.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.requestQuoteCompModel1,
-                                      updateCallback: () => setState(() {}),
-                                      child: RequestQuoteCompWidget(
-                                        formImage:
-                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/sqeka8titoar/Rectangle_24.png',
-                                        email: 'info@virtuoustechlogic.com',
-                                        callNumber: '6377231496',
-                                        whatsappNumber: '6377231496',
-                                        descriptionText:
-                                            'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
-                                      ),
-                                    ),
-                                  ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 40.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -214,39 +192,21 @@ class _DedicatedServicePageWidgetState extends State<DedicatedServicePageWidget>
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.dedicatedServicesCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: DedicatedServicesCompWidget(),
+                                    child: const DedicatedServicesCompWidget(),
                                   ),
                                 ),
-                                if (false)
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 30.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.requestQuoteCompModel2,
-                                      updateCallback: () => setState(() {}),
-                                      child: RequestQuoteCompWidget(
-                                        formImage:
-                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/sqeka8titoar/Rectangle_24.png',
-                                        email: 'info@virtuoustechlogic.com',
-                                        callNumber: '6377231496',
-                                        whatsappNumber: '6377231496',
-                                        descriptionText:
-                                            'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
-                                      ),
-                                    ),
-                                  ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 40.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -262,7 +222,7 @@ class _DedicatedServicePageWidgetState extends State<DedicatedServicePageWidget>
                         wrapWithModel(
                           model: _model.desktopHeaderCompModel,
                           updateCallback: () => setState(() {}),
-                          child: DesktopHeaderCompWidget(
+                          child: const DesktopHeaderCompWidget(
                             indexParameter: 2,
                           ),
                         ),
@@ -272,39 +232,21 @@ class _DedicatedServicePageWidgetState extends State<DedicatedServicePageWidget>
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 30.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.dedicatedServicesCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: DedicatedServicesCompWidget(),
+                                    child: const DedicatedServicesCompWidget(),
                                   ),
                                 ),
-                                if (false)
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 40.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.requestQuoteCompModel3,
-                                      updateCallback: () => setState(() {}),
-                                      child: RequestQuoteCompWidget(
-                                        formImage:
-                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/sqeka8titoar/Rectangle_24.png',
-                                        email: 'info@virtuoustechlogic.com',
-                                        callNumber: '6377231496',
-                                        whatsappNumber: '6377231496',
-                                        descriptionText:
-                                            'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
-                                      ),
-                                    ),
-                                  ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 50.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -317,11 +259,12 @@ class _DedicatedServicePageWidgetState extends State<DedicatedServicePageWidget>
                 },
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 40.0),
                 child: wrapWithModel(
                   model: _model.whatsapStickyCompModel,
                   updateCallback: () => setState(() {}),
-                  child: WhatsapStickyCompWidget(),
+                  child: const WhatsapStickyCompWidget(),
                 ),
               ),
             ],

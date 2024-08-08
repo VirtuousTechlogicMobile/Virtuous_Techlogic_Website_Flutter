@@ -1,13 +1,16 @@
-import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:virtuous_techlogic_website/custom_code/widgets/loader_widget.dart';
+
+import '/backend/backend.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'customer_review_comp_model.dart';
+
 export 'customer_review_comp_model.dart';
 
 class CustomerReviewCompWidget extends StatefulWidget {
@@ -71,7 +74,7 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
 
         return Container(
           width: double.infinity,
-          decoration: BoxDecoration(),
+          decoration: const BoxDecoration(),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -81,7 +84,7 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                     final customerReview =
                         containerCustomerReviewRecordList.toList();
 
-                    return Container(
+                    return SizedBox(
                       width: MediaQuery.sizeOf(context).width * 1.0,
                       height: 350.0,
                       child: CarouselSlider.builder(
@@ -90,13 +93,13 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                           final customerReviewItem =
                               customerReview[customerReviewIndex];
                           return Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 20.0),
                             child: Container(
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4.0,
                                     color: Color(0x33000000),
@@ -109,7 +112,7 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                                 borderRadius: BorderRadius.circular(8.0),
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(20.0),
+                                padding: const EdgeInsets.all(20.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,6 +120,14 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.network(
+                                        loadingBuilder:
+                                            (context, child, loadingProgress) {
+                                          if (loadingProgress == null) {
+                                            return child;
+                                          } else {
+                                            return const CircularProgressIndicator();
+                                          }
+                                        },
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/sgqk4wzety89/comma.png',
                                         width: 68.0,
                                         height: 50.0,
@@ -125,8 +136,8 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                                     ),
                                     Flexible(
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 10.0),
+                                        padding: const EdgeInsetsDirectional
+                                            .fromSTEB(0.0, 10.0, 0.0, 10.0),
                                         child: AutoSizeText(
                                           customerReviewItem.reviewText,
                                           textAlign: TextAlign.start,
@@ -149,29 +160,31 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 10.0, 0.0, 10.0),
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 10.0, 0.0, 10.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.min,
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
                                           Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    0.0, 0.0, 10.0, 0.0),
+                                            padding: const EdgeInsetsDirectional
+                                                .fromSTEB(0.0, 0.0, 10.0, 0.0),
                                             child: Container(
                                               width: 60.0,
                                               height: 60.0,
                                               clipBehavior: Clip.antiAlias,
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                 shape: BoxShape.circle,
                                               ),
                                               child: CachedNetworkImage(
-                                                fadeInDuration:
-                                                    Duration(milliseconds: 100),
-                                                fadeOutDuration:
-                                                    Duration(milliseconds: 100),
+                                                placeholder: (context, url) {
+                                                  return const LoaderWidget(
+                                                    width: 50,
+                                                    height: 50,
+                                                  );
+                                                },
                                                 imageUrl:
                                                     customerReviewItem.image,
                                                 fit: BoxFit.cover,
@@ -267,7 +280,7 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           blurRadius: 4.0,
                           color: Color(0x33000000),
@@ -296,7 +309,7 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                         logFirebaseEvent(
                             'CUSTOMER_REVIEW_arrow_back_ICN_ON_TAP');
                         await _model.carouselController?.previousPage(
-                          duration: Duration(milliseconds: 300),
+                          duration: const Duration(milliseconds: 300),
                           curve: Curves.ease,
                         );
                       },
@@ -304,7 +317,7 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                   ),
                   Container(
                     decoration: BoxDecoration(
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           blurRadius: 4.0,
                           color: Color(0x33000000),
@@ -333,15 +346,15 @@ class _CustomerReviewCompWidgetState extends State<CustomerReviewCompWidget> {
                         logFirebaseEvent(
                             'CUSTOMER_REVIEW_arrow_forward_ICN_ON_TAP');
                         await _model.carouselController?.nextPage(
-                          duration: Duration(milliseconds: 300),
+                          duration: const Duration(milliseconds: 300),
                           curve: Curves.ease,
                         );
                       },
                     ),
                   ),
-                ].divide(SizedBox(width: 20.0)),
+                ].divide(const SizedBox(width: 20.0)),
               ),
-            ].divide(SizedBox(height: 20.0)),
+            ].divide(const SizedBox(height: 20.0)),
           ),
         );
       },

@@ -1,22 +1,20 @@
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
 import '/components/our_product_component_comp/our_product_component_comp_widget.dart';
-import '/components/request_quote_comp/request_quote_comp_widget.dart';
 import '/components/sidebar_comp/sidebar_comp_widget.dart';
 import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'our_products_page_model.dart';
+
 export 'our_products_page_model.dart';
 
 class OurProductsPageWidget extends StatefulWidget {
@@ -55,8 +53,8 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget>
             curve: Curves.easeOut,
             delay: 0.0.ms,
             duration: 1000.0.ms,
-            begin: Offset(100.0, 0.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(100.0, 0.0),
+            end: const Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -92,7 +90,7 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget>
           child: wrapWithModel(
             model: _model.sidebarCompModel,
             updateCallback: () => setState(() {}),
-            child: SidebarCompWidget(),
+            child: const SidebarCompWidget(),
           ),
         ).animateOnActionTrigger(
             animationsMap['endDrawerOnActionTriggerAnimation']!,
@@ -100,7 +98,7 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget>
         body: SafeArea(
           top: true,
           child: Stack(
-            alignment: AlignmentDirectional(1.0, 1.0),
+            alignment: const AlignmentDirectional(1.0, 1.0),
             children: [
               Builder(
                 builder: (context) {
@@ -137,45 +135,32 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget>
                         ),
                         Expanded(
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: SingleChildScrollView(
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 0.0, 10.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            10.0, 0.0, 10.0, 0.0),
                                     child: wrapWithModel(
                                       model:
                                           _model.ourProductComponentCompModel1,
                                       updateCallback: () => setState(() {}),
-                                      child: OurProductComponentCompWidget(),
+                                      child:
+                                          const OurProductComponentCompWidget(),
                                     ),
                                   ),
-                                  if (false)
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 30.0, 0.0, 0.0),
-                                      child: wrapWithModel(
-                                        model: _model.requestQuoteCompModel1,
-                                        updateCallback: () => setState(() {}),
-                                        child: RequestQuoteCompWidget(
-                                          email: 'info@virtuoustechlogic.com',
-                                          callNumber: '6377231496',
-                                          whatsappNumber: '6377231496',
-                                          descriptionText:
-                                              'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
-                                        ),
-                                      ),
-                                    ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 40.0, 0.0, 0.0),
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0.0, 40.0, 0.0, 0.0),
                                     child: wrapWithModel(
                                       model: _model.footerCompModel1,
                                       updateCallback: () => setState(() {}),
-                                      child: FooterCompWidget(),
+                                      child: const FooterCompWidget(),
                                     ),
                                   ),
                                 ],
@@ -222,39 +207,22 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget>
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       48.0, 30.0, 48.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.ourProductComponentCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: OurProductComponentCompWidget(),
+                                    child:
+                                        const OurProductComponentCompWidget(),
                                   ),
                                 ),
-                                if (false)
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 30.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.requestQuoteCompModel2,
-                                      updateCallback: () => setState(() {}),
-                                      child: RequestQuoteCompWidget(
-                                        formImage:
-                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/p356smxuzasu/AI_Chat_App_Thumbnail1-1_1.svg',
-                                        email: 'info@virtuoustechlogic.com',
-                                        callNumber: '6377231496',
-                                        whatsappNumber: '6377231496',
-                                        descriptionText:
-                                            'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
-                                      ),
-                                    ),
-                                  ),
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 50.0, 0.0, 0.0),
                                   child: wrapWithModel(
                                     model: _model.footerCompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                    child: const FooterCompWidget(),
                                   ),
                                 ),
                               ],
@@ -270,67 +238,124 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget>
                         wrapWithModel(
                           model: _model.desktopHeaderCompModel,
                           updateCallback: () => setState(() {}),
-                          child: DesktopHeaderCompWidget(
+                          child: const DesktopHeaderCompWidget(
                             indexParameter: 3,
                           ),
                         ),
                         Expanded(
-                          child: SingleChildScrollView(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      60.0, 40.0, 60.0, 0.0),
-                                  child: wrapWithModel(
-                                    model: _model.ourProductComponentCompModel3,
-                                    updateCallback: () => setState(() {}),
-                                    child: OurProductComponentCompWidget(),
-                                  ),
-                                ),
-                                if (false)
+                          child: Stack(
+                            alignment: Alignment.topCenter,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 30.0, 0.0, 0.0),
-                                    child: wrapWithModel(
-                                      model: _model.requestQuoteCompModel3,
-                                      updateCallback: () => setState(() {}),
-                                      child: RequestQuoteCompWidget(
-                                        formImage:
-                                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/p356smxuzasu/AI_Chat_App_Thumbnail1-1_1.svg',
-                                        email: 'info@virtuoustechlogic.com',
-                                        callNumber: '6377231496',
-                                        whatsappNumber: '6377231496',
-                                        descriptionText:
-                                            'Our goal is to help businesses and entrepreneurs bring their ideas to life and deliver outstanding user experiences to their customers. With a passion for innovation and a dedication to excellence, we are committed to delivering top-notch results that meet the unique needs of each of our clients.',
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            80, 400, 0, 0),
+                                    child: BackdropFilter(
+                                      filter: ImageFilter.blur(
+                                          sigmaX: 0.2, sigmaY: 0.2),
+                                      child: Container(
+                                        width: 200,
+                                        height: 200,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFFD2E8F6),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 100,
+                                              color: Color(0xFFD2E5F2),
+                                              offset: Offset(
+                                                0.0,
+                                                0,
+                                              ),
+                                              spreadRadius: 200,
+                                            )
+                                          ],
+                                          borderRadius:
+                                              BorderRadius.circular(500),
+                                        ),
                                       ),
                                     ),
                                   ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 50.0, 0.0, 0.0),
-                                  child: wrapWithModel(
-                                    model: _model.footerCompModel3,
-                                    updateCallback: () => setState(() {}),
-                                    child: FooterCompWidget(),
+                                  Padding(
+                                    padding:
+                                        const EdgeInsetsDirectional.fromSTEB(
+                                            0, 0, 50, 0),
+                                    child: BackdropFilter(
+                                      filter: ImageFilter.blur(
+                                          sigmaX: 0.4, sigmaY: 0.4),
+                                      child: Container(
+                                        height: 100,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xf2f1e5d6),
+                                          boxShadow: const [
+                                            BoxShadow(
+                                              blurRadius: 100,
+                                              color: Color(0xECF5E5D6),
+                                              offset: Offset(
+                                                15,
+                                                0,
+                                              ),
+                                              spreadRadius: 300,
+                                            )
+                                          ],
+                                          borderRadius:
+                                              BorderRadius.circular(500),
+                                        ),
+                                      ),
+                                    ),
                                   ),
+                                ],
+                              ),
+                              SingleChildScrollView(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              60.0, 40.0, 60.0, 0.0),
+                                      child: wrapWithModel(
+                                        model: _model
+                                            .ourProductComponentCompModel3,
+                                        updateCallback: () => setState(() {}),
+                                        child:
+                                            const OurProductComponentCompWidget(),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0.0, 50.0, 0.0, 0.0),
+                                      child: wrapWithModel(
+                                        model: _model.footerCompModel3,
+                                        updateCallback: () => setState(() {}),
+                                        child: const FooterCompWidget(),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
-                        ),
+                        )
                       ],
                     );
                   }
                 },
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 25.0),
+                padding:
+                    const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 25.0),
                 child: wrapWithModel(
                   model: _model.whatsapStickyCompModel,
                   updateCallback: () => setState(() {}),
-                  child: WhatsapStickyCompWidget(),
+                  child: const WhatsapStickyCompWidget(),
                 ),
               ),
             ],

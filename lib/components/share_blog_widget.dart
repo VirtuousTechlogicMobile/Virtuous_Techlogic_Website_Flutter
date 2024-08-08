@@ -59,7 +59,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
         borderRadius: BorderRadius.circular(16.0),
       ),
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: InkWell(
           splashColor: Colors.transparent,
           focusColor: Colors.transparent,
@@ -69,7 +69,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
             logFirebaseEvent('SHARE_BLOG_COMP_Column_hlbm48wn_ON_TAP');
             await Clipboard.setData(ClipboardData(
                 text:
-                    'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget!.blogReference?.id}&blogTitle=${widget!.blogTitle}'));
+                    'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget.blogReference?.id}&blogTitle=${widget.blogTitle}'));
           },
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -90,7 +90,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                         ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(1.0, -1.0),
+                    alignment: const AlignmentDirectional(1.0, -1.0),
                     child: Icon(
                       Icons.close_rounded,
                       color: FlutterFlowTheme.of(context).secondaryText,
@@ -125,7 +125,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                           logFirebaseEvent(
                               'SHARE_BLOG_COMP_facebookF_ICN_ON_TAP');
                           await launchURL(
-                              'https://www.facebook.com/sharer/sharer.php?u=https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget!.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget!.blogTitle!))}');
+                              'https://www.facebook.com/sharer/sharer.php?u=https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget.blogTitle!))}');
                         },
                       ),
                       Text(
@@ -164,7 +164,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                           logFirebaseEvent(
                               'SHARE_BLOG_COMP_instagram_ICN_ON_TAP');
                           await actions.socialMediablogShare(
-                            widget!.blogTitle!,
+                            widget.blogTitle!,
                             'https://api.whatsapp.com/send?text=',
                           );
                         },
@@ -189,8 +189,8 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        10.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -198,7 +198,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                         Flexible(
                           child: SelectionArea(
                               child: Text(
-                            'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget!.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget!.blogTitle!))}',
+                            'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget.blogTitle!))}',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -213,7 +213,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                         ),
                         Flexible(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -225,7 +225,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                                     'SHARE_BLOG_COMP_Icon_h3y7faep_ON_TAP');
                                 await Clipboard.setData(ClipboardData(
                                     text:
-                                        'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget!.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget!.blogTitle!))}'));
+                                        'https://virtuoustechlogic.com/individualBlogPage?blogRef=${widget.blogReference?.id}&blogTitle=${Uri.encodeComponent((widget.blogTitle!))}'));
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
@@ -244,7 +244,7 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
-                                                offset: Offset(1.0, 1.0),
+                                                offset: const Offset(1.0, 1.0),
                                                 blurRadius: 1.0,
                                               )
                                             ],
@@ -254,7 +254,8 @@ class _ShareBlogWidgetState extends State<ShareBlogWidget> {
                                                         .bodyMediumFamily),
                                           ),
                                     ),
-                                    duration: Duration(milliseconds: 4000),
+                                    duration:
+                                        const Duration(milliseconds: 4000),
                                     backgroundColor:
                                         FlutterFlowTheme.of(context).primary,
                                   ),

@@ -1,9 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'brandguidelinescomp_model.dart';
 export 'brandguidelinescomp_model.dart';
 
@@ -46,7 +44,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
         color: FlutterFlowTheme.of(context).secondaryBackground,
       ),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 0.0),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -58,7 +56,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
                       'Introduction',
                       textAlign: TextAlign.start,
@@ -116,17 +114,17 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                               FlutterFlowTheme.of(context).bodyMediumFamily),
                         ),
                   ),
-                ].divide(SizedBox(height: 10.0)),
+                ].divide(const SizedBox(height: 10.0)),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: Text(
                         'Brand story',
                         textAlign: TextAlign.start,
@@ -196,11 +194,11 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -241,7 +239,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -262,7 +260,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'We are experts in our field. Our knowledge and skills are reflected in every solution we provide. We speak with confidence and competence, ensuring our partners feel secure in our hands.',
@@ -295,7 +293,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Innovation isn’t just what we do; it\'s who we are. We continuously push boundaries, explore new horizons, and anticipate future trends. Our forward-thinking approach keeps us and our clients at the forefront of technological advancements.',
@@ -328,7 +326,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Despite our technical expertise, we speak your language. Our solutions and communications are designed to be accessible, understandable, and user-friendly.  We believe in building connections, not complexity.',
@@ -361,7 +359,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Trust is the foundation of all our relationships. We earn it through transparency, reliability, and consistent support. Our clients know they can rely on us not just as a service provider, but as a steadfast ally.',
@@ -394,7 +392,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'We thrive on collaboration, both within our team and with our partners. Our community-oriented spirit fuels our commitment to not only serving our clients but also contributing to the broader community.',
@@ -411,7 +409,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(height: 10.0)),
+                        ].divide(const SizedBox(height: 10.0)),
                       ),
                     ),
                     Text(
@@ -424,11 +422,11 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -469,7 +467,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -490,7 +488,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               ' Always use the approved version of the logo. Do not alter, distort, rotate, or modify the logo in any way.',
@@ -523,7 +521,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Maintain the proportions of the logo when resizing. Ensure that the logo is always legible and clear, regardless of its size.',
@@ -556,7 +554,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'A minimum clear space should be maintained around the logo. This space should be free of other elements to ensure the logo’s visibility and impact.',
@@ -589,7 +587,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Use the color version of the logo on light backgrounds and the white version on dark backgrounds. Avoid using the logo on overly busy or patterned backgrounds.',
@@ -622,7 +620,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Examples of incorrect usage should be shown to prevent common mistakes. This includes altering the logo’s color (beyond the approved palette), adding effects, \nor placing the logo on conflicting backgrounds.',
@@ -655,7 +653,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               ' Provide the logo in various file formats (e.g., JPEG, PNG, SVG) for different use cases like print, web, and merchandise.',
@@ -672,7 +670,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(height: 10.0)),
+                        ].divide(const SizedBox(height: 10.0)),
                       ),
                     ),
                     Text(
@@ -685,11 +683,11 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -755,7 +753,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                             color: FlutterFlowTheme.of(context).primary,
                           ),
                         ),
-                      ].divide(SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -781,7 +779,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                         ),
-                      ].divide(SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
                     ),
                     Text(
                       'Secondary Color: Innovation Orange',
@@ -806,11 +804,11 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                         Container(
                           width: 50.0,
                           height: 50.0,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFFF5AE2A),
                           ),
                         ),
-                      ].divide(SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
                     ),
                     Row(
                       mainAxisSize: MainAxisSize.max,
@@ -836,7 +834,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                         ),
-                      ].divide(SizedBox(width: 20.0)),
+                      ].divide(const SizedBox(width: 20.0)),
                     ),
                     Text(
                       'Usage Guidelines:',
@@ -852,7 +850,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -873,7 +871,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'The primary color should dominate our visual designs, with the secondary color used as an accent.',
@@ -906,7 +904,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'If additional colors are necessary, choose shades that complement our primary and secondary colors while maintaining the overall brand aesthetic.',
@@ -939,7 +937,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Use the primary color for major background elements. The secondary color can be used for smaller accents or elements that require emphasis.',
@@ -972,7 +970,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Primary color should be used for headings and key messages, while the secondary color can be utilized for highlights or calls to action.',
@@ -1005,7 +1003,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'While both colors are vital to our brand, overusing them, especially the secondary color, can dilute their impact. Balance is key.',
@@ -1022,7 +1020,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                   ),
                             ),
                           ),
-                        ].divide(SizedBox(height: 10.0)),
+                        ].divide(const SizedBox(height: 10.0)),
                       ),
                     ),
                     Text(
@@ -1035,7 +1033,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 FlutterFlowTheme.of(context).bodyMediumFamily),
                           ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Column(
@@ -1044,7 +1042,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
                       'Typography',
                       textAlign: TextAlign.start,
@@ -1140,7 +1138,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Row(
                     mainAxisSize: MainAxisSize.max,
@@ -1166,7 +1164,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                               ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 20.0)),
+                    ].divide(const SizedBox(width: 20.0)),
                   ),
                   Text(
                     'Usage Guidelines:',
@@ -1182,7 +1180,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -1202,7 +1200,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Robot Bold is perfect for headings and titles, providing a strong, commanding presence on the page. Its bold weight ensures high visibility and impact.',
@@ -1233,7 +1231,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'While Robot Bold is primarily for headings, for body text, consider a lighter weight or a complementary font that maintains legibility and complements the bold nature of Robot Bold.',
@@ -1264,7 +1262,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Use Robot Bold consistently across all platforms – digital and print – to maintain a cohesive brand identity.',
@@ -1295,7 +1293,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Pay attention to letter and line spacing to ensure the text is easily readable. Proper alignment, based on the layout and design, is crucial for a clean and professional look.',
@@ -1326,7 +1324,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Robot Bold should ideally be used in our primary or secondary brand colors, depending on the background and design, to enhance brand recognition and cohesion.',
@@ -1357,7 +1355,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                               ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 0.0, 0.0),
                           child: Text(
                             ' Different sizes of Robot Bold should be used to create a visual hierarchy, making it easier for readers to navigate through the content and understand the importance of various elements.',
@@ -1373,12 +1371,12 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                                 ),
                           ),
                         ),
-                      ].divide(SizedBox(height: 10.0)),
+                      ].divide(const SizedBox(height: 10.0)),
                     ),
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Text(
                       'By adhering to these guidelines, Robot Bold will serve as a strong visual anchor for our brand, ensuring that every piece of communication is clearly Virtuouse Techlogic.',
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1390,7 +1388,7 @@ class _BrandguidelinescompWidgetState extends State<BrandguidelinescompWidget> {
                           ),
                     ),
                   ),
-                ].divide(SizedBox(height: 10.0)),
+                ].divide(const SizedBox(height: 10.0)),
               ),
             ],
           ),

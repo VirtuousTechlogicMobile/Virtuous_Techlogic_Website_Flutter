@@ -1,11 +1,12 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
+
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'our_culture_imag_mobile_comp_model.dart';
+
 export 'our_culture_imag_mobile_comp_model.dart';
 
 class OurCultureImagMobileCompWidget extends StatefulWidget {
@@ -16,7 +17,7 @@ class OurCultureImagMobileCompWidget extends StatefulWidget {
     required this.richText2,
     required this.textforDesc,
     bool? isUpsideText,
-  }) : this.isUpsideText = isUpsideText ?? false;
+  }) : isUpsideText = isUpsideText ?? false;
 
   final String? image;
   final String? richText1;
@@ -58,7 +59,7 @@ class _OurCultureImagMobileCompWidgetState
   Widget build(BuildContext context) {
     return Container(
       width: 360.0,
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -67,14 +68,14 @@ class _OurCultureImagMobileCompWidgetState
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                if (!widget!.isUpsideText)
+                if (widget!.isUpsideText)
                   Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.richText1,
-                          'Our ',
+                          widget.richText1,
+                          'Our',
                         ),
                         style: FlutterFlowTheme.of(context)
                             .headlineSmall
@@ -90,7 +91,7 @@ class _OurCultureImagMobileCompWidgetState
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget!.richText2,
+                          widget.richText2,
                           'Culture',
                         ),
                         style:
@@ -104,15 +105,15 @@ class _OurCultureImagMobileCompWidgetState
                                           .headlineSmallFamily),
                                 ),
                       ),
-                    ].divide(SizedBox(width: 5.0)),
+                    ].divide(const SizedBox(width: 5.0)),
                   ),
                 if (widget!.isUpsideText)
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 15.0, 0.0, 15.0),
                     child: SelectionArea(
                         child: Text(
-                      widget!.textforDesc!,
+                      widget.textforDesc!,
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
                             fontFamily:
                                 FlutterFlowTheme.of(context).bodyLargeFamily,
@@ -126,9 +127,10 @@ class _OurCultureImagMobileCompWidgetState
                 ClipRRect(
                   borderRadius: BorderRadius.circular(24.0),
                   child: CachedNetworkImage(
-                    fadeInDuration: Duration(milliseconds: 500),
-                    fadeOutDuration: Duration(milliseconds: 500),
-                    imageUrl: widget!.image!,
+                    fadeInDuration: const Duration(milliseconds: 0),
+                    fadeOutDuration: const Duration(milliseconds: 0),
+                    imageUrl: widget.image ??
+                        "https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/vhvw84cmjyb3/logo.webp",
                     width: () {
                       if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
                         return 320.0;
@@ -142,20 +144,32 @@ class _OurCultureImagMobileCompWidgetState
                         return 386.0;
                       }
                     }(),
-                    height: 520.0,
+                    height: () {
+                      if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                        return 580.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
+                        return 580.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
+                        return 580.0;
+                      } else {
+                        return 580.0;
+                      }
+                    }(),
                     fit: BoxFit.cover,
                   ),
                 ),
-                if (!widget!.isUpsideText)
+                if (!widget.isUpsideText)
                   Padding(
-                    padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(
+                        0.0, 20.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget!.richText1,
+                            widget.richText1,
                             'Our ',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -172,7 +186,7 @@ class _OurCultureImagMobileCompWidgetState
                         ),
                         Text(
                           valueOrDefault<String>(
-                            widget!.richText2,
+                            widget.richText2,
                             'Culture',
                           ),
                           style: FlutterFlowTheme.of(context)
@@ -187,18 +201,18 @@ class _OurCultureImagMobileCompWidgetState
                                         .headlineSmallFamily),
                               ),
                         ),
-                      ].divide(SizedBox(width: 5.0)),
+                      ].divide(const SizedBox(width: 5.0)),
                     ),
                   ),
-                if (!widget!.isUpsideText)
+                if (!widget.isUpsideText)
                   Flexible(
                     child: Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+                      padding: const EdgeInsetsDirectional.fromSTEB(
+                          10.0, 10.0, 10.0, 0.0),
                       child: SelectionArea(
                           child: AutoSizeText(
                         valueOrDefault<String>(
-                          widget!.textforDesc,
+                          widget.textforDesc,
                           'We are not just Developing App but also Celebrate different festival.',
                         ),
                         textAlign: TextAlign.start,

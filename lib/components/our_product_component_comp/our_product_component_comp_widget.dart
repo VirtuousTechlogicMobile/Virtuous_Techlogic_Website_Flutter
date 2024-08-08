@@ -1,12 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+
 import '/backend/backend.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/components/explore_our_product_comp/explore_our_product_comp_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'our_product_component_comp_model.dart';
+
 export 'our_product_component_comp_model.dart';
 
 class OurProductComponentCompWidget extends StatefulWidget {
@@ -70,9 +72,6 @@ class _OurProductComponentCompWidgetState
   Widget build(BuildContext context) {
     return Container(
       constraints: BoxConstraints(maxWidth: getMaxWidth(context)),
-      decoration: BoxDecoration(
-        color: FlutterFlowTheme.of(context).secondaryBackground,
-      ),
       child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 30.0, 0.0),
         child: SingleChildScrollView(

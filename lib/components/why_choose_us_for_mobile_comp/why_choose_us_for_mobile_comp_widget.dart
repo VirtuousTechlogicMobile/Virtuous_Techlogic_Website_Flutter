@@ -1,14 +1,13 @@
+import 'package:flutter/material.dart';
+
 import '/backend/backend.dart';
-import '/button_component/get_in_touch_button_comp/get_in_touch_button_comp_widget.dart';
 import '/components/about_experience_comp/about_experience_comp_widget.dart';
 import '/components/common_rich_text_comp/common_rich_text_comp_widget.dart';
 import '/components/company_comp/company_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'why_choose_us_for_mobile_comp_model.dart';
+
 export 'why_choose_us_for_mobile_comp_model.dart';
 
 class WhyChooseUsForMobileCompWidget extends StatefulWidget {
@@ -47,7 +46,7 @@ class _WhyChooseUsForMobileCompWidgetState
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(),
+      decoration: const BoxDecoration(),
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -55,7 +54,7 @@ class _WhyChooseUsForMobileCompWidgetState
             wrapWithModel(
               model: _model.commonRichTextCompModel,
               updateCallback: () => setState(() {}),
-              child: CommonRichTextCompWidget(
+              child: const CommonRichTextCompWidget(
                 richTextOne: 'Why ',
                 richTextTwo: 'Choose Us?',
                 texts:
@@ -63,7 +62,8 @@ class _WhyChooseUsForMobileCompWidgetState
               ),
             ),
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+              padding:
+                  const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
               child: StreamBuilder<List<WhyChooseUsRecord>>(
                 stream: queryWhyChooseUsRecord(
                   queryBuilder: (whyChooseUsRecord) => whyChooseUsRecord.where(
@@ -114,58 +114,16 @@ class _WhyChooseUsForMobileCompWidgetState
                 },
               ),
             ),
-            if (false)
-              InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  logFirebaseEvent('WHY_CHOOSE_US_FOR_MOBILE_Container_cfz8h');
-
-                  context.pushNamed(
-                    'contactUsPage',
-                    queryParameters: {
-                      'index': serializeParam(
-                        5,
-                        ParamType.int,
-                      ),
-                    }.withoutNulls,
-                  );
-                },
-                child: wrapWithModel(
-                  model: _model.getInTouchButtonCompModel,
-                  updateCallback: () => setState(() {}),
-                  child: GetInTouchButtonCompWidget(
-                    buttonName: 'About Us',
-                    showIcon: false,
-                    buttonAction: () async {
-                      logFirebaseEvent(
-                          'WHY_CHOOSE_US_FOR_MOBILE_Container_cfz8h');
-
-                      context.pushNamed(
-                        'aboutPage',
-                        queryParameters: {
-                          'index': serializeParam(
-                            1,
-                            ParamType.int,
-                          ),
-                        }.withoutNulls,
-                      );
-                    },
-                  ),
-                ),
-              ),
             wrapWithModel(
               model: _model.aboutExperienceCompModel,
               updateCallback: () => setState(() {}),
-              child: AboutExperienceCompWidget(
+              child: const AboutExperienceCompWidget(
                 projects: 200,
                 satisfiedClients: 50,
                 expertise: 10,
               ),
             ),
-          ].divide(SizedBox(height: 50.0)),
+          ].divide(const SizedBox(height: 50.0)),
         ),
       ),
     );
