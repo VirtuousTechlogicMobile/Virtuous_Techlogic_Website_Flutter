@@ -49,6 +49,7 @@ class _MobileHeaderCompWidgetState extends State<MobileHeaderCompWidget> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
+      height: 100,
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Row(
@@ -67,9 +68,9 @@ class _MobileHeaderCompWidgetState extends State<MobileHeaderCompWidget> {
                 context.pushNamed('homePage');
               },
               child: Image.asset(
-                'assets/images/logo.webp',
-                width: 122,
-                height: 40,
+                'assets/images/logo.png',
+                width: 183,
+                height: 60,
               ),
             ),
             FlutterFlowIconButton(

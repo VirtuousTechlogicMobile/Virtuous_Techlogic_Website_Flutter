@@ -49,7 +49,7 @@ class _TabletHeaderCompWidgetState extends State<TabletHeaderCompWidget> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: MediaQuery.sizeOf(context).height * 0.1,
+      height: 100,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,10 +67,10 @@ class _TabletHeaderCompWidgetState extends State<TabletHeaderCompWidget> {
 
                 context.pushNamed('homePage');
               },
-              child: Image.network(
+              child: Image.asset(
+                'assets/images/logo.png',
                 width: 183,
                 height: 60,
-                'assets/images/VirtuousLogoImage.svg',
               ),
             ),
           ),

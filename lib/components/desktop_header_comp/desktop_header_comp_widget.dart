@@ -50,7 +50,7 @@ class _DesktopHeaderCompWidgetState extends State<DesktopHeaderCompWidget> {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: MediaQuery.sizeOf(context).height * 0.1,
+      height: 100,
       color: FlutterFlowTheme.of(context).secondaryBackground,
       child: Padding(
         padding: const EdgeInsets.all(25.0),
