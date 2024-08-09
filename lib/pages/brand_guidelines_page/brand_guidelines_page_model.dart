@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 import '/components/brandguidelinescomp/brandguidelinescomp_widget.dart';
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
@@ -5,13 +7,8 @@ import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
 import '/components/sidebar_comp/sidebar_comp_widget.dart';
 import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'brand_guidelines_page_widget.dart' show BrandGuidelinesPageWidget;
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class BrandGuidelinesPageModel
     extends FlutterFlowModel<BrandGuidelinesPageWidget> {

@@ -70,7 +70,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(24.0),
                   child: Image.network(
-                    widget!.exblogimg!,
+                    widget.exblogimg ?? '',
                     loadingBuilder: (context, child, loadingProgress) {
                       if (loadingProgress == null) {
                         return child;
@@ -109,7 +109,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Text(
-                            widget!.title!,
+                            widget.title ?? "tile",
                             style: FlutterFlowTheme.of(context)
                                 .headlineSmall
                                 .override(
@@ -129,7 +129,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Text(
-                            widget!.description!,
+                            widget.description ?? "Description",
                             textAlign: TextAlign.start,
                             maxLines: 6,
                             style: FlutterFlowTheme.of(context)
@@ -264,7 +264,7 @@ class _ExploreBlogCompWidgetState extends State<ExploreBlogCompWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Text(
-                                  widget!.description!,
+                                  widget.description ?? "description",
                                   textAlign: TextAlign.justify,
                                   maxLines: 6,
                                   style: FlutterFlowTheme.of(context)

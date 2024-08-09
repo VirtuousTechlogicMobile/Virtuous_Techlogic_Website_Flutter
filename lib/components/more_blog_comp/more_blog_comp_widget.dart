@@ -77,7 +77,7 @@ class _MoreBlogCompWidgetState extends State<MoreBlogCompWidget> {
           Container(
             decoration: const BoxDecoration(),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+              padding: const EdgeInsetsDirectional.fromSTEB(30, 30, 30, 0),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,

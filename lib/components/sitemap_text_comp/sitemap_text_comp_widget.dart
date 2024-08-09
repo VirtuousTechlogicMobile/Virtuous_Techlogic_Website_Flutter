@@ -484,7 +484,7 @@ class _SitemapTextCompWidgetState extends State<SitemapTextCompWidget> {
                                           'SITEMAP_TEXT_Text_xz33cn4u_ON_TAP');
 
                                       context.pushNamed(
-                                        'desclaimerPage',
+                                        'DisclaimerPage',
                                         queryParameters: {
                                           'index': serializeParam(
                                             0,
@@ -865,7 +865,7 @@ class _SitemapTextCompWidgetState extends State<SitemapTextCompWidget> {
                                 'SITEMAP_TEXT_Text_mp9hgvbi_ON_TAP');
 
                             context.pushNamed(
-                              'desclaimerPage',
+                              'DisclaimerPage',
                               queryParameters: {
                                 'index': serializeParam(
                                   0,

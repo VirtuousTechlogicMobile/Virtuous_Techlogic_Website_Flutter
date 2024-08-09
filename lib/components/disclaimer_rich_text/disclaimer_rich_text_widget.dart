@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:virtuous_techlogic_website/components/disclaimer_rich_text/disclaimer_rich_text_model.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'desclaimer_rich_text_model.dart';
 
-export 'desclaimer_rich_text_model.dart';
-
-class DesclaimerRichTextWidget extends StatefulWidget {
-  const DesclaimerRichTextWidget({super.key});
+class DisclaimerRichTextWidget extends StatefulWidget {
+  const DisclaimerRichTextWidget({super.key});
 
   @override
-  State<DesclaimerRichTextWidget> createState() =>
-      _DesclaimerRichTextWidgetState();
+  State<DisclaimerRichTextWidget> createState() =>
+      _DisclaimerRichTextWidgetState();
 }
 
-class _DesclaimerRichTextWidgetState extends State<DesclaimerRichTextWidget> {
-  late DesclaimerRichTextModel _model;
+class _DisclaimerRichTextWidgetState extends State<DisclaimerRichTextWidget> {
+  late DisclaimerRichTextModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -27,7 +25,7 @@ class _DesclaimerRichTextWidgetState extends State<DesclaimerRichTextWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DesclaimerRichTextModel());
+    _model = createModel(context, () => DisclaimerRichTextModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }

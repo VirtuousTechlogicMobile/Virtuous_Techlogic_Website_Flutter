@@ -88,16 +88,6 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
         tablet: false,
       ),
       child: Container(
-        height: MediaQuery.sizeOf(context).height * 0.9,
-        decoration: BoxDecoration(
-          color: FlutterFlowTheme.of(context).secondaryBackground,
-          image: DecorationImage(
-            fit: BoxFit.cover,
-            image: Image.network(
-              '',
-            ).image,
-          ),
-        ),
         child: Stack(
           alignment: const AlignmentDirectional(0, 0),
           children: [
@@ -230,17 +220,16 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
                       ),
                     ),
                   ),
-                  Expanded(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(0),
-                      child: CachedNetworkImage(
-                        imageUrl:
-                            'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/mjobrghz7cg0/Group_4.webp',
-                        fit: BoxFit.contain,
-                      ),
-                    ).animateOnPageLoad(
-                        animationsMap['imageOnPageLoadAnimation']!),
-                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(0),
+                    child: CachedNetworkImage(
+                      width: MediaQuery.of(context).size.width * 0.5,
+                      imageUrl:
+                          'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/mjobrghz7cg0/Group_4.webp',
+                      fit: BoxFit.cover,
+                    ),
+                  ).animateOnPageLoad(
+                      animationsMap['imageOnPageLoadAnimation']!),
                   wrapWithModel(
                     model: _model.languageCompDesktopModel,
                     updateCallback: () => setState(() {}),
@@ -252,98 +241,116 @@ class _FirstCompWidgetState extends State<FirstCompWidget>
             ),
 
             /// flutterflow image
-            wrapWithModel(
-              model: _model.circleImageAnimationModel1,
-              updateCallback: () => setState(() {}),
-              child: const CircleImageAnimationWidget(
-                delayAnimationTime: 600.0,
-                diameterWidth: 80.0,
-                imageName:
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/wq16ltz3z0zp/Frame_8.webp',
-                durationAnimation: 600.0,
-                finalPosition: 10.0,
-                xPosition: 0.675,
-                yPosition: -0.059,
+            Padding(
+              padding: const EdgeInsets.only(top: 200.0, right: 20.0),
+              child: wrapWithModel(
+                model: _model.circleImageAnimationModel1,
+                updateCallback: () => setState(() {}),
+                child: const CircleImageAnimationWidget(
+                  delayAnimationTime: 600.0,
+                  diameterWidth: 80.0,
+                  imageName:
+                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/wq16ltz3z0zp/Frame_8.webp',
+                  durationAnimation: 600.0,
+                  finalPosition: 10.0,
+                  xPosition: 0.675,
+                  yPosition: -0.059,
+                ),
               ),
             ),
 
             /// figma image
-            wrapWithModel(
-              model: _model.circleImageAnimationModel2,
-              updateCallback: () => setState(() {}),
-              child: const CircleImageAnimationWidget(
-                delayAnimationTime: 500.0,
-                diameterWidth: 60.0,
-                imageName:
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/7uf3bxilokcs/Frame_10.webp',
-                durationAnimation: 600.0,
-                finalPosition: 10.0,
-                xPosition: 0.68,
-                yPosition: -0.585,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 350.0),
+              child: wrapWithModel(
+                model: _model.circleImageAnimationModel2,
+                updateCallback: () => setState(() {}),
+                child: const CircleImageAnimationWidget(
+                  delayAnimationTime: 500.0,
+                  diameterWidth: 60.0,
+                  imageName:
+                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/7uf3bxilokcs/Frame_10.webp',
+                  durationAnimation: 600.0,
+                  finalPosition: 10.0,
+                  xPosition: 0.68,
+                  yPosition: -0.585,
+                ),
               ),
             ),
 
             /// flutter image left side
-            wrapWithModel(
-              model: _model.circleImageAnimationModel3,
-              updateCallback: () => setState(() {}),
-              child: const CircleImageAnimationWidget(
-                delayAnimationTime: 400.0,
-                diameterWidth: 40.0,
-                imageName:
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/hwfbx5qnm3y8/Frame_5.webp',
-                durationAnimation: 600.0,
-                finalPosition: 10.0,
-                xPosition: 0.435,
-                yPosition: -0.32,
+            Padding(
+              padding: const EdgeInsets.only(left: 80.0),
+              child: wrapWithModel(
+                model: _model.circleImageAnimationModel3,
+                updateCallback: () => setState(() {}),
+                child: const CircleImageAnimationWidget(
+                  delayAnimationTime: 400.0,
+                  diameterWidth: 40.0,
+                  imageName:
+                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/hwfbx5qnm3y8/Frame_5.webp',
+                  durationAnimation: 600.0,
+                  finalPosition: 10.0,
+                  xPosition: 0.435,
+                  yPosition: -0.32,
+                ),
               ),
             ),
 
             /// right Flutter Image
-            wrapWithModel(
-              model: _model.circleImageAnimationModel4,
-              updateCallback: () => setState(() {}),
-              child: const CircleImageAnimationWidget(
-                delayAnimationTime: 100.0,
-                diameterWidth: 70.0,
-                imageName:
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/hwfbx5qnm3y8/Frame_5.webp',
-                durationAnimation: 600.0,
-                finalPosition: 10.0,
-                xPosition: -0.842,
-                yPosition: 0.002,
+            Padding(
+              padding: const EdgeInsets.only(right: 350.0, top: 50.0),
+              child: wrapWithModel(
+                model: _model.circleImageAnimationModel4,
+                updateCallback: () => setState(() {}),
+                child: const CircleImageAnimationWidget(
+                  delayAnimationTime: 100.0,
+                  diameterWidth: 70.0,
+                  imageName:
+                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/hwfbx5qnm3y8/Frame_5.webp',
+                  durationAnimation: 600.0,
+                  finalPosition: 10.0,
+                  xPosition: -0.842,
+                  yPosition: 0.002,
+                ),
               ),
             ),
 
             /// Figma Image
-            wrapWithModel(
-              model: _model.circleImageAnimationModel5,
-              updateCallback: () => setState(() {}),
-              child: const CircleImageAnimationWidget(
-                delayAnimationTime: 200.0,
-                diameterWidth: 60.0,
-                imageName:
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/7uf3bxilokcs/Frame_10.webp',
-                durationAnimation: 600.0,
-                finalPosition: 10.0,
-                xPosition: -0.666,
-                yPosition: -0.338,
+            Padding(
+              padding: const EdgeInsets.only(right: 100.0),
+              child: wrapWithModel(
+                model: _model.circleImageAnimationModel5,
+                updateCallback: () => setState(() {}),
+                child: const CircleImageAnimationWidget(
+                  delayAnimationTime: 200.0,
+                  diameterWidth: 60.0,
+                  imageName:
+                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/7uf3bxilokcs/Frame_10.webp',
+                  durationAnimation: 600.0,
+                  finalPosition: 10.0,
+                  xPosition: -0.666,
+                  yPosition: -0.338,
+                ),
               ),
             ),
 
             /// FlutterFlow image
-            wrapWithModel(
-              model: _model.circleImageAnimationModel6,
-              updateCallback: () => setState(() {}),
-              child: const CircleImageAnimationWidget(
-                delayAnimationTime: 300.0,
-                diameterWidth: 50.0,
-                imageName:
-                    'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/wq16ltz3z0zp/Frame_8.webp',
-                durationAnimation: 600.0,
-                finalPosition: 10.0,
-                xPosition: -0.75,
-                yPosition: -0.584,
+            Padding(
+              padding: const EdgeInsets.only(bottom: 400.0, left: 300.0),
+              child: wrapWithModel(
+                model: _model.circleImageAnimationModel6,
+                updateCallback: () => setState(() {}),
+                child: const CircleImageAnimationWidget(
+                  delayAnimationTime: 600.0,
+                  diameterWidth: 50.0,
+                  imageName:
+                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/wq16ltz3z0zp/Frame_8.webp',
+                  durationAnimation: 100.0,
+                  finalPosition: 10.0,
+                  xPosition: -1.01,
+                  yPosition: -0.188,
+                ),
               ),
             ),
           ],

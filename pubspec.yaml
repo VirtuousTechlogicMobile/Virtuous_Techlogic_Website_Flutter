@@ -88,6 +88,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   fluttertoast: ^8.2.6
   flutter_svg: ^2.0.10+1
+  flutter_webview_plugin: ^0.4.0
 
 dependency_overrides:
   http: 1.2.1

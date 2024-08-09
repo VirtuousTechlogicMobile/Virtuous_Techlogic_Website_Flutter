@@ -157,7 +157,6 @@ class _AboutUsCompWidgetState extends State<AboutUsCompWidget> {
               children: [
                 Container(
                   width: double.infinity,
-                  height: MediaQuery.sizeOf(context).height * 0.1,
                   child: custom_widgets.RichText(
                     width: double.infinity,
                     height: MediaQuery.sizeOf(context).height * 0.1,

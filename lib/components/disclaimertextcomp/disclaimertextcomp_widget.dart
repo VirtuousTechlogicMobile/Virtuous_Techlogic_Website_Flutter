@@ -1,20 +1,22 @@
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'desclaimertextcomp_model.dart';
-export 'desclaimertextcomp_model.dart';
 
-class DesclaimertextcompWidget extends StatefulWidget {
-  const DesclaimertextcompWidget({super.key});
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import 'Disclaimertextcomp_model.dart';
+
+export 'Disclaimertextcomp_model.dart';
+
+class DisclaimertextcompWidget extends StatefulWidget {
+  const DisclaimertextcompWidget({super.key});
 
   @override
-  State<DesclaimertextcompWidget> createState() =>
-      _DesclaimertextcompWidgetState();
+  State<DisclaimertextcompWidget> createState() =>
+      _DisclaimertextcompWidgetState();
 }
 
-class _DesclaimertextcompWidgetState extends State<DesclaimertextcompWidget> {
-  late DesclaimertextcompModel _model;
+class _DisclaimertextcompWidgetState extends State<DisclaimertextcompWidget> {
+  late DisclaimertextcompModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -25,7 +27,7 @@ class _DesclaimertextcompWidgetState extends State<DesclaimertextcompWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DesclaimertextcompModel());
+    _model = createModel(context, () => DisclaimertextcompModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -268,7 +270,7 @@ class _DesclaimertextcompWidgetState extends State<DesclaimertextcompWidget> {
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
                                     logFirebaseEvent(
-                                        'DESCLAIMERTEXTText_ax3jjyr6_ON_TAP');
+                                        'DisclaimerTEXTText_ax3jjyr6_ON_TAP');
                                     await launchURL(
                                         'https://virtuoustechlogic.flutterflow.app/');
                                   },
@@ -762,7 +764,7 @@ class _DesclaimertextcompWidgetState extends State<DesclaimertextcompWidget> {
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
                                     logFirebaseEvent(
-                                        'DESCLAIMERTEXTText_n2q97iqf_ON_TAP');
+                                        'DisclaimerTEXTText_n2q97iqf_ON_TAP');
                                     await launchURL(
                                         'https://virtuoustechlogic.flutterflow.app/');
                                   },

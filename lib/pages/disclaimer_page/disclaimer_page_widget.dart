@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:virtuous_techlogic_website/components/disclaimertextcomp/disclaimertextcomp_widget.dart';
 
-import '/components/desclaimertextcomp/desclaimertextcomp_widget.dart';
 import '/components/desktop_header_comp/desktop_header_comp_widget.dart';
 import '/components/footer_comp/footer_comp_widget.dart';
 import '/components/mobile_header_comp/mobile_header_comp_widget.dart';
@@ -9,12 +9,12 @@ import '/components/tablet_header_comp/tablet_header_comp_widget.dart';
 import '/components/whatsap_sticky_comp/whatsap_sticky_comp_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'desclaimer_page_model.dart';
+import 'Disclaimer_page_model.dart';
 
-export 'desclaimer_page_model.dart';
+export 'Disclaimer_page_model.dart';
 
-class DesclaimerPageWidget extends StatefulWidget {
-  const DesclaimerPageWidget({
+class DisclaimerPageWidget extends StatefulWidget {
+  const DisclaimerPageWidget({
     super.key,
     required this.index,
   });
@@ -22,21 +22,21 @@ class DesclaimerPageWidget extends StatefulWidget {
   final int? index;
 
   @override
-  State<DesclaimerPageWidget> createState() => _DesclaimerPageWidgetState();
+  State<DisclaimerPageWidget> createState() => _DisclaimerPageWidgetState();
 }
 
-class _DesclaimerPageWidgetState extends State<DesclaimerPageWidget> {
-  late DesclaimerPageModel _model;
+class _DisclaimerPageWidgetState extends State<DisclaimerPageWidget> {
+  late DisclaimerPageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DesclaimerPageModel());
+    _model = createModel(context, () => DisclaimerPageModel());
 
     logFirebaseEvent('screen_view',
-        parameters: {'screen_name': 'desclaimerPage'});
+        parameters: {'screen_name': 'DisclaimerPage'});
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -97,7 +97,7 @@ class _DesclaimerPageWidgetState extends State<DesclaimerPageWidget> {
                             index: 1,
                             drawerCallBack: () async {
                               logFirebaseEvent(
-                                  'DESCLAIMER_Container_4c94gcae_CALLBACK');
+                                  'Disclaimer_Container_4c94gcae_CALLBACK');
                               scaffoldKey.currentState!.openEndDrawer();
                             },
                           ),
@@ -111,9 +111,9 @@ class _DesclaimerPageWidgetState extends State<DesclaimerPageWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 0.0),
                                   child: wrapWithModel(
-                                    model: _model.desclaimertextcompModel1,
+                                    model: _model.DisclaimertextcompModel1,
                                     updateCallback: () => setState(() {}),
-                                    child: const DesclaimertextcompWidget(),
+                                    child: const DisclaimertextcompWidget(),
                                   ),
                                 ),
                                 Padding(
@@ -166,9 +166,9 @@ class _DesclaimerPageWidgetState extends State<DesclaimerPageWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 10.0, 30.0, 0.0),
                                   child: wrapWithModel(
-                                    model: _model.desclaimertextcompModel2,
+                                    model: _model.DisclaimertextcompModel2,
                                     updateCallback: () => setState(() {}),
-                                    child: const DesclaimertextcompWidget(),
+                                    child: const DisclaimertextcompWidget(),
                                   ),
                                 ),
                                 Padding(
@@ -206,9 +206,9 @@ class _DesclaimerPageWidgetState extends State<DesclaimerPageWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 0.0, 30.0, 0.0),
                                   child: wrapWithModel(
-                                    model: _model.desclaimertextcompModel3,
+                                    model: _model.DisclaimertextcompModel3,
                                     updateCallback: () => setState(() {}),
-                                    child: const DesclaimertextcompWidget(),
+                                    child: const DisclaimertextcompWidget(),
                                   ),
                                 ),
                                 Padding(

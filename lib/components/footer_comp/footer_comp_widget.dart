@@ -698,7 +698,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                           'FOOTER_COMP_COMP_Text_ry2bxjbe_ON_TAP');
 
                                       context.pushNamed(
-                                        'desclaimerPage',
+                                        'DisclaimerPage',
                                         queryParameters: {
                                           'index': serializeParam(
                                             10,
@@ -1470,7 +1470,7 @@ class _FooterCompWidgetState extends State<FooterCompWidget> {
                                     'FOOTER_COMP_COMP_Text_uij1sz0g_ON_TAP');
 
                                 context.pushNamed(
-                                  'desclaimerPage',
+                                  'DisclaimerPage',
                                   queryParameters: {
                                     'index': serializeParam(
                                       10,

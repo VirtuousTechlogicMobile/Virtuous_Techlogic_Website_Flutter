@@ -241,8 +241,6 @@ class _HiringCompWidgetState extends State<HiringCompWidget> {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: CachedNetworkImage(
-                        fadeInDuration: const Duration(milliseconds: 500),
-                        fadeOutDuration: const Duration(milliseconds: 500),
                         imageUrl: valueOrDefault<String>(
                           widget.imagePath,
                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/8w8x2gnlyyl6/customer-service.svg',

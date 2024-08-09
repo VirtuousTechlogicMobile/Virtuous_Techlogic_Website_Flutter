@@ -99,7 +99,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'homePage',
               path: 'homePage',
               builder: (context, params) {
-                // Add MetaSEO just into Web platform condition
+                setDocumentTitle(
+                    'Virtuous Techlogic: Flutter And FlutterFlow Devs Company');
+
                 if (kIsWeb) {
                   // Define MetaSEO object
                   MetaSEO meta = MetaSEO();
@@ -124,7 +126,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'aboutPage',
               path: 'aboutPage',
               builder: (context, params) {
-                // Add MetaSEO just into Web platform condition
+                setDocumentTitle('About Virtuous');
                 if (kIsWeb) {
                   // Define MetaSEO object
                   MetaSEO meta = MetaSEO();
@@ -153,6 +155,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               path: 'servicesPage',
               builder: (context, params) {
                 // Add MetaSEO just into Web platform condition
+                setDocumentTitle('Explore Our Expertise');
                 if (kIsWeb) {
                   // Define MetaSEO object
                   MetaSEO meta = MetaSEO();
@@ -180,23 +183,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'ourProductsPage',
               path: 'ourProductsPage',
               builder: (context, params) {
-                // Add MetaSEO just into Web platform condition
-                if (kIsWeb) {
-                  // Define MetaSEO object
-                  MetaSEO meta = MetaSEO();
-                  // add meta seo data for web app as you want
-                  meta.ogTitle(
-                    ogTitle: 'Explore Our Own Area',
-                  );
-                  meta.description(
-                    description:
-                        'From retail to healthcare, our white-label solutions are tailored to fit your industry needs. Take your business to the next level with ease!',
-                  );
-                  meta.keywords(
-                    keywords:
-                        'Chatter, Vigoura App, VirChat an End to end AI Powered chatting application,',
-                  );
-                }
+                setDocumentTitle('Explore Our Own Area');
                 return OurProductsPageWidget(
                   index: params.getParam(
                     'index',
@@ -209,23 +196,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'caseStudiesPage',
               path: 'caseStudiesPage',
               builder: (context, params) {
-                // Add MetaSEO just into Web platform condition
-                if (kIsWeb) {
-                  // Define MetaSEO object
-                  MetaSEO meta = MetaSEO();
-                  // add meta seo data for web app as you want
-                  meta.ogTitle(
-                    ogTitle: 'Explore Our Case Studies',
-                  );
-                  meta.description(
-                    description:
-                        'We consider ourselves lucky to work on many innovative concepts with amazing companies. We absolutely love solving problems and transforming ideas into reality.',
-                  );
-                  meta.keywords(
-                    keywords:
-                        'Baseball tournament App, Astrology App, Chart App, Social Streaming App, Digital Gaming App, Chatting App',
-                  );
-                }
+                setDocumentTitle('Explore Our Case Studies');
                 return CaseStudiesPageWidget(
                   index: params.getParam(
                     'index',
@@ -238,6 +209,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'contactUsPage',
               path: 'contactUsPage',
               builder: (context, params) {
+                setDocumentTitle('About Virtuous');
                 return ContactUsPageWidget(
                   index: params.getParam(
                     'index',
@@ -250,6 +222,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'dedicatedServicePage',
               path: 'dedicatedServicePage',
               builder: (context, params) {
+                setDocumentTitle('ServicePage');
                 return const DedicatedServicePageWidget();
               },
             ),
@@ -261,6 +234,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     getDoc(['buildProduct'], BuildProductRecord.fromSnapshot),
               },
               builder: (context, params) {
+                final String productTitle = params.getParam(
+                  'productTitle',
+                  ParamType.String,
+                );
+                setDocumentTitle(productTitle);
                 return IndividualProductPageWidget(
                   productRef: params.getParam(
                     'productRef',
@@ -277,6 +255,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'moreBlog',
               path: 'moreBlog',
               builder: (context, params) {
+                setDocumentTitle('More Blog');
                 return const MoreBlogWidget();
               },
             ),
@@ -297,7 +276,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                       ParamType.String,
                     )
                     .replaceAll('+', ' '); //space to decode title
-
+                setDocumentTitle(title);
                 return IndividualBlogPageWidget(
                   blogTitle: title,
                 );
@@ -310,6 +289,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 'ref': getDoc(['caseStudies'], CaseStudiesRecord.fromSnapshot),
               },
               builder: (context, params) {
+                final CaseStudiesRecord caseStudy = params.getParam(
+                  'ref',
+                  ParamType.Document,
+                );
+
+                // Get the title from the document
+                final String title = caseStudy.title;
+                setDocumentTitle(title);
                 return IndividualCaseStudyWidget(
                   ref: params.getParam(
                     'ref',
@@ -322,6 +309,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'cookieSettingPage',
               path: 'cookieSettingPage',
               builder: (context, params) {
+                setDocumentTitle('Cookies Policy');
+
                 return CookieSettingPageWidget(
                   index: params.getParam(
                     'index',
@@ -334,6 +323,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'brandGuidelinesPage',
               path: 'brandGuidelinesPage',
               builder: (context, params) {
+                setDocumentTitle('Brand Guidelines');
+
                 return BrandGuidelinesPageWidget(
                   index: params.getParam(
                     'index',
@@ -343,10 +334,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               },
             ),
             FFRoute(
-              name: 'desclaimerPage',
-              path: 'desclaimerPage',
+              name: 'DisclaimerPage',
+              path: 'DisclaimerPage',
               builder: (context, params) {
-                return DesclaimerPageWidget(
+                setDocumentTitle('Disclaimer');
+
+                return DisclaimerPageWidget(
                   index: params.getParam(
                     'index',
                     ParamType.int,
@@ -358,6 +351,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'termsServicePage',
               path: 'termsServicePage',
               builder: (context, params) {
+                setDocumentTitle('Virtuous Terms & Services');
                 return TermsServicePageWidget(
                   index: params.getParam(
                     'index',
@@ -370,6 +364,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'sitemapPage',
               path: 'sitemapPage',
               builder: (context, params) {
+                setDocumentTitle('Virtuous Sitemap');
+
                 return SitemapPageWidget(
                   index: params.getParam(
                     'index',
@@ -382,6 +378,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'faqPage',
               path: 'faqPage',
               builder: (context, params) {
+                setDocumentTitle('Q&As');
+
                 return FaqPageWidget(
                   index: params.getParam(
                     'index',
@@ -394,6 +392,8 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'privacyPolicy',
               path: 'privacyPolicy',
               builder: (context, params) {
+                setDocumentTitle('Privacy Policy');
+
                 return PrivacyPolicyWidget(
                   index: params.getParam(
                     'index',

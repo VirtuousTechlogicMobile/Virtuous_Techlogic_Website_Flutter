@@ -77,8 +77,32 @@ class _BlogCompWidgetState extends State<BlogCompWidget> {
                   child: CachedNetworkImage(
                     imageUrl: widget.blogimage ??
                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/virtuous-techlogic-website-mjpcg0/assets/ojp553es6376/virtuous-logo-only.png',
-                    width: MediaQuery.sizeOf(context).width * 0.35,
-                    height: MediaQuery.sizeOf(context).height * 0.3,
+                    width: () {
+                      if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                        return 328.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
+                        return 590.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
+                        return 590.0;
+                      } else {
+                        return 590.0;
+                      }
+                    }(),
+                    height: () {
+                      if (MediaQuery.sizeOf(context).width < kBreakpointSmall) {
+                        return 240.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointMedium) {
+                        return 280.0;
+                      } else if (MediaQuery.sizeOf(context).width <
+                          kBreakpointLarge) {
+                        return 280.0;
+                      } else {
+                        return 280.0;
+                      }
+                    }(),
                     fit: BoxFit.cover,
                     errorWidget: (context, url, error) =>
                         const Icon(Icons.error),

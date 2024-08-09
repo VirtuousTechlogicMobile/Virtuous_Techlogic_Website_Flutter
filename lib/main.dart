@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
 
-    Future.delayed(Duration(milliseconds: 1000),
+    Future.delayed(const Duration(milliseconds: 1000),
         () => setState(() => _appStateNotifier.stopShowingSplashImage()));
   }
 
@@ -63,9 +63,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'HomePage',
+      // title: 'HomePage',
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: [
+      localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
@@ -73,7 +73,7 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: const [Locale('en', '')],
       theme: ThemeData(
         brightness: Brightness.light,
-        scrollbarTheme: ScrollbarThemeData(
+        scrollbarTheme: const ScrollbarThemeData(
           interactive: false,
         ),
         useMaterial3: false,

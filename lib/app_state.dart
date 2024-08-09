@@ -28,11 +28,7 @@ class FFAppState extends ChangeNotifier {
 
   late SharedPreferences prefs;
 
-  int _currentIndex = 0;
-  int get currentIndex => _currentIndex;
-  set currentIndex(int value) {
-    _currentIndex = value;
-  }
+  int currentIndex = 0;
 
   String _selectedTitle = '';
   String get selectedTitle => _selectedTitle;
@@ -47,9 +43,11 @@ void _safeInit(Function() initializeField) {
     initializeField();
   } catch (_) {}
 }
+/*
 
 Future _safeInitAsync(Function() initializeField) async {
   try {
     await initializeField();
   } catch (_) {}
 }
+*/

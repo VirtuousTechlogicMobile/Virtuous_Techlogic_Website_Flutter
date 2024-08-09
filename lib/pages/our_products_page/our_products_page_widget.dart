@@ -246,70 +246,73 @@ class _OurProductsPageWidgetState extends State<OurProductsPageWidget>
                           child: Stack(
                             alignment: Alignment.topCenter,
                             children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            80, 400, 0, 0),
-                                    child: BackdropFilter(
-                                      filter: ImageFilter.blur(
-                                          sigmaX: 0.2, sigmaY: 0.2),
-                                      child: Container(
-                                        width: 200,
-                                        height: 200,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFFD2E8F6),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                              blurRadius: 100,
-                                              color: Color(0xFFD2E5F2),
-                                              offset: Offset(
-                                                0.0,
-                                                0,
-                                              ),
-                                              spreadRadius: 200,
-                                            )
-                                          ],
-                                          borderRadius:
-                                              BorderRadius.circular(500),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 100),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              80, 400, 0, 0),
+                                      child: BackdropFilter(
+                                        filter: ImageFilter.blur(
+                                            sigmaX: 0.2, sigmaY: 0.2),
+                                        child: Container(
+                                          width: 200,
+                                          height: 200,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFD2E8F6),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 100,
+                                                color: Color(0xFFD2E5F2),
+                                                offset: Offset(
+                                                  0.0,
+                                                  0,
+                                                ),
+                                                spreadRadius: 200,
+                                              )
+                                            ],
+                                            borderRadius:
+                                                BorderRadius.circular(500),
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsetsDirectional.fromSTEB(
-                                            0, 0, 50, 0),
-                                    child: BackdropFilter(
-                                      filter: ImageFilter.blur(
-                                          sigmaX: 0.4, sigmaY: 0.4),
-                                      child: Container(
-                                        height: 100,
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xf2f1e5d6),
-                                          boxShadow: const [
-                                            BoxShadow(
-                                              blurRadius: 100,
-                                              color: Color(0xECF5E5D6),
-                                              offset: Offset(
-                                                15,
-                                                0,
-                                              ),
-                                              spreadRadius: 300,
-                                            )
-                                          ],
-                                          borderRadius:
-                                              BorderRadius.circular(500),
+                                    Padding(
+                                      padding:
+                                          const EdgeInsetsDirectional.fromSTEB(
+                                              0, 0, 50, 0),
+                                      child: BackdropFilter(
+                                        filter: ImageFilter.blur(
+                                            sigmaX: 0.4, sigmaY: 0.4),
+                                        child: Container(
+                                          height: 100,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xf2f1e5d6),
+                                            boxShadow: const [
+                                              BoxShadow(
+                                                blurRadius: 100,
+                                                color: Color(0xECF5E5D6),
+                                                offset: Offset(
+                                                  15,
+                                                  0,
+                                                ),
+                                                spreadRadius: 300,
+                                              )
+                                            ],
+                                            borderRadius:
+                                                BorderRadius.circular(500),
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                               SingleChildScrollView(
                                 child: Column(
